@@ -1041,7 +1041,8 @@ export default function TessaCloudLanding() {
                 Address
               </h3>
               <p className="text-gray-300">
-                #136, 4th Cross, BMV Mayanna Layout, Nagasandra Post, Bengaluru
+                #979/5, Narayana Swamy Compound, 5th Cross, Sampige Road, K R
+                Puram, Hassan, Karnataka, India - 573201
               </p>
 
               <h3 className="text-lg font-semibold mt-6 mb-2 text-red-400">
