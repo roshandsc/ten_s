@@ -131,6 +131,7 @@
     --color-teal-400: #00d3bd;
     --color-blue-400: #54a2ff;
     --color-blue-500: #3080ff;
+    --color-blue-600: #155dfc;
     --color-indigo-400: #7d87ff;
     --color-purple-400: #c07eff;
     --color-purple-600: #9810fa;
@@ -201,6 +202,7 @@
       --color-teal-400: color(display-p3 .322787 .822056 .744388);
       --color-blue-400: color(display-p3 .397443 .62813 .992116);
       --color-blue-500: color(display-p3 .266422 .491219 .988624);
+      --color-blue-600: color(display-p3 .174493 .358974 .950247);
       --color-indigo-400: color(display-p3 .494992 .525291 .985107);
       --color-purple-400: color(display-p3 .719919 .492497 .995173);
       --color-purple-600: color(display-p3 .546729 .130167 .94439);
@@ -231,6 +233,7 @@
       --color-teal-400: lab(76.0109% -53.3483 -2.27906);
       --color-blue-400: lab(65.0361% -1.42065 -56.9802);
       --color-blue-500: lab(54.1736% 13.3369 -74.6839);
+      --color-blue-600: lab(44.0605% 29.0279 -86.0352);
       --color-indigo-400: lab(59.866% 22.4834 -64.4485);
       --color-purple-400: lab(63.6946% 47.6127 -59.2066);
       --color-purple-600: lab(43.0295% 75.21 -86.5669);
@@ -767,6 +770,10 @@
     display: none;
   }
 
+  .inline-block {
+    display: inline-block;
+  }
+
   .h-12 {
     height: calc(var(--spacing) * 12);
   }
@@ -1077,6 +1084,11 @@
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
   }
 
+  .from-blue-600 {
+    --tw-gradient-from: var(--color-blue-600);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+
   .from-gray-900 {
     --tw-gradient-from: var(--color-gray-900);
     --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
@@ -1255,6 +1267,10 @@
 
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
+  }
+
+  .px-8 {
+    padding-inline: calc(var(--spacing) * 8);
   }
 
   .py-2 {
@@ -1703,12 +1719,6 @@
     .md\:text-base {
       font-size: var(--text-base);
       line-height: var(--tw-leading, var(--text-base--line-height));
-    }
-  }
-
-  @media (min-width: 64rem) {
-    .lg\:grid-cols-3 {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
 

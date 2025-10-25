@@ -225,14 +225,10 @@ export default function TessaCloudLanding() {
               <a href="#" className="hover:text-red-500 transition">
                 Home
               </a>
-              <a
-                href="#"
-                className="hover:text-red-500 transition"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleScrollToPopularCategories();
-                }}
-              >
+              <a href="#courses" className="hover:text-red-500 transition">
+                Courses
+              </a>
+              <a href="#internships" className="hover:text-red-500 transition">
                 Internships
               </a>
               <a href="#placements" className="hover:text-red-500 transition">
@@ -300,15 +296,16 @@ export default function TessaCloudLanding() {
                     Home
                   </a>
                   <a
-                    href="#"
+                    href="#courses"
                     className="px-4 py-2 hover:bg-gray-800 transition"
-                    onClick={(e) => {
-                      e.preventDefault();
-                      setMobileMenuOpen(false);
-                      setTimeout(() => {
-                        handleScrollToPopularCategories();
-                      }, 100);
-                    }}
+                    onClick={() => setMobileMenuOpen(false)}
+                  >
+                    Courses
+                  </a>
+                  <a
+                    href="#internships"
+                    className="px-4 py-2 hover:bg-gray-800 transition"
+                    onClick={() => setMobileMenuOpen(false)}
                   >
                     Internships
                   </a>
@@ -545,7 +542,7 @@ export default function TessaCloudLanding() {
             </div>
           </section>
           {/* Courses Section */}
-          <section className="max-w-7xl mx-auto px-6 py-12">
+          <section id="courses" className="max-w-7xl mx-auto px-6 py-12">
             <h2 className="text-3xl md:text-4xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-400 bg-clip-text text-transparent tracking-wide text-center">
               Explore Our Courses
             </h2>
@@ -659,8 +656,57 @@ export default function TessaCloudLanding() {
               })}
             </div>
           </section>
+          {/* Download Brochure Section */}
+          <section
+            id="brochure"
+            className="max-w-7xl mx-auto px-6 py-12 text-center"
+          >
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-4 bg-gradient-to-r from-green-400 via-teal-400 to-blue-400 bg-clip-text text-transparent">
+              Download Our Brochure
+            </h2>
+            <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
+              Get a detailed overview of Tessa Learn programs, internship
+              tracks, and placement support in our official brochure.
+            </p>
+            <a
+              href="/tessa-learn-brochure.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block px-8 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-teal-400 text-white font-semibold shadow-lg hover:scale-105 transition-transform"
+            >
+              📄 Download Brochure
+            </a>
+          </section>
+
+          {/* Tessa Learn Certifications Section */}
+          <section id="certifications" className="max-w-7xl mx-auto px-6 py-12">
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-400 bg-clip-text text-transparent tracking-wide text-center">
+              Tessa Learn Certifications
+            </h2>
+            <p className="text-center text-gray-400 mb-10 max-w-3xl mx-auto">
+              Every learner receives a{" "}
+              <strong>Tessa Learn Course Certificate</strong> or
+              <strong> Internship Completion Certificate</strong> verified by{" "}
+              <strong>Tessa Cloud</strong>. Each certificate carries a{" "}
+              <strong>unique verification ID</strong> that companies can
+              validate directly through Tessa Cloud’s platform — ensuring trust
+              and authenticity in every credential.
+            </p>
+            <div className="text-center">
+              <button
+                onClick={() =>
+                  window.open("https://tessacloud.com/verify", "_blank")
+                }
+                className="px-6 py-3 rounded-md bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 text-white font-semibold shadow-lg hover:scale-105 transition-transform"
+              >
+                Verify a Certificate →
+              </button>
+            </div>
+          </section>
+
           {/* Internship Cards */}
           <section
+            id="internships"
             className="max-w-7xl mx-auto px-6 py-12"
             ref={popularCategoriesRef}
           >
@@ -821,32 +867,6 @@ export default function TessaCloudLanding() {
                     </span>
                   </motion.li>
                 </ul>
-
-                {/* Tessa Certifications Section */}
-                <section className="max-w-7xl mx-auto px-6 py-12">
-                  <h2 className="text-3xl md:text-4xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-400 bg-clip-text text-transparent tracking-wide text-center">
-                    Tessa Learn Certifications
-                  </h2>
-                  <p className="text-center text-gray-400 mb-10 max-w-3xl mx-auto">
-                    Every learner receives a{" "}
-                    <strong>Tessa Learn Course Certificate</strong> or
-                    <strong> Internship Completion Certificate</strong> verified
-                    by <strong>Tessa Cloud</strong>. Each certificate carries a{" "}
-                    <strong>unique verification ID</strong> that companies can
-                    validate directly through Tessa Cloud’s platform — ensuring
-                    trust and authenticity in every credential.
-                  </p>
-                  <div className="text-center">
-                    <button
-                      onClick={() =>
-                        window.open("https://tessacloud.com/verify", "_blank")
-                      }
-                      className="px-6 py-3 rounded-md bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 text-white font-semibold shadow-lg hover:scale-105 transition-transform"
-                    >
-                      Verify a Certificate →
-                    </button>
-                  </div>
-                </section>
 
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -1187,7 +1207,7 @@ export default function TessaCloudLanding() {
           )}
 
           {/* Training & Placement */}
-          <section className="max-w-7xl mx-auto px-6 py-12">
+          <section id="placements" className="max-w-7xl mx-auto px-6 py-12">
             <h2 className="text-2xl font-semibold mb-6">
               Placement Assistance
             </h2>
