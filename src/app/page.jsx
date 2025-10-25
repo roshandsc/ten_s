@@ -235,17 +235,11 @@ export default function TessaCloudLanding() {
               >
                 Internships
               </a>
-              <a
-                href="https://tessacloud.com/careers"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-red-500 transition"
-              >
-                Careers
+              <a href="#placements" className="hover:text-red-500 transition">
+                Placements Assistance
               </a>
               <a
-                href="#"
-                onClick={() => setShowAbout(true)}
+                href="#about-tessa-learn"
                 className="hover:text-red-500 transition"
               >
                 About Us
@@ -319,13 +313,11 @@ export default function TessaCloudLanding() {
                     Internships
                   </a>
                   <a
-                    href="https://tessacloud.com/careers"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="#placements"
                     className="px-4 py-2 hover:bg-gray-800 transition"
                     onClick={() => setMobileMenuOpen(false)}
                   >
-                    Careers
+                    Placement Assistance
                   </a>
                   <a
                     href="#"
@@ -460,7 +452,6 @@ export default function TessaCloudLanding() {
             </AnimatePresence>
           </HydrationSafe>
           {/* Hero */}
-          {/* Hero */}
           <section className="max-w-7xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center gap-10">
             <HydrationSafe>
               <motion.div
@@ -513,6 +504,160 @@ export default function TessaCloudLanding() {
                 </div>
               </motion.div>
             </HydrationSafe>
+          </section>
+          {/* About Tessa Learn Section */}
+          <section
+            id="about-tessa-learn"
+            className="max-w-7xl mx-auto px-6 py-12"
+          >
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-6 bg-gradient-to-r from-red-400 via-pink-400 to-yellow-400 bg-clip-text text-transparent tracking-wide text-center">
+              About Tessa Learn
+            </h2>
+            <p className="text-center text-gray-300 max-w-3xl mx-auto leading-relaxed">
+              <strong>Tessa Learn</strong> is the learning and internship
+              platform powered by <strong>Tessa Cloud</strong>. It bridges the
+              gap between education and employability through industry-relevant
+              internships, project-based courses, and guided mentorship. We
+              focus on building technical confidence and providing real-world
+              exposure to students and young professionals.
+            </p>
+            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="bg-gradient-to-br from-gray-900 to-gray-800 p-6 rounded-xl border border-gray-700 shadow-md">
+                <h3 className="text-xl font-semibold mb-3 text-red-400">
+                  Our Mission
+                </h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  To empower learners with practical knowledge, real projects,
+                  and industry connections that prepare them for a successful
+                  tech career.
+                </p>
+              </div>
+              <div className="bg-gradient-to-br from-gray-900 to-gray-800 p-6 rounded-xl border border-gray-700 shadow-md">
+                <h3 className="text-xl font-semibold mb-3 text-red-400">
+                  Our Vision
+                </h3>
+                <p className="text-gray-400 text-sm leading-relaxed">
+                  To create a next-generation ecosystem where learning meets
+                  innovation, and every student finds a pathway from internship
+                  to placement.
+                </p>
+              </div>
+            </div>
+          </section>
+          {/* Courses Section */}
+          <section className="max-w-7xl mx-auto px-6 py-12">
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-400 bg-clip-text text-transparent tracking-wide text-center">
+              Explore Our Courses
+            </h2>
+            <p className="text-center text-gray-400 mb-10 max-w-2xl mx-auto">
+              Learn industry-ready skills at your own pace. Choose from beginner
+              to advanced level courses designed to prepare you for real-world
+              challenges.
+            </p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-fr">
+              {[
+                {
+                  title: "Python for Beginners",
+                  iconName: "FaPython",
+                  duration: "8 Hours",
+                  level: "Beginner",
+                  color: "yellow-400",
+                },
+                {
+                  title: "React JS Masterclass",
+                  iconName: "FaReact",
+                  duration: "12 Hours",
+                  level: "Intermediate",
+                  color: "blue-400",
+                },
+                {
+                  title: "Machine Learning with Python",
+                  iconName: "FaRobot",
+                  duration: "15 Hours",
+                  level: "Advanced",
+                  color: "green-400",
+                },
+                {
+                  title: "UI/UX Design Fundamentals",
+                  iconName: "FaPaintBrush",
+                  duration: "10 Hours",
+                  level: "Beginner",
+                  color: "pink-400",
+                },
+                {
+                  title: "Cloud Computing Basics",
+                  iconName: "FaCloud",
+                  duration: "9 Hours",
+                  level: "Intermediate",
+                  color: "teal-400",
+                },
+                {
+                  title: "Cybersecurity Essentials",
+                  iconName: "FaShieldAlt",
+                  duration: "11 Hours",
+                  level: "Beginner",
+                  color: "red-400",
+                },
+                {
+                  title: "Full Stack Web Development",
+                  iconName: "FaLayerGroup",
+                  duration: "20 Hours",
+                  level: "Advanced",
+                  color: "orange-400",
+                },
+                {
+                  title: "Data Analytics using Excel",
+                  iconName: "FaChartBar",
+                  duration: "7 Hours",
+                  level: "Beginner",
+                  color: "purple-400",
+                },
+              ].map((course) => {
+                const Icon = FaIcons[course.iconName];
+                return (
+                  <HydrationSafe key={course.title}>
+                    <motion.div
+                      whileHover={{ scale: 1.03 }}
+                      transition={{ type: "spring", stiffness: 300 }}
+                      className="bg-gradient-to-br from-gray-900 to-gray-800 p-5 rounded-xl border border-gray-700 shadow-md hover:shadow-xl transition-shadow min-h-[260px] flex flex-col"
+                    >
+                      <div className="flex items-center gap-3 mb-3">
+                        {Icon && (
+                          <Icon className={`text-2xl text-${course.color}`} />
+                        )}
+                        <div className="text-lg font-semibold">
+                          {course.title}
+                        </div>
+                      </div>
+                      <div className="text-sm text-gray-400 mt-2 flex flex-col gap-2 flex-grow">
+                        <div className="flex justify-between">
+                          <span>Duration:</span>
+                          <span>{course.duration}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span>Level:</span>
+                          <span>{course.level}</span>
+                        </div>
+                      </div>
+                      <div className="mt-auto">
+                        <button
+                          onClick={() =>
+                            window.open(
+                              "https://forms.gle/B8RZpdtVXn5NdUjy6",
+                              "_blank"
+                            )
+                          }
+                          className="w-full px-5 py-2.5 rounded-lg bg-gradient-to-r from-purple-700 via-pink-500 to-red-600 text-white font-semibold shadow-[0_0_6px_rgba(255,0,85,0.2)] hover:shadow-[0_0_10px_rgba(255,0,85,0.3)] transition-all duration-300 hover:scale-105"
+                        >
+                          Enroll Now →
+                        </button>
+                      </div>
+                    </motion.div>
+                  </HydrationSafe>
+                );
+              })}
+            </div>
           </section>
           {/* Internship Cards */}
           <section
@@ -656,6 +801,18 @@ export default function TessaCloudLanding() {
                     whileHover={{ scale: 1.05, color: "#ffffff" }}
                     className="flex items-center gap-3"
                   >
+                    <FaUserTie className="text-blue-400 text-xl" />
+                    <span>
+                      <strong>Placement Assistance:</strong> Backed by{" "}
+                      <strong>Tessa Cloud</strong>, we provide mentorship, mock
+                      interviews, and verified certificates that boost
+                      employability.
+                    </span>
+                  </motion.li>
+                  <motion.li
+                    whileHover={{ scale: 1.05, color: "#ffffff" }}
+                    className="flex items-center gap-3"
+                  >
                     <FaLightbulb className="text-pink-400 text-xl" />
                     <span>
                       <strong>Creative Edge:</strong> Learn with purpose. Build
@@ -664,6 +821,32 @@ export default function TessaCloudLanding() {
                     </span>
                   </motion.li>
                 </ul>
+
+                {/* Tessa Certifications Section */}
+                <section className="max-w-7xl mx-auto px-6 py-12">
+                  <h2 className="text-3xl md:text-4xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-400 bg-clip-text text-transparent tracking-wide text-center">
+                    Tessa Learn Certifications
+                  </h2>
+                  <p className="text-center text-gray-400 mb-10 max-w-3xl mx-auto">
+                    Every learner receives a{" "}
+                    <strong>Tessa Learn Course Certificate</strong> or
+                    <strong> Internship Completion Certificate</strong> verified
+                    by <strong>Tessa Cloud</strong>. Each certificate carries a{" "}
+                    <strong>unique verification ID</strong> that companies can
+                    validate directly through Tessa Cloud’s platform — ensuring
+                    trust and authenticity in every credential.
+                  </p>
+                  <div className="text-center">
+                    <button
+                      onClick={() =>
+                        window.open("https://tessacloud.com/verify", "_blank")
+                      }
+                      className="px-6 py-3 rounded-md bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 text-white font-semibold shadow-lg hover:scale-105 transition-transform"
+                    >
+                      Verify a Certificate →
+                    </button>
+                  </div>
+                </section>
 
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -1006,7 +1189,7 @@ export default function TessaCloudLanding() {
           {/* Training & Placement */}
           <section className="max-w-7xl mx-auto px-6 py-12">
             <h2 className="text-2xl font-semibold mb-6">
-              Training & Placement
+              Placement Assistance
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {trainings.map((t) => (
