@@ -226,7 +226,7 @@ export default function TessaCloudLanding() {
                 Internships
               </a>
               <a href="#placements" className="hover:text-red-500 transition">
-                Placements Assistance
+                Placement Assistance
               </a>
               <a
                 href="#about-tessa-learn"
