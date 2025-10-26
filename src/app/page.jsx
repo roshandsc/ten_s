@@ -756,7 +756,7 @@ export default function TessaCloudLanding() {
                       }
                       className="px-6 py-3 rounded-md bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 text-white font-semibold shadow-lg hover:scale-105 transition-transform"
                     >
-                      Verify a Certificate →
+                      View Sample Certificate →
                     </button>
                   </div>
                 </div>
