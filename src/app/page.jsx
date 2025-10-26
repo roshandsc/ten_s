@@ -194,7 +194,9 @@ export default function TessaCloudLanding() {
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
-      <div className="min-h-screen text-white bg-gradient-to-b from-black via-gray-900 to-gray-800 font-inter">
+      <div
+        className={`min-h-screen text-white bg-gradient-to-b from-black via-gray-900 to-gray-800 ${rubik.className}`}
+      >
         {/* Header */}
         <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm bg-black/50">
           <div className="max-w-7xl mx-auto flex items-center justify-between p-4 md:p-6">
