@@ -458,7 +458,7 @@ export default function TessaCloudLanding() {
                 className="flex-1"
               >
                 <h1 className="text-3xl md:text-5xl font-bold leading-tight">
-                  Explore Your Internship Opportunities
+                  Explore Your Courses and Internship Opportunities
                 </h1>
                 <p className="mt-4 text-gray-300 max-w-xl">
                   Choose your internship duration and find the perfect learning
@@ -507,37 +507,53 @@ export default function TessaCloudLanding() {
             id="about-tessa-learn"
             className="max-w-7xl mx-auto px-6 py-12"
           >
-            <h2 className="text-3xl md:text-4xl font-extrabold mb-6 bg-gradient-to-r from-red-400 via-pink-400 to-yellow-400 bg-clip-text text-transparent tracking-wide text-center">
+            <h2 className="text-3xl md:text-4xl font-extrabold mb-3 bg-gradient-to-r from-red-400 via-pink-400 to-yellow-400 bg-clip-text text-transparent tracking-wide text-center">
               About Tessa Learn
             </h2>
-            <p className="text-center text-gray-300 max-w-3xl mx-auto leading-relaxed">
-              <strong>Tessa Learn</strong> is the learning and internship
-              platform powered by <strong>Tessa Cloud</strong>. It bridges the
-              gap between education and employability through industry-relevant
-              internships, project-based courses, and guided mentorship. We
-              focus on building technical confidence and providing real-world
-              exposure to students and young professionals.
-            </p>
-            <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-gradient-to-br from-gray-900 to-gray-800 p-6 rounded-xl border border-gray-700 shadow-md">
-                <h3 className="text-xl font-semibold mb-3 text-red-400">
-                  Our Mission
-                </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  To empower learners with practical knowledge, real projects,
-                  and industry connections that prepare them for a successful
-                  tech career.
-                </p>
+            <div className="flex flex-col md:flex-row items-center gap-6">
+              {/* Left: Logo */}
+              <div className="flex-shrink-0 flex justify-center md:justify-start w-full md:w-1/3">
+                <img
+                  src="“About Us”.jpg"
+                  alt="Tessa Cloud Logo"
+                  className="w-full h-72 md:h-96 rounded-2xl object-cover shadow-lg"
+                />
               </div>
-              <div className="bg-gradient-to-br from-gray-900 to-gray-800 p-6 rounded-xl border border-gray-700 shadow-md">
-                <h3 className="text-xl font-semibold mb-3 text-red-400">
-                  Our Vision
-                </h3>
-                <p className="text-gray-400 text-sm leading-relaxed">
-                  To create a next-generation ecosystem where learning meets
-                  innovation, and every student finds a pathway from internship
-                  to placement.
+              {/* Right: Content */}
+              <div className="flex-1 w-full">
+                <p className="text-gray-300 max-w-3xl leading-relaxed mb-4">
+                  {" "}
+                  {/* Changed mb-6 to mb-4 to slightly reduce vertical space */}
+                  <strong>Tessa Learn</strong> is the learning and internship
+                  platform powered by <strong>Tessa Cloud</strong>. It bridges
+                  the gap between education and employability through
+                  industry-relevant internships, project-based courses, and
+                  guided mentorship. We focus on building technical confidence
+                  and providing real-world exposure to students and young
+                  professionals.
                 </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="bg-gradient-to-br from-gray-900 to-gray-800 p-6 rounded-xl border border-gray-700 shadow-md">
+                    <h3 className="text-xl font-semibold mb-3 text-red-400">
+                      Our Mission
+                    </h3>
+                    <p className="text-gray-400 text-sm leading-relaxed">
+                      To empower learners with practical knowledge, real
+                      projects, and industry connections that prepare them for a
+                      successful tech career.
+                    </p>
+                  </div>
+                  <div className="bg-gradient-to-br from-gray-900 to-gray-800 p-6 rounded-xl border border-gray-700 shadow-md">
+                    <h3 className="text-xl font-semibold mb-3 text-red-400">
+                      Our Vision
+                    </h3>
+                    <p className="text-gray-400 text-sm leading-relaxed">
+                      To create a next-generation ecosystem where learning meets
+                      innovation, and every student finds a pathway from
+                      internship to placement.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -547,46 +563,88 @@ export default function TessaCloudLanding() {
               Explore Our Courses
             </h2>
             <p className="text-center text-gray-400 mb-10 max-w-2xl mx-auto">
-              Learn industry-ready skills at your own pace. Choose from beginner
-              to advanced level courses designed to prepare you for real-world
-              challenges.
+              Learn skills that empower your career and mindset. Each course is
+              crafted to connect logic with creativity — designed to help you
+              grow both technically and personally.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 auto-rows-fr">
               {[
                 {
-                  title: "Python for Beginners",
-                  iconName: "FaPython",
-                  duration: "8 Hours",
-                  level: "Beginner",
-                  color: "yellow-400",
-                },
-                {
-                  title: "React JS Masterclass",
+                  title: "React JS & Next.js",
                   iconName: "FaReact",
-                  duration: "12 Hours",
+                  duration: "15 Hours",
                   level: "Intermediate",
                   color: "blue-400",
                 },
                 {
-                  title: "Machine Learning with Python",
+                  title: "Python Web Development",
+                  iconName: "FaPython",
+                  duration: "12 Hours",
+                  level: "Intermediate",
+                  color: "yellow-400",
+                },
+                {
+                  title: "Data Science with Python",
                   iconName: "FaRobot",
-                  duration: "15 Hours",
-                  level: "Advanced",
+                  duration: "14 Hours",
+                  level: "Intermediate",
                   color: "green-400",
                 },
                 {
-                  title: "UI/UX Design Fundamentals",
-                  iconName: "FaPaintBrush",
+                  title: "Machine Learning with Python",
+                  iconName: "FaBrain",
+                  duration: "16 Hours",
+                  level: "Intermediate",
+                  color: "pink-400",
+                },
+                {
+                  title: "Data Analytics with Python",
+                  iconName: "FaChartLine",
                   duration: "10 Hours",
                   level: "Beginner",
-                  color: "pink-400",
+                  color: "purple-400",
+                },
+                {
+                  title: "Data Analytics with Power BI, Tableau & Excel",
+                  iconName: "FaChartBar",
+                  duration: "11 Hours",
+                  level: "Beginner",
+                  color: "teal-400",
+                },
+                {
+                  title: "Full Stack Web App Development with Python",
+                  iconName: "FaLayerGroup",
+                  duration: "20 Hours",
+                  level: "Intermediate",
+                  color: "orange-400",
+                },
+                {
+                  title: "SQL for Developers",
+                  iconName: "FaDatabase",
+                  duration: "9 Hours",
+                  level: "Beginner",
+                  color: "indigo-400",
+                },
+                {
+                  title: "DevOps Essentials",
+                  iconName: "FaCloud",
+                  duration: "13 Hours",
+                  level: "Intermediate",
+                  color: "cyan-400",
+                },
+                {
+                  title: "Full Stack Web Development with Java",
+                  iconName: "FaJava",
+                  duration: "20 Hours",
+                  level: "Intermediate",
+                  color: "red-400",
                 },
                 {
                   title: "Cloud Computing Basics",
                   iconName: "FaCloud",
                   duration: "9 Hours",
-                  level: "Intermediate",
+                  level: "Beginner",
                   color: "teal-400",
                 },
                 {
@@ -595,20 +653,6 @@ export default function TessaCloudLanding() {
                   duration: "11 Hours",
                   level: "Beginner",
                   color: "red-400",
-                },
-                {
-                  title: "Full Stack Web Development",
-                  iconName: "FaLayerGroup",
-                  duration: "20 Hours",
-                  level: "Advanced",
-                  color: "orange-400",
-                },
-                {
-                  title: "Data Analytics using Excel",
-                  iconName: "FaChartBar",
-                  duration: "7 Hours",
-                  level: "Beginner",
-                  color: "purple-400",
                 },
               ].map((course) => {
                 const Icon = FaIcons[course.iconName];
@@ -657,50 +701,67 @@ export default function TessaCloudLanding() {
             </div>
           </section>
           {/* Download Brochure Section */}
-          <section
-            id="brochure"
-            className="max-w-7xl mx-auto px-6 py-12 text-center"
-          >
-            <h2 className="text-3xl md:text-4xl font-extrabold mb-4 bg-gradient-to-r from-green-400 via-teal-400 to-blue-400 bg-clip-text text-transparent">
-              Download Our Brochure
-            </h2>
-            <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
-              Get a detailed overview of Tessa Learn programs, internship
-              tracks, and placement support in our official brochure.
-            </p>
-            <a
-              href="/tessa-learn-brochure.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-8 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-teal-400 text-white font-semibold shadow-lg hover:scale-105 transition-transform"
-            >
-              📄 Download Brochure
-            </a>
+          <section id="brochure" className="max-w-7xl mx-auto px-6 py-12">
+            <div className="mx-auto max-w-4xl">
+              <div className="bg-gradient-to-r from-green-400 via-teal-400 to-blue-400 p-[2px] rounded-xl shadow-lg">
+                <div className="flex flex-col md:flex-row items-center justify-between bg-gray-900 p-8 rounded-xl shadow-inner">
+                  <div className="flex-1 text-left">
+                    <h2 className="text-3xl md:text-4xl font-extrabold mb-2 bg-gradient-to-r from-green-400 via-teal-400 to-blue-400 bg-clip-text text-transparent">
+                      Download Our Brochure
+                    </h2>
+                    <p className="text-gray-400 mb-0 max-w-xl">
+                      Get a detailed overview of Tessa Learn programs,
+                      internship tracks, and placement support in our official
+                      brochure.
+                    </p>
+                  </div>
+                  <div className="mt-6 md:mt-0 md:ml-8">
+                    <a
+                      href="/tessa-learn-brochure.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block px-8 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-teal-400 text-white font-semibold shadow-lg hover:scale-105 transition-transform"
+                    >
+                      📄 Download Brochure
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </section>
 
           {/* Tessa Learn Certifications Section */}
           <section id="certifications" className="max-w-7xl mx-auto px-6 py-12">
-            <h2 className="text-3xl md:text-4xl font-extrabold mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-400 bg-clip-text text-transparent tracking-wide text-center">
-              Tessa Learn Certifications
-            </h2>
-            <p className="text-center text-gray-400 mb-10 max-w-3xl mx-auto">
-              Every learner receives a{" "}
-              <strong>Tessa Learn Course Certificate</strong> or
-              <strong> Internship Completion Certificate</strong> verified by{" "}
-              <strong>Tessa Cloud</strong>. Each certificate carries a{" "}
-              <strong>unique verification ID</strong> that companies can
-              validate directly through Tessa Cloud’s platform — ensuring trust
-              and authenticity in every credential.
-            </p>
-            <div className="text-center">
-              <button
-                onClick={() =>
-                  window.open("https://tessacloud.com/verify", "_blank")
-                }
-                className="px-6 py-3 rounded-md bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 text-white font-semibold shadow-lg hover:scale-105 transition-transform"
-              >
-                Verify a Certificate →
-              </button>
+            <div className="mx-auto max-w-4xl">
+              <div className="bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-400 p-[2px] rounded-xl shadow-lg">
+                <div className="flex flex-col md:flex-row items-center justify-between bg-gray-900 p-8 rounded-xl shadow-inner">
+                  <div className="flex-1 text-left">
+                    <h2 className="text-3xl md:text-4xl font-extrabold mb-2 bg-gradient-to-r from-purple-400 via-pink-400 to-yellow-400 bg-clip-text text-transparent">
+                      Tessa Learn Certifications
+                    </h2>
+                    <p className="text-gray-400 mb-0 max-w-xl">
+                      Every learner receives a{" "}
+                      <strong>Tessa Learn Course Certificate</strong> or
+                      <strong> Internship Completion Certificate</strong>{" "}
+                      verified by <strong>Tessa Cloud</strong>. Each certificate
+                      carries a <strong>unique verification ID</strong> that
+                      companies can validate directly through Tessa Cloud’s
+                      platform — ensuring trust and authenticity in every
+                      credential.
+                    </p>
+                  </div>
+                  <div className="mt-6 md:mt-0 md:ml-8">
+                    <button
+                      onClick={() =>
+                        window.open("https://tessacloud.com/verify", "_blank")
+                      }
+                      className="px-6 py-3 rounded-md bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 text-white font-semibold shadow-lg hover:scale-105 transition-transform"
+                    >
+                      Verify a Certificate →
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
 
@@ -1278,25 +1339,21 @@ export default function TessaCloudLanding() {
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold mb-3">Jobs</h3>
+              <h3 className="font-semibold mb-3">Courses</h3>
               <ul className="text-sm text-gray-400 space-y-2">
-                <li>Entry Level</li>
-                <li>Intern to Hire</li>
+                <li>React</li>
+                <li>Python</li>
+                <li>AI/ML</li>
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold mb-3">Careers</h3>
+              <h3 className="font-semibold mb-3">Placement Assistance</h3>
               <ul className="text-sm text-gray-400 space-y-2">
-                <li>
-                  <a
-                    href="https://tessacloud.com/careers"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-red-500 transition"
-                  >
-                    Explore Careers
-                  </a>
-                </li>
+                <li>Mentorship</li>
+                <li>Resume Building</li>
+                <li>Mock Interviews</li>
+                <li>LinkedIn Optimization</li>
+                <li>Career Guidance</li>
               </ul>
             </div>
             <div className="text-right lg:text-right sm:text-left">
