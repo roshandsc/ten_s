@@ -48,13 +48,6 @@ export default function TessaCloudLanding() {
 
   const internships = [
     {
-      title: "DSA using C++",
-      iconName: "FaCode",
-      duration: "6 Months",
-      mode: "Online",
-      color: "blue-400",
-    },
-    {
       title: "Web Development",
       iconName: "FaGlobe",
       duration: "4-12 weeks",
@@ -65,14 +58,14 @@ export default function TessaCloudLanding() {
       title: "Mobile App Development",
       iconName: "FaMobileAlt",
       duration: "4-12 weeks",
-      mode: "Hybrid",
+      mode: "Online",
       color: "purple-400",
     },
     {
       title: "Machine Learning / AI",
       iconName: "FaRobot",
       duration: "6-24 weeks",
-      mode: "Hybrid",
+      mode: "Online",
       color: "yellow-400",
     },
     {
@@ -83,7 +76,7 @@ export default function TessaCloudLanding() {
       color: "red-400",
     },
     {
-      title: "Cybersecurity Basics",
+      title: "Cybersecurity",
       iconName: "FaShieldAlt",
       duration: "4-12 weeks",
       mode: "Online",
@@ -93,7 +86,7 @@ export default function TessaCloudLanding() {
       title: "Desktop App Development",
       iconName: "FaDesktop",
       duration: "4-12 weeks",
-      mode: "Hybrid",
+      mode: "Online",
       color: "indigo-400",
     },
     {
@@ -104,31 +97,31 @@ export default function TessaCloudLanding() {
       color: "green-500",
     },
     {
-      title: "DevOps / Cloud Basics",
+      title: "DevOps / Cloud",
       iconName: "FaCloud",
       duration: "4-12 weeks",
-      mode: "Hybrid",
+      mode: "Online",
       color: "teal-400",
     },
     {
       title: "Open Source Contribution",
       iconName: "FaGithub",
       duration: "4-12 weeks",
-      mode: "Remote",
+      mode: "Online",
       color: "gray-400",
     },
     {
-      title: "Game Development (Beginner)",
+      title: "Game Development",
       iconName: "FaGamepad",
       duration: "4-12 weeks",
-      mode: "Hybrid",
+      mode: "Online",
       color: "pink-400",
     },
     {
-      title: "Full Stack Development (6 Months)",
+      title: "Full Stack Development",
       iconName: "FaLayerGroup",
       duration: "6 Months",
-      mode: "Hybrid",
+      mode: "Online",
       color: "orange-400",
     },
   ];
@@ -163,22 +156,21 @@ export default function TessaCloudLanding() {
   }, []);
   // Define rows explicitly
   const firstRow = [
-    "DSA using C++",
     "Web Development",
-    "Cybersecurity Basics",
+    "Cybersecurity",
     "Machine Learning / AI",
+    "Data Science & Analytics",
   ];
   const secondRow = [
-    "Data Science & Analytics",
     "Mobile App Development",
     "Desktop App Development",
-    "Full Stack Development (6 Months)",
+    "Full Stack Development",
+    "Software Testing & QA",
   ];
   const remaining = [
-    "Software Testing & QA",
-    "DevOps / Cloud Basics",
+    "DevOps / Cloud",
     "Open Source Contribution",
-    "Game Development (Beginner)",
+    "Game Development",
   ];
 
   // Map titles to internship objects
@@ -571,84 +563,84 @@ export default function TessaCloudLanding() {
                 {
                   title: "React JS & Next.js",
                   iconName: "FaReact",
-                  duration: "15 Hours",
+                  duration: "4 Weeks",
                   level: "Intermediate",
                   color: "blue-400",
                 },
                 {
                   title: "Python Web Development",
                   iconName: "FaPython",
-                  duration: "12 Hours",
+                  duration: "4 Weeks",
                   level: "Intermediate",
                   color: "yellow-400",
                 },
                 {
                   title: "Data Science with Python",
                   iconName: "FaRobot",
-                  duration: "14 Hours",
+                  duration: "4 Weeks",
                   level: "Intermediate",
                   color: "green-400",
                 },
                 {
                   title: "Machine Learning with Python",
                   iconName: "FaBrain",
-                  duration: "16 Hours",
+                  duration: "4-6 Weeks",
                   level: "Intermediate",
                   color: "pink-400",
                 },
                 {
                   title: "Data Analytics with Python",
                   iconName: "FaChartLine",
-                  duration: "10 Hours",
+                  duration: "4 Weeks",
                   level: "Beginner",
                   color: "purple-400",
                 },
                 {
                   title: "Data Analytics with Power BI, Tableau & Excel",
                   iconName: "FaChartBar",
-                  duration: "11 Hours",
+                  duration: "4 Weeks",
                   level: "Beginner",
                   color: "teal-400",
                 },
                 {
                   title: "Full Stack Web App Development with Python",
                   iconName: "FaLayerGroup",
-                  duration: "20 Hours",
+                  duration: "8-12 Weeks",
                   level: "Intermediate",
                   color: "orange-400",
                 },
                 {
                   title: "SQL for Developers",
                   iconName: "FaDatabase",
-                  duration: "9 Hours",
+                  duration: "4 Weeks",
                   level: "Beginner",
                   color: "indigo-400",
                 },
                 {
                   title: "DevOps Essentials",
                   iconName: "FaCloud",
-                  duration: "13 Hours",
+                  duration: "4 Weeks",
                   level: "Intermediate",
                   color: "cyan-400",
                 },
                 {
                   title: "Full Stack Web Development with Java",
                   iconName: "FaJava",
-                  duration: "20 Hours",
+                  duration: "8-12 Weeks",
                   level: "Intermediate",
                   color: "red-400",
                 },
                 {
                   title: "Cloud Computing Basics",
                   iconName: "FaCloud",
-                  duration: "9 Hours",
+                  duration: "4 Weeks",
                   level: "Beginner",
                   color: "teal-400",
                 },
                 {
                   title: "Cybersecurity Essentials",
                   iconName: "FaShieldAlt",
-                  duration: "11 Hours",
+                  duration: "4 Weeks",
                   level: "Beginner",
                   color: "red-400",
                 },
@@ -985,79 +977,6 @@ export default function TessaCloudLanding() {
                     {selectedInternship.title}
                   </h3>
                   {/* Render detailed content based on selected internship */}
-                  {selectedInternship.title === "DSA using C++" && (
-                    <div className="text-gray-300 space-y-4 text-sm">
-                      <p>
-                        <strong>Duration:</strong> 6 Months |{" "}
-                        <strong>Mode:</strong> Online
-                      </p>
-                      <p>
-                        <strong>C++ Refresher & Basic Data Structures:</strong>
-                      </p>
-                      <ul className="list-disc list-inside ml-4">
-                        <li>
-                          Reviewed C++ basics, variables, data types, control
-                          structures
-                        </li>
-                        <li>
-                          Implemented arrays, strings, structures, pointers
-                        </li>
-                        <li>Solved searching and sorting problems</li>
-                      </ul>
-                      <p>
-                        <strong>Linked Lists, Stacks, and Queues:</strong>
-                      </p>
-                      <ul className="list-disc list-inside ml-4">
-                        <li>
-                          Implemented singly, doubly, circular linked lists
-                        </li>
-                        <li>
-                          Built stacks and queues using array and linked lists
-                        </li>
-                        <li>Introduced STL containers: stack, queue, list</li>
-                      </ul>
-                      <p>
-                        <strong>Trees and Recursion:</strong>
-                      </p>
-                      <ul className="list-disc list-inside ml-4">
-                        <li>Implemented binary trees and BSTs</li>
-                        <li>
-                          Practiced traversals: inorder, preorder, postorder
-                        </li>
-                        <li>
-                          Worked on recursive problems and LCA, height, diameter
-                          calculations
-                        </li>
-                      </ul>
-                      <p>
-                        <strong>Graphs & Final Project:</strong>
-                      </p>
-                      <ul className="list-disc list-inside ml-4">
-                        <li>
-                          Graph implementation using adjacency list/matrix
-                        </li>
-                        <li>
-                          Traversal: BFS, DFS; Algorithms: Dijkstra, Topological
-                          Sorting, Cycle Detection
-                        </li>
-                        <li>Final project: Mini DSA console project</li>
-                      </ul>
-                      <p>
-                        <strong>Skills Gained:</strong>
-                      </p>
-                      <ul className="list-disc list-inside ml-4">
-                        <li>Core DSA concepts in C++</li>
-                        <li>
-                          Problem-solving using recursion, pointers, and dynamic
-                          memory
-                        </li>
-                        <li>
-                          Code debugging, optimization, and real-world DSA
-                          challenges
-                        </li>
-                      </ul>
-                    </div>
-                  )}
                   {selectedInternship.title === "Web Development" && (
                     <div className="text-gray-300 space-y-4 text-sm">
                       <p>
@@ -1082,7 +1001,7 @@ export default function TessaCloudLanding() {
                     <div className="text-gray-300 space-y-4 text-sm">
                       <p>
                         <strong>Duration:</strong> 4-12 weeks |{" "}
-                        <strong>Mode:</strong> Hybrid
+                        <strong>Mode:</strong> Online
                       </p>
                       <p>
                         <strong>Platforms:</strong> Android (Java/Kotlin), iOS
@@ -1098,7 +1017,7 @@ export default function TessaCloudLanding() {
                     <div className="text-gray-300 space-y-4 text-sm">
                       <p>
                         <strong>Duration:</strong> 6-24 weeks |{" "}
-                        <strong>Mode:</strong> Hybrid
+                        <strong>Mode:</strong> Online
                       </p>
                       <p>
                         <strong>Tools:</strong> Python, Scikit-learn,
@@ -1126,7 +1045,7 @@ export default function TessaCloudLanding() {
                       </p>
                     </div>
                   )}
-                  {selectedInternship.title === "Cybersecurity Basics" && (
+                  {selectedInternship.title === "Cybersecurity" && (
                     <div className="text-gray-300 space-y-4 text-sm">
                       <p>
                         <strong>Duration:</strong> 4-12 weeks |{" "}
@@ -1146,7 +1065,7 @@ export default function TessaCloudLanding() {
                     <div className="text-gray-300 space-y-4 text-sm">
                       <p>
                         <strong>Duration:</strong> 4-12 weeks |{" "}
-                        <strong>Mode:</strong> Hybrid
+                        <strong>Mode:</strong> Online
                       </p>
                       <p>
                         <strong>Tech:</strong> Java (Swing/JavaFX), Python
@@ -1174,11 +1093,11 @@ export default function TessaCloudLanding() {
                       </p>
                     </div>
                   )}
-                  {selectedInternship.title === "DevOps / Cloud Basics" && (
+                  {selectedInternship.title === "DevOps / Cloud" && (
                     <div className="text-gray-300 space-y-4 text-sm">
                       <p>
                         <strong>Duration:</strong> 4-12 weeks |{" "}
-                        <strong>Mode:</strong> Hybrid
+                        <strong>Mode:</strong> Online
                       </p>
                       <p>
                         <strong>Tools:</strong> Git, Docker, CI/CD, AWS, Azure,
@@ -1194,7 +1113,7 @@ export default function TessaCloudLanding() {
                     <div className="text-gray-300 space-y-4 text-sm">
                       <p>
                         <strong>Duration:</strong> 4-12 weeks |{" "}
-                        <strong>Mode:</strong> Remote
+                        <strong>Mode:</strong> Online
                       </p>
                       <p>
                         <strong>Platforms:</strong> GitHub, GitLab
@@ -1209,12 +1128,11 @@ export default function TessaCloudLanding() {
                       </p>
                     </div>
                   )}
-                  {selectedInternship.title ===
-                    "Game Development (Beginner)" && (
+                  {selectedInternship.title === "Game Development" && (
                     <div className="text-gray-300 space-y-4 text-sm">
                       <p>
                         <strong>Duration:</strong> 4-12 weeks |{" "}
-                        <strong>Mode:</strong> Hybrid
+                        <strong>Mode:</strong> Online
                       </p>
                       <p>
                         <strong>Tools:</strong> Unity (C#), Godot, Pygame
@@ -1225,12 +1143,11 @@ export default function TessaCloudLanding() {
                       </p>
                     </div>
                   )}
-                  {selectedInternship.title ===
-                    "Full Stack Development (6 Months)" && (
+                  {selectedInternship.title === "Full Stack Development" && (
                     <div className="text-gray-300 space-y-4 text-sm">
                       <p>
                         <strong>Duration:</strong> 6 Months |{" "}
-                        <strong>Mode:</strong> Hybrid
+                        <strong>Mode:</strong> Online
                       </p>
                       <p>
                         <strong>Frontend:</strong> HTML, CSS, JavaScript, React,
