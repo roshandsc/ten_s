@@ -468,10 +468,16 @@ export default function TessaCloudLanding() {
                       View Internships
                     </button>
                     <button
-                      onClick={() => setShowContact(true)}
+                      onClick={() => {
+                        const coursesSection =
+                          document.getElementById("courses");
+                        if (coursesSection) {
+                          coursesSection.scrollIntoView({ behavior: "smooth" });
+                        }
+                      }}
                       className="px-6 py-3 rounded-md text-white bg-transparent border border-red-600 hover:bg-red-600/10 shadow-lg w-full sm:w-auto"
                     >
-                      Contact Us
+                      View Courses
                     </button>
                   </motion.div>
                 </HydrationSafe>
@@ -669,6 +675,10 @@ export default function TessaCloudLanding() {
                         <div className="flex justify-between">
                           <span>Level:</span>
                           <span>{course.level}</span>
+                        </div>
+                        <div className="flex justify-between">
+                          <span>Mode:</span>
+                          <span>Online</span>
                         </div>
                       </div>
                       <div className="mt-auto">
