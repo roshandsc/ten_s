@@ -511,7 +511,7 @@ export default function TessaCloudLanding() {
               {/* Left: Logo */}
               <div className="flex-shrink-0 flex justify-center md:justify-start w-full md:w-1/3">
                 <img
-                  src="“About Us”.jpg"
+                  src="AboutUs.jpg"
                   alt="Tessa Cloud Logo"
                   className="w-full h-72 md:h-96 rounded-2xl object-cover shadow-lg"
                 />
@@ -715,9 +715,8 @@ export default function TessaCloudLanding() {
                   </div>
                   <div className="mt-6 md:mt-0 md:ml-8">
                     <a
-                      href="/tessa-learn-brochure.pdf"
-                      target="_blank"
-                      rel="noopener noreferrer"
+                      href="/tessa_learn_opportunities.pdf"
+                      download
                       className="inline-block px-8 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-teal-400 text-white font-semibold shadow-lg hover:scale-105 transition-transform"
                     >
                       📄 Download Brochure
