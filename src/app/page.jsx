@@ -505,12 +505,9 @@ export default function TessaCloudLanding() {
           {/* About Tessa Learn Section */}
           <section
             id="about-tessa-learn"
-            className="max-w-7xl mx-auto px-6 py-12"
+            className="max-w-7xl mx-auto px-6 py-16"
           >
-            <h2 className="text-3xl md:text-4xl font-extrabold mb-3 bg-gradient-to-r from-red-400 via-pink-400 to-yellow-400 bg-clip-text text-transparent tracking-wide text-center">
-              About Tessa Learn
-            </h2>
-            <div className="flex flex-col md:flex-row items-center gap-6">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-10">
               {/* Left: Logo */}
               <div className="flex-shrink-0 flex justify-center md:justify-start w-full md:w-1/3">
                 <img
@@ -520,10 +517,11 @@ export default function TessaCloudLanding() {
                 />
               </div>
               {/* Right: Content */}
-              <div className="flex-1 w-full">
-                <p className="text-gray-300 max-w-3xl leading-relaxed mb-4">
-                  {" "}
-                  {/* Changed mb-6 to mb-4 to slightly reduce vertical space */}
+              <div className="flex-1 w-full flex flex-col justify-center items-start md:items-start">
+                <h2 className="text-3xl md:text-4xl font-extrabold mb-6 bg-gradient-to-r from-red-400 via-pink-400 to-yellow-400 bg-clip-text text-transparent tracking-wide text-left">
+                  About Tessa Learn
+                </h2>
+                <p className="text-gray-300 max-w-3xl leading-snug mb-10">
                   <strong>Tessa Learn</strong> is the learning and internship
                   platform powered by <strong>Tessa Cloud</strong>. It bridges
                   the gap between education and employability through
@@ -1335,15 +1333,21 @@ export default function TessaCloudLanding() {
               <ul className="text-sm text-gray-400 space-y-2">
                 <li>Web Dev</li>
                 <li>AI/ML</li>
+                <li>Data Science</li>
+                <li>Cybersecurity</li>
+                <li>SQL</li>
                 <li>Cloud</li>
               </ul>
             </div>
             <div>
               <h3 className="font-semibold mb-3">Courses</h3>
               <ul className="text-sm text-gray-400 space-y-2">
-                <li>React</li>
-                <li>Python</li>
+                <li>Mobile App Development</li>
+                <li>Full Stack Development</li>
                 <li>AI/ML</li>
+                <li>Desktop App Development</li>
+                <li>Cybersecurity</li>
+                <li>Software Testing & QA</li>
               </ul>
             </div>
             <div>
@@ -1354,6 +1358,7 @@ export default function TessaCloudLanding() {
                 <li>Mock Interviews</li>
                 <li>LinkedIn Optimization</li>
                 <li>Career Guidance</li>
+                <li>Soft Skills Training</li>
               </ul>
             </div>
             <div className="text-right lg:text-right sm:text-left">
