@@ -511,7 +511,7 @@ export default function TessaCloudLanding() {
               {/* Left: Logo */}
               <div className="flex-shrink-0 flex justify-center md:justify-start w-full md:w-1/3">
                 <img
-                  src="AboutUs.jpg"
+                  src="about_us.png"
                   alt="Tessa Cloud Logo"
                   className="w-full h-72 md:h-96 rounded-2xl object-cover shadow-lg"
                 />
