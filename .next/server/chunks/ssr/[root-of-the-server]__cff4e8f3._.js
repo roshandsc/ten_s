@@ -295,7 +295,7 @@ function TessaCloudLanding() {
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: "min-h-screen text-white bg-gradient-to-b from-black via-gray-900 to-gray-800 font-inter",
+                className: `min-h-screen text-white bg-gradient-to-b from-black via-gray-900 to-gray-800 ${__TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$rubik_c458fae6$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].className}`,
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("header", {
                         className: "fixed top-0 left-0 right-0 z-50 backdrop-blur-sm bg-black/50",
@@ -313,7 +313,7 @@ function TessaCloudLanding() {
                                                 className: "w-12 h-12 md:w-14 md:h-14 object-contain"
                                             }, void 0, false, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 203,
+                                                lineNumber: 205,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -321,18 +321,18 @@ function TessaCloudLanding() {
                                                 children: "Tessa Learn"
                                             }, void 0, false, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 208,
+                                                lineNumber: 210,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                        lineNumber: 202,
+                                        lineNumber: 204,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                    lineNumber: 201,
+                                    lineNumber: 203,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("nav", {
@@ -344,7 +344,7 @@ function TessaCloudLanding() {
                                             children: "Home"
                                         }, void 0, false, {
                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                            lineNumber: 217,
+                                            lineNumber: 219,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -353,7 +353,7 @@ function TessaCloudLanding() {
                                             children: "Courses"
                                         }, void 0, false, {
                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                            lineNumber: 220,
+                                            lineNumber: 222,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -362,16 +362,16 @@ function TessaCloudLanding() {
                                             children: "Internships"
                                         }, void 0, false, {
                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                            lineNumber: 223,
+                                            lineNumber: 225,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
                                             href: "#placements",
                                             className: "hover:text-red-500 transition",
-                                            children: "Placements Assistance"
+                                            children: "Placement Assistance"
                                         }, void 0, false, {
                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                            lineNumber: 226,
+                                            lineNumber: 228,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -380,7 +380,7 @@ function TessaCloudLanding() {
                                             children: "About Us"
                                         }, void 0, false, {
                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                            lineNumber: 229,
+                                            lineNumber: 231,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -390,13 +390,13 @@ function TessaCloudLanding() {
                                             children: "Contact Us"
                                         }, void 0, false, {
                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                            lineNumber: 235,
+                                            lineNumber: 237,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                    lineNumber: 216,
+                                    lineNumber: 218,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -409,12 +409,12 @@ function TessaCloudLanding() {
                                             className: "hover:text-blue-500 transition",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FaFacebookF"], {}, void 0, false, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 251,
+                                                lineNumber: 253,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                            lineNumber: 245,
+                                            lineNumber: 247,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -424,12 +424,12 @@ function TessaCloudLanding() {
                                             className: "hover:text-pink-500 transition",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FaInstagram"], {}, void 0, false, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 259,
+                                                lineNumber: 261,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                            lineNumber: 253,
+                                            lineNumber: 255,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -439,18 +439,18 @@ function TessaCloudLanding() {
                                             className: "hover:text-blue-400 transition",
                                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FaLinkedinIn"], {}, void 0, false, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 267,
+                                                lineNumber: 269,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                            lineNumber: 261,
+                                            lineNumber: 263,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                    lineNumber: 244,
+                                    lineNumber: 246,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -463,7 +463,7 @@ function TessaCloudLanding() {
                                             children: mobileMenuOpen ? "✕" : "☰"
                                         }, void 0, false, {
                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                            lineNumber: 273,
+                                            lineNumber: 275,
                                             columnNumber: 15
                                         }, this),
                                         mobileMenuOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -476,7 +476,7 @@ function TessaCloudLanding() {
                                                     children: "Home"
                                                 }, void 0, false, {
                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                    lineNumber: 283,
+                                                    lineNumber: 285,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -486,7 +486,7 @@ function TessaCloudLanding() {
                                                     children: "Courses"
                                                 }, void 0, false, {
                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                    lineNumber: 290,
+                                                    lineNumber: 292,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -496,7 +496,7 @@ function TessaCloudLanding() {
                                                     children: "Internships"
                                                 }, void 0, false, {
                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                    lineNumber: 297,
+                                                    lineNumber: 299,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -506,7 +506,7 @@ function TessaCloudLanding() {
                                                     children: "Placement Assistance"
                                                 }, void 0, false, {
                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                    lineNumber: 304,
+                                                    lineNumber: 306,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -519,7 +519,7 @@ function TessaCloudLanding() {
                                                     children: "About Us"
                                                 }, void 0, false, {
                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                    lineNumber: 311,
+                                                    lineNumber: 313,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -532,30 +532,30 @@ function TessaCloudLanding() {
                                                     children: "Contact Us"
                                                 }, void 0, false, {
                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                    lineNumber: 321,
+                                                    lineNumber: 323,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                            lineNumber: 282,
+                                            lineNumber: 284,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                    lineNumber: 272,
+                                    lineNumber: 274,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                            lineNumber: 200,
+                            lineNumber: 202,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                        lineNumber: 199,
+                        lineNumber: 201,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -608,7 +608,7 @@ function TessaCloudLanding() {
                                                     children: "✕"
                                                 }, void 0, false, {
                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                    lineNumber: 358,
+                                                    lineNumber: 360,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -616,7 +616,7 @@ function TessaCloudLanding() {
                                                     children: "About Tessa Cloud"
                                                 }, void 0, false, {
                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                    lineNumber: 364,
+                                                    lineNumber: 366,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -624,7 +624,7 @@ function TessaCloudLanding() {
                                                     children: "Tessa Cloud builds intelligent enterprise-grade software applications leveraging AI to solve complex business challenges efficiently. Our solutions automate workflows, enhance productivity, and empower innovation. With a focus on cutting-edge technology, Tessa Cloud delivers scalable and secure solutions tailored to enterprise needs."
                                                 }, void 0, false, {
                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                    lineNumber: 367,
+                                                    lineNumber: 369,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -632,28 +632,28 @@ function TessaCloudLanding() {
                                                     children: "“Innovate. Automate. Elevate.”"
                                                 }, void 0, false, {
                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                    lineNumber: 375,
+                                                    lineNumber: 377,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                            lineNumber: 350,
+                                            lineNumber: 352,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                        lineNumber: 342,
+                                        lineNumber: 344,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                    lineNumber: 340,
+                                    lineNumber: 342,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                lineNumber: 339,
+                                lineNumber: 341,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(HydrationSafe, {
@@ -703,7 +703,7 @@ function TessaCloudLanding() {
                                                     children: "✕"
                                                 }, void 0, false, {
                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                    lineNumber: 403,
+                                                    lineNumber: 405,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -711,7 +711,7 @@ function TessaCloudLanding() {
                                                     children: "Contact Tessa Cloud"
                                                 }, void 0, false, {
                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                    lineNumber: 409,
+                                                    lineNumber: 411,
                                                     columnNumber: 21
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -721,7 +721,7 @@ function TessaCloudLanding() {
                                                             children: "We’d love to hear from you! Reach out to us via email or phone."
                                                         }, void 0, false, {
                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                            lineNumber: 413,
+                                                            lineNumber: 415,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -730,7 +730,7 @@ function TessaCloudLanding() {
                                                                     children: "Email:"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                    lineNumber: 418,
+                                                                    lineNumber: 420,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 " ",
@@ -742,13 +742,13 @@ function TessaCloudLanding() {
                                                                     children: "info@tessacloud.com"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                    lineNumber: 419,
+                                                                    lineNumber: 421,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                            lineNumber: 417,
+                                                            lineNumber: 419,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -757,7 +757,7 @@ function TessaCloudLanding() {
                                                                     children: "Phone:"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                    lineNumber: 429,
+                                                                    lineNumber: 431,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 " ",
@@ -767,40 +767,40 @@ function TessaCloudLanding() {
                                                                     children: "+91 12345 67890"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                    lineNumber: 430,
+                                                                    lineNumber: 432,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                            lineNumber: 428,
+                                                            lineNumber: 430,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                    lineNumber: 412,
+                                                    lineNumber: 414,
                                                     columnNumber: 21
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                            lineNumber: 395,
+                                            lineNumber: 397,
                                             columnNumber: 19
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                        lineNumber: 387,
+                                        lineNumber: 389,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                    lineNumber: 385,
+                                    lineNumber: 387,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                lineNumber: 384,
+                                lineNumber: 386,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -826,7 +826,7 @@ function TessaCloudLanding() {
                                                     children: "Explore Your Courses and Internship Opportunities"
                                                 }, void 0, false, {
                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                    lineNumber: 452,
+                                                    lineNumber: 454,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -834,7 +834,7 @@ function TessaCloudLanding() {
                                                     children: "Choose your internship duration and find the perfect learning path!"
                                                 }, void 0, false, {
                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                    lineNumber: 455,
+                                                    lineNumber: 457,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(HydrationSafe, {
@@ -850,7 +850,7 @@ function TessaCloudLanding() {
                                                                 children: "View Internships"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 464,
+                                                                lineNumber: 466,
                                                                 columnNumber: 21
                                                             }, this),
                                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -866,29 +866,29 @@ function TessaCloudLanding() {
                                                                 children: "View Courses"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 470,
+                                                                lineNumber: 472,
                                                                 columnNumber: 21
                                                             }, this)
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 460,
+                                                        lineNumber: 462,
                                                         columnNumber: 19
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                    lineNumber: 459,
+                                                    lineNumber: 461,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                            lineNumber: 446,
+                                            lineNumber: 448,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                        lineNumber: 445,
+                                        lineNumber: 447,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(HydrationSafe, {
@@ -913,28 +913,28 @@ function TessaCloudLanding() {
                                                     className: "w-full h-full object-cover rounded-2xl"
                                                 }, void 0, false, {
                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                    lineNumber: 494,
+                                                    lineNumber: 496,
                                                     columnNumber: 19
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 493,
+                                                lineNumber: 495,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                            lineNumber: 487,
+                                            lineNumber: 489,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                        lineNumber: 486,
+                                        lineNumber: 488,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                lineNumber: 444,
+                                lineNumber: 446,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -951,12 +951,12 @@ function TessaCloudLanding() {
                                                 className: "w-full h-72 md:h-96 rounded-2xl object-cover shadow-lg"
                                             }, void 0, false, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 511,
+                                                lineNumber: 513,
                                                 columnNumber: 17
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                            lineNumber: 510,
+                                            lineNumber: 512,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -967,7 +967,7 @@ function TessaCloudLanding() {
                                                     children: "About Tessa Learn"
                                                 }, void 0, false, {
                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                    lineNumber: 519,
+                                                    lineNumber: 521,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -977,7 +977,7 @@ function TessaCloudLanding() {
                                                             children: "Tessa Learn"
                                                         }, void 0, false, {
                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                            lineNumber: 523,
+                                                            lineNumber: 525,
                                                             columnNumber: 19
                                                         }, this),
                                                         " is the learning and internship platform powered by ",
@@ -985,14 +985,14 @@ function TessaCloudLanding() {
                                                             children: "Tessa Cloud"
                                                         }, void 0, false, {
                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                            lineNumber: 524,
+                                                            lineNumber: 526,
                                                             columnNumber: 39
                                                         }, this),
                                                         ". It bridges the gap between education and employability through industry-relevant internships, project-based courses, and guided mentorship. We focus on building technical confidence and providing real-world exposure to students and young professionals."
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                    lineNumber: 522,
+                                                    lineNumber: 524,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1006,7 +1006,7 @@ function TessaCloudLanding() {
                                                                     children: "Our Mission"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                    lineNumber: 533,
+                                                                    lineNumber: 535,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1014,13 +1014,13 @@ function TessaCloudLanding() {
                                                                     children: "To empower learners with practical knowledge, real projects, and industry connections that prepare them for a successful tech career."
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                    lineNumber: 536,
+                                                                    lineNumber: 538,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                            lineNumber: 532,
+                                                            lineNumber: 534,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1031,7 +1031,7 @@ function TessaCloudLanding() {
                                                                     children: "Our Vision"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                    lineNumber: 543,
+                                                                    lineNumber: 545,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1039,36 +1039,36 @@ function TessaCloudLanding() {
                                                                     children: "To create a next-generation ecosystem where learning meets innovation, and every student finds a pathway from internship to placement."
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                    lineNumber: 546,
+                                                                    lineNumber: 548,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                            lineNumber: 542,
+                                                            lineNumber: 544,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                    lineNumber: 531,
+                                                    lineNumber: 533,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                            lineNumber: 518,
+                                            lineNumber: 520,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                    lineNumber: 508,
+                                    lineNumber: 510,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                lineNumber: 504,
+                                lineNumber: 506,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1080,7 +1080,7 @@ function TessaCloudLanding() {
                                         children: "Explore Our Courses"
                                     }, void 0, false, {
                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                        lineNumber: 558,
+                                        lineNumber: 560,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1088,7 +1088,7 @@ function TessaCloudLanding() {
                                         children: "Learn skills that empower your career and mindset. Each course is crafted to connect logic with creativity — designed to help you grow both technically and personally."
                                     }, void 0, false, {
                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                        lineNumber: 561,
+                                        lineNumber: 563,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1198,7 +1198,7 @@ function TessaCloudLanding() {
                                                                     className: `text-2xl text-${course.color}`
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                    lineNumber: 664,
+                                                                    lineNumber: 666,
                                                                     columnNumber: 27
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1206,13 +1206,13 @@ function TessaCloudLanding() {
                                                                     children: course.title
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                    lineNumber: 666,
+                                                                    lineNumber: 668,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                            lineNumber: 662,
+                                                            lineNumber: 664,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1225,20 +1225,20 @@ function TessaCloudLanding() {
                                                                             children: "Duration:"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                            lineNumber: 672,
+                                                                            lineNumber: 674,
                                                                             columnNumber: 27
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                             children: course.duration
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                            lineNumber: 673,
+                                                                            lineNumber: 675,
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                    lineNumber: 671,
+                                                                    lineNumber: 673,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1248,20 +1248,20 @@ function TessaCloudLanding() {
                                                                             children: "Level:"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                            lineNumber: 676,
+                                                                            lineNumber: 678,
                                                                             columnNumber: 27
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                             children: course.level
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                            lineNumber: 677,
+                                                                            lineNumber: 679,
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                    lineNumber: 675,
+                                                                    lineNumber: 677,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1271,26 +1271,26 @@ function TessaCloudLanding() {
                                                                             children: "Mode:"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                            lineNumber: 680,
+                                                                            lineNumber: 682,
                                                                             columnNumber: 27
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                             children: "Online"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                            lineNumber: 681,
+                                                                            lineNumber: 683,
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                    lineNumber: 679,
+                                                                    lineNumber: 681,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                            lineNumber: 670,
+                                                            lineNumber: 672,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1301,35 +1301,35 @@ function TessaCloudLanding() {
                                                                 children: "Enroll Now →"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 685,
+                                                                lineNumber: 687,
                                                                 columnNumber: 25
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                            lineNumber: 684,
+                                                            lineNumber: 686,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                    lineNumber: 657,
+                                                    lineNumber: 659,
                                                     columnNumber: 21
                                                 }, this)
                                             }, course.title, false, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 656,
+                                                lineNumber: 658,
                                                 columnNumber: 19
                                             }, this);
                                         })
                                     }, void 0, false, {
                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                        lineNumber: 567,
+                                        lineNumber: 569,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                lineNumber: 557,
+                                lineNumber: 559,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1350,7 +1350,7 @@ function TessaCloudLanding() {
                                                             children: "Download Our Brochure"
                                                         }, void 0, false, {
                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                            lineNumber: 709,
+                                                            lineNumber: 711,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1358,13 +1358,13 @@ function TessaCloudLanding() {
                                                             children: "Get a detailed overview of Tessa Learn programs, internship tracks, and placement support in our official brochure."
                                                         }, void 0, false, {
                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                            lineNumber: 712,
+                                                            lineNumber: 714,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                    lineNumber: 708,
+                                                    lineNumber: 710,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1376,33 +1376,33 @@ function TessaCloudLanding() {
                                                         children: "📄 Download Brochure"
                                                     }, void 0, false, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 719,
+                                                        lineNumber: 721,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                    lineNumber: 718,
+                                                    lineNumber: 720,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                            lineNumber: 707,
+                                            lineNumber: 709,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                        lineNumber: 706,
+                                        lineNumber: 708,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                    lineNumber: 705,
+                                    lineNumber: 707,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                lineNumber: 704,
+                                lineNumber: 706,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1423,7 +1423,7 @@ function TessaCloudLanding() {
                                                             children: "Tessa Learn Certifications"
                                                         }, void 0, false, {
                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                            lineNumber: 738,
+                                                            lineNumber: 740,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1435,7 +1435,7 @@ function TessaCloudLanding() {
                                                                     children: "Tessa Learn Course Certificate"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                    lineNumber: 743,
+                                                                    lineNumber: 745,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 " or",
@@ -1443,7 +1443,7 @@ function TessaCloudLanding() {
                                                                     children: " Internship Completion Certificate"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                    lineNumber: 744,
+                                                                    lineNumber: 746,
                                                                     columnNumber: 23
                                                                 }, this),
                                                                 " ",
@@ -1452,7 +1452,7 @@ function TessaCloudLanding() {
                                                                     children: "Tessa Cloud"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                    lineNumber: 745,
+                                                                    lineNumber: 747,
                                                                     columnNumber: 35
                                                                 }, this),
                                                                 ". Each certificate carries a ",
@@ -1460,57 +1460,59 @@ function TessaCloudLanding() {
                                                                     children: "unique verification ID"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                    lineNumber: 746,
+                                                                    lineNumber: 748,
                                                                     columnNumber: 33
                                                                 }, this),
                                                                 " that companies can validate directly through Tessa Cloud’s platform — ensuring trust and authenticity in every credential."
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                            lineNumber: 741,
+                                                            lineNumber: 743,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                    lineNumber: 737,
+                                                    lineNumber: 739,
                                                     columnNumber: 19
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                                     className: "mt-6 md:mt-0 md:ml-8",
-                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                                        onClick: ()=>window.open("https://tessacloud.com/verify", "_blank"),
+                                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
+                                                        href: "/Sample_Certificate_Tessa_Learn.pdf",
+                                                        target: "_blank",
+                                                        rel: "noopener noreferrer",
                                                         className: "px-6 py-3 rounded-md bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 text-white font-semibold shadow-lg hover:scale-105 transition-transform",
-                                                        children: "Verify a Certificate →"
+                                                        children: "View Sample Certificate →"
                                                     }, void 0, false, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 753,
+                                                        lineNumber: 755,
                                                         columnNumber: 21
                                                     }, this)
                                                 }, void 0, false, {
                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                    lineNumber: 752,
+                                                    lineNumber: 754,
                                                     columnNumber: 19
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                            lineNumber: 736,
+                                            lineNumber: 738,
                                             columnNumber: 17
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                        lineNumber: 735,
+                                        lineNumber: 737,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                    lineNumber: 734,
+                                    lineNumber: 736,
                                     columnNumber: 13
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                lineNumber: 733,
+                                lineNumber: 735,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -1523,7 +1525,7 @@ function TessaCloudLanding() {
                                         children: "Unlock Your Future | Explore Opportunities That Shape You"
                                     }, void 0, false, {
                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                        lineNumber: 773,
+                                        lineNumber: 775,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -1531,7 +1533,7 @@ function TessaCloudLanding() {
                                         children: "Every great career begins with a single step. Discover internships designed to fuel your curiosity, challenge your creativity, and launch your professional journey."
                                     }, void 0, false, {
                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                        lineNumber: 776,
+                                        lineNumber: 778,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1556,7 +1558,7 @@ function TessaCloudLanding() {
                                                                     className: `text-2xl ${it.title === "Mobile App Development" ? "text-purple-400" : it.color === "blue-400" ? "text-blue-400" : it.color === "green-400" ? "text-green-400" : it.color === "yellow-400" ? "text-yellow-400" : it.color === "red-400" ? "text-red-400" : it.color === "blue-500" ? "text-blue-500" : it.color === "indigo-400" ? "text-indigo-400" : it.color === "green-500" ? "text-green-500" : it.color === "teal-400" ? "text-teal-400" : it.color === "gray-400" ? "text-gray-400" : it.color === "pink-400" ? "text-pink-400" : it.color === "orange-400" ? "text-orange-400" : "text-white"}`
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                    lineNumber: 793,
+                                                                    lineNumber: 795,
                                                                     columnNumber: 27
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1564,13 +1566,13 @@ function TessaCloudLanding() {
                                                                     children: it.title
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                    lineNumber: 823,
+                                                                    lineNumber: 825,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                            lineNumber: 791,
+                                                            lineNumber: 793,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1583,20 +1585,20 @@ function TessaCloudLanding() {
                                                                             children: "Duration:"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                            lineNumber: 827,
+                                                                            lineNumber: 829,
                                                                             columnNumber: 27
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                             children: it.duration
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                            lineNumber: 828,
+                                                                            lineNumber: 830,
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                    lineNumber: 826,
+                                                                    lineNumber: 828,
                                                                     columnNumber: 25
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1606,26 +1608,26 @@ function TessaCloudLanding() {
                                                                             children: "Mode:"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                            lineNumber: 831,
+                                                                            lineNumber: 833,
                                                                             columnNumber: 27
                                                                         }, this),
                                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                                             children: it.mode
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                            lineNumber: 832,
+                                                                            lineNumber: 834,
                                                                             columnNumber: 27
                                                                         }, this)
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                    lineNumber: 830,
+                                                                    lineNumber: 832,
                                                                     columnNumber: 25
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                            lineNumber: 825,
+                                                            lineNumber: 827,
                                                             columnNumber: 23
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1638,34 +1640,34 @@ function TessaCloudLanding() {
                                                                     children: "View Details →"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                    lineNumber: 840,
+                                                                    lineNumber: 842,
                                                                     columnNumber: 27
                                                                 }, this)
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 836,
+                                                                lineNumber: 838,
                                                                 columnNumber: 25
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                            lineNumber: 835,
+                                                            lineNumber: 837,
                                                             columnNumber: 23
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                    lineNumber: 786,
+                                                    lineNumber: 788,
                                                     columnNumber: 21
                                                 }, this)
                                             }, it.title, false, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 785,
+                                                lineNumber: 787,
                                                 columnNumber: 19
                                             }, this);
                                         })
                                     }, void 0, false, {
                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                        lineNumber: 781,
+                                        lineNumber: 783,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -1676,12 +1678,12 @@ function TessaCloudLanding() {
                                             children: showAll ? "View Less ▲" : "View More ▼"
                                         }, void 0, false, {
                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                            lineNumber: 849,
+                                            lineNumber: 851,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                        lineNumber: 848,
+                                        lineNumber: 850,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1720,13 +1722,13 @@ function TessaCloudLanding() {
                                                             children: "Tessa Learn?"
                                                         }, void 0, false, {
                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                            lineNumber: 869,
+                                                            lineNumber: 871,
                                                             columnNumber: 32
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                    lineNumber: 863,
+                                                    lineNumber: 865,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -1743,7 +1745,7 @@ function TessaCloudLanding() {
                                                                     className: "text-yellow-400 text-xl"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                    lineNumber: 877,
+                                                                    lineNumber: 879,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1752,20 +1754,20 @@ function TessaCloudLanding() {
                                                                             children: "Hands-on Learning:"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                            lineNumber: 879,
+                                                                            lineNumber: 881,
                                                                             columnNumber: 23
                                                                         }, this),
                                                                         " Work on real projects from Day 1 and build an impressive portfolio employers love."
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                    lineNumber: 878,
+                                                                    lineNumber: 880,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                            lineNumber: 873,
+                                                            lineNumber: 875,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].li, {
@@ -1779,7 +1781,7 @@ function TessaCloudLanding() {
                                                                     className: "text-green-400 text-xl"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                    lineNumber: 888,
+                                                                    lineNumber: 890,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1788,20 +1790,20 @@ function TessaCloudLanding() {
                                                                             children: "Integrated Projects:"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                            lineNumber: 890,
+                                                                            lineNumber: 892,
                                                                             columnNumber: 23
                                                                         }, this),
                                                                         " Collaborate with mentors and peers on live products — the ultimate skill booster."
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                    lineNumber: 889,
+                                                                    lineNumber: 891,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                            lineNumber: 884,
+                                                            lineNumber: 886,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].li, {
@@ -1815,7 +1817,7 @@ function TessaCloudLanding() {
                                                                     className: "text-blue-400 text-xl"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                    lineNumber: 899,
+                                                                    lineNumber: 901,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1824,20 +1826,20 @@ function TessaCloudLanding() {
                                                                             children: "Career Growth:"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                            lineNumber: 901,
+                                                                            lineNumber: 903,
                                                                             columnNumber: 23
                                                                         }, this),
                                                                         " From internship to placement — Tessa Learn bridges the gap between learning and earning."
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                    lineNumber: 900,
+                                                                    lineNumber: 902,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                            lineNumber: 895,
+                                                            lineNumber: 897,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].li, {
@@ -1851,7 +1853,7 @@ function TessaCloudLanding() {
                                                                     className: "text-blue-400 text-xl"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                    lineNumber: 910,
+                                                                    lineNumber: 912,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1860,7 +1862,7 @@ function TessaCloudLanding() {
                                                                             children: "Placement Assistance:"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                            lineNumber: 912,
+                                                                            lineNumber: 914,
                                                                             columnNumber: 23
                                                                         }, this),
                                                                         " Backed by",
@@ -1869,20 +1871,20 @@ function TessaCloudLanding() {
                                                                             children: "Tessa Cloud"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                            lineNumber: 913,
+                                                                            lineNumber: 915,
                                                                             columnNumber: 23
                                                                         }, this),
                                                                         ", we provide mentorship, mock interviews, and verified certificates that boost employability."
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                    lineNumber: 911,
+                                                                    lineNumber: 913,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                            lineNumber: 906,
+                                                            lineNumber: 908,
                                                             columnNumber: 19
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].li, {
@@ -1896,7 +1898,7 @@ function TessaCloudLanding() {
                                                                     className: "text-pink-400 text-xl"
                                                                 }, void 0, false, {
                                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                    lineNumber: 922,
+                                                                    lineNumber: 924,
                                                                     columnNumber: 21
                                                                 }, this),
                                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -1905,26 +1907,26 @@ function TessaCloudLanding() {
                                                                             children: "Creative Edge:"
                                                                         }, void 0, false, {
                                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                            lineNumber: 924,
+                                                                            lineNumber: 926,
                                                                             columnNumber: 23
                                                                         }, this),
                                                                         " Learn with purpose. Build with passion. Leave your digital footprint with innovation."
                                                                     ]
                                                                 }, void 0, true, {
                                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                    lineNumber: 923,
+                                                                    lineNumber: 925,
                                                                     columnNumber: 21
                                                                 }, this)
                                                             ]
                                                         }, void 0, true, {
                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                            lineNumber: 918,
+                                                            lineNumber: 920,
                                                             columnNumber: 19
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                    lineNumber: 872,
+                                                    lineNumber: 874,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1942,7 +1944,7 @@ function TessaCloudLanding() {
                                                     children: "“Your journey to brilliance starts here — innovate, grow, and make a mark with Tessa Learn.”"
                                                 }, void 0, false, {
                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                    lineNumber: 931,
+                                                    lineNumber: 933,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1960,7 +1962,7 @@ function TessaCloudLanding() {
                                                     className: "absolute -top-20 -right-20 w-64 h-64 bg-gradient-to-r from-red-400 to-yellow-300 opacity-20 rounded-full blur-3xl"
                                                 }, void 0, false, {
                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                    lineNumber: 941,
+                                                    lineNumber: 943,
                                                     columnNumber: 17
                                                 }, this),
                                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].div, {
@@ -1978,24 +1980,24 @@ function TessaCloudLanding() {
                                                     className: "absolute bottom-0 left-0 w-52 h-52 bg-gradient-to-r from-pink-500 to-blue-400 opacity-20 rounded-full blur-3xl"
                                                 }, void 0, false, {
                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                    lineNumber: 950,
+                                                    lineNumber: 952,
                                                     columnNumber: 17
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                            lineNumber: 862,
+                                            lineNumber: 864,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                        lineNumber: 856,
+                                        lineNumber: 858,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                lineNumber: 768,
+                                lineNumber: 770,
                                 columnNumber: 11
                             }, this),
                             selectedInternship && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(HydrationSafe, {
@@ -2036,7 +2038,7 @@ function TessaCloudLanding() {
                                                 children: "✕"
                                             }, void 0, false, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 980,
+                                                lineNumber: 982,
                                                 columnNumber: 19
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -2044,7 +2046,7 @@ function TessaCloudLanding() {
                                                 children: selectedInternship.title
                                             }, void 0, false, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 986,
+                                                lineNumber: 988,
                                                 columnNumber: 19
                                             }, this),
                                             selectedInternship.title === "Web Development" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2056,7 +2058,7 @@ function TessaCloudLanding() {
                                                                 children: "Duration:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 993,
+                                                                lineNumber: 995,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " 4-12 weeks |",
@@ -2065,14 +2067,14 @@ function TessaCloudLanding() {
                                                                 children: "Mode:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 994,
+                                                                lineNumber: 996,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " Online"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 992,
+                                                        lineNumber: 994,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2081,14 +2083,14 @@ function TessaCloudLanding() {
                                                                 children: "Frontend:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 997,
+                                                                lineNumber: 999,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " HTML, CSS, JavaScript, React, Vue"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 996,
+                                                        lineNumber: 998,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2097,14 +2099,14 @@ function TessaCloudLanding() {
                                                                 children: "Backend:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1001,
+                                                                lineNumber: 1003,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " Node.js, Express, Django, Flask"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1000,
+                                                        lineNumber: 1002,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2113,20 +2115,20 @@ function TessaCloudLanding() {
                                                                 children: "Project Ideas:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1005,
+                                                                lineNumber: 1007,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " Build a portfolio website, to-do app, or blog CMS"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1004,
+                                                        lineNumber: 1006,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 991,
+                                                lineNumber: 993,
                                                 columnNumber: 21
                                             }, this),
                                             selectedInternship.title === "Mobile App Development" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2138,7 +2140,7 @@ function TessaCloudLanding() {
                                                                 children: "Duration:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1013,
+                                                                lineNumber: 1015,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " 4-12 weeks |",
@@ -2147,14 +2149,14 @@ function TessaCloudLanding() {
                                                                 children: "Mode:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1014,
+                                                                lineNumber: 1016,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " Online"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1012,
+                                                        lineNumber: 1014,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2163,14 +2165,14 @@ function TessaCloudLanding() {
                                                                 children: "Platforms:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1017,
+                                                                lineNumber: 1019,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " Android (Java/Kotlin), iOS (Swift), Flutter (Dart)"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1016,
+                                                        lineNumber: 1018,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2179,20 +2181,20 @@ function TessaCloudLanding() {
                                                                 children: "Project Ideas:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1021,
+                                                                lineNumber: 1023,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " Weather app, Expense tracker, Notes app"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1020,
+                                                        lineNumber: 1022,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 1011,
+                                                lineNumber: 1013,
                                                 columnNumber: 21
                                             }, this),
                                             selectedInternship.title === "Machine Learning / AI" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2204,7 +2206,7 @@ function TessaCloudLanding() {
                                                                 children: "Duration:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1029,
+                                                                lineNumber: 1031,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " 6-24 weeks |",
@@ -2213,14 +2215,14 @@ function TessaCloudLanding() {
                                                                 children: "Mode:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1030,
+                                                                lineNumber: 1032,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " Online"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1028,
+                                                        lineNumber: 1030,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2229,14 +2231,14 @@ function TessaCloudLanding() {
                                                                 children: "Tools:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1033,
+                                                                lineNumber: 1035,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " Python, Scikit-learn, TensorFlow, OpenCV"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1032,
+                                                        lineNumber: 1034,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2245,20 +2247,20 @@ function TessaCloudLanding() {
                                                                 children: "Project Ideas:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1037,
+                                                                lineNumber: 1039,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " Image classifier, Chatbot, Sentiment analysis"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1036,
+                                                        lineNumber: 1038,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 1027,
+                                                lineNumber: 1029,
                                                 columnNumber: 21
                                             }, this),
                                             selectedInternship.title === "Data Science & Analytics" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2270,7 +2272,7 @@ function TessaCloudLanding() {
                                                                 children: "Duration:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1045,
+                                                                lineNumber: 1047,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " 4-12 weeks |",
@@ -2279,14 +2281,14 @@ function TessaCloudLanding() {
                                                                 children: "Mode:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1046,
+                                                                lineNumber: 1048,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " Online"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1044,
+                                                        lineNumber: 1046,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2295,14 +2297,14 @@ function TessaCloudLanding() {
                                                                 children: "Tools:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1049,
+                                                                lineNumber: 1051,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " Python, Pandas, Excel, Power BI, SQL"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1048,
+                                                        lineNumber: 1050,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2311,20 +2313,20 @@ function TessaCloudLanding() {
                                                                 children: "Project Ideas:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1053,
+                                                                lineNumber: 1055,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " Analyze a dataset, Sales dashboard, Data visualization reports"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1052,
+                                                        lineNumber: 1054,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 1043,
+                                                lineNumber: 1045,
                                                 columnNumber: 21
                                             }, this),
                                             selectedInternship.title === "Cybersecurity" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2336,7 +2338,7 @@ function TessaCloudLanding() {
                                                                 children: "Duration:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1061,
+                                                                lineNumber: 1063,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " 4-12 weeks |",
@@ -2345,14 +2347,14 @@ function TessaCloudLanding() {
                                                                 children: "Mode:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1062,
+                                                                lineNumber: 1064,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " Online"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1060,
+                                                        lineNumber: 1062,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2361,14 +2363,14 @@ function TessaCloudLanding() {
                                                                 children: "Topics:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1065,
+                                                                lineNumber: 1067,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " Network security, OWASP Top 10, Ethical Hacking (Kali Linux), Web vulnerabilities"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1064,
+                                                        lineNumber: 1066,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2377,20 +2379,20 @@ function TessaCloudLanding() {
                                                                 children: "Project Ideas:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1069,
+                                                                lineNumber: 1071,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " Basic penetration testing on a test website, password strength checker"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1068,
+                                                        lineNumber: 1070,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 1059,
+                                                lineNumber: 1061,
                                                 columnNumber: 21
                                             }, this),
                                             selectedInternship.title === "Desktop App Development" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2402,7 +2404,7 @@ function TessaCloudLanding() {
                                                                 children: "Duration:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1077,
+                                                                lineNumber: 1079,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " 4-12 weeks |",
@@ -2411,14 +2413,14 @@ function TessaCloudLanding() {
                                                                 children: "Mode:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1078,
+                                                                lineNumber: 1080,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " Online"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1076,
+                                                        lineNumber: 1078,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2427,14 +2429,14 @@ function TessaCloudLanding() {
                                                                 children: "Tech:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1081,
+                                                                lineNumber: 1083,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " Java (Swing/JavaFX), Python (Tkinter/PyQt), Electron.js"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1080,
+                                                        lineNumber: 1082,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2443,20 +2445,20 @@ function TessaCloudLanding() {
                                                                 children: "Project Ideas:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1085,
+                                                                lineNumber: 1087,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " Calculator, Notepad, File Organizer"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1084,
+                                                        lineNumber: 1086,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 1075,
+                                                lineNumber: 1077,
                                                 columnNumber: 21
                                             }, this),
                                             selectedInternship.title === "Software Testing & QA" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2468,7 +2470,7 @@ function TessaCloudLanding() {
                                                                 children: "Duration:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1093,
+                                                                lineNumber: 1095,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " 4-12 weeks |",
@@ -2477,14 +2479,14 @@ function TessaCloudLanding() {
                                                                 children: "Mode:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1094,
+                                                                lineNumber: 1096,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " Online"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1092,
+                                                        lineNumber: 1094,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2493,14 +2495,14 @@ function TessaCloudLanding() {
                                                                 children: "Types:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1097,
+                                                                lineNumber: 1099,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " Manual Testing, Automation (Selenium, Postman)"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1096,
+                                                        lineNumber: 1098,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2509,20 +2511,20 @@ function TessaCloudLanding() {
                                                                 children: "Project Ideas:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1101,
+                                                                lineNumber: 1103,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " Create test cases for a small app, automate login flow testing"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1100,
+                                                        lineNumber: 1102,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 1091,
+                                                lineNumber: 1093,
                                                 columnNumber: 21
                                             }, this),
                                             selectedInternship.title === "DevOps / Cloud" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2534,7 +2536,7 @@ function TessaCloudLanding() {
                                                                 children: "Duration:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1109,
+                                                                lineNumber: 1111,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " 4-12 weeks |",
@@ -2543,14 +2545,14 @@ function TessaCloudLanding() {
                                                                 children: "Mode:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1110,
+                                                                lineNumber: 1112,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " Online"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1108,
+                                                        lineNumber: 1110,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2559,14 +2561,14 @@ function TessaCloudLanding() {
                                                                 children: "Tools:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1113,
+                                                                lineNumber: 1115,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " Git, Docker, CI/CD, AWS, Azure, Google Cloud"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1112,
+                                                        lineNumber: 1114,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2575,20 +2577,20 @@ function TessaCloudLanding() {
                                                                 children: "Project Ideas:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1117,
+                                                                lineNumber: 1119,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " Dockerize a small app, set up CI with GitHub Actions"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1116,
+                                                        lineNumber: 1118,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 1107,
+                                                lineNumber: 1109,
                                                 columnNumber: 21
                                             }, this),
                                             selectedInternship.title === "Open Source Contribution" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2600,7 +2602,7 @@ function TessaCloudLanding() {
                                                                 children: "Duration:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1125,
+                                                                lineNumber: 1127,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " 4-12 weeks |",
@@ -2609,14 +2611,14 @@ function TessaCloudLanding() {
                                                                 children: "Mode:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1126,
+                                                                lineNumber: 1128,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " Online"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1124,
+                                                        lineNumber: 1126,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2625,14 +2627,14 @@ function TessaCloudLanding() {
                                                                 children: "Platforms:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1129,
+                                                                lineNumber: 1131,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " GitHub, GitLab"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1128,
+                                                        lineNumber: 1130,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2641,14 +2643,14 @@ function TessaCloudLanding() {
                                                                 children: "Skills:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1132,
+                                                                lineNumber: 1134,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " Git, issue tracking, pull requests"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1131,
+                                                        lineNumber: 1133,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2657,20 +2659,20 @@ function TessaCloudLanding() {
                                                                 children: "Project Idea:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1136,
+                                                                lineNumber: 1138,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " Contribute documentation or code to beginner-friendly repositories"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1135,
+                                                        lineNumber: 1137,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 1123,
+                                                lineNumber: 1125,
                                                 columnNumber: 21
                                             }, this),
                                             selectedInternship.title === "Game Development" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2682,7 +2684,7 @@ function TessaCloudLanding() {
                                                                 children: "Duration:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1144,
+                                                                lineNumber: 1146,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " 4-12 weeks |",
@@ -2691,14 +2693,14 @@ function TessaCloudLanding() {
                                                                 children: "Mode:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1145,
+                                                                lineNumber: 1147,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " Online"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1143,
+                                                        lineNumber: 1145,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2707,14 +2709,14 @@ function TessaCloudLanding() {
                                                                 children: "Tools:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1148,
+                                                                lineNumber: 1150,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " Unity (C#), Godot, Pygame"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1147,
+                                                        lineNumber: 1149,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2723,20 +2725,20 @@ function TessaCloudLanding() {
                                                                 children: "Project Ideas:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1151,
+                                                                lineNumber: 1153,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " Simple 2D games like Pong, Breakout, or Platformer"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1150,
+                                                        lineNumber: 1152,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 1142,
+                                                lineNumber: 1144,
                                                 columnNumber: 21
                                             }, this),
                                             selectedInternship.title === "Full Stack Development" && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2748,7 +2750,7 @@ function TessaCloudLanding() {
                                                                 children: "Duration:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1159,
+                                                                lineNumber: 1161,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " 6 Months |",
@@ -2757,14 +2759,14 @@ function TessaCloudLanding() {
                                                                 children: "Mode:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1160,
+                                                                lineNumber: 1162,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " Online"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1158,
+                                                        lineNumber: 1160,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2773,14 +2775,14 @@ function TessaCloudLanding() {
                                                                 children: "Frontend:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1163,
+                                                                lineNumber: 1165,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " HTML, CSS, JavaScript, React, Vue"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1162,
+                                                        lineNumber: 1164,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2789,14 +2791,14 @@ function TessaCloudLanding() {
                                                                 children: "Backend:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1167,
+                                                                lineNumber: 1169,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " Node.js, Express, Django, Flask"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1166,
+                                                        lineNumber: 1168,
                                                         columnNumber: 23
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2805,20 +2807,20 @@ function TessaCloudLanding() {
                                                                 children: "Project Ideas:"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                                lineNumber: 1171,
+                                                                lineNumber: 1173,
                                                                 columnNumber: 25
                                                             }, this),
                                                             " Build a full-stack project (Portfolio, Blog, To-do app)"
                                                         ]
                                                     }, void 0, true, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1170,
+                                                        lineNumber: 1172,
                                                         columnNumber: 23
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 1157,
+                                                lineNumber: 1159,
                                                 columnNumber: 21
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2829,28 +2831,28 @@ function TessaCloudLanding() {
                                                     children: "Enroll Now"
                                                 }, void 0, false, {
                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                    lineNumber: 1177,
+                                                    lineNumber: 1179,
                                                     columnNumber: 21
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 1176,
+                                                lineNumber: 1178,
                                                 columnNumber: 19
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                        lineNumber: 973,
+                                        lineNumber: 975,
                                         columnNumber: 17
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                    lineNumber: 965,
+                                    lineNumber: 967,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                lineNumber: 964,
+                                lineNumber: 966,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -2862,7 +2864,7 @@ function TessaCloudLanding() {
                                         children: "Placement Assistance"
                                     }, void 0, false, {
                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                        lineNumber: 1196,
+                                        lineNumber: 1198,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2879,7 +2881,7 @@ function TessaCloudLanding() {
                                                             children: t.icon
                                                         }, void 0, false, {
                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                            lineNumber: 1206,
+                                                            lineNumber: 1208,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2887,7 +2889,7 @@ function TessaCloudLanding() {
                                                             children: t.title
                                                         }, void 0, false, {
                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                            lineNumber: 1209,
+                                                            lineNumber: 1211,
                                                             columnNumber: 21
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2895,35 +2897,35 @@ function TessaCloudLanding() {
                                                             children: "Practical sessions and expert mentors to boost your career."
                                                         }, void 0, false, {
                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                            lineNumber: 1210,
+                                                            lineNumber: 1212,
                                                             columnNumber: 21
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                    lineNumber: 1202,
+                                                    lineNumber: 1204,
                                                     columnNumber: 19
                                                 }, this)
                                             }, t.title, false, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 1201,
+                                                lineNumber: 1203,
                                                 columnNumber: 17
                                             }, this))
                                     }, void 0, false, {
                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                        lineNumber: 1199,
+                                        lineNumber: 1201,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                lineNumber: 1195,
+                                lineNumber: 1197,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                        lineNumber: 337,
+                        lineNumber: 339,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -2934,7 +2936,7 @@ function TessaCloudLanding() {
                                 children: "Get in Touch"
                             }, void 0, false, {
                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                lineNumber: 1223,
+                                lineNumber: 1225,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2942,7 +2944,7 @@ function TessaCloudLanding() {
                                 children: "Have ideas? Let’s talk and build something great together."
                             }, void 0, false, {
                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                lineNumber: 1224,
+                                lineNumber: 1226,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2955,7 +2957,7 @@ function TessaCloudLanding() {
                                                 children: "Address"
                                             }, void 0, false, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 1229,
+                                                lineNumber: 1231,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2963,7 +2965,7 @@ function TessaCloudLanding() {
                                                 children: "#979/5, Narayana Swamy Compound, 5th Cross, Sampige Road, K R Puram, Hassan, Karnataka, India - 573201"
                                             }, void 0, false, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 1232,
+                                                lineNumber: 1234,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -2971,7 +2973,7 @@ function TessaCloudLanding() {
                                                 children: "Email"
                                             }, void 0, false, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 1237,
+                                                lineNumber: 1239,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -2982,35 +2984,35 @@ function TessaCloudLanding() {
                                                     children: "info@tessacloud.com"
                                                 }, void 0, false, {
                                                     fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                    lineNumber: 1241,
+                                                    lineNumber: 1243,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 1240,
+                                                lineNumber: 1242,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                        lineNumber: 1228,
+                                        lineNumber: 1230,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(ZohoContactFormEmbed, {}, void 0, false, {
                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                        lineNumber: 1250,
+                                        lineNumber: 1252,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                lineNumber: 1227,
+                                lineNumber: 1229,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                        lineNumber: 1222,
+                        lineNumber: 1224,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
@@ -3026,7 +3028,7 @@ function TessaCloudLanding() {
                                                 children: "Internships"
                                             }, void 0, false, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 1258,
+                                                lineNumber: 1260,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -3036,54 +3038,54 @@ function TessaCloudLanding() {
                                                         children: "Web Dev"
                                                     }, void 0, false, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1260,
+                                                        lineNumber: 1262,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                         children: "AI/ML"
                                                     }, void 0, false, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1261,
+                                                        lineNumber: 1263,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                         children: "Data Science"
                                                     }, void 0, false, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1262,
+                                                        lineNumber: 1264,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                         children: "Cybersecurity"
                                                     }, void 0, false, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1263,
+                                                        lineNumber: 1265,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                         children: "SQL"
                                                     }, void 0, false, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1264,
+                                                        lineNumber: 1266,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                         children: "Cloud"
                                                     }, void 0, false, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1265,
+                                                        lineNumber: 1267,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 1259,
+                                                lineNumber: 1261,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                        lineNumber: 1257,
+                                        lineNumber: 1259,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3093,7 +3095,7 @@ function TessaCloudLanding() {
                                                 children: "Courses"
                                             }, void 0, false, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 1269,
+                                                lineNumber: 1271,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -3103,54 +3105,54 @@ function TessaCloudLanding() {
                                                         children: "Mobile App Development"
                                                     }, void 0, false, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1271,
+                                                        lineNumber: 1273,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                         children: "Full Stack Development"
                                                     }, void 0, false, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1272,
+                                                        lineNumber: 1274,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                         children: "AI/ML"
                                                     }, void 0, false, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1273,
+                                                        lineNumber: 1275,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                         children: "Desktop App Development"
                                                     }, void 0, false, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1274,
+                                                        lineNumber: 1276,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                         children: "Cybersecurity"
                                                     }, void 0, false, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1275,
+                                                        lineNumber: 1277,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                         children: "Software Testing & QA"
                                                     }, void 0, false, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1276,
+                                                        lineNumber: 1278,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 1270,
+                                                lineNumber: 1272,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                        lineNumber: 1268,
+                                        lineNumber: 1270,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3160,7 +3162,7 @@ function TessaCloudLanding() {
                                                 children: "Placement Assistance"
                                             }, void 0, false, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 1280,
+                                                lineNumber: 1282,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
@@ -3170,54 +3172,54 @@ function TessaCloudLanding() {
                                                         children: "Mentorship"
                                                     }, void 0, false, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1282,
+                                                        lineNumber: 1284,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                         children: "Resume Building"
                                                     }, void 0, false, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1283,
+                                                        lineNumber: 1285,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                         children: "Mock Interviews"
                                                     }, void 0, false, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1284,
+                                                        lineNumber: 1286,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                         children: "LinkedIn Optimization"
                                                     }, void 0, false, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1285,
+                                                        lineNumber: 1287,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                         children: "Career Guidance"
                                                     }, void 0, false, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1286,
+                                                        lineNumber: 1288,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
                                                         children: "Soft Skills Training"
                                                     }, void 0, false, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1287,
+                                                        lineNumber: 1289,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 1281,
+                                                lineNumber: 1283,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                        lineNumber: 1279,
+                                        lineNumber: 1281,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3228,7 +3230,7 @@ function TessaCloudLanding() {
                                                 children: "About & Contact"
                                             }, void 0, false, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 1291,
+                                                lineNumber: 1293,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3236,7 +3238,7 @@ function TessaCloudLanding() {
                                                 children: "info@tessacloud.com"
                                             }, void 0, false, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 1292,
+                                                lineNumber: 1294,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3249,12 +3251,12 @@ function TessaCloudLanding() {
                                                         className: "hover:text-blue-500 transition",
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FaFacebookF"], {}, void 0, false, {
                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                            lineNumber: 1300,
+                                                            lineNumber: 1302,
                                                             columnNumber: 19
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1294,
+                                                        lineNumber: 1296,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -3264,12 +3266,12 @@ function TessaCloudLanding() {
                                                         className: "hover:text-pink-500 transition",
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FaInstagram"], {}, void 0, false, {
                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                            lineNumber: 1308,
+                                                            lineNumber: 1310,
                                                             columnNumber: 19
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1302,
+                                                        lineNumber: 1304,
                                                         columnNumber: 17
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -3279,30 +3281,30 @@ function TessaCloudLanding() {
                                                         className: "hover:text-blue-400 transition",
                                                         children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$react$2d$icons$2f$fa$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["FaLinkedinIn"], {}, void 0, false, {
                                                             fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                            lineNumber: 1316,
+                                                            lineNumber: 1318,
                                                             columnNumber: 19
                                                         }, this)
                                                     }, void 0, false, {
                                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                        lineNumber: 1310,
+                                                        lineNumber: 1312,
                                                         columnNumber: 17
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                                lineNumber: 1293,
+                                                lineNumber: 1295,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                        lineNumber: 1290,
+                                        lineNumber: 1292,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                lineNumber: 1256,
+                                lineNumber: 1258,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3310,13 +3312,13 @@ function TessaCloudLanding() {
                                 children: "© 2025 Tessa Cloud | Internship Platform. All rights reserved."
                             }, void 0, false, {
                                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                                lineNumber: 1321,
+                                lineNumber: 1323,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/tessa_learn/src/app/page.jsx",
-                        lineNumber: 1255,
+                        lineNumber: 1257,
                         columnNumber: 9
                     }, this)
                 ]
@@ -3372,7 +3374,7 @@ function ZohoContactFormEmbed() {
                 }
             }, void 0, false, {
                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                lineNumber: 1373,
+                lineNumber: 1375,
                 columnNumber: 7
             }, this),
             isDesktop && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("iframe", {
@@ -3389,13 +3391,13 @@ function ZohoContactFormEmbed() {
                 allowFullScreen: true
             }, void 0, false, {
                 fileName: "[project]/tessa_learn/src/app/page.jsx",
-                lineNumber: 1380,
+                lineNumber: 1382,
                 columnNumber: 9
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/tessa_learn/src/app/page.jsx",
-        lineNumber: 1372,
+        lineNumber: 1374,
         columnNumber: 5
     }, this);
 }

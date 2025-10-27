@@ -752,14 +752,14 @@ export default function TessaCloudLanding() {
                     </p>
                   </div>
                   <div className="mt-6 md:mt-0 md:ml-8">
-                    <button
-                      onClick={() =>
-                        window.open("https://tessacloud.com/verify", "_blank")
-                      }
+                    <a
+                      href="/Sample_Certificate_Tessa_Learn.pdf"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="px-6 py-3 rounded-md bg-gradient-to-r from-purple-600 via-pink-500 to-red-500 text-white font-semibold shadow-lg hover:scale-105 transition-transform"
                     >
                       View Sample Certificate →
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
