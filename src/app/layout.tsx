@@ -2,7 +2,6 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import React from "react";
-import Head from "next/head";
 import Image from "next/image";
 import {
   FaFacebookF,
@@ -38,6 +37,10 @@ export const metadata: Metadata = {
     locale: "en_IN",
     type: "website",
   },
+  icons: {
+    icon: "/favicon.ico",
+  },
+  themeColor: "#0d47a1",
 };
 
 export default function RootLayout({
@@ -52,11 +55,7 @@ export default function RootLayout({
       data-gramm_editor="false"
       data-enable-grammarly="false"
     >
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <meta name="theme-color" content="#0d47a1" />
-      </Head>
-      <body className={poppins.className}>
+      <body className={poppins.className} suppressHydrationWarning>
         <main className="main">{children}</main>
       </body>
     </html>
