@@ -90,6 +90,20 @@ export default function Page() {
     if (statsSection) observer.observe(statsSection);
   }, [hydrated]);
 
+  useEffect(() => {
+    const slides = document.querySelectorAll(".hero-slide");
+    const dots = document.querySelectorAll(".hero-dot");
+    let index = 0;
+
+    const changeSlide = () => {
+      slides.forEach((s, i) => s.classList.toggle("active", i === index));
+      dots.forEach((d, i) => d.classList.toggle("active", i === index));
+      index = (index + 1) % slides.length;
+    };
+
+    const interval = setInterval(changeSlide, 5000);
+    return () => clearInterval(interval);
+  }, []);
   // Track > Assign > Achieve Tabs
   useEffect(() => {
     if (!hydrated || typeof window === "undefined") return;
@@ -202,478 +216,179 @@ export default function Page() {
 
       <main className="main" style={{ minHeight: "60vh" }}>
         <section id="hero" className="hero-banner">
-          <div className="hero-content">
-            <div className="hero-text">
-              <h1>From Campus to Corporate — in Just 10 SECONDS.</h1>
-              <p
-                style={{
-                  fontSize: "1.25rem",
-                  fontWeight: 500,
-                  margin: "1rem 0 2rem 0",
-                }}
-              >
-                We’re an employability ecosystem empowering students,
-                institutions, and recruiters through training, technology, and
-                talent solutions.
-              </p>
-              <div
-                className="hero-values"
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  gap: "1.5rem",
-                  marginBottom: "2.5rem",
-                }}
-              >
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "flex-start",
-                    gap: "1rem",
-                  }}
-                >
-                  <span style={{ fontSize: "1.8rem", lineHeight: 1 }}>🎓</span>
-                  <span>
-                    <strong>Training That Transforms</strong> — Aptitude,
-                    Coding, and Soft-Skill programs built for real placements.
-                  </span>
+          <div className="hero-header-text">
+            <h1 className="main-headline" style={{ textAlign: "center" }}>
+              From Campus to Corporate — in Just <span>10 SECONDS.</span>
+            </h1>
+            <p
+              className="sub-headline"
+              style={{
+                textAlign: "center",
+                padding: "0 15%",
+                marginTop: "1rem",
+                fontSize: "1.1rem",
+                lineHeight: "1.6",
+                color: "#333",
+              }}
+            >
+              We’re an employability ecosystem empowering students,
+              institutions, and recruiters through training, technology, and
+              talent solutions.
+            </p>
+          </div>
+          <div className="hero-slider">
+            {/* Block 1 — Training That Transforms */}
+            <div className="hero-slide active">
+              <div className="hero-content">
+                <div className="hero-text">
+                  <h1>Training That Transforms</h1>
+                  <h2>
+                    Aptitude, Coding, and Soft-Skill programs built for real
+                    placements.
+                  </h2>
+                  <p>
+                    From Campus to Corporate — in Just <span>10 SECONDS</span>.
+                  </p>
+                  <button className="hero-btn">Explore Programs</button>
                 </div>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "flex-start",
-                    gap: "1rem",
-                  }}
-                >
-                  <span style={{ fontSize: "1.8rem", lineHeight: 1 }}>💻</span>
-                  <span>
-                    <strong>Technology That Tracks</strong> — LMS with
-                    analytics, assessments, and recruiter-benchmarked tests.
-                  </span>
+                <div className="hero-image">
+                  <Image
+                    src="/hero_card1.png"
+                    alt="Training Illustration"
+                    width={500}
+                    height={400}
+                  />
                 </div>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "flex-start",
-                    gap: "1rem",
-                  }}
-                >
-                  <span style={{ fontSize: "1.8rem", lineHeight: 1 }}>🤝</span>
-                  <span>
-                    <strong>Talent That Fits</strong> — Staffing and consulting
-                    services connecting pre-trained candidates with leading
-                    corporates.
-                  </span>
-                </div>
-              </div>
-              <div
-                className="hero-cta-buttons"
-                style={{ display: "flex", gap: "1.2rem", flexWrap: "wrap" }}
-              >
-                <Link
-                  href="#contact"
-                  className="hero-button"
-                  style={{ minWidth: 160, textAlign: "center" }}
-                >
-                  Partner With Us
-                </Link>
-                <Link
-                  href="#lms-platform"
-                  className="hero-button"
-                  style={{
-                    minWidth: 160,
-                    textAlign: "center",
-                    background: "#003366",
-                    color: "#fff",
-                  }}
-                >
-                  Explore Our LMS
-                </Link>
-                <Link
-                  href="#services"
-                  className="hero-button"
-                  style={{
-                    minWidth: 180,
-                    textAlign: "center",
-                    background: "#ff8800",
-                    color: "#fff",
-                  }}
-                >
-                  Hire With Confidence
-                </Link>
               </div>
             </div>
-            <div className="hero-image">
-              <Image
-                src="/hero_banner_i.png"
-                alt="Hero Banner"
-                width={500}
-                height={400}
-                className="hero-banner-image"
-              />
+
+            {/* Block 2 — Technology That Tracks */}
+            <div className="hero-slide">
+              <div className="hero-content">
+                <div className="hero-text">
+                  <h1> Technology That Tracks</h1>
+                  <h2>
+                    LMS with analytics, assessments, and recruiter-benchmarked
+                    tests.
+                  </h2>
+                  <p>
+                    Empowering institutions and recruiters with smart
+                    performance insights.
+                  </p>
+                  <button className="hero-btn">Discover LMS</button>
+                </div>
+                <div className="hero-image">
+                  <Image
+                    src="/hero_card2.png"
+                    alt="Technology Illustration"
+                    width={500}
+                    height={400}
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Block 3 — Talent That Fits */}
+            <div className="hero-slide">
+              <div className="hero-content">
+                <div className="hero-text">
+                  <h1> Talent That Fits</h1>
+                  <h2>
+                    Staffing and consulting services connecting pre-trained
+                    candidates with leading corporates.
+                  </h2>
+                  <p>
+                    Hire with confidence through our curated and industry-ready
+                    workforce.
+                  </p>
+                  <button className="hero-btn">Hire With Us</button>
+                </div>
+                <div className="hero-image">
+                  <Image
+                    src="/hero_card3.png"
+                    alt="Talent Illustration"
+                    width={500}
+                    height={400}
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Blue Navigation Dots */}
+            <div className="hero-dots">
+              <div className="hero-dot active"></div>
+              <div className="hero-dot"></div>
+              <div className="hero-dot"></div>
             </div>
           </div>
         </section>
 
+        {/* ======= About Us Section ======= */}
         <section id="about" className="about-section">
-          <div className="about-content">
-            <div className="about-text">
-              <h2 style={{ fontSize: "2.5rem", fontWeight: "700" }}>
-                Who We Are
-              </h2>
-              <p style={{ fontSize: "1.15rem", marginBottom: "1.5rem" }}>
-                10 SECONDS is a new-age training and staffing organization that
-                unifies learning, assessment, and recruitment under one roof. We
-                partner with colleges, universities, and corporates to create
-                career-ready graduates who meet real industry expectations.
-              </p>
-              <h3
-                style={{
-                  fontSize: "1.35rem",
-                  fontWeight: "600",
-                  marginTop: "2rem",
-                  marginBottom: "0.5rem",
-                }}
-              >
-                What We Believe
-              </h3>
-              <p style={{ fontSize: "1.05rem", marginBottom: "1.3rem" }}>
-                It takes just ten seconds to make a strong first impression. Our
-                programs ensure every student, trainer, and partner institution
-                makes theirs count.
-              </p>
-              <h3
-                style={{
-                  fontSize: "1.35rem",
-                  fontWeight: "600",
-                  marginTop: "2rem",
-                  marginBottom: "0.5rem",
-                }}
-              >
-                Our Journey
-              </h3>
-              <p style={{ fontSize: "1.05rem" }}>
-                From a single classroom in 2003 to a statewide network of 60
-                partner institutions, we’ve grown through innovation, trust, and
-                measurable outcomes. Today, our digital learning platform and
-                staffing services make us one of Karnataka’s most trusted
-                campus-to-corporate partners. We don’t just teach. We transform
-                potential into performance.
-              </p>
-            </div>
-            <div className="about-image">
-              <Image
-                src="/about_i.png"
-                alt="About Us"
-                width={550}
-                height={400}
-                className="about-us-image"
-              />
-            </div>
-          </div>
-        </section>
-        {/* ======= Services Section ======= */}
-        <section
-          id="services"
-          className="services-section"
-          style={{ background: "#f5f8ff", padding: "70px 0" }}
-        >
-          <div className="services-container" data-aos="fade-up">
-            <header
-              className="services-header"
-              style={{ textAlign: "center", marginBottom: "50px" }}
-            >
-              <h2
-                style={{
-                  color: "#003366",
-                  fontWeight: "700",
-                  fontSize: "2.2rem",
-                }}
-              >
-                Our Services
-              </h2>
+          <div className="about-container" data-aos="fade-up">
+            <header className="about-header">
+              <h2>🌟 ABOUT US</h2>
             </header>
-            <div
-              className="services-grid"
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit,minmax(260px,1fr))",
-                gap: "2rem",
-              }}
-            >
-              <div
-                className="service-card"
-                style={{
-                  background: "#fff",
-                  borderRadius: "12px",
-                  boxShadow: "0 4px 18px rgba(0,0,0,0.07)",
-                  padding: "2rem",
-                }}
-              >
-                <div style={{ fontSize: "2.2rem", marginBottom: "10px" }}>
-                  🎓
-                </div>
-                <h3 style={{ marginBottom: "0.5rem" }}>
-                  Campus Recruitment Training
-                </h3>
-                <p style={{ fontSize: "1rem", color: "#444" }}>
-                  End-to-end aptitude, coding, and soft-skills programs designed
-                  for real-world campus placements. Our outcome-based training
-                  modules ensure students are job-ready and confident for every
-                  interview.
-                </p>
-              </div>
-              <div
-                className="service-card"
-                style={{
-                  background: "#fff",
-                  borderRadius: "12px",
-                  boxShadow: "0 4px 18px rgba(0,0,0,0.07)",
-                  padding: "2rem",
-                }}
-              >
-                <div style={{ fontSize: "2.2rem", marginBottom: "10px" }}>
-                  💻
-                </div>
-                <h3 style={{ marginBottom: "0.5rem" }}>
-                  Learning Management System (LMS)
-                </h3>
-                <p style={{ fontSize: "1rem", color: "#444" }}>
-                  Our proprietary LMS brings analytics, recruiter-benchmarked
-                  assessments, and personalized learning paths to institutions.
-                  Track progress, assign tests, and drive measurable improvement
-                  at scale.
-                </p>
-              </div>
-              <div
-                className="service-card"
-                style={{
-                  background: "#fff",
-                  borderRadius: "12px",
-                  boxShadow: "0 4px 18px rgba(0,0,0,0.07)",
-                  padding: "2rem",
-                }}
-              >
-                <div style={{ fontSize: "2.2rem", marginBottom: "10px" }}>
-                  🤝
-                </div>
-                <h3 style={{ marginBottom: "0.5rem" }}>
-                  Staffing & Placement Services
-                </h3>
-                <p style={{ fontSize: "1rem", color: "#444" }}>
-                  We connect pre-trained, vetted candidates with top corporates.
-                  Our talent solutions reduce hiring time and ensure every
-                  recruit is ready to deliver from day one.
-                </p>
-              </div>
-              <div
-                className="service-card"
-                style={{
-                  background: "#fff",
-                  borderRadius: "12px",
-                  boxShadow: "0 4px 18px rgba(0,0,0,0.07)",
-                  padding: "2rem",
-                }}
-              >
-                <div style={{ fontSize: "2.2rem", marginBottom: "10px" }}>
-                  🧑‍🏫
-                </div>
-                <h3 style={{ marginBottom: "0.5rem" }}>Faculty Development</h3>
-                <p style={{ fontSize: "1rem", color: "#444" }}>
-                  Upskill your faculty with the latest teaching methodologies,
-                  digital tools, and industry insights. Our workshops empower
-                  educators to deliver engaging, effective learning experiences.
-                </p>
-              </div>
-              <div
-                className="service-card"
-                style={{
-                  background: "#fff",
-                  borderRadius: "12px",
-                  boxShadow: "0 4px 18px rgba(0,0,0,0.07)",
-                  padding: "2rem",
-                }}
-              >
-                <div style={{ fontSize: "2.2rem", marginBottom: "10px" }}>
-                  🔍
-                </div>
-                <h3 style={{ marginBottom: "0.5rem" }}>
-                  Assessment & Analytics
-                </h3>
-                <p style={{ fontSize: "1rem", color: "#444" }}>
-                  Benchmark student and faculty performance with advanced
-                  analytics, AI-powered feedback, and customizable assessments
-                  mapped to industry standards.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        {/* ======= LMS Platform Section ======= */}
-        <section
-          id="lms-platform"
-          className="lms-platform-section"
-          style={{ background: "#fff", padding: "70px 0" }}
-        >
-          <div className="lms-platform-container" data-aos="fade-up">
-            <header
-              className="lms-platform-header"
-              style={{ textAlign: "center", marginBottom: "50px" }}
-            >
-              <h2
-                style={{
-                  color: "#003366",
-                  fontWeight: "700",
-                  fontSize: "2.2rem",
-                }}
-              >
-                LMS Platform
-              </h2>
-              <p
-                style={{
-                  color: "#555",
-                  fontSize: "1.15rem",
-                  margin: "0 auto",
-                  maxWidth: 700,
-                }}
-              >
-                The 10 SECONDS LMS is your digital campus for employability.
-                Designed for students, faculty, and recruiters, it offers:
-              </p>
-            </header>
-            <div
-              className="lms-features-grid"
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit,minmax(250px,1fr))",
-                gap: "2rem",
-                marginBottom: "2rem",
-              }}
-            >
-              <div
-                style={{
-                  background: "#f7f9fc",
-                  borderRadius: "10px",
-                  padding: "1.5rem",
-                }}
-              >
-                <strong>📈 Analytics Dashboards</strong>
-                <p style={{ fontSize: "0.98rem", marginTop: "0.5rem" }}>
-                  Real-time progress tracking for students and institutions.
-                </p>
-              </div>
-              <div
-                style={{
-                  background: "#f7f9fc",
-                  borderRadius: "10px",
-                  padding: "1.5rem",
-                }}
-              >
-                <strong>📝 Recruiter-Benchmarked Assessments</strong>
-                <p style={{ fontSize: "0.98rem", marginTop: "0.5rem" }}>
-                  Aptitude, coding, and communication tests mapped to industry
-                  standards.
-                </p>
-              </div>
-              <div
-                style={{
-                  background: "#f7f9fc",
-                  borderRadius: "10px",
-                  padding: "1.5rem",
-                }}
-              >
-                <strong>🎯 Personalized Learning Paths</strong>
-                <p style={{ fontSize: "0.98rem", marginTop: "0.5rem" }}>
-                  Adaptive modules for every learner, from beginner to advanced.
-                </p>
-              </div>
-              <div
-                style={{
-                  background: "#f7f9fc",
-                  borderRadius: "10px",
-                  padding: "1.5rem",
-                }}
-              >
-                <strong>👩‍🏫 Faculty Tools</strong>
-                <p style={{ fontSize: "0.98rem", marginTop: "0.5rem" }}>
-                  Assignments, feedback, and classroom management at your
-                  fingertips.
-                </p>
-              </div>
-              <div
-                style={{
-                  background: "#f7f9fc",
-                  borderRadius: "10px",
-                  padding: "1.5rem",
-                }}
-              >
-                <strong>🔒 Secure & Scalable</strong>
-                <p style={{ fontSize: "0.98rem", marginTop: "0.5rem" }}>
-                  Trusted by 60+ institutions and 1,00,000+ learners across
-                  Karnataka.
-                </p>
-              </div>
-            </div>
-            <div
-              className="lms-metrics"
-              style={{
-                display: "flex",
-                flexWrap: "wrap",
-                justifyContent: "center",
-                gap: "2.5rem",
-              }}
-            >
-              <div style={{ textAlign: "center" }}>
+            <div className="about-grid">
+              {[
+                {
+                  title: "Who We Are",
+                  desc: "10 SECONDS is a new-age training and staffing organization that unifies learning, assessment, and recruitment under one roof. We partner with colleges, universities, and corporates to create career-ready graduates who meet real industry expectations.",
+                  icon: <FaUniversity />,
+                },
+                {
+                  title: "What We Believe",
+                  desc: "It takes just ten seconds to make a strong first impression. Our programs ensure every student, trainer, and partner institution makes theirs count.",
+                  icon: <FaBrain />,
+                },
+                {
+                  title: "Our Journey",
+                  desc: "From a single classroom in 2003 to a statewide network of 60 partner institutions, we’ve grown through innovation, trust, and measurable outcomes. Today, our digital learning platform and staffing services make us one of Karnataka’s most trusted campus-to-corporate partners. We don’t just teach. We transform potential into performance.",
+                  icon: <FaRocket />,
+                },
+              ].map((item, index) => (
                 <div
+                  className="about-card"
+                  key={index}
                   style={{
-                    fontSize: "2rem",
-                    color: "#003366",
-                    fontWeight: 700,
+                    animationDelay: `${index * 0.2}s`,
+                    background: "#ffffff",
+                    borderRadius: "12px",
+                    padding: "25px",
+                    boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
+                    textAlign: "center",
+                    transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "translateY(-8px)";
+                    e.currentTarget.style.boxShadow =
+                      "0 8px 25px rgba(0,0,0,0.12)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow =
+                      "0 4px 20px rgba(0,0,0,0.08)";
                   }}
                 >
-                  1,00,000+
+                  <div
+                    className="about-icon"
+                    style={{
+                      fontSize: "2.5rem",
+                      color: "#007bff",
+                      marginBottom: "15px",
+                    }}
+                  >
+                    {item.icon}
+                  </div>
+                  <h3 style={{ color: "#003366", marginBottom: "10px" }}>
+                    {item.title}
+                  </h3>
+                  <p style={{ color: "#444", lineHeight: "1.6" }}>
+                    {item.desc}
+                  </p>
                 </div>
-                <div style={{ color: "#444" }}>Students Impacted</div>
-              </div>
-              <div style={{ textAlign: "center" }}>
-                <div
-                  style={{
-                    fontSize: "2rem",
-                    color: "#003366",
-                    fontWeight: 700,
-                  }}
-                >
-                  60+
-                </div>
-                <div style={{ color: "#444" }}>Institutions Onboarded</div>
-              </div>
-              <div style={{ textAlign: "center" }}>
-                <div
-                  style={{
-                    fontSize: "2rem",
-                    color: "#003366",
-                    fontWeight: 700,
-                  }}
-                >
-                  5000+
-                </div>
-                <div style={{ color: "#444" }}>
-                  Recruiter Benchmarked Assessments
-                </div>
-              </div>
-              <div style={{ textAlign: "center" }}>
-                <div
-                  style={{
-                    fontSize: "2rem",
-                    color: "#003366",
-                    fontWeight: 700,
-                  }}
-                >
-                  10,00,000+
-                </div>
-                <div style={{ color: "#444" }}>Tests Attempted</div>
-              </div>
+              ))}
             </div>
           </div>
         </section>
@@ -1018,43 +733,36 @@ export default function Page() {
           </div>
         </section>
 
-        {/* ======= Our Journey Section ======= */}
+        {/* ======= Our Journey So Far Section ======= */}
         <section className="journey-section">
           <div className="journey-container" data-aos="fade-up">
             <header className="journey-header">
-              <p>Our Journey</p>
+              <p>Our Journey So Far!</p>
             </header>
             <div className="timeline">
               {[
                 {
                   year: "2003",
-                  title:
-                    "10 SECONDS founded — first classroom, first batch, first step.",
+                  title: "Started with Aptitude Training.",
                   icon: <FaRocket color="#007cf0" />,
                 },
                 {
-                  year: "2010",
+                  year: "2012",
                   title:
-                    "Expanded to 20+ colleges with placement-focused training modules.",
+                    "Expanded by mastering technical training and innovative learning.",
                   icon: <FaCogs color="#00bcd4" />,
+                },
+                {
+                  year: "2016",
+                  title:
+                    "With quality-based training, reached 80+ prestigious colleges across Karnataka.",
+                  icon: <FaUniversity color="#009688" />,
                 },
                 {
                   year: "2020",
                   title:
-                    "Launched our digital LMS and assessment platform, scaling to 50+ institutions.",
+                    "Revamped the entire experience with a modern Learning Management Portal.",
                   icon: <FaLaptopCode color="#ff8800" />,
-                },
-                {
-                  year: "2022",
-                  title:
-                    "Staffing & consulting division launched, connecting 1000+ candidates to corporates.",
-                  icon: <FaUniversity color="#009688" />,
-                },
-                {
-                  year: "2024",
-                  title:
-                    "1,00,000+ students empowered. 60+ partners. Recognized as Karnataka’s trusted campus-to-corporate ecosystem.",
-                  icon: <FaRocket color="#007cf0" />,
                 },
               ].map((item, index) => (
                 <div className="timeline-item" key={index}>
@@ -1075,41 +783,6 @@ export default function Page() {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-
-        {/* ======= Vision & Future Section ======= */}
-        <section
-          className="vision-section"
-          style={{ background: "#f5f8ff", padding: "70px 0" }}
-        >
-          <div className="vision-container" data-aos="fade-up">
-            <header
-              className="vision-header"
-              style={{ textAlign: "center", marginBottom: "30px" }}
-            >
-              <h2
-                style={{
-                  color: "#003366",
-                  fontWeight: "700",
-                  fontSize: "2.2rem",
-                }}
-              >
-                Our Vision
-              </h2>
-            </header>
-            <p
-              style={{
-                fontSize: "1.15rem",
-                color: "#444",
-                textAlign: "center",
-                maxWidth: 700,
-                margin: "0 auto",
-              }}
-            >
-              To be India’s most trusted campus-to-corporate ecosystem driven by
-              Training, Technology & Talent.
-            </p>
           </div>
         </section>
 
@@ -1160,107 +833,79 @@ export default function Page() {
                     gap: "1.5rem",
                   }}
                 >
-                  <div
-                    className="info-box"
-                    style={{
-                      background: "#ffffff",
-                      borderRadius: "10px",
-                      padding: "20px",
-                      boxShadow: "0 4px 15px rgba(0,0,0,0.08)",
-                      borderLeft: "4px solid #ff8800",
-                    }}
-                  >
-                    <i
-                      className="bi bi-geo-alt"
+                  {[
+                    {
+                      icon: "bi-geo-alt",
+                      title: "Address",
+                      content:
+                        "10 SECONDS, Arya Hamsa, Royal County, 80 Feet Road, JP Nagar, 8th Phase, Bangalore - 83",
+                    },
+                    {
+                      icon: "bi-clock",
+                      title: "Open Hours",
+                      content: "Monday - Friday\n10:00AM - 07:00PM",
+                    },
+                    {
+                      icon: "bi-telephone",
+                      title: "Call Us",
+                      content: "+91 9611 22 4444",
+                    },
+                    {
+                      icon: "bi-envelope",
+                      title: "Email Us",
+                      content: "info@10secondsgroup.in",
+                    },
+                  ].map((item, i) => (
+                    <div
+                      key={i}
+                      className="info-box"
                       style={{
-                        fontSize: "2rem",
-                        color: "#007bff",
-                        marginBottom: "10px",
-                        display: "block",
-                        transition: "color 0.3s",
+                        background: "#ffffff",
+                        borderRadius: "10px",
+                        padding: "20px",
+                        boxShadow: "0 4px 15px rgba(0,0,0,0.08)",
+                        transition:
+                          "transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1)",
+                        cursor: "pointer",
+                        borderLeft:
+                          i === 2
+                            ? "4px solid #ff8800"
+                            : i === 3
+                            ? "4px solid #ff8800"
+                            : "4px solid transparent",
                       }}
-                    ></i>
-                    <h3 style={{ color: "#003366" }}>Head Office</h3>
-                    <p style={{ whiteSpace: "pre-line", color: "#444" }}>
-                      10 SECONDS, Arya Hamsa, 8th Phase, JP Nagar, Bengaluru –
-                      560083
-                    </p>
-                  </div>
-                  <div
-                    className="info-box"
-                    style={{
-                      background: "#ffffff",
-                      borderRadius: "10px",
-                      padding: "20px",
-                      boxShadow: "0 4px 15px rgba(0,0,0,0.08)",
-                      borderLeft: "4px solid #ff8800",
-                    }}
-                  >
-                    <i
-                      className="bi bi-telephone"
-                      style={{
-                        fontSize: "2rem",
-                        color: "#007bff",
-                        marginBottom: "10px",
-                        display: "block",
-                        transition: "color 0.3s",
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = "translateY(-5px)";
+                        e.currentTarget.style.boxShadow =
+                          "0 8px 24px rgba(0,0,0,0.13)";
+                        e.currentTarget.style.borderLeft = "4px solid #ff8800";
                       }}
-                    ></i>
-                    <h3 style={{ color: "#003366" }}>Phones</h3>
-                    <p style={{ whiteSpace: "pre-line", color: "#444" }}>
-                      +91 97311 44344{" | "}+91 94800 74552
-                    </p>
-                  </div>
-                  <div
-                    className="info-box"
-                    style={{
-                      background: "#ffffff",
-                      borderRadius: "10px",
-                      padding: "20px",
-                      boxShadow: "0 4px 15px rgba(0,0,0,0.08)",
-                      borderLeft: "4px solid #ff8800",
-                    }}
-                  >
-                    <i
-                      className="bi bi-envelope"
-                      style={{
-                        fontSize: "2rem",
-                        color: "#007bff",
-                        marginBottom: "10px",
-                        display: "block",
-                        transition: "color 0.3s",
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = "translateY(0)";
+                        e.currentTarget.style.boxShadow =
+                          "0 4px 15px rgba(0,0,0,0.08)";
+                        e.currentTarget.style.borderLeft =
+                          i === 2 || i === 3
+                            ? "4px solid #ff8800"
+                            : "4px solid transparent";
                       }}
-                    ></i>
-                    <h3 style={{ color: "#003366" }}>Email</h3>
-                    <p style={{ whiteSpace: "pre-line", color: "#444" }}>
-                      care@10seconds.co.in
-                    </p>
-                  </div>
-                  <div
-                    className="info-box"
-                    style={{
-                      background: "#ffffff",
-                      borderRadius: "10px",
-                      padding: "20px",
-                      boxShadow: "0 4px 15px rgba(0,0,0,0.08)",
-                      borderLeft: "4px solid #ff8800",
-                    }}
-                  >
-                    <i
-                      className="bi bi-globe"
-                      style={{
-                        fontSize: "2rem",
-                        color: "#007bff",
-                        marginBottom: "10px",
-                        display: "block",
-                        transition: "color 0.3s",
-                      }}
-                    ></i>
-                    <h3 style={{ color: "#003366" }}>Website</h3>
-                    <p style={{ whiteSpace: "pre-line", color: "#444" }}>
-                      www.10seconds.co.in
-                    </p>
-                  </div>
+                    >
+                      <i
+                        className={`bi ${item.icon}`}
+                        style={{
+                          fontSize: "2rem",
+                          color: "#007bff",
+                          marginBottom: "10px",
+                          display: "block",
+                          transition: "color 0.3s",
+                        }}
+                      ></i>
+                      <h3 style={{ color: "#003366" }}>{item.title}</h3>
+                      <p style={{ whiteSpace: "pre-line", color: "#444" }}>
+                        {item.content}
+                      </p>
+                    </div>
+                  ))}
                 </div>
               </div>
 
@@ -1306,10 +951,10 @@ export default function Page() {
               height={50}
             />
             <p>
-              10 SECONDS is a new-age training and staffing organization that
-              unifies learning, assessment, and recruitment under one roof. We
-              partner with colleges, universities, and corporates to create
-              career-ready graduates who meet real industry expectations.
+              10 SECONDS is an organization that unifies training, assessments
+              and recruitment under one roof. Conceptualised by Anijith Shetty
+              and Ramaprasad, we are an ensemble set of young executive trainers
+              who specialise in all things digital.
             </p>
             <div className="social-icons">
               <a href="#" aria-label="Facebook">
@@ -1366,24 +1011,20 @@ export default function Page() {
                 <address>
                   10 SECONDS
                   <br />
-                  Arya Hamsa, 8th Phase, JP Nagar,
+                  Arya Hamsa
                   <br />
-                  Bengaluru – 560083
+                  Royal County, 80 Feet Road
+                  <br />
+                  J P Nagar, 8th Phase
+                  <br />
+                  Bangalore - 83
                   <br />
                   <br />
-                  Phone: <a href="tel:+919731144344">+91 97311 44344</a> |{" "}
-                  <a href="tel:+919480074552">+91 94800 74552</a>
+                  Phone: <a href="tel:+919611224444">+91 9611 22 4444</a>
                   <br />
                   Email:{" "}
-                  <a href="mailto:care@10seconds.co.in">care@10seconds.co.in</a>
-                  <br />
-                  Website:{" "}
-                  <a
-                    href="https://www.10seconds.co.in"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    www.10seconds.co.in
+                  <a href="mailto:info@10secondsgroup.in">
+                    info@10secondsgroup.in
                   </a>
                 </address>
               </div>
