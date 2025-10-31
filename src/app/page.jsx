@@ -18,7 +18,11 @@ import {
   FaRocket,
   FaCogs,
   FaUniversity,
+  FaHandshake,
+  FaUsersCog,
   FaLaptopCode,
+  FaUserTie,
+  FaHandshake as FaHandshakeIcon,
 } from "react-icons/fa";
 import SwiperCore from "swiper";
 import { Autoplay, FreeMode } from "swiper/modules";
@@ -243,7 +247,17 @@ export default function Page() {
 
         <section className="quick-summary">
           <div className="summary-card">
-            <h2>🎓 Training That Transforms</h2>
+            <div
+              className="summary-icon"
+              style={{
+                fontSize: "2.5rem",
+                color: "#007bff",
+                marginBottom: "10px",
+              }}
+            >
+              <FaBookOpen />
+            </div>
+            <h2>Training That Transforms</h2>
             <p>
               Aptitude, Coding, and Soft-Skill programs built for real
               placements.
@@ -251,14 +265,34 @@ export default function Page() {
           </div>
 
           <div className="summary-card">
-            <h2>💻 Technology That Tracks</h2>
+            <div
+              className="summary-icon"
+              style={{
+                fontSize: "2.5rem",
+                color: "#00bcd4",
+                marginBottom: "10px",
+              }}
+            >
+              <FaLaptopCode />
+            </div>
+            <h2>Technology That Tracks</h2>
             <p>
               LMS with analytics, assessments, and recruiter-benchmarked tests.
             </p>
           </div>
 
           <div className="summary-card">
-            <h2>🤝 Talent That Fits</h2>
+            <div
+              className="summary-icon"
+              style={{
+                fontSize: "2.5rem",
+                color: "#28a745",
+                marginBottom: "10px",
+              }}
+            >
+              <FaHandshake />
+            </div>
+            <h2>Talent That Fits</h2>
             <p>
               Staffing and consulting services connecting pre-trained candidates
               with leading corporates.
@@ -335,377 +369,325 @@ export default function Page() {
             </div>
           </div>
         </section>
-
-        <section className="why-ten-seconds">
-          <h2 className="why-title">Why 10 SECONDS</h2>
-          <div className="why-card-container">
-            <div className="why-card">
-              <Image
-                src="/c1.png"
-                alt="Why 10 Seconds 1"
-                width={350}
-                height={250}
-                className="why-card-image"
-              />
-              <p>
-                The name of the business is inspired by research that suggests
-                it takes 10 SECONDS to build a strong first impression. We try
-                to apply this principle in everything we do, be it in our
-                interactions with clients, prospects or even our partners.
-              </p>
-            </div>
-            <div className="why-card">
-              <Image
-                src="/c2.png"
-                alt="Why 10 Seconds 2"
-                width={350}
-                height={250}
-                className="why-card-image"
-              />
-              <p>
-                We have built an organization that enables us to provide high
-                quality, skill-oriented training and services through a team of
-                highly qualified professionals.
-              </p>
-            </div>
-            <div className="why-card">
-              <Image
-                src="/c3.png"
-                alt="Why 10 Seconds 3"
-                width={350}
-                height={250}
-                className="why-card-image"
-              />
-              <p>
-                Our focus on technology and innovation makes us future-ready and
-                helps us deliver cutting edge solutions that are
-                student-centric, easy to use and most importantly cost-effective
-                for our clients.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section className="boardroom-section">
-          <div className="boardroom-container">
-            <div className="boardroom-image">
-              <Image
-                src="/bored.png"
-                alt="Boardroom"
-                width={600}
-                height={400}
-                className="boardroom-photo"
-              />
-            </div>
-            <div className="boardroom-text">
-              <h2>What brews in our boardrooms?</h2>
-              <p>
-                We are a bunch of young, passionate trendsetters who are led by
-                some of the most credible names in the industry. So, when you
-                tap onto the career universe with us, we ensure you are heard
-                without getting lost in the echo of trends.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Animated Stats Section */}
-        <section className="stats-section">
-          <h2 className="stats-title">Our Impact in Numbers</h2>
-          <div className="stats-container">
-            <div className="stat-card">
-              <div className="stat-icon">😊</div>
-              <h3 className="stat-number" data-target="232">
-                0
-              </h3>
-              <p>Happy Clients</p>
-            </div>
-            <div className="stat-card">
-              <div className="stat-icon">📊</div>
-              <h3 className="stat-number" data-target="521">
-                0
-              </h3>
-              <p>Projects</p>
-            </div>
-            <div className="stat-card">
-              <div className="stat-icon">🎧</div>
-              <h3 className="stat-number" data-target="1463">
-                0
-              </h3>
-              <p>Hours of Support</p>
-            </div>
-            <div className="stat-card">
-              <div className="stat-icon">👥</div>
-              <h3 className="stat-number" data-target="63">
-                0
-              </h3>
-              <p>Hard Workers</p>
-            </div>
-          </div>
-        </section>
-
-        <section id="consulting" className="consulting-section">
-          <h2 className="consulting-title">Consulting</h2>
-          <div className="consulting-container">
-            <div className="consulting-content">
-              <div className="consult-point" data-animate>
-                <div className="consult-number">1</div>
-                <p>
-                  10 SECONDS is your career partner that translates your ideas &
-                  dreams into reality. Our mission is to help you discover your
-                  potential, build a solid career foundation, and achieve
-                  greater success in life through the finest possible career
-                  consulting.
-                </p>
-              </div>
-
-              <div className="consult-point" data-animate>
-                <div className="consult-number">2</div>
-                <p>
-                  Align Group is one of the fastest-growing career consulting
-                  firms in India and has an extensive network spread across
-                  multiple cities.
-                </p>
-              </div>
-
-              <div className="consult-point" data-animate>
-                <div className="consult-number">3</div>
-                <p>
-                  With a strong focus on services like campus placements,
-                  training & development, executive search and recruitment, we
-                  have been able to establish ourselves as one of the most
-                  sought after job portals in the country.
-                </p>
-              </div>
-            </div>
-
-            <div className="consulting-image-wrapper">
-              <Image
-                src="/consulting_img.png"
-                alt="Consulting"
-                width={550}
-                height={400}
-                className="consulting-image"
-              />
-            </div>
-          </div>
-        </section>
-
-        <section className="career-section">
-          <h2 className="career-title" style={{ textAlign: "center" }}>
-            Career
-          </h2>
-          <div
-            className="career-container"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: "2rem",
-            }}
-          >
-            <div className="career-image-wrapper" style={{ flex: "1" }}>
-              <Image
-                src="/career_image.png"
-                alt="Career"
-                width={550}
-                height={400}
-                className="career-image"
-              />
-            </div>
-            <div className="career-content" style={{ flex: "1" }}>
-              <div className="career-point" data-animate>
-                <h3>
-                  <strong>Like what you saw? Work with us</strong>
-                </h3>
-                <p>
-                  Your voice and art of training need to reach your target
-                  audience without getting lost in the echo of trends. We make
-                  it happen here.
-                </p>
-              </div>
-
-              <div className="career-point" data-animate>
-                <h3>
-                  <strong>Want to join the 10-sec clan?</strong>
-                </h3>
-                <p>
-                  We have been looking out for you and your expertise in
-                  training! At 10 SECONDS, we believe in innovating the content
-                  and stories we tell through ingenious minds. We are a clan of
-                  dedicated, passionate, multi-skilled think-tanks who are
-                  always looking out for more.
-                </p>
-              </div>
-
-              <div className="career-point" data-animate>
-                <h3>
-                  <strong>
-                    And if this sounds like you, say hello to us with your
-                    profile
-                  </strong>
-                </h3>
-                <p>- info@10secondsgroup.in</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Track > Assign > Achieve Section */}
-        <section id="track-assign-achieve" className="track-assign-achieve">
-          <div className="taa-container" data-aos="fade-up">
-            <header className="taa-header">
-              <p>Track &gt; Assign &gt; Achieve</p>
+        {/* ======= Services Section ======= */}
+        <section id="services" className="services-section">
+          <div className="services-container" data-aos="fade-up">
+            <header className="services-header">
+              <h2>🔧 SERVICES</h2>
             </header>
 
-            <div className="taa-content">
-              <div className="taa-left">
-                <ul className="taa-tabs">
-                  <li className="taa-tab active" data-target="track">
-                    Track
-                  </li>
-                  <li className="taa-tab" data-target="assign">
-                    Assign
-                  </li>
-                  <li className="taa-tab" data-target="achieve">
-                    Achieve
-                  </li>
-                </ul>
-
-                <div className="taa-tab-content">
-                  <div className="taa-pane active" id="track">
-                    <h3> Fast Track Their Progress</h3>
-                    <p>
-                      Get real-time insights into your students’ learning
-                      journey and monitor progress with futuristic analytics
-                      dashboards that visualize growth.
-                    </p>
-                  </div>
-                  <div className="taa-pane" id="assign">
-                    <h3>📘 Assess Students' Performance</h3>
-                    <p>
-                      Empower educators with adaptive tests, AI-based feedback,
-                      and detailed performance breakdowns. Personalized
-                      difficulty levels ensure every student thrives.
-                    </p>
-                  </div>
-                  <div className="taa-pane" id="achieve">
-                    <h3> No Regrets, Only Achievement!</h3>
-                    <p>
-                      With over 100 personalized achievement paths, students
-                      receive tailored guidance and milestone tracking,
-                      motivating them toward excellence.
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              <div className="taa-right">
-                <Image
-                  src="/track.png"
-                  alt="Track Assign Achieve"
-                  width={550}
-                  height={400}
-                  className="taa-image"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ======= Why Choose 10SECONDS PREP Section ======= */}
-        <section className="why-choose-prep">
-          <div className="prep-container" data-aos="fade-up">
-            <header className="prep-header">
-              <p>Why Choose 10SECONDS PREP?</p>
-            </header>
-
-            <div className="prep-grid">
+            <div
+              className="services-grid"
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+                gap: "2rem",
+                marginTop: "2rem",
+              }}
+            >
               {[
                 {
-                  title: " Video Lessons by Top Trainers",
-                  desc: "Live and recorded sessions by top curators with interactive visual learning.",
-                  icon: <FaVideo />,
+                  title: "Pre-Placement Training",
+                  icon: <FaChalkboardTeacher color="#007cf0" size={50} />,
+                  desc: "Aptitude (Quant, Reasoning, Verbal) | Soft Skills & Communication | Mock Interviews | Competitive Coding (C, C++, DSA).",
+                  outcome:
+                    "Higher aptitude clearance, improved recruiter alignment, and better first-round success.",
                 },
                 {
-                  title: " Comprehensive Modules",
-                  desc: "Covering aptitude, reasoning, and technical languages with modern methodologies.",
-                  icon: <FaBookOpen />,
+                  title: "Recruitment Readiness & Campus Programs",
+                  icon: <FaUsersCog color="#00bcd4" size={50} />,
+                  desc: "Company-specific test prep, GD and HR interview coaching, resume + LinkedIn grooming, and career mapping.",
+                  outcome:
+                    "Students ready for Cognizant, SAP Labs, TCS, Infosys & top recruiters.",
                 },
                 {
-                  title: " Latest Pattern Test Series",
-                  desc: "Practice full-length mock tests with instant feedback and leaderboard ranking.",
-                  icon: <FaBrain />,
+                  title: "Technical Upskilling & Projects",
+                  icon: <FaLaptopCode color="#28a745" size={50} />,
+                  desc: "C, C++, Java, Python | IoT & Embedded Systems | Mini & Major Industry Projects.",
+                  outcome:
+                    "Hands-on, project-based learning that mirrors real corporate environments.",
                 },
                 {
-                  title: " Expert Faculty Sets",
-                  desc: "Every module crafted by industry experts for maximum conceptual clarity.",
-                  icon: <FaChalkboardTeacher />,
+                  title: "Corporate Training & Team Development",
+                  icon: <FaUserTie color="#ff8800" size={50} />,
+                  desc: "Leadership, Etiquette, Workplace Communication, and Time Management Modules for organizations and faculty.",
+                  outcome: "Upskilled, motivated, and collaborative teams.",
                 },
                 {
-                  title: " Updated Question Patterns",
-                  desc: "Stay ahead with the latest exam trends and structured question sets.",
-                  icon: <FaClipboardList />,
-                },
-                {
-                  title: " Detailed Solutions",
-                  desc: "Every question comes with in-depth explanations for complete understanding.",
-                  icon: <FaFileAlt />,
+                  title: "Staffing & Talent Consulting (NEW)",
+                  icon: <FaHandshake color="#004aad" size={50} />,
+                  desc: "End-to-end recruitment support for companies hiring pre-trained talent. We handle sourcing, screening, onboarding, and payroll — powered by our LMS insights. Our staffing model is not transactional. It’s ecosystem-driven.",
+                  outcome:
+                    "Faster hiring cycles, better retention, zero bench cost.",
                 },
               ].map((item, index) => (
                 <div
-                  className="prep-card"
                   key={index}
-                  style={{ animationDelay: `${index * 0.2}s` }}
+                  className="service-card"
+                  style={{
+                    background: "#ffffff",
+                    borderRadius: "12px",
+                    padding: "25px",
+                    boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
+                    transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                    textAlign: "center",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = "translateY(-8px)";
+                    e.currentTarget.style.boxShadow =
+                      "0 8px 25px rgba(0,0,0,0.12)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow =
+                      "0 4px 20px rgba(0,0,0,0.08)";
+                  }}
                 >
                   <div
-                    className="prep-icon"
-                    style={{
-                      fontSize: "2rem",
-                      color: "#007bff",
-                      marginBottom: "10px",
-                    }}
+                    className="service-icon"
+                    style={{ marginBottom: "15px" }}
                   >
                     {item.icon}
                   </div>
-                  <h3>{item.title}</h3>
-                  <p>{item.desc}</p>
+                  <h3 style={{ color: "#007bff", marginBottom: "10px" }}>
+                    {item.title}
+                  </h3>
+                  <p style={{ color: "#444", lineHeight: "1.6" }}>
+                    {item.desc}
+                  </p>
+                  <p style={{ marginTop: "10px", color: "#003366" }}>
+                    <strong>Outcome:</strong> {item.outcome}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
         </section>
+        {/* ======= LMS PLATFORM Section ======= */}
+        <section id="lms-platform" className="lms-section">
+          <div className="lms-container" data-aos="fade-up">
+            <header className="lms-header">
+              <h2>📚 LMS PLATFORM</h2>
+              <a
+                href="https://learning.10seconds.co.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="lms-link"
+              >
+                learning.10seconds.co.in
+              </a>
+            </header>
 
-        {/* ======= Our Journey So Far Section ======= */}
+            <p className="lms-description">
+              Our in-house Learning Management System connects learners,
+              trainers, and recruiters on one platform.
+            </p>
+
+            <div className="lms-stats">
+              {[
+                { number: "50K+", label: "Active Users" },
+                { number: "250+", label: "Mock & Company-Specific Tests" },
+                { number: "100+", label: "Video Tutorials" },
+                { number: "📊", label: "Real-time Analytics & Leaderboards" },
+                { number: "💻", label: "MCQ + Coding Assessments" },
+              ].map((stat, index) => (
+                <div key={index} className="lms-card">
+                  <h3>{stat.number}</h3>
+                  <p>{stat.label}</p>
+                </div>
+              ))}
+            </div>
+
+            <p className="lms-footer">
+              Personalized, data-driven, and measurable — our LMS turns every
+              learner into a performer.
+            </p>
+          </div>
+        </section>
+
+        {/* ======= Clients Section ======= */}
+        <section id="clients" className="clients-section">
+          <div className="clients-container" data-aos="fade-up">
+            <header
+              className="clients-header"
+              style={{ textAlign: "center", marginBottom: "2rem" }}
+            >
+              <h2
+                style={{
+                  fontSize: "2.4rem",
+                  fontWeight: "800",
+                  color: "#004aad",
+                }}
+              >
+                🤝 Institutional Partners
+              </h2>
+              <p
+                style={{
+                  fontSize: "1.1rem",
+                  color: "#333",
+                  maxWidth: "900px",
+                  margin: "1rem auto 3rem auto",
+                  lineHeight: "1.7",
+                }}
+              >
+                Trusted by 50+ top colleges including{" "}
+                <strong>
+                  NITK Surathkal, MAHE Manipal, RVCE, BMSCE, NMIT, Sahyadri
+                  Mangalore, PES Mandya, VCET Puttur, Navkis Hassan, Jain
+                  University, MIT Mysuru
+                </strong>
+                , and many more.
+              </p>
+            </header>
+
+            <div
+              className="clients-slider-wrapper"
+              style={{ marginBottom: "4rem" }}
+            >
+              <ClientsSection />
+            </div>
+
+            <div
+              className="clients-footer"
+              style={{ textAlign: "center", marginTop: "3rem" }}
+            >
+              <h3
+                style={{
+                  color: "#004aad",
+                  fontSize: "1.8rem",
+                  fontWeight: "700",
+                  marginBottom: "1rem",
+                }}
+              >
+                🌍 Our footprint covers every major engineering hub across
+                Karnataka.
+              </h3>
+
+              <div className="corporate-collab" style={{ marginTop: "2rem" }}>
+                <h2
+                  style={{
+                    fontSize: "2rem",
+                    fontWeight: "800",
+                    color: "#007bff",
+                    marginBottom: "1rem",
+                  }}
+                >
+                  Corporate Collaborations
+                </h2>
+                <p
+                  style={{
+                    fontSize: "1.1rem",
+                    color: "#333",
+                    maxWidth: "850px",
+                    margin: "0 auto 1.5rem auto",
+                    lineHeight: "1.7",
+                  }}
+                >
+                  <strong>
+                    Tata Elxsi | UiPath | Hitachi | Everi India | RPASoft.ai |
+                    VectorFab | Glowtouch | Prime Technosoft
+                  </strong>
+                </p>
+                <p
+                  style={{
+                    fontSize: "1.05rem",
+                    color: "#003366",
+                    maxWidth: "750px",
+                    margin: "0 auto",
+                  }}
+                >
+                  We design, train, and deploy talent aligned with real-world
+                  industry needs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ======= Our Journey Section ======= */}
         <section className="journey-section">
           <div className="journey-container" data-aos="fade-up">
-            <header className="journey-header">
-              <p>Our Journey So Far!</p>
+            <header
+              className="journey-header"
+              style={{ textAlign: "center", marginBottom: "2.5rem" }}
+            >
+              <h2
+                style={{
+                  fontSize: "2.5rem",
+                  fontWeight: "800",
+                  color: "#004aad",
+                }}
+              >
+                🌱 OUR JOURNEY
+              </h2>
+              <h3
+                style={{
+                  fontSize: "1.4rem",
+                  color: "#007bff",
+                  marginTop: "0.5rem",
+                }}
+              >
+                From a Classroom Dream to a Campus Movement
+              </h3>
+              <p
+                style={{
+                  fontSize: "1.1rem",
+                  color: "#333",
+                  maxWidth: "850px",
+                  margin: "1.5rem auto 2rem auto",
+                  lineHeight: "1.7",
+                }}
+              >
+                What began in 2003 as a passion for aptitude has grown into a
+                network that bridges classrooms and careers. With every phase —
+                from training students to digitizing learning to building
+                corporate staffing models — we’ve evolved without losing focus
+                on what matters most: <strong>student success.</strong>
+              </p>
             </header>
+
+            <h3
+              style={{
+                textAlign: "center",
+                fontSize: "1.8rem",
+                color: "#004aad",
+                marginBottom: "2rem",
+              }}
+            >
+              Milestones
+            </h3>
+
             <div className="timeline">
               {[
                 {
                   year: "2003",
-                  title: "Started with Aptitude Training.",
+                  title: "Aptitude Training Begins",
+                  desc: "We started our journey by training students in aptitude, problem-solving, and analytical thinking — building strong career foundations.",
                   icon: <FaRocket color="#007cf0" />,
                 },
                 {
-                  year: "2012",
-                  title:
-                    "Expanded by mastering technical training and innovative learning.",
+                  year: "2010",
+                  title: "Technical & Soft Skills Expansion",
+                  desc: "Introduced modules for communication, coding, and technical interviews, making students job-ready across multiple domains.",
                   icon: <FaCogs color="#00bcd4" />,
                 },
                 {
-                  year: "2016",
-                  title:
-                    "With quality-based training, reached 80+ prestigious colleges across Karnataka.",
+                  year: "2020",
+                  title: "BASE Educational Services (Udupi) Acquired",
+                  desc: "Expanded our footprint and strengthened our regional presence by integrating BASE's educational excellence with our training ecosystem.",
                   icon: <FaUniversity color="#009688" />,
                 },
                 {
-                  year: "2020",
-                  title:
-                    "Revamped the entire experience with a modern Learning Management Portal.",
+                  year: "2022",
+                  title: "LMS Platform Launched",
+                  desc: "Digitized learning with our in-house Learning Management System — enabling real-time analytics, assessments, and skill benchmarking.",
                   icon: <FaLaptopCode color="#ff8800" />,
+                },
+                {
+                  year: "2024",
+                  title: "Staffing & Consulting Vertical Introduced",
+                  desc: "Launched the Staffing and Consulting division — bridging trained talent and corporates, transforming employability into measurable success.",
+                  icon: <FaClipboardList color="#004aad" />,
                 },
               ].map((item, index) => (
                 <div className="timeline-item" key={index}>
@@ -722,15 +704,21 @@ export default function Page() {
                   <div className="timeline-year">{item.year}</div>
                   <div className="timeline-content">
                     <h4>{item.title}</h4>
+                    <p
+                      style={{
+                        color: "#444",
+                        lineHeight: "1.6",
+                        marginTop: "0.3rem",
+                      }}
+                    >
+                      {item.desc}
+                    </p>
                   </div>
                 </div>
               ))}
             </div>
           </div>
         </section>
-
-        {/* ======= Clients Section ======= */}
-        <ClientsSection />
         {/* ======= Contact Section ======= */}
         <section
           id="contact"
@@ -883,7 +871,83 @@ export default function Page() {
           </div>
         </section>
       </main>
+      {/* ======= Vision & Future Section ======= */}
+      <section id="vision-future" className="vision-section">
+        <div className="vision-container" data-aos="fade-up">
+          <header
+            className="vision-header"
+            style={{ textAlign: "center", marginBottom: "2.5rem" }}
+          >
+            <h2
+              style={{
+                fontSize: "2.5rem",
+                fontWeight: "800",
+                color: "#004aad",
+                background: "linear-gradient(90deg, #007cf0, #00dfd8, #007cf0)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+                animation: "headerShine 6s linear infinite",
+              }}
+            >
+              🔮 VISION & FUTURE
+            </h2>
+          </header>
 
+          <div
+            className="vision-content"
+            style={{
+              maxWidth: "900px",
+              margin: "0 auto",
+              background: "#ffffff",
+              borderRadius: "15px",
+              boxShadow: "0 6px 25px rgba(0, 0, 0, 0.08)",
+              padding: "40px",
+              textAlign: "center",
+              transition: "transform 0.3s ease, box-shadow 0.3s ease",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "translateY(-6px)";
+              e.currentTarget.style.boxShadow =
+                "0 12px 30px rgba(0, 0, 0, 0.12)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.boxShadow =
+                "0 6px 25px rgba(0, 0, 0, 0.08)";
+            }}
+          >
+            <h3
+              style={{
+                fontSize: "1.8rem",
+                color: "#007bff",
+                fontWeight: "700",
+                marginBottom: "1rem",
+              }}
+            >
+              Our Vision
+            </h3>
+            <p
+              style={{
+                fontSize: "1.2rem",
+                color: "#333",
+                lineHeight: "1.7",
+              }}
+            >
+              To be India’s most trusted campus-to-corporate ecosystem driven by{" "}
+              <strong>Training, Technology & Talent.</strong>
+            </p>
+            <div
+              style={{
+                height: "2px",
+                width: "80px",
+                background: "#00bcd4",
+                margin: "2rem auto 0 auto",
+                borderRadius: "2px",
+              }}
+            ></div>
+          </div>
+        </div>
+      </section>
       <footer className="footer">
         <div className="footer-container">
           <div className="footer-left">

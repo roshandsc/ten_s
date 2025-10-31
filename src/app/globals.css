@@ -2550,3 +2550,451 @@ main {
     font-size: 1rem;
   }
 }
+
+/* ===========================
+   SERVICES SECTION
+=========================== */
+.services-section {
+  background: linear-gradient(180deg, #f5faff 0%, #ffffff 100%);
+  padding: 100px 5%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.services-section::before,
+.services-section::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 223, 216, 0.15), transparent 70%);
+  filter: blur(80px);
+  z-index: 0;
+  animation: floatGlow 10s ease-in-out infinite alternate;
+}
+
+.services-section::before {
+  top: -100px;
+  left: -100px;
+}
+
+.services-section::after {
+  bottom: -100px;
+  right: -100px;
+}
+
+@keyframes floatGlow {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(50px, -50px);
+  }
+}
+
+.services-header h2 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #004aad;
+  background: linear-gradient(90deg, #007cf0, #00dfd8, #007cf0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: headerShine 6s linear infinite;
+  margin-bottom: 3rem;
+}
+
+@keyframes headerShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.service-card {
+  background: linear-gradient(145deg, #ffffff, #f5f9ff);
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 124, 240, 0.1);
+  padding: 2rem;
+  transition: all 0.4s ease-in-out;
+  border-top: 5px solid transparent;
+  border-image: linear-gradient(90deg, #007cf0, #00dfd8);
+  border-image-slice: 1;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(0, 124, 240, 0.25);
+}
+
+.service-card h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #003c8f;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover h3 {
+  color: #00bcd4;
+  transform: translateX(5px);
+}
+
+.service-card p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333;
+}
+
+.service-card p strong {
+  color: #0a2a66;
+}
+
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(0, 223, 216, 0.1), transparent 70%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.service-card:hover::before {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .services-header h2 {
+    font-size: 2rem;
+  }
+
+  .service-card {
+    padding: 1.5rem;
+  }
+}
+/* ===========================
+   LMS PLATFORM SECTION
+=========================== */
+.lms-section {
+  background: linear-gradient(180deg, #eaf3ff 0%, #ffffff 100%);
+  padding: 100px 5%;
+  text-align: center;
+}
+
+.lms-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #004aad;
+  margin-bottom: 0.5rem;
+}
+
+.lms-link {
+  display: inline-block;
+  color: #007bff;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.lms-link:hover {
+  color: #00bcd4;
+  text-decoration: underline;
+}
+
+.lms-description {
+  font-size: 1.2rem;
+  color: #333;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.lms-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.lms-card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  padding: 2rem 1rem;
+  transition: all 0.4s ease;
+  border-top: 4px solid #007bff;
+}
+
+.lms-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 124, 240, 0.2);
+}
+
+.lms-card h3 {
+  font-size: 2rem;
+  color: #007bff;
+  font-weight: 700;
+}
+
+.lms-card p {
+  color: #333;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+.lms-footer {
+  margin-top: 3rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #003366;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ===========================
+   CLIENTS SECTION (INSTITUTIONAL + CORPORATE)
+=========================== */
+.clients-section {
+  background: linear-gradient(180deg, #f5faff 0%, #ffffff 100%);
+  padding: 100px 5%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.clients-section::before,
+.clients-section::after {
+  content: "";
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 124, 240, 0.12), transparent 70%);
+  filter: blur(70px);
+  z-index: 0;
+  animation: floatLightClients 10s ease-in-out infinite alternate;
+}
+
+.clients-section::before {
+  top: -120px;
+  left: -120px;
+}
+
+.clients-section::after {
+  bottom: -100px;
+  right: -100px;
+}
+
+@keyframes floatLightClients {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(40px, -40px);
+  }
+}
+
+.clients-header h2 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: #004aad;
+  background: linear-gradient(90deg, #007cf0, #00dfd8, #007cf0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: clientsHeaderShine 6s linear infinite;
+  margin-bottom: 1.5rem;
+}
+
+@keyframes clientsHeaderShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.clients-header p {
+  font-size: 1.1rem;
+  color: #333;
+  max-width: 900px;
+  margin: 0 auto 3rem;
+  line-height: 1.7;
+}
+
+.clients-slider-wrapper {
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 1;
+}
+
+.clients-footer h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #004aad;
+  margin-bottom: 1rem;
+}
+
+.corporate-collab h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #007bff;
+  margin-bottom: 1rem;
+}
+
+.corporate-collab p {
+  font-size: 1.1rem;
+  color: #333;
+  max-width: 850px;
+  margin: 0 auto 1.5rem auto;
+  line-height: 1.7;
+}
+
+.corporate-collab strong {
+  color: #0a2a66;
+}
+
+.corporate-collab {
+  margin-top: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .clients-header h2 {
+    font-size: 2rem;
+  }
+
+  .clients-footer h3 {
+    font-size: 1.5rem;
+  }
+
+  .corporate-collab h2 {
+    font-size: 1.7rem;
+  }
+
+  .clients-header p,
+  .corporate-collab p {
+    font-size: 1rem;
+  }
+}
+
+/* ===========================
+   OUR JOURNEY SECTION (ENHANCED FINISHING)
+=========================== */
+
+.journey-header h2 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #004aad;
+  background: linear-gradient(90deg, #007cf0, #00dfd8, #007cf0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: headerShine 6s linear infinite;
+  margin-bottom: 0.8rem;
+}
+
+.journey-header h3 {
+  font-size: 1.4rem;
+  color: #007bff;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+.journey-header p {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.8;
+  max-width: 850px;
+  margin: 0 auto 3rem;
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding: 1.5rem 2rem;
+  background: linear-gradient(145deg, #ffffff, #f0f8ff);
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 124, 240, 0.12);
+  transition: all 0.4s ease;
+}
+
+.timeline-item:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 15px 40px rgba(0, 124, 240, 0.25);
+}
+
+.timeline-year {
+  font-weight: 800;
+  color: #003c8f;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #004aad;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-content p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.7;
+}
+
+.timeline-dot {
+  font-size: 2rem;
+  text-align: center;
+  animation: pulseDot 2.5s ease-in-out infinite;
+}
+
+@keyframes pulseDot {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+/* Responsive timeline stacking for smaller screens */
+@media (max-width: 992px) {
+  .timeline {
+    gap: 2rem;
+  }
+  .timeline-item {
+    width: 100%;
+    left: 0 !important;
+    border-left: 5px solid #007cf0 !important;
+    border-right: none !important;
+  }
+}
