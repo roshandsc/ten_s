@@ -215,111 +215,54 @@ export default function Page() {
       </header>
 
       <main className="main" style={{ minHeight: "60vh" }}>
-        <section id="hero" className="hero-banner">
-          <div className="hero-header-text">
-            <h1 className="main-headline" style={{ textAlign: "center" }}>
-              From Campus to Corporate — in Just <span>10 SECONDS.</span>
-            </h1>
-            <p
-              className="sub-headline"
-              style={{
-                textAlign: "center",
-                padding: "0 15%",
-                marginTop: "1rem",
-                fontSize: "1.1rem",
-                lineHeight: "1.6",
-                color: "#333",
-              }}
-            >
-              We’re an employability ecosystem empowering students,
-              institutions, and recruiters through training, technology, and
-              talent solutions.
+        <section id="hero" className="hero">
+          <div className="hero-content">
+            <div className="hero-text">
+              <h1>
+                From Campus to Corporate — in Just <span>10 SECONDS</span>.
+              </h1>
+              <h3>
+                We’re an employability ecosystem empowering students,
+                institutions, and recruiters through training, technology, and
+                talent solutions.
+              </h3>
+              <button className="hero-btn">Get Started Now</button>
+            </div>
+
+            <div className="hero-image">
+              <Image
+                src="/hero.png"
+                alt="A professional graphic related to career success"
+                width={550}
+                height={400}
+                className="hero-main-image"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section className="quick-summary">
+          <div className="summary-card">
+            <h2>🎓 Training That Transforms</h2>
+            <p>
+              Aptitude, Coding, and Soft-Skill programs built for real
+              placements.
             </p>
           </div>
-          <div className="hero-slider">
-            {/* Block 1 — Training That Transforms */}
-            <div className="hero-slide active">
-              <div className="hero-content">
-                <div className="hero-text">
-                  <h1>Training That Transforms</h1>
-                  <h2>
-                    Aptitude, Coding, and Soft-Skill programs built for real
-                    placements.
-                  </h2>
-                  <p>
-                    From Campus to Corporate — in Just <span>10 SECONDS</span>.
-                  </p>
-                  <button className="hero-btn">Explore Programs</button>
-                </div>
-                <div className="hero-image">
-                  <Image
-                    src="/hero_card1.png"
-                    alt="Training Illustration"
-                    width={500}
-                    height={400}
-                  />
-                </div>
-              </div>
-            </div>
 
-            {/* Block 2 — Technology That Tracks */}
-            <div className="hero-slide">
-              <div className="hero-content">
-                <div className="hero-text">
-                  <h1> Technology That Tracks</h1>
-                  <h2>
-                    LMS with analytics, assessments, and recruiter-benchmarked
-                    tests.
-                  </h2>
-                  <p>
-                    Empowering institutions and recruiters with smart
-                    performance insights.
-                  </p>
-                  <button className="hero-btn">Discover LMS</button>
-                </div>
-                <div className="hero-image">
-                  <Image
-                    src="/hero_card2.png"
-                    alt="Technology Illustration"
-                    width={500}
-                    height={400}
-                  />
-                </div>
-              </div>
-            </div>
+          <div className="summary-card">
+            <h2>💻 Technology That Tracks</h2>
+            <p>
+              LMS with analytics, assessments, and recruiter-benchmarked tests.
+            </p>
+          </div>
 
-            {/* Block 3 — Talent That Fits */}
-            <div className="hero-slide">
-              <div className="hero-content">
-                <div className="hero-text">
-                  <h1> Talent That Fits</h1>
-                  <h2>
-                    Staffing and consulting services connecting pre-trained
-                    candidates with leading corporates.
-                  </h2>
-                  <p>
-                    Hire with confidence through our curated and industry-ready
-                    workforce.
-                  </p>
-                  <button className="hero-btn">Hire With Us</button>
-                </div>
-                <div className="hero-image">
-                  <Image
-                    src="/hero_card3.png"
-                    alt="Talent Illustration"
-                    width={500}
-                    height={400}
-                  />
-                </div>
-              </div>
-            </div>
-
-            {/* Blue Navigation Dots */}
-            <div className="hero-dots">
-              <div className="hero-dot active"></div>
-              <div className="hero-dot"></div>
-              <div className="hero-dot"></div>
-            </div>
+          <div className="summary-card">
+            <h2>🤝 Talent That Fits</h2>
+            <p>
+              Staffing and consulting services connecting pre-trained candidates
+              with leading corporates.
+            </p>
           </div>
         </section>
 
