@@ -424,7 +424,7 @@ address a:hover {
   position: relative;
   color: #000000;
   font-weight: 600;
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   text-decoration: none;
   transition: color 0.4s ease, transform 0.4s ease;
 }
@@ -520,7 +520,7 @@ address a:hover {
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  gap: 2.5rem;
+  gap: 2rem;
   list-style: none;
   margin: 0;
   padding: 0;
