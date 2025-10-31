@@ -39,8 +39,11 @@ SwiperCore.use([Autoplay, FreeMode]);
 const navigationLinks = [
   { name: "Home", href: "#hero" },
   { name: "About Us", href: "#about" },
-  { name: "For Universities / Institutions", href: "#track-assign-achieve" },
-  { name: "Consulting", href: "#consulting" },
+  { name: "Services", href: "#services" },
+  { name: "LMS Platform", href: "#lms-platform" },
+  { name: "Our Clients", href: "#clients" },
+  { name: "Our Journey", href: "#journey" },
+  { name: "Vision and Future", href: "#vision-future" },
   { name: "Contact Us", href: "#contact" },
 ];
 
@@ -51,6 +54,12 @@ export default function Page() {
   const [hydrated, setHydrated] = useState(false);
   useEffect(() => {
     setHydrated(true);
+  }, []);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      document.documentElement.style.scrollBehavior = "smooth";
+    }
   }, []);
 
   // Stats Counter Animation
@@ -194,21 +203,16 @@ export default function Page() {
                 {navigationLinks.map((link) => (
                   <li key={link.name}>
                     {link.name === "Contact Us" ? (
-                      <Link
-                        href={link.href}
-                        className={`contact-button ${
-                          pathname === link.href ? "active-link" : ""
-                        }`}
-                      >
+                      <a href={link.href} className="contact-button">
                         {link.name}
-                      </Link>
+                      </a>
                     ) : (
-                      <Link
+                      <a
                         href={link.href}
                         className={pathname === link.href ? "active-link" : ""}
                       >
                         {link.name}
-                      </Link>
+                      </a>
                     )}
                   </li>
                 ))}
@@ -223,7 +227,7 @@ export default function Page() {
           <div className="hero-content">
             <div className="hero-text">
               <h1>
-                From Campus to Corporate — in Just <span>10 SECONDS</span>.
+                From Campus to Corporate — in Just <span>10 SECONDS</span>
               </h1>
               <h3>
                 We’re an employability ecosystem empowering students,
@@ -235,7 +239,7 @@ export default function Page() {
 
             <div className="hero-image">
               <Image
-                src="/hero.png"
+                src="/h.png"
                 alt="A professional graphic related to career success"
                 width={550}
                 height={400}
