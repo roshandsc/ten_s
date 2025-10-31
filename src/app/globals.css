@@ -454,7 +454,7 @@ address a:hover {
 /* Contact button: solid blue, white text, no gradient or animation */
 .contact-button {
   background: var(--primary-blue);
-  color: #ffffff !important;
+  color: #060000 !important;
   padding: 0.7rem 1.6rem;
   border-radius: 8px;
   font-weight: 700;
