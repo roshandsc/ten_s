@@ -1,0 +1,1 @@
+self.__REACT_LOADABLE_MANIFEST="{\"app/page.jsx -> ./ClientsSection\":{\"id\":\"app/page.jsx -> ./ClientsSection\",\"files\":[\"static/chunks/_app-pages-browser_src_app_ClientsSection_jsx.js\"]},\"app/page.jsx -> swiper\":{\"id\":\"app/page.jsx -> swiper\",\"files\":[]}}"
