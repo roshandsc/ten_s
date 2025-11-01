@@ -385,10 +385,21 @@ export default function Page() {
                     display: "flex",
                     flexDirection: "column",
                     gap: "1.2rem",
+                    animation: navOpen
+                      ? "fadeSlideIn 0.45s ease forwards"
+                      : "fadeSlideOut 0.3s ease forwards",
                   }}
                 >
-                  {navigationLinks.map((link) => (
-                    <li key={link.name}>
+                  {navigationLinks.map((link, i) => (
+                    <li
+                      key={link.name}
+                      style={{
+                        opacity: 0,
+                        animation: navOpen
+                          ? `fadeInItem 0.4s ease forwards ${i * 0.08}s`
+                          : "none",
+                      }}
+                    >
                       <a
                         href={link.href}
                         className={
@@ -412,6 +423,39 @@ export default function Page() {
                     </li>
                   ))}
                 </ul>
+
+                <style jsx>{`
+                  @keyframes fadeSlideIn {
+                    from {
+                      opacity: 0;
+                      transform: translateY(-10px);
+                    }
+                    to {
+                      opacity: 1;
+                      transform: translateY(0);
+                    }
+                  }
+
+                  @keyframes fadeInItem {
+                    from {
+                      opacity: 0;
+                      transform: translateY(8px);
+                    }
+                    to {
+                      opacity: 1;
+                      transform: translateY(0);
+                    }
+                  }
+
+                  @keyframes fadeSlideOut {
+                    from {
+                      opacity: 1;
+                    }
+                    to {
+                      opacity: 0;
+                    }
+                  }
+                `}</style>
               </nav>
             </div>
           )}
@@ -579,9 +623,9 @@ export default function Page() {
             ...maxWidthWrapperStyle,
             display: "flex",
             flexDirection: isBelow992 ? "column" : "row",
-            alignItems: "stretch",
+            alignItems: "center",
             justifyContent: "center",
-            gap: isBelow480 ? "1rem" : isBelow768 ? "1.2rem" : "2.2rem",
+            gap: isBelow480 ? "1.2rem" : isBelow768 ? "1.5rem" : "2.4rem",
             padding: isBelow480
               ? "20px 0 10px"
               : isBelow768
@@ -590,96 +634,280 @@ export default function Page() {
             boxSizing: "border-box",
           }}
         >
+          {/* Minimal summary item 1 */}
           <div
-            className="summary-card"
+            className="summary-item"
             style={{
               flex: 1,
               minWidth: isBelow992 ? "90%" : 0,
               width: isBelow992 ? "90%" : "auto",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "space-between",
+              textAlign: "center",
               margin: isBelow992 ? "0 auto" : 0,
-              padding: isBelow480 ? "18px" : isBelow768 ? "22px" : "25px",
-              marginBottom: isBelow992 ? "0.8rem" : 0,
-              borderRadius: 12,
+              gap: isBelow480 ? "0.5rem" : "0.8rem",
               background: "#fff",
               boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
-              textAlign: "center",
+              border: "2px solid #e0f2ff",
+              borderRadius: "15px",
+              transition:
+                "border-color 0.2s cubic-bezier(.4,0,.2,1), box-shadow 0.3s ease, transform 0.3s ease",
+              minHeight: isBelow480 ? "240px" : isBelow768 ? "280px" : "340px",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = "#00bcd4";
+              e.currentTarget.style.boxShadow = "0 8px 25px rgba(0,0,0,0.12)";
+              e.currentTarget.style.transform = "translateY(-6px)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = "#e0f2ff";
+              e.currentTarget.style.boxShadow = "0 4px 20px rgba(0,0,0,0.08)";
+              e.currentTarget.style.transform = "translateY(0)";
             }}
           >
-            <div
-              className="summary-icon"
+            <Image
+              src="/q1.png"
+              alt="Training That Transforms Icon"
+              width={isBelow480 ? 68 : isBelow768 ? 82 : 100}
+              height={isBelow480 ? 68 : isBelow768 ? 82 : 100}
               style={{
-                fontSize: "2.5rem",
-                color: "#007bff",
-                marginBottom: "10px",
+                objectFit: "contain",
+                maxWidth: "100%",
+                filter: "brightness(1.1) saturate(1.15)",
+                display: "block",
+                marginBottom: isBelow480 ? "0.4rem" : "0.6rem",
+                marginTop: "0.4rem",
+                transition: "transform 0.2s cubic-bezier(.4,0,.2,1)",
+              }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.transform = "scale(1.07)")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.transform = "scale(1)")
+              }
+              tabIndex={0}
+            />
+            <h2
+              style={{
+                fontSize: isBelow480
+                  ? "1.13rem"
+                  : isBelow768
+                  ? "1.22rem"
+                  : "1.3rem",
+                fontWeight: 700,
+                color: "#003366",
+                margin: 0,
+                marginBottom: "0.25rem",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                height: "auto",
+                minHeight: "unset",
               }}
             >
-              <FaBookOpen />
-            </div>
-            <h2>Training That Transforms</h2>
-            <p>
+              Training That Transforms
+            </h2>
+            <p
+              style={{
+                color: "#444",
+                fontSize: isBelow480 ? "0.99rem" : "1.06rem",
+                margin: 0,
+                marginTop: 0,
+                lineHeight: "1.6",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                height: "auto",
+                minHeight: "unset",
+              }}
+            >
               Aptitude, Coding, and Soft-Skill programs built for real
               placements.
             </p>
           </div>
-
+          {/* Minimal summary item 2 */}
           <div
-            className="summary-card"
+            className="summary-item"
             style={{
               flex: 1,
               minWidth: isBelow992 ? "90%" : 0,
               width: isBelow992 ? "90%" : "auto",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "space-between",
+              textAlign: "center",
               margin: isBelow992 ? "0 auto" : 0,
-              padding: isBelow480 ? "18px" : isBelow768 ? "22px" : "25px",
-              marginBottom: isBelow992 ? "0.8rem" : 0,
-              borderRadius: 12,
+              gap: isBelow480 ? "0.5rem" : "0.8rem",
               background: "#fff",
               boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
-              textAlign: "center",
+              border: "2px solid #e0f2ff",
+              borderRadius: "15px",
+              transition:
+                "border-color 0.2s cubic-bezier(.4,0,.2,1), box-shadow 0.3s ease, transform 0.3s ease",
+              minHeight: isBelow480 ? "240px" : isBelow768 ? "280px" : "340px",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = "#00bcd4";
+              e.currentTarget.style.boxShadow = "0 8px 25px rgba(0,0,0,0.12)";
+              e.currentTarget.style.transform = "translateY(-6px)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = "#e0f2ff";
+              e.currentTarget.style.boxShadow = "0 4px 20px rgba(0,0,0,0.08)";
+              e.currentTarget.style.transform = "translateY(0)";
             }}
           >
-            <div
-              className="summary-icon"
+            <Image
+              src="/q2.png"
+              alt="Technology That Tracks Icon"
+              width={isBelow480 ? 68 : isBelow768 ? 82 : 100}
+              height={isBelow480 ? 68 : isBelow768 ? 82 : 100}
               style={{
-                fontSize: "2.5rem",
-                color: "#00bcd4",
-                marginBottom: "10px",
+                objectFit: "contain",
+                maxWidth: "100%",
+                filter: "brightness(1.1) saturate(1.15)",
+                display: "block",
+                marginBottom: isBelow480 ? "0.4rem" : "0.6rem",
+                marginTop: "0.4rem",
+                transition: "transform 0.2s cubic-bezier(.4,0,.2,1)",
+              }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.transform = "scale(1.07)")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.transform = "scale(1)")
+              }
+              tabIndex={0}
+            />
+            <h2
+              style={{
+                fontSize: isBelow480
+                  ? "1.13rem"
+                  : isBelow768
+                  ? "1.22rem"
+                  : "1.3rem",
+                fontWeight: 700,
+                color: "#003366",
+                margin: 0,
+                marginBottom: "0.25rem",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                height: "auto",
+                minHeight: "unset",
               }}
             >
-              <FaLaptopCode />
-            </div>
-            <h2>Technology That Tracks</h2>
-            <p>
+              Technology That Tracks
+            </h2>
+            <p
+              style={{
+                color: "#444",
+                fontSize: isBelow480 ? "0.99rem" : "1.06rem",
+                margin: 0,
+                marginTop: 0,
+                lineHeight: "1.6",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                height: "auto",
+                minHeight: "unset",
+              }}
+            >
               LMS with analytics, assessments, and recruiter-benchmarked tests.
             </p>
           </div>
-
+          {/* Minimal summary item 3 */}
           <div
-            className="summary-card"
+            className="summary-item"
             style={{
               flex: 1,
               minWidth: isBelow992 ? "90%" : 0,
               width: isBelow992 ? "90%" : "auto",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "space-between",
+              textAlign: "center",
               margin: isBelow992 ? "0 auto" : 0,
-              padding: isBelow480 ? "18px" : isBelow768 ? "22px" : "25px",
-              marginBottom: isBelow992 ? "0.8rem" : 0,
-              borderRadius: 12,
+              gap: isBelow480 ? "0.5rem" : "0.8rem",
               background: "#fff",
               boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
-              textAlign: "center",
+              border: "2px solid #e0f2ff",
+              borderRadius: "15px",
+              transition:
+                "border-color 0.2s cubic-bezier(.4,0,.2,1), box-shadow 0.3s ease, transform 0.3s ease",
+              minHeight: isBelow480 ? "240px" : isBelow768 ? "280px" : "340px",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.borderColor = "#00bcd4";
+              e.currentTarget.style.boxShadow = "0 8px 25px rgba(0,0,0,0.12)";
+              e.currentTarget.style.transform = "translateY(-6px)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.borderColor = "#e0f2ff";
+              e.currentTarget.style.boxShadow = "0 4px 20px rgba(0,0,0,0.08)";
+              e.currentTarget.style.transform = "translateY(0)";
             }}
           >
-            <div
-              className="summary-icon"
+            <Image
+              src="/q3.png"
+              alt="Talent That Fits Icon"
+              width={isBelow480 ? 68 : isBelow768 ? 82 : 100}
+              height={isBelow480 ? 68 : isBelow768 ? 82 : 100}
               style={{
-                fontSize: "2.5rem",
-                color: "#28a745",
-                marginBottom: "10px",
+                objectFit: "contain",
+                maxWidth: "100%",
+                filter: "brightness(1.1) saturate(1.15)",
+                display: "block",
+                marginBottom: isBelow480 ? "0.4rem" : "0.6rem",
+                marginTop: "0.4rem",
+                transition: "transform 0.2s cubic-bezier(.4,0,.2,1)",
+              }}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.transform = "scale(1.07)")
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.transform = "scale(1)")
+              }
+              tabIndex={0}
+            />
+            <h2
+              style={{
+                fontSize: isBelow480
+                  ? "1.13rem"
+                  : isBelow768
+                  ? "1.22rem"
+                  : "1.3rem",
+                fontWeight: 700,
+                color: "#003366",
+                margin: 0,
+                marginBottom: "0.25rem",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                height: "auto",
+                minHeight: "unset",
               }}
             >
-              <FaHandshake />
-            </div>
-            <h2>Talent That Fits</h2>
-            <p>
+              Talent That Fits
+            </h2>
+            <p
+              style={{
+                color: "#444",
+                fontSize: isBelow480 ? "0.99rem" : "1.06rem",
+                margin: 0,
+                marginTop: 0,
+                lineHeight: "1.6",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                height: "auto",
+                minHeight: "unset",
+              }}
+            >
               Staffing and consulting services connecting pre-trained candidates
               with leading corporates.
             </p>
