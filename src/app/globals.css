@@ -432,12 +432,12 @@ address a:hover {
 /* ===== Header Styling ===== */
 .header {
   background-color: #ffffff;
-  border-bottom: 2px solid #e6f0ff;
+  border-bottom: 3px solid #007cf0;
   height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 12px rgba(0, 124, 240, 0.07);
   position: fixed;
   top: 0;
   width: 100%;
@@ -615,7 +615,7 @@ main {
   margin-bottom: 6rem;
 }
 /* ===========================================================
-   HERO SECTION (Refined Typography + Full Mobile Responsiveness)
+   HERO SECTION (Exact Replica from Uploaded Reference)
 =========================================================== */
 
 .hero {
@@ -623,12 +623,15 @@ main {
   align-items: center;
   justify-content: space-between;
   background: linear-gradient(90deg, #eaf3ff 0%, #ffffff 100%);
+  border-top: 3px solid #007cf0; /* Blue line under header */
   padding: 6rem 8%;
   height: 90vh;
-  position: relative;
   overflow: hidden;
+  position: relative;
+  box-sizing: border-box;
 }
 
+/* Container */
 .hero-content {
   display: flex;
   align-items: center;
@@ -638,82 +641,69 @@ main {
   gap: 4rem;
 }
 
+/* Left Section: Text */
 .hero-text {
   flex: 1;
   text-align: left;
+  max-width: 600px;
   padding-right: 2rem;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   justify-content: center;
-  max-width: 650px;
-  word-break: break-word;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  align-items: flex-start;
 }
 
-/* Main Heading - Refined Poppins + Inter Typography */
+/* Heading */
 .hero-text h1 {
   font-family: "Poppins", "Inter", sans-serif;
   font-weight: 800;
   font-size: 3.2rem;
-  letter-spacing: -0.5px;
-  color: #0a1a3c;
   line-height: 1.2;
+  color: #0b1a33;
   margin-bottom: 1.2rem;
-  text-rendering: optimizeLegibility;
 }
 
+/* Highlighted Accent Text */
 .hero-text h1 span {
-  font-family: "Poppins", "Inter", sans-serif;
-  font-weight: 900;
-  letter-spacing: -0.5px;
   background: linear-gradient(90deg, #007cf0, #00dfd8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight: 900;
 }
 
-.hero-text h3 {
-  font-family: "Inter", "Poppins", sans-serif;
-  font-weight: 500;
-  font-size: 1.3rem;
-  color: #333333;
-  line-height: 1.6;
-  letter-spacing: 0.2px;
-  margin-bottom: 1.5rem;
-}
-
-/* Supporting text below the subtitle */
+/* Supporting Text */
 .hero-text p {
-  font-size: 1.1rem;
   font-family: "Poppins", sans-serif;
-  color: #444;
-  line-height: 1.8;
-  margin-bottom: 2rem;
+  font-size: 1.05rem;
+  color: #000000;
+  line-height: 1.7;
+  margin-bottom: 2.2rem;
+  max-width: 550px;
 }
 
-/* Button Styling */
-/* Hero Button - Emphasized */
+/* CTA Button */
 .hero-btn {
-  background-color: #007cf0;
-  color: #fff;
-  font-size: 1.1rem;
-  font-weight: 500;
-  padding: 1rem 2.4rem;
-  border-radius: 10px;
+  background-color: #1463be;
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 0.9rem 2.4rem;
   border: none;
+  border-radius: 0; /* 👈 Makes the button rectangular */
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 6px 20px rgba(0, 124, 240, 0.25);
+  box-shadow: 0px 4px 12px rgba(0, 124, 240, 0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .hero-btn:hover {
-  background-color: #005fd1;
+  background-color: #0f4c94;
+  color: #ffffff;
   transform: translateY(-3px);
-  box-shadow: 0 8px 30px rgba(0, 124, 240, 0.35);
+  box-shadow: 0px 6px 20px rgba(0, 124, 240, 0.4);
 }
 
-/* Hero Image Styling */
+/* Right Section: Image */
 .hero-image {
   flex: 1;
   display: flex;
@@ -726,18 +716,12 @@ main {
   max-width: 520px;
   height: auto;
   object-fit: contain;
-  transition: all 0.4s ease-in-out;
-}
-
-.hero-image img:hover {
-  transform: scale(1.03);
 }
 
 /* ==========================================
    RESPONSIVE ADJUSTMENTS
 ========================================== */
 
-/* Tablets and Smaller Screens */
 @media (max-width: 992px) {
   .hero {
     flex-direction: column-reverse;
@@ -752,31 +736,24 @@ main {
   }
 
   .hero-text {
-    padding: 0;
     text-align: center;
     align-items: center;
+    padding: 0;
   }
 
   .hero-text h1 {
     font-size: 2.6rem;
-    line-height: 1.25;
-  }
-
-  .hero-text h3 {
-    font-size: 1.15rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .hero-btn {
-    margin: 0 auto;
   }
 
   .hero-image img {
     max-width: 420px;
   }
+
+  .hero-btn {
+    margin: 0 auto;
+  }
 }
 
-/* Mobile Phones */
 @media (max-width: 600px) {
   .hero {
     padding: 3rem 1rem;
@@ -784,238 +761,150 @@ main {
 
   .hero-text h1 {
     font-size: 2.1rem;
-    font-weight: 800;
-    line-height: 1.25;
   }
 
-  .hero-text h3 {
+  .hero-text p {
     font-size: 1rem;
-    font-weight: 500;
-    color: #333333;
   }
 
   .hero-btn {
     width: 100%;
-    font-size: 1rem;
     padding: 0.9rem 0;
+    font-size: 1rem;
   }
 
   .hero-image img {
     max-width: 320px;
   }
 }
-
-/* Very Small Devices */
-@media (max-width: 400px) {
-  .hero-text h1 {
-    font-size: 1.8rem;
-  }
-
-  .hero-text h3 {
-    font-size: 0.95rem;
-  }
-
-  .hero-image img {
-    max-width: 280px;
-  }
-}
-
 /* ===========================================================
-   QUICK SUMMARY SECTION
+   QUICK SUMMARY SECTION (Image Left, Horizontal Cards Right)
 =========================================================== */
-@keyframes glowBorder {
-  0% {
-    border-image-source: linear-gradient(90deg, #007cf0, #00dfd8, #007cf0);
-  }
-  50% {
-    border-image-source: linear-gradient(90deg, #00dfd8, #007cf0, #00dfd8);
-  }
-  100% {
-    border-image-source: linear-gradient(90deg, #007cf0, #00dfd8, #007cf0);
-  }
-}
-
-@keyframes iconPulse {
-  0%,
-  100% {
-    transform: scale(1);
-    opacity: 0.9;
-  }
-  50% {
-    transform: scale(1.15);
-    opacity: 1;
-  }
-}
-
-/* ===========================
-   QUICK SUMMARY SECTION (Enhanced with Glassmorphism & Tailwind-inspired Animations)
-=========================== */
+/* QUICK SUMMARY SECTION (Image Left, Horizontal Cards Right) */
 .quick-summary {
-  /* Basic flex container for the cards */
   display: flex;
+  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 2rem;
-  background: var(--light-gray, #f9f9f9);
-  padding: 4rem 2rem;
-}
-
-.summary-card {
-  background: linear-gradient(135deg, #ffffff 0%, #f3f9ff 40%, #e8f0ff 100%);
-  border-radius: 1.25rem;
-  box-shadow: 0 6px 25px rgba(0, 124, 240, 0.1);
-  text-align: center;
-  padding: 2.5rem 2rem;
-  flex: 1;
-  min-width: 280px;
-  max-width: 360px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  border: 1px solid rgba(0, 124, 240, 0.15);
-  transition: all 0.4s ease-in-out;
+  gap: 3rem;
+  background: radial-gradient(
+    circle at 20% 30%,
+    #eaf3ff 0%,
+    #ffffff 60%,
+    #f0f8ff 100%
+  );
   position: relative;
   overflow: hidden;
+  padding: 4.5rem 2.5rem;
+  box-sizing: border-box;
 }
 
-.summary-card::before {
+.quick-summary::before,
+.quick-summary::after {
   content: "";
   position: absolute;
-  inset: 0;
-  background: radial-gradient(
-      circle at top left,
-      rgba(0, 223, 216, 0.12),
-      transparent 60%
-    ),
-    radial-gradient(
-      circle at bottom right,
-      rgba(0, 124, 240, 0.12),
-      transparent 60%
-    );
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 124, 240, 0.15), transparent 70%);
+  filter: blur(80px);
   z-index: 0;
 }
-
-.summary-card:hover {
-  box-shadow: 0 10px 35px rgba(0, 124, 240, 0.2);
-  transform: translateY(-6px);
-  border-color: #00dfd8;
-  background: linear-gradient(135deg, #eaf6ff 0%, #ffffff 60%, #f0fcff 100%);
+.quick-summary::before {
+  top: -100px;
+  left: -120px;
+}
+.quick-summary::after {
+  bottom: -100px;
+  right: -120px;
 }
 
-.summary-card h2,
-.summary-card p,
-.summary-card img {
+.quick-summary-image {
+  flex: 0 0 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quick-summary-image img {
+  width: 600px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0;
+  filter: brightness(1.2) contrast(1.1)
+    drop-shadow(0 0 25px rgba(20, 99, 190, 0.3));
+  transform: scale(1.05);
+  transition: transform 0.3s ease, filter 0.3s ease;
+  background: transparent;
+}
+
+.quick-summary-image img:hover {
+  transform: scale(1.08);
+  filter: brightness(1.25) contrast(1.15)
+    drop-shadow(0 0 35px rgba(20, 99, 190, 0.4));
+}
+
+.quick-summary-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
   position: relative;
   z-index: 1;
 }
 
-/* --- Image Styling (Enlarged and Clear) --- */
-/* --- Image Styling (Refined for consistency and visibility) --- */
-.summary-card img {
-  width: 100%;
-  max-width: 260px; /* Ensures clear visibility and proper proportion */
-  height: 180px; /* Balanced height for uniformity */
-  margin: 0 auto 1.8rem;
-  object-fit: cover; /* Fills the container neatly without distortion */
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
-  display: block;
+.summary-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.09);
+  padding: 2rem 1.5rem;
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  gap: 0.5rem;
+  min-width: 260px;
+  max-width: 370px;
 }
 
-@media (max-width: 768px) {
-  .summary-card img {
-    max-width: 200px;
-    height: 140px;
-  }
+.summary-card:hover {
+  transform: translateY(-7px) scale(1.03);
+  box-shadow: 0 10px 32px rgba(20, 99, 190, 0.13);
 }
 
-/* --- Content Styling --- */
 .summary-card h2 {
-  font-size: 1.8rem; /* Slightly larger heading */
+  font-size: 1.35rem;
   font-weight: 700;
-  /* Simple solid color, removing gradient text effect */
-  color: #007cf0;
-  margin-bottom: 0.8rem;
-  text-shadow: none;
+  color: #003366;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
 }
 
 .summary-card p {
-  font-size: 1.1rem;
-  color: #333;
-  line-height: 1.6;
-  margin: 0 auto;
-  max-width: 280px;
-  font-weight: 400; /* Reduced font weight */
-}
-
-.summary-icon {
-  font-size: 2.8rem;
-  color: #007cf0;
-  margin-bottom: 1rem;
-  /* Removed animation */
-}
-
-/* --- Summary Item Cleanup Section (Kept basic for structure) --- */
-
-.summary-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  text-align: center;
-  background: #fff;
-  border: 2px solid #e0e0e0;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  transition: border-color 0.2s ease, box-shadow 0.3s ease, transform 0.3s ease;
-  min-height: 340px;
-  padding: 1.8rem 1.5rem;
-}
-
-.summary-item:hover {
-  border-color: #007cf0;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  transform: translateY(-4px); /* Simplified lift effect */
-}
-
-.summary-item img {
-  margin-top: 0.4rem;
-  margin-bottom: 1rem; /* Increased margin */
-  width: 100px; /* **Larger image size** */
-  height: 100px; /* **Larger image size** */
-  object-fit: contain;
-  transition: none; /* Removed image scale on hover */
-}
-
-.summary-item:hover img {
-  transform: none; /* Ensure no image scale */
-}
-
-.summary-item h2 {
-  margin-bottom: 0.25rem;
-  color: #003366;
-  font-weight: 700;
-  font-size: 1.3rem;
-}
-
-.summary-item p {
   color: #444;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
+  margin: 0;
   line-height: 1.6;
-  margin-top: 0;
 }
 
-/* Responsive spacing adjustments */
-@media (max-width: 768px) {
-  .summary-item {
-    min-height: 280px;
-    padding: 1.5rem;
+/* Responsive behavior */
+@media (max-width: 992px) {
+  .quick-summary {
+    flex-direction: column;
+    text-align: center;
   }
-
-  .summary-item img {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 0.4rem;
+  .quick-summary-cards {
+    flex-direction: column;
+  }
+  .summary-card {
+    align-items: center;
+    text-align: center;
   }
 }
 /* ===========================

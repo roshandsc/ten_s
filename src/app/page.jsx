@@ -48,9 +48,7 @@ export default function Page() {
   // Hydration-safe flag
   const [hydrated, setHydrated] = useState(false);
   // Responsive state
-  const [windowWidth, setWindowWidth] = useState(
-    typeof window !== "undefined" ? window.innerWidth : 1200
-  );
+  const [windowWidth, setWindowWidth] = useState(0);
   const [navOpen, setNavOpen] = useState(false);
 
   useEffect(() => {
@@ -59,14 +57,19 @@ export default function Page() {
 
   useEffect(() => {
     if (typeof window !== "undefined") {
+      setWindowWidth(window.innerWidth);
       document.documentElement.style.scrollBehavior = "smooth";
-      // Responsive window resize handler
-      const handleResize = () => {
-        setWindowWidth(window.innerWidth);
-      };
+      const handleResize = () => setWindowWidth(window.innerWidth);
       window.addEventListener("resize", handleResize);
       handleResize();
       return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && document.body) {
+      delete document.body.dataset.grExtInstalled;
+      delete document.body.dataset.newGrCSCheckLoaded;
     }
   }, []);
 
@@ -205,6 +208,7 @@ export default function Page() {
     boxSizing: "border-box",
   };
 
+  if (!hydrated) return null;
   return (
     <>
       <header
@@ -446,34 +450,17 @@ export default function Page() {
           paddingTop: "70px",
         }}
       >
-        <section
-          id="hero"
-          className="hero-section"
-          style={{
-            background: "#e6f0ff",
-            padding: isBelow480
-              ? "80px 0 40px"
-              : isBelow768
-              ? "100px 0 50px"
-              : "120px 0 60px",
-          }}
-        >
+        <section id="hero" className="hero">
           <div
             className="hero-content"
             style={{
               ...maxWidthWrapperStyle,
-              display: "flex",
-              flexDirection: isBelow992 ? "column" : "row",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: isBelow480 ? "1.2rem" : isBelow768 ? "2rem" : "3.5rem",
-              boxSizing: "border-box",
             }}
           >
             <div
               className="hero-text"
               style={{
-                flex: "1 1 0",
+                fontSize: isBelow480 ? undefined : undefined,
                 textAlign: isBelow992 ? "center" : "left",
                 marginBottom: isBelow992 ? "2.5rem" : 0,
                 marginRight: isBelow992 ? 0 : "2.5rem",
@@ -501,7 +488,7 @@ export default function Page() {
                 From Campus to Corporate — in Just <br />
                 <span
                   style={{
-                    background: "linear-gradient(90deg, #007cf0, #00dfd8)",
+                    background: "linear-gradient(90deg, #41a2ef, #1463be)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     fontFamily: "'Poppins', 'Inter', sans-serif'",
@@ -529,8 +516,8 @@ export default function Page() {
                     ? "1.22rem"
                     : "1.3rem",
                   fontFamily: "'Inter', 'Poppins', sans-serif'",
-                  fontWeight: 500,
-                  color: "#333333",
+                  fontWeight: 700,
+                  color: "#000000",
                   lineHeight: "1.6",
                   letterSpacing: "0.2px",
                   marginBottom: isBelow480 ? "0.8rem" : "1.2rem",
@@ -550,10 +537,21 @@ export default function Page() {
                     : "1rem 2.8rem",
                   fontSize: isBelow480 ? "1.05rem" : "1.18rem",
                   fontWeight: 700,
-                  borderRadius: 30,
+                  borderRadius: 10,
                   display: "block",
                   width: isBelow480 ? "100%" : "auto",
                   margin: isBelow992 ? "0 auto" : "0",
+                  backgroundColor: "#1463be",
+                  color: "#fff",
+                  border: "none",
+                  cursor: "pointer",
+                  transition: "background-color 0.2s",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = "#0f4c94";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = "#1463be";
                 }}
               >
                 Get Started Now
@@ -562,10 +560,6 @@ export default function Page() {
             <div
               className="hero-image"
               style={{
-                flex: "1 1 0",
-                display: "flex",
-                justifyContent: isBelow992 ? "center" : "flex-end",
-                alignItems: "center",
                 width: isBelow768 ? "75%" : "100%",
                 maxWidth: isBelow992 ? "480px" : "550px",
                 minWidth: 0,
@@ -593,57 +587,156 @@ export default function Page() {
           </div>
         </section>
 
-        <section
-          id="quick-summary"
-          className="quick-summary grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center items-stretch gap-8 py-12 px-6 bg-gradient-to-b from-white to-blue-50"
-        >
-          {[
-            {
-              img: "/q1.png",
-              title: "Training That Transforms",
-              desc: "Aptitude, Coding, and Soft-Skill programs built for real placements.",
-            },
-            {
-              img: "/q2.png",
-              title: "Technology That Tracks",
-              desc: "LMS with analytics, assessments, and recruiter-benchmarked tests.",
-            },
-            {
-              img: "/q3.png",
-              title: "Talent That Fits",
-              desc: "Staffing and consulting services connecting pre-trained candidates with leading corporates.",
-            },
-          ].map((item, index) => (
+        <section id="quick-summary" className="quick-summary">
+          {/* Left side image */}
+          <div
+            className="quick-summary-image"
+            style={{
+              flex: isBelow992 ? "none" : "0 0 350px",
+              marginBottom: isBelow992 ? "2rem" : 0,
+              width: isBelow992 ? "100%" : "350px",
+              maxWidth: "100%",
+              minWidth: 0,
+            }}
+          >
+            <Image
+              src="/quick.png"
+              alt="Training, Technology, Talent"
+              width={isBelow480 ? 400 : isBelow768 ? 550 : 700}
+              height={isBelow480 ? 280 : isBelow768 ? 380 : 500}
+              style={{
+                maxWidth: "100%",
+                width: "100%",
+                height: "auto",
+                objectFit: "contain",
+                borderRadius: "0",
+                filter: "none",
+                transform: "scale(1.1)",
+                transition: "transform 0.4s ease, filter 0.4s ease",
+                background: "transparent",
+                mixBlendMode: "multiply",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "scale(1.15)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "scale(1.1)";
+              }}
+              priority
+            />
+          </div>
+          {/* Right side cards */}
+          <div
+            className="quick-summary-cards"
+            style={{
+              gap: isBelow480 ? "1.1rem" : isBelow768 ? "1.4rem" : "2.2rem",
+              flex: 1,
+              minWidth: 0,
+            }}
+          >
+            {/* Card 1 */}
             <div
-              key={index}
-              className="summary-card hover:scale-[1.03] transition-transform duration-500 cursor-pointer w-full sm:w-[85%] md:w-[90%] lg:w-[100%] px-4 py-6"
+              className="summary-card"
+              style={{
+                minWidth: isBelow480 ? "0" : isBelow768 ? "220px" : "260px",
+                maxWidth: "370px",
+                flex: "1 1 0",
+                gap: "0.5rem",
+              }}
             >
-              <Image
-                src={item.img}
-                alt={item.title}
-                width={260}
-                height={180}
-                className="summary-image"
+              <h2
                 style={{
-                  display: "block",
-                  margin: "0 auto 1.5rem",
-                  borderRadius: "10px",
-                  width: "100%",
-                  maxWidth: "260px",
-                  height: "180px",
-                  objectFit: "cover",
-                  boxShadow: "0 4px 15px rgba(0, 0, 0, 0.12)",
+                  fontSize: isBelow480
+                    ? "1.12rem"
+                    : isBelow768
+                    ? "1.18rem"
+                    : "1.35rem",
                 }}
-                priority={index === 0}
-              />
-              <h2 className="text-lg sm:text-xl md:text-2xl font-bold mt-2 mb-1">
-                {item.title}
+              >
+                Training That Transforms
               </h2>
-              <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed">
-                {item.desc}
+              <p
+                style={{
+                  fontSize: isBelow480
+                    ? "0.97rem"
+                    : isBelow768
+                    ? "1.05rem"
+                    : "1.11rem",
+                }}
+              >
+                Aptitude, Coding, and Soft-Skill programs built for real
+                placements.
               </p>
             </div>
-          ))}
+            {/* Card 2 */}
+            <div
+              className="summary-card"
+              style={{
+                minWidth: isBelow480 ? "0" : isBelow768 ? "220px" : "260px",
+                maxWidth: "370px",
+                flex: "1 1 0",
+                gap: "0.5rem",
+              }}
+            >
+              <h2
+                style={{
+                  fontSize: isBelow480
+                    ? "1.12rem"
+                    : isBelow768
+                    ? "1.18rem"
+                    : "1.35rem",
+                }}
+              >
+                Technology That Tracks
+              </h2>
+              <p
+                style={{
+                  fontSize: isBelow480
+                    ? "0.97rem"
+                    : isBelow768
+                    ? "1.05rem"
+                    : "1.11rem",
+                }}
+              >
+                LMS with analytics, assessments, and recruiter-benchmarked
+                tests.
+              </p>
+            </div>
+            {/* Card 3 */}
+            <div
+              className="summary-card"
+              style={{
+                minWidth: isBelow480 ? "0" : isBelow768 ? "220px" : "260px",
+                maxWidth: "370px",
+                flex: "1 1 0",
+                gap: "0.5rem",
+              }}
+            >
+              <h2
+                style={{
+                  fontSize: isBelow480
+                    ? "1.12rem"
+                    : isBelow768
+                    ? "1.18rem"
+                    : "1.35rem",
+                }}
+              >
+                Talent That Fits
+              </h2>
+              <p
+                style={{
+                  fontSize: isBelow480
+                    ? "0.97rem"
+                    : isBelow768
+                    ? "1.05rem"
+                    : "1.11rem",
+                }}
+              >
+                Staffing and consulting services connecting pre-trained
+                candidates with leading corporates.
+              </p>
+            </div>
+          </div>
         </section>
 
         {/* ======= About Us Section ======= */}
