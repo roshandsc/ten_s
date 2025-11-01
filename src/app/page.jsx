@@ -354,154 +354,83 @@ export default function Page() {
               </ul>
             </nav>
           </div>
-          {/* Mobile Nav Drawer - Tessa Learn style */}
+          {/* Mobile Nav Dropdown - Tessa Cloud style */}
           {isBelow768 && (
-            <>
-              <div
-                className="mobile-nav-overlay"
+            <div
+              className="mobile-dropdown"
+              style={{
+                position: "absolute",
+                top: "100%",
+                left: 0,
+                width: "100%",
+                background: "#ffffff",
+                boxShadow: "0 4px 15px rgba(0,0,0,0.1)",
+                borderTop: "1px solid #e0e0e0",
+                overflow: "hidden",
+                transition: "max-height 0.4s ease, opacity 0.4s ease",
+                maxHeight: navOpen ? "400px" : "0",
+                opacity: navOpen ? 1 : 0,
+                zIndex: 999,
+              }}
+            >
+              {/* Blue X close icon */}
+              <button
+                onClick={() => setNavOpen(false)}
+                aria-label="Close navigation"
                 style={{
-                  position: "fixed",
-                  top: 0,
-                  left: 0,
-                  width: "100vw",
-                  height: "100vh",
-                  zIndex: 1000,
-                  display: navOpen ? "flex" : "none",
+                  position: "absolute",
+                  top: 10,
+                  right: 18,
+                  background: "none",
+                  border: "none",
+                  fontSize: "2.1rem",
+                  color: "#004aad",
+                  cursor: "pointer",
+                  zIndex: 1001,
+                  padding: 0,
+                  lineHeight: 1,
+                  fontWeight: 700,
+                  transition: "color 0.2s",
+                  display: navOpen ? "block" : "none",
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = "#007cf0")}
+                onMouseLeave={(e) => (e.currentTarget.style.color = "#004aad")}
+              >
+                ×
+              </button>
+              <ul
+                style={{
+                  listStyle: "none",
+                  padding: "15px 20px",
+                  margin: 0,
+                  display: "flex",
                   flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  textAlign: "center",
-                  background: navOpen ? "rgba(0,0,0,0.84)" : "transparent",
-                  animation: navOpen
-                    ? "fadeSlideIn 0.5s cubic-bezier(.4,0,.2,1) forwards"
-                    : "none",
-                  backdropFilter: "blur(10px)",
-                  WebkitBackdropFilter: "blur(10px)",
-                  transition: "background 0.4s ease, transform 0.3s ease",
+                  gap: "1rem",
                 }}
               >
-                <button
-                  onClick={() => setNavOpen(false)}
-                  style={{
-                    position: "absolute",
-                    top: "24px",
-                    right: "24px",
-                    background: "none",
-                    border: "none",
-                    fontSize: "2.2rem",
-                    color: "#fff",
-                    cursor: "pointer",
-                    transition:
-                      "color 0.3s, transform 0.2s cubic-bezier(.4,0,.2,1)",
-                  }}
-                  className="mobile-nav-close"
-                >
-                  ✕
-                </button>
-                <ul
-                  style={{
-                    listStyle: "none",
-                    padding: 0,
-                    margin: 0,
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "1.5rem",
-                    animation: navOpen
-                      ? "fadeSlideIn 0.5s cubic-bezier(.4,0,.2,1) forwards"
-                      : "none",
-                    width: "100%",
-                    alignItems: "center",
-                  }}
-                >
-                  {navigationLinks.map((link, i) => (
-                    <li
-                      key={link.name}
+                {navigationLinks.map((link) => (
+                  <li key={link.name}>
+                    <a
+                      href={link.href}
+                      onClick={() => setNavOpen(false)}
                       style={{
-                        opacity: 0,
-                        animation: navOpen
-                          ? `fadeInItem 0.4s cubic-bezier(.4,0,.2,1) forwards ${
-                              i * 0.08
-                            }s`
-                          : "none",
-                        width: "100%",
+                        color: "#004aad",
+                        fontSize: "1.2rem",
+                        fontWeight: 600,
+                        textDecoration: "none",
+                        display: "block",
+                        padding: "6px 0",
+                        transition: "color 0.3s ease",
                       }}
+                      onMouseEnter={(e) => (e.target.style.color = "#007cf0")}
+                      onMouseLeave={(e) => (e.target.style.color = "#004aad")}
                     >
-                      <a
-                        href={link.href}
-                        onClick={() => setNavOpen(false)}
-                        style={{
-                          color: "#fff",
-                          fontSize: "1.4rem",
-                          fontWeight: 600,
-                          textDecoration: "none",
-                          transition:
-                            "color 0.3s ease, transform 0.3s cubic-bezier(.4,0,.2,1)",
-                          display: "inline-block",
-                          width: "100%",
-                          padding: "0.4em 0",
-                        }}
-                      >
-                        {link.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-                <style jsx>{`
-                  @keyframes fadeSlideIn {
-                    from {
-                      opacity: 0;
-                      transform: translateY(-15px);
-                    }
-                    to {
-                      opacity: 1;
-                      transform: translateY(0);
-                    }
-                  }
-                  @keyframes fadeInItem {
-                    from {
-                      opacity: 0;
-                      transform: translateY(10px);
-                    }
-                    to {
-                      opacity: 1;
-                      transform: translateY(0);
-                    }
-                  }
-                  .mobile-nav-overlay {
-                    backdrop-filter: blur(10px);
-                    -webkit-backdrop-filter: blur(10px);
-                    transition: background 0.4s ease, transform 0.3s ease;
-                  }
-                  .mobile-nav-overlay button {
-                    transition: color 0.3s,
-                      transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-                  }
-                  .mobile-nav-overlay button:hover {
-                    transform: scale(1.1);
-                    color: #00bcd4;
-                  }
-                  .mobile-nav-overlay a {
-                    color: #fff;
-                    font-size: 1.4rem;
-                    font-weight: 600;
-                    text-decoration: none;
-                    transition: color 0.3s ease,
-                      transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-                    display: inline-block;
-                    width: 100%;
-                  }
-                  .mobile-nav-overlay a:hover {
-                    color: #00bcd4;
-                    transform: scale(1.05);
-                  }
-                  @media (max-width: 480px) {
-                    .mobile-nav-overlay a {
-                      font-size: 1.25rem !important;
-                    }
-                  }
-                `}</style>
-              </div>
-            </>
+                      {link.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           )}
         </div>
       </header>

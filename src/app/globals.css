@@ -1651,3 +1651,78 @@ footer.footer a:hover {
   color: #00bcd4;
   text-decoration: underline;
 }
+
+/* ===========================================================
+   MOBILE NAVIGATION (Dropdown Style like Tessa Cloud)
+=========================================================== */
+.mobile-dropdown {
+  background: #ffffff;
+  border-top: 2px solid #007cf0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.mobile-dropdown.open {
+  max-height: 450px;
+  opacity: 1;
+}
+
+.mobile-dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.mobile-dropdown ul li a {
+  display: block;
+  color: #004aad;
+  font-weight: 600;
+  font-size: 1.15rem;
+  text-decoration: none;
+  padding: 0.6rem 0;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.mobile-dropdown ul li a:hover {
+  color: #007cf0;
+  transform: translateX(5px);
+}
+
+.mobile-dropdown button {
+  position: absolute;
+  top: 10px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #004aad;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.mobile-dropdown button:hover {
+  color: #007cf0;
+  transform: scale(1.1);
+}
+
+/* Responsive behavior for mobile view */
+@media (max-width: 768px) {
+  .mobile-dropdown ul li a {
+    font-size: 1.1rem;
+  }
+
+  .mobile-dropdown ul {
+    padding: 15px;
+  }
+}
