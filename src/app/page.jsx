@@ -354,40 +354,63 @@ export default function Page() {
               </ul>
             </nav>
           </div>
-          {/* Mobile Nav Drawer */}
+          {/* Mobile Nav Drawer - Tessa Learn style */}
           {isBelow768 && (
-            <div
-              className="mobile-nav-drawer"
-              style={{
-                position: "fixed",
-                top: 0,
-                right: navOpen ? 0 : "-100vw",
-                width: "80vw",
-                maxWidth: 350,
-                height: "100vh",
-                background: "#fff",
-                boxShadow: navOpen ? "0 0 24px rgba(0,0,0,0.09)" : "none",
-                zIndex: 1001,
-                transition: "right 0.35s cubic-bezier(.4,0,.2,1)",
-                display: "flex",
-                flexDirection: "column",
-                padding: "38px 26px 24px 26px",
-              }}
-              onClick={() => setNavOpen(false)}
-            >
-              <nav style={{ width: "100%" }}>
+            <>
+              <div
+                className="mobile-nav-overlay"
+                style={{
+                  position: "fixed",
+                  top: 0,
+                  left: 0,
+                  width: "100vw",
+                  height: "100vh",
+                  zIndex: 1000,
+                  display: navOpen ? "flex" : "none",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  textAlign: "center",
+                  background: navOpen ? "rgba(0,0,0,0.84)" : "transparent",
+                  animation: navOpen
+                    ? "fadeSlideIn 0.5s cubic-bezier(.4,0,.2,1) forwards"
+                    : "none",
+                  backdropFilter: "blur(10px)",
+                  WebkitBackdropFilter: "blur(10px)",
+                  transition: "background 0.4s ease, transform 0.3s ease",
+                }}
+              >
+                <button
+                  onClick={() => setNavOpen(false)}
+                  style={{
+                    position: "absolute",
+                    top: "24px",
+                    right: "24px",
+                    background: "none",
+                    border: "none",
+                    fontSize: "2.2rem",
+                    color: "#fff",
+                    cursor: "pointer",
+                    transition:
+                      "color 0.3s, transform 0.2s cubic-bezier(.4,0,.2,1)",
+                  }}
+                  className="mobile-nav-close"
+                >
+                  ✕
+                </button>
                 <ul
-                  className="nav-links-mobile"
                   style={{
                     listStyle: "none",
                     padding: 0,
                     margin: 0,
                     display: "flex",
                     flexDirection: "column",
-                    gap: "1.2rem",
+                    gap: "1.5rem",
                     animation: navOpen
-                      ? "fadeSlideIn 0.45s ease forwards"
-                      : "fadeSlideOut 0.3s ease forwards",
+                      ? "fadeSlideIn 0.5s cubic-bezier(.4,0,.2,1) forwards"
+                      : "none",
+                    width: "100%",
+                    alignItems: "center",
                   }}
                 >
                   {navigationLinks.map((link, i) => (
@@ -396,86 +419,89 @@ export default function Page() {
                       style={{
                         opacity: 0,
                         animation: navOpen
-                          ? `fadeInItem 0.4s ease forwards ${i * 0.08}s`
+                          ? `fadeInItem 0.4s cubic-bezier(.4,0,.2,1) forwards ${
+                              i * 0.08
+                            }s`
                           : "none",
+                        width: "100%",
                       }}
                     >
                       <a
                         href={link.href}
-                        className={
-                          link.name === "Contact Us"
-                            ? "contact-button"
-                            : pathname === link.href
-                            ? "active-link"
-                            : ""
-                        }
-                        style={{
-                          display: "block",
-                          textAlign: "left",
-                          fontSize: isBelow480 ? "1.15rem" : "1.22rem",
-                          fontWeight: link.name === "Contact Us" ? 700 : 600,
-                          padding: "8px 0",
-                        }}
                         onClick={() => setNavOpen(false)}
+                        style={{
+                          color: "#fff",
+                          fontSize: "1.4rem",
+                          fontWeight: 600,
+                          textDecoration: "none",
+                          transition:
+                            "color 0.3s ease, transform 0.3s cubic-bezier(.4,0,.2,1)",
+                          display: "inline-block",
+                          width: "100%",
+                          padding: "0.4em 0",
+                        }}
                       >
                         {link.name}
                       </a>
                     </li>
                   ))}
                 </ul>
-
                 <style jsx>{`
                   @keyframes fadeSlideIn {
                     from {
                       opacity: 0;
-                      transform: translateY(-10px);
+                      transform: translateY(-15px);
                     }
                     to {
                       opacity: 1;
                       transform: translateY(0);
                     }
                   }
-
                   @keyframes fadeInItem {
                     from {
                       opacity: 0;
-                      transform: translateY(8px);
+                      transform: translateY(10px);
                     }
                     to {
                       opacity: 1;
                       transform: translateY(0);
                     }
                   }
-
-                  @keyframes fadeSlideOut {
-                    from {
-                      opacity: 1;
-                    }
-                    to {
-                      opacity: 0;
+                  .mobile-nav-overlay {
+                    backdrop-filter: blur(10px);
+                    -webkit-backdrop-filter: blur(10px);
+                    transition: background 0.4s ease, transform 0.3s ease;
+                  }
+                  .mobile-nav-overlay button {
+                    transition: color 0.3s,
+                      transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+                  }
+                  .mobile-nav-overlay button:hover {
+                    transform: scale(1.1);
+                    color: #00bcd4;
+                  }
+                  .mobile-nav-overlay a {
+                    color: #fff;
+                    font-size: 1.4rem;
+                    font-weight: 600;
+                    text-decoration: none;
+                    transition: color 0.3s ease,
+                      transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                    display: inline-block;
+                    width: 100%;
+                  }
+                  .mobile-nav-overlay a:hover {
+                    color: #00bcd4;
+                    transform: scale(1.05);
+                  }
+                  @media (max-width: 480px) {
+                    .mobile-nav-overlay a {
+                      font-size: 1.25rem !important;
                     }
                   }
                 `}</style>
-              </nav>
-            </div>
-          )}
-          {/* Overlay for mobile nav */}
-          {isBelow768 && navOpen && (
-            <div
-              className="mobile-nav-overlay"
-              style={{
-                position: "fixed",
-                top: 0,
-                left: 0,
-                width: "100vw",
-                height: "100vh",
-                background: "rgba(0,0,0,0.18)",
-                zIndex: 1000,
-                transition: "opacity 0.25s",
-                opacity: navOpen ? 1 : 0,
-              }}
-              onClick={() => setNavOpen(false)}
-            />
+              </div>
+            </>
           )}
         </div>
       </header>
