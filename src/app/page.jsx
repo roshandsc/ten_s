@@ -215,8 +215,13 @@ export default function Page() {
         className="header"
         style={{
           background: "#fff",
-          boxShadow: "0 2px 12px rgba(0,0,0,0.03)",
+          boxShadow: "0 1px 8px rgba(0,0,0,0.05)",
           width: "100%",
+          height: "70px",
+          position: "fixed",
+          top: 0,
+          left: 0,
+          zIndex: 1000,
         }}
       >
         <div
@@ -226,7 +231,7 @@ export default function Page() {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            padding: isBelow768 ? "10px 16px" : "20px 36px",
+            padding: isBelow768 ? "8px 18px" : "14px 40px",
             position: "relative",
           }}
         >
@@ -360,16 +365,18 @@ export default function Page() {
               className="mobile-dropdown"
               style={{
                 position: "absolute",
-                top: "100%",
-                left: 0,
-                width: "100%",
+                top: "72px",
+                right: "5%",
+                width: "90%",
                 background: "#ffffff",
-                boxShadow: "0 4px 15px rgba(0,0,0,0.1)",
-                borderTop: "1px solid #e0e0e0",
+                borderRadius: "12px",
+                boxShadow: "0 8px 25px rgba(0,0,0,0.15)",
+                border: "1px solid #e0e0e0",
                 overflow: "hidden",
-                transition: "max-height 0.4s ease, opacity 0.4s ease",
-                maxHeight: navOpen ? "400px" : "0",
+                transition: "all 0.4s ease-in-out",
+                maxHeight: navOpen ? "420px" : "0",
                 opacity: navOpen ? 1 : 0,
+                transform: navOpen ? "translateY(0)" : "translateY(-10px)",
                 zIndex: 999,
               }}
             >
@@ -380,17 +387,16 @@ export default function Page() {
                 style={{
                   position: "absolute",
                   top: 10,
-                  right: 18,
+                  right: 14,
                   background: "none",
                   border: "none",
-                  fontSize: "2.1rem",
+                  fontSize: "1.9rem",
                   color: "#004aad",
                   cursor: "pointer",
                   zIndex: 1001,
                   padding: 0,
                   lineHeight: 1,
                   fontWeight: 700,
-                  transition: "color 0.2s",
                   display: navOpen ? "block" : "none",
                 }}
                 onMouseEnter={(e) => (e.currentTarget.style.color = "#007cf0")}
@@ -401,11 +407,12 @@ export default function Page() {
               <ul
                 style={{
                   listStyle: "none",
-                  padding: "15px 20px",
+                  padding: "20px 18px",
                   margin: 0,
                   display: "flex",
                   flexDirection: "column",
                   gap: "1rem",
+                  textAlign: "center",
                 }}
               >
                 {navigationLinks.map((link) => (
@@ -437,12 +444,23 @@ export default function Page() {
 
       <main
         className="main"
-        style={{ minHeight: "60vh", background: "#f7fbff" }}
+        style={{
+          minHeight: "60vh",
+          background: "#f7fbff",
+          paddingTop: "70px",
+        }}
       >
         <section
           id="hero"
           className="hero-section"
-          style={{ background: "#e6f0ff" }}
+          style={{
+            background: "#e6f0ff",
+            padding: isBelow480
+              ? "80px 0 40px"
+              : isBelow768
+              ? "100px 0 50px"
+              : "120px 0 60px",
+          }}
         >
           <div
             className="hero-content"
@@ -453,11 +471,6 @@ export default function Page() {
               alignItems: "center",
               justifyContent: "center",
               gap: isBelow480 ? "1.2rem" : isBelow768 ? "2rem" : "3.5rem",
-              padding: isBelow480
-                ? "28px 8px 18px"
-                : isBelow768
-                ? "38px 24px 28px"
-                : "60px 32px 38px",
               boxSizing: "border-box",
             }}
           >
@@ -487,16 +500,20 @@ export default function Page() {
                   lineHeight: isBelow480 ? "1.23" : "1.13",
                 }}
               >
-                From Campus to Corporate — in Just{" "}
+                From Campus to Corporate — in Just <br />
                 <span
                   style={{
-                    color: "#007cf0",
+                    background: "linear-gradient(90deg, #007cf0, #00dfd8)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
                     fontWeight: 900,
                     fontSize: isBelow480
                       ? "1.25em"
                       : isBelow768
                       ? "1.18em"
                       : "1.1em",
+                    display: "inline-block",
+                    textAlign: "center",
                   }}
                 >
                   10 SECONDS
@@ -546,7 +563,8 @@ export default function Page() {
                 display: "flex",
                 justifyContent: isBelow992 ? "center" : "flex-end",
                 alignItems: "center",
-                width: isBelow768 ? "100%" : "auto",
+                width: isBelow768 ? "75%" : "100%",
+                maxWidth: isBelow992 ? "480px" : "550px",
                 minWidth: 0,
                 padding: isBelow480 ? "0 0.2rem" : isBelow768 ? "0 0.7rem" : 0,
               }}
@@ -562,7 +580,7 @@ export default function Page() {
                 }
                 className="hero-main-image"
                 style={{
-                  maxWidth: isBelow768 ? "70%" : "100%",
+                  maxWidth: "100%",
                   width: "100%",
                   height: "auto",
                   objectFit: "contain",
@@ -573,300 +591,45 @@ export default function Page() {
         </section>
 
         <section
-          className="quick-summary"
-          style={{
-            ...maxWidthWrapperStyle,
-            display: "flex",
-            flexDirection: isBelow992 ? "column" : "row",
-            alignItems: "center",
-            justifyContent: "center",
-            gap: isBelow480 ? "1.2rem" : isBelow768 ? "1.5rem" : "2.4rem",
-            padding: isBelow480
-              ? "20px 0 10px"
-              : isBelow768
-              ? "28px 0 18px"
-              : "36px 0 24px",
-            boxSizing: "border-box",
-          }}
+          id="quick-summary"
+          className="quick-summary grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center items-stretch gap-8 py-12 px-6 bg-gradient-to-b from-white to-blue-50"
         >
-          {/* Minimal summary item 1 */}
-          <div
-            className="summary-item"
-            style={{
-              flex: 1,
-              minWidth: isBelow992 ? "90%" : 0,
-              width: isBelow992 ? "90%" : "auto",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "space-between",
-              textAlign: "center",
-              margin: isBelow992 ? "0 auto" : 0,
-              gap: isBelow480 ? "0.5rem" : "0.8rem",
-              background: "#fff",
-              boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
-              border: "2px solid #e0f2ff",
-              borderRadius: "15px",
-              transition:
-                "border-color 0.2s cubic-bezier(.4,0,.2,1), box-shadow 0.3s ease, transform 0.3s ease",
-              minHeight: isBelow480 ? "240px" : isBelow768 ? "280px" : "340px",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = "#00bcd4";
-              e.currentTarget.style.boxShadow = "0 8px 25px rgba(0,0,0,0.12)";
-              e.currentTarget.style.transform = "translateY(-6px)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = "#e0f2ff";
-              e.currentTarget.style.boxShadow = "0 4px 20px rgba(0,0,0,0.08)";
-              e.currentTarget.style.transform = "translateY(0)";
-            }}
-          >
-            <Image
-              src="/q1.png"
-              alt="Training That Transforms Icon"
-              width={isBelow480 ? 68 : isBelow768 ? 82 : 100}
-              height={isBelow480 ? 68 : isBelow768 ? 82 : 100}
-              style={{
-                objectFit: "contain",
-                maxWidth: "100%",
-                filter: "brightness(1.1) saturate(1.15)",
-                display: "block",
-                marginBottom: isBelow480 ? "0.4rem" : "0.6rem",
-                marginTop: "0.4rem",
-                transition: "transform 0.2s cubic-bezier(.4,0,.2,1)",
-              }}
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.transform = "scale(1.07)")
-              }
-              onMouseLeave={(e) =>
-                (e.currentTarget.style.transform = "scale(1)")
-              }
-              tabIndex={0}
-            />
-            <h2
-              style={{
-                fontSize: isBelow480
-                  ? "1.13rem"
-                  : isBelow768
-                  ? "1.22rem"
-                  : "1.3rem",
-                fontWeight: 700,
-                color: "#003366",
-                margin: 0,
-                marginBottom: "0.25rem",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                height: "auto",
-                minHeight: "unset",
-              }}
+          {[
+            {
+              img: "/q1.png",
+              title: "Training That Transforms",
+              desc: "Aptitude, Coding, and Soft-Skill programs built for real placements.",
+            },
+            {
+              img: "/q2.png",
+              title: "Technology That Tracks",
+              desc: "LMS with analytics, assessments, and recruiter-benchmarked tests.",
+            },
+            {
+              img: "/q3.png",
+              title: "Talent That Fits",
+              desc: "Staffing and consulting services connecting pre-trained candidates with leading corporates.",
+            },
+          ].map((item, index) => (
+            <div
+              key={index}
+              className="summary-card hover:scale-[1.03] transition-transform duration-500 cursor-pointer w-full sm:w-[85%] md:w-[90%] lg:w-[100%] px-4 py-6"
             >
-              Training That Transforms
-            </h2>
-            <p
-              style={{
-                color: "#444",
-                fontSize: isBelow480 ? "0.99rem" : "1.06rem",
-                margin: 0,
-                marginTop: 0,
-                lineHeight: "1.6",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                height: "auto",
-                minHeight: "unset",
-              }}
-            >
-              Aptitude, Coding, and Soft-Skill programs built for real
-              placements.
-            </p>
-          </div>
-          {/* Minimal summary item 2 */}
-          <div
-            className="summary-item"
-            style={{
-              flex: 1,
-              minWidth: isBelow992 ? "90%" : 0,
-              width: isBelow992 ? "90%" : "auto",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "space-between",
-              textAlign: "center",
-              margin: isBelow992 ? "0 auto" : 0,
-              gap: isBelow480 ? "0.5rem" : "0.8rem",
-              background: "#fff",
-              boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
-              border: "2px solid #e0f2ff",
-              borderRadius: "15px",
-              transition:
-                "border-color 0.2s cubic-bezier(.4,0,.2,1), box-shadow 0.3s ease, transform 0.3s ease",
-              minHeight: isBelow480 ? "240px" : isBelow768 ? "280px" : "340px",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = "#00bcd4";
-              e.currentTarget.style.boxShadow = "0 8px 25px rgba(0,0,0,0.12)";
-              e.currentTarget.style.transform = "translateY(-6px)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = "#e0f2ff";
-              e.currentTarget.style.boxShadow = "0 4px 20px rgba(0,0,0,0.08)";
-              e.currentTarget.style.transform = "translateY(0)";
-            }}
-          >
-            <Image
-              src="/q2.png"
-              alt="Technology That Tracks Icon"
-              width={isBelow480 ? 68 : isBelow768 ? 82 : 100}
-              height={isBelow480 ? 68 : isBelow768 ? 82 : 100}
-              style={{
-                objectFit: "contain",
-                maxWidth: "100%",
-                filter: "brightness(1.1) saturate(1.15)",
-                display: "block",
-                marginBottom: isBelow480 ? "0.4rem" : "0.6rem",
-                marginTop: "0.4rem",
-                transition: "transform 0.2s cubic-bezier(.4,0,.2,1)",
-              }}
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.transform = "scale(1.07)")
-              }
-              onMouseLeave={(e) =>
-                (e.currentTarget.style.transform = "scale(1)")
-              }
-              tabIndex={0}
-            />
-            <h2
-              style={{
-                fontSize: isBelow480
-                  ? "1.13rem"
-                  : isBelow768
-                  ? "1.22rem"
-                  : "1.3rem",
-                fontWeight: 700,
-                color: "#003366",
-                margin: 0,
-                marginBottom: "0.25rem",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                height: "auto",
-                minHeight: "unset",
-              }}
-            >
-              Technology That Tracks
-            </h2>
-            <p
-              style={{
-                color: "#444",
-                fontSize: isBelow480 ? "0.99rem" : "1.06rem",
-                margin: 0,
-                marginTop: 0,
-                lineHeight: "1.6",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                height: "auto",
-                minHeight: "unset",
-              }}
-            >
-              LMS with analytics, assessments, and recruiter-benchmarked tests.
-            </p>
-          </div>
-          {/* Minimal summary item 3 */}
-          <div
-            className="summary-item"
-            style={{
-              flex: 1,
-              minWidth: isBelow992 ? "90%" : 0,
-              width: isBelow992 ? "90%" : "auto",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "space-between",
-              textAlign: "center",
-              margin: isBelow992 ? "0 auto" : 0,
-              gap: isBelow480 ? "0.5rem" : "0.8rem",
-              background: "#fff",
-              boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
-              border: "2px solid #e0f2ff",
-              borderRadius: "15px",
-              transition:
-                "border-color 0.2s cubic-bezier(.4,0,.2,1), box-shadow 0.3s ease, transform 0.3s ease",
-              minHeight: isBelow480 ? "240px" : isBelow768 ? "280px" : "340px",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.borderColor = "#00bcd4";
-              e.currentTarget.style.boxShadow = "0 8px 25px rgba(0,0,0,0.12)";
-              e.currentTarget.style.transform = "translateY(-6px)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.borderColor = "#e0f2ff";
-              e.currentTarget.style.boxShadow = "0 4px 20px rgba(0,0,0,0.08)";
-              e.currentTarget.style.transform = "translateY(0)";
-            }}
-          >
-            <Image
-              src="/q3.png"
-              alt="Talent That Fits Icon"
-              width={isBelow480 ? 68 : isBelow768 ? 82 : 100}
-              height={isBelow480 ? 68 : isBelow768 ? 82 : 100}
-              style={{
-                objectFit: "contain",
-                maxWidth: "100%",
-                filter: "brightness(1.1) saturate(1.15)",
-                display: "block",
-                marginBottom: isBelow480 ? "0.4rem" : "0.6rem",
-                marginTop: "0.4rem",
-                transition: "transform 0.2s cubic-bezier(.4,0,.2,1)",
-              }}
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.transform = "scale(1.07)")
-              }
-              onMouseLeave={(e) =>
-                (e.currentTarget.style.transform = "scale(1)")
-              }
-              tabIndex={0}
-            />
-            <h2
-              style={{
-                fontSize: isBelow480
-                  ? "1.13rem"
-                  : isBelow768
-                  ? "1.22rem"
-                  : "1.3rem",
-                fontWeight: 700,
-                color: "#003366",
-                margin: 0,
-                marginBottom: "0.25rem",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                height: "auto",
-                minHeight: "unset",
-              }}
-            >
-              Talent That Fits
-            </h2>
-            <p
-              style={{
-                color: "#444",
-                fontSize: isBelow480 ? "0.99rem" : "1.06rem",
-                margin: 0,
-                marginTop: 0,
-                lineHeight: "1.6",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                height: "auto",
-                minHeight: "unset",
-              }}
-            >
-              Staffing and consulting services connecting pre-trained candidates
-              with leading corporates.
-            </p>
-          </div>
+              <Image
+                src={item.img}
+                alt={item.title}
+                width={100}
+                height={100}
+                className="mx-auto mb-4 w-[70px] h-[70px] sm:w-[80px] sm:h-[80px] md:w-[90px] md:h-[90px] lg:w-[100px] lg:h-[100px]"
+              />
+              <h2 className="text-lg sm:text-xl md:text-2xl font-bold mt-2 mb-1">
+                {item.title}
+              </h2>
+              <p className="text-gray-700 text-sm sm:text-base md:text-lg leading-relaxed">
+                {item.desc}
+              </p>
+            </div>
+          ))}
         </section>
 
         {/* ======= About Us Section ======= */}
