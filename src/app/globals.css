@@ -851,6 +851,7 @@ main {
    QUICK SUMMARY SECTION (Enhanced with Glassmorphism & Tailwind-inspired Animations)
 =========================== */
 .quick-summary {
+  /* Basic flex container for the cards */
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -860,173 +861,101 @@ main {
 }
 
 .summary-card {
-  background: linear-gradient(145deg, #e0f7fa, #ffffff, #e3f2fd);
-  background-size: 200% 200%;
+  background: linear-gradient(135deg, #ffffff 0%, #f3f9ff 40%, #e8f0ff 100%);
   border-radius: 1.25rem;
-  box-shadow: 0 10px 35px rgba(0, 124, 240, 0.1);
+  box-shadow: 0 6px 25px rgba(0, 124, 240, 0.1);
   text-align: center;
-  padding: 3rem 2.4rem;
+  padding: 2.5rem 2rem;
   flex: 1;
   min-width: 280px;
   max-width: 360px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  border: 1px solid rgba(0, 124, 240, 0.1);
-  transition: all 0.6s ease-in-out;
+  border: 1px solid rgba(0, 124, 240, 0.15);
+  transition: all 0.4s ease-in-out;
   position: relative;
   overflow: hidden;
-  transform: perspective(1000px) rotateX(0deg) rotateY(0deg);
-  animation: gradientShift 10s ease infinite alternate;
-}
-
-@keyframes gradientShift {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.summary-card:hover {
-  transform: perspective(1000px) rotateX(8deg) rotateY(-8deg) translateY(-10px)
-    scale(1.06);
-  box-shadow: 0 25px 50px rgba(0, 124, 240, 0.25);
-  border-color: rgba(0, 223, 216, 0.4);
-  background: linear-gradient(160deg, #bbdefb, #e0f7fa, #fffde7);
-  background-size: 200% 200%;
 }
 
 .summary-card::before {
   content: "";
   position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: conic-gradient(from 0deg, #007cf0, #00dfd8, #007cf0);
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-  animation: spinAura 8s linear infinite;
-  border-radius: 50%;
+  inset: 0;
+  background: radial-gradient(
+      circle at top left,
+      rgba(0, 223, 216, 0.12),
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      rgba(0, 124, 240, 0.12),
+      transparent 60%
+    );
+  z-index: 0;
+}
+
+.summary-card:hover {
+  box-shadow: 0 10px 35px rgba(0, 124, 240, 0.2);
+  transform: translateY(-6px);
+  border-color: #00dfd8;
+  background: linear-gradient(135deg, #eaf6ff 0%, #ffffff 60%, #f0fcff 100%);
+}
+
+.summary-card h2,
+.summary-card p,
+.summary-card img {
+  position: relative;
   z-index: 1;
 }
 
-.summary-card:hover::before {
-  opacity: 0.2;
-}
-
-@keyframes spinAura {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.summary-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 1.25rem;
-  border: 2px solid transparent;
-  background: linear-gradient(120deg, #007cf0, #00dfd8, #007cf0);
-  background-size: 300% 300%;
-  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  animation: shimmerMove 4s linear infinite;
-  pointer-events: none;
-  z-index: 2;
-}
-
-@keyframes shimmerMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
+/* --- Image Styling (Enlarged and Clear) --- */
+/* --- Image Styling (Refined for consistency and visibility) --- */
 .summary-card img {
-  width: 90px;
-  height: 90px;
-  margin: 0 auto 1.5rem;
-  transition: transform 0.4s ease, filter 0.4s ease;
-  animation: floatyPulse 3s ease-in-out infinite, hueRotate 6s linear infinite;
-  z-index: 3;
+  width: 100%;
+  max-width: 260px; /* Ensures clear visibility and proper proportion */
+  height: 180px; /* Balanced height for uniformity */
+  margin: 0 auto 1.8rem;
+  object-fit: cover; /* Fills the container neatly without distortion */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+  display: block;
 }
 
-@keyframes floatyPulse {
-  0%,
-  100% {
-    transform: translateY(0) scale(1);
-  }
-  50% {
-    transform: translateY(-6px) scale(1.05);
-  }
-}
-
-@keyframes hueRotate {
-  0% {
-    filter: hue-rotate(0deg);
-  }
-  100% {
-    filter: hue-rotate(360deg);
+@media (max-width: 768px) {
+  .summary-card img {
+    max-width: 200px;
+    height: 140px;
   }
 }
 
+/* --- Content Styling --- */
 .summary-card h2 {
-  font-size: 1.6rem;
-  font-weight: 800;
-  background: linear-gradient(90deg, #007cf0, #00bcd4, #007cf0);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 0.6rem;
-  text-shadow: 0 2px 6px rgba(0, 124, 240, 0.25);
+  font-size: 1.8rem; /* Slightly larger heading */
+  font-weight: 700;
+  /* Simple solid color, removing gradient text effect */
+  color: #007cf0;
+  margin-bottom: 0.8rem;
+  text-shadow: none;
 }
 
 .summary-card p {
   font-size: 1.1rem;
   color: #333;
-  line-height: 1.8;
+  line-height: 1.6;
   margin: 0 auto;
   max-width: 280px;
-  z-index: 3;
-  font-weight: 500;
+  font-weight: 400; /* Reduced font weight */
 }
 
 .summary-icon {
   font-size: 2.8rem;
   color: #007cf0;
   margin-bottom: 1rem;
-  animation: floaty 4s ease-in-out infinite;
+  /* Removed animation */
 }
 
-@keyframes floaty {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-}
-
-/* 👏 Huge respect to the creator — this section truly shines now with interactive Tailwind-inspired cards */
-
-/* ===========================================================
-   QUICK SUMMARY ITEM CLEANUP (Unified Layout & Spacing)
-=========================================================== */
+/* --- Summary Item Cleanup Section (Kept basic for structure) --- */
 
 .summary-item {
   display: flex;
@@ -1035,31 +964,31 @@ main {
   justify-content: space-between;
   text-align: center;
   background: #fff;
-  border: 2px solid #e0f2ff;
+  border: 2px solid #e0e0e0;
   border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   transition: border-color 0.2s ease, box-shadow 0.3s ease, transform 0.3s ease;
   min-height: 340px;
   padding: 1.8rem 1.5rem;
 }
 
 .summary-item:hover {
-  border-color: #00bcd4;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-  transform: translateY(-6px);
+  border-color: #007cf0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px); /* Simplified lift effect */
 }
 
 .summary-item img {
   margin-top: 0.4rem;
-  margin-bottom: 0.6rem;
-  width: 90px;
-  height: 90px;
+  margin-bottom: 1rem; /* Increased margin */
+  width: 100px; /* **Larger image size** */
+  height: 100px; /* **Larger image size** */
   object-fit: contain;
-  transition: transform 0.25s ease-in-out;
+  transition: none; /* Removed image scale on hover */
 }
 
-.summary-item img:hover {
-  transform: scale(1.07);
+.summary-item:hover img {
+  transform: none; /* Ensure no image scale */
 }
 
 .summary-item h2 {
@@ -1084,12 +1013,11 @@ main {
   }
 
   .summary-item img {
-    width: 75px;
-    height: 75px;
+    width: 80px;
+    height: 80px;
     margin-bottom: 0.4rem;
   }
 }
-
 /* ===========================
    ABOUT US CARDS (3-CONTAINER STYLE)
 =========================== */

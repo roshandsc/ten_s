@@ -8,12 +8,9 @@ import {
   FaLinkedinIn,
   FaInstagram,
   FaYoutube,
-  FaVideo,
-  FaBookOpen,
   FaBrain,
   FaChalkboardTeacher,
   FaClipboardList,
-  FaFileAlt,
   FaRocket,
   FaCogs,
   FaUniversity,
@@ -21,7 +18,6 @@ import {
   FaUsersCog,
   FaLaptopCode,
   FaUserTie,
-  FaHandshake as FaHandshakeIcon,
 } from "react-icons/fa";
 import SwiperCore from "swiper";
 import { Autoplay, FreeMode } from "swiper/modules";
@@ -625,9 +621,20 @@ export default function Page() {
               <Image
                 src={item.img}
                 alt={item.title}
-                width={100}
-                height={100}
-                className="mx-auto mb-4 w-[70px] h-[70px] sm:w-[80px] sm:h-[80px] md:w-[90px] md:h-[90px] lg:w-[100px] lg:h-[100px]"
+                width={260}
+                height={180}
+                className="summary-image"
+                style={{
+                  display: "block",
+                  margin: "0 auto 1.5rem",
+                  borderRadius: "10px",
+                  width: "100%",
+                  maxWidth: "260px",
+                  height: "180px",
+                  objectFit: "cover",
+                  boxShadow: "0 4px 15px rgba(0, 0, 0, 0.12)",
+                }}
+                priority={index === 0}
               />
               <h2 className="text-lg sm:text-xl md:text-2xl font-bold mt-2 mb-1">
                 {item.title}
