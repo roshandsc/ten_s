@@ -494,8 +494,10 @@ export default function Page() {
                     : isBelow992
                     ? "2.6rem"
                     : "3rem",
+                  fontFamily: "'Poppins', 'Inter', sans-serif'",
                   fontWeight: 800,
-                  color: "#003366",
+                  letterSpacing: "-0.5px",
+                  color: "#0a1a3c",
                   marginBottom: isBelow480 ? "0.65rem" : "1.1rem",
                   lineHeight: isBelow480 ? "1.23" : "1.13",
                 }}
@@ -506,7 +508,9 @@ export default function Page() {
                     background: "linear-gradient(90deg, #007cf0, #00dfd8)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
+                    fontFamily: "'Poppins', 'Inter', sans-serif'",
                     fontWeight: 900,
+                    letterSpacing: "-0.5px",
                     fontSize: isBelow480
                       ? "1.25em"
                       : isBelow768
@@ -528,8 +532,11 @@ export default function Page() {
                     : isBelow992
                     ? "1.22rem"
                     : "1.3rem",
-                  color: "#444",
+                  fontFamily: "'Inter', 'Poppins', sans-serif'",
                   fontWeight: 500,
+                  color: "#333333",
+                  lineHeight: "1.6",
+                  letterSpacing: "0.2px",
                   marginBottom: isBelow480 ? "0.8rem" : "1.2rem",
                 }}
               >
