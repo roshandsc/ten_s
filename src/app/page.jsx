@@ -1,6 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -52,6 +51,12 @@ export default function Page() {
   const [showPolicy, setShowPolicy] = useState(false);
   // Hydration-safe flag
   const [hydrated, setHydrated] = useState(false);
+  // Responsive state
+  const [windowWidth, setWindowWidth] = useState(
+    typeof window !== "undefined" ? window.innerWidth : 1200
+  );
+  const [navOpen, setNavOpen] = useState(false);
+
   useEffect(() => {
     setHydrated(true);
   }, []);
@@ -59,6 +64,13 @@ export default function Page() {
   useEffect(() => {
     if (typeof window !== "undefined") {
       document.documentElement.style.scrollBehavior = "smooth";
+      // Responsive window resize handler
+      const handleResize = () => {
+        setWindowWidth(window.innerWidth);
+      };
+      window.addEventListener("resize", handleResize);
+      handleResize();
+      return () => window.removeEventListener("resize", handleResize);
     }
   }, []);
 
@@ -184,22 +196,145 @@ export default function Page() {
       .catch((err) => console.error("Swiper init failed:", err));
   }, []);
 
+  // Responsive classes/logic
+  const isBelow992 = windowWidth < 992;
+  const isBelow768 = windowWidth < 768;
+  const isBelow480 = windowWidth < 480;
+
+  // Max-width wrapper style for central alignment
+  const maxWidthWrapperStyle = {
+    maxWidth: "1280px",
+    margin: "0 auto",
+    width: "100%",
+    boxSizing: "border-box",
+  };
+
   return (
     <>
-      <header className="header">
-        <div className="header-container">
-          <div className="header-left">
+      <header
+        className="header"
+        style={{
+          background: "#fff",
+          boxShadow: "0 2px 12px rgba(0,0,0,0.03)",
+          width: "100%",
+        }}
+      >
+        <div
+          className="header-container"
+          style={{
+            ...maxWidthWrapperStyle,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            padding: isBelow768 ? "10px 16px" : "20px 36px",
+            position: "relative",
+          }}
+        >
+          <div
+            className="header-left"
+            style={{ display: "flex", alignItems: "center" }}
+          >
             <Image
               src="/logo.png"
               alt="10Seconds Logo"
-              width={180}
-              height={55}
+              width={isBelow480 ? 110 : isBelow768 ? 140 : 180}
+              height={isBelow480 ? 35 : isBelow768 ? 45 : 55}
               className="header-logo"
+              style={{
+                maxWidth: "100%",
+                height: "auto",
+                objectFit: "contain",
+              }}
             />
           </div>
-          <div className="header-right">
+          {/* Hamburger for mobile */}
+          {isBelow768 ? (
+            <div
+              className="mobile-nav-toggle"
+              style={{
+                display: "block",
+                cursor: "pointer",
+                zIndex: 1002,
+                marginLeft: "auto",
+              }}
+              onClick={() => setNavOpen((open) => !open)}
+              aria-label={navOpen ? "Close navigation" : "Open navigation"}
+            >
+              <div
+                style={{
+                  width: 32,
+                  height: 32,
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <span
+                  style={{
+                    display: "block",
+                    width: 28,
+                    height: 4,
+                    background: "#007bff",
+                    margin: "3px 0",
+                    borderRadius: 2,
+                    transition: "0.3s",
+                    transform: navOpen
+                      ? "rotate(45deg) translate(5px, 6px)"
+                      : "none",
+                  }}
+                />
+                <span
+                  style={{
+                    display: "block",
+                    width: 28,
+                    height: 4,
+                    background: "#007bff",
+                    margin: "3px 0",
+                    borderRadius: 2,
+                    opacity: navOpen ? 0 : 1,
+                    transition: "0.3s",
+                  }}
+                />
+                <span
+                  style={{
+                    display: "block",
+                    width: 28,
+                    height: 4,
+                    background: "#007bff",
+                    margin: "3px 0",
+                    borderRadius: 2,
+                    transition: "0.3s",
+                    transform: navOpen
+                      ? "rotate(-45deg) translate(5px, -6px)"
+                      : "none",
+                  }}
+                />
+              </div>
+            </div>
+          ) : null}
+          {/* Navigation */}
+          <div
+            className="header-right"
+            style={{
+              flex: 1,
+              display: isBelow768 ? "none" : "flex",
+              justifyContent: "flex-end",
+              alignItems: "center",
+            }}
+          >
             <nav className="nav">
-              <ul className="nav-links">
+              <ul
+                className="nav-links"
+                style={{
+                  display: "flex",
+                  gap: "1.7rem",
+                  alignItems: "center",
+                  margin: 0,
+                  padding: 0,
+                  listStyle: "none",
+                }}
+              >
                 {navigationLinks.map((link) => (
                   <li key={link.name}>
                     {link.name === "Contact Us" ? (
@@ -219,38 +354,257 @@ export default function Page() {
               </ul>
             </nav>
           </div>
+          {/* Mobile Nav Drawer */}
+          {isBelow768 && (
+            <div
+              className="mobile-nav-drawer"
+              style={{
+                position: "fixed",
+                top: 0,
+                right: navOpen ? 0 : "-100vw",
+                width: "80vw",
+                maxWidth: 350,
+                height: "100vh",
+                background: "#fff",
+                boxShadow: navOpen ? "0 0 24px rgba(0,0,0,0.09)" : "none",
+                zIndex: 1001,
+                transition: "right 0.35s cubic-bezier(.4,0,.2,1)",
+                display: "flex",
+                flexDirection: "column",
+                padding: "38px 26px 24px 26px",
+              }}
+              onClick={() => setNavOpen(false)}
+            >
+              <nav style={{ width: "100%" }}>
+                <ul
+                  className="nav-links-mobile"
+                  style={{
+                    listStyle: "none",
+                    padding: 0,
+                    margin: 0,
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "1.2rem",
+                  }}
+                >
+                  {navigationLinks.map((link) => (
+                    <li key={link.name}>
+                      <a
+                        href={link.href}
+                        className={
+                          link.name === "Contact Us"
+                            ? "contact-button"
+                            : pathname === link.href
+                            ? "active-link"
+                            : ""
+                        }
+                        style={{
+                          display: "block",
+                          textAlign: "left",
+                          fontSize: isBelow480 ? "1.15rem" : "1.22rem",
+                          fontWeight: link.name === "Contact Us" ? 700 : 600,
+                          padding: "8px 0",
+                        }}
+                        onClick={() => setNavOpen(false)}
+                      >
+                        {link.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            </div>
+          )}
+          {/* Overlay for mobile nav */}
+          {isBelow768 && navOpen && (
+            <div
+              className="mobile-nav-overlay"
+              style={{
+                position: "fixed",
+                top: 0,
+                left: 0,
+                width: "100vw",
+                height: "100vh",
+                background: "rgba(0,0,0,0.18)",
+                zIndex: 1000,
+                transition: "opacity 0.25s",
+                opacity: navOpen ? 1 : 0,
+              }}
+              onClick={() => setNavOpen(false)}
+            />
+          )}
         </div>
       </header>
 
-      <main className="main" style={{ minHeight: "60vh" }}>
-        <section id="hero" className="hero">
-          <div className="hero-content">
-            <div className="hero-text">
-              <h1>
-                From Campus to Corporate — in Just <span>10 SECONDS</span>
+      <main
+        className="main"
+        style={{ minHeight: "60vh", background: "#f7fbff" }}
+      >
+        <section
+          id="hero"
+          className="hero-section"
+          style={{ background: "#e6f0ff" }}
+        >
+          <div
+            className="hero-content"
+            style={{
+              ...maxWidthWrapperStyle,
+              display: "flex",
+              flexDirection: isBelow992 ? "column" : "row",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: isBelow480 ? "1.2rem" : isBelow768 ? "2rem" : "3.5rem",
+              padding: isBelow480
+                ? "28px 8px 18px"
+                : isBelow768
+                ? "38px 24px 28px"
+                : "60px 32px 38px",
+              boxSizing: "border-box",
+            }}
+          >
+            <div
+              className="hero-text"
+              style={{
+                flex: "1 1 0",
+                textAlign: isBelow992 ? "center" : "left",
+                marginBottom: isBelow992 ? "2.5rem" : 0,
+                marginRight: isBelow992 ? 0 : "2.5rem",
+                maxWidth: isBelow992 ? "100%" : 540,
+                padding: isBelow480 ? "0 0.2rem" : isBelow768 ? "0 0.7rem" : 0,
+              }}
+            >
+              <h1
+                style={{
+                  fontSize: isBelow480
+                    ? "1.55rem"
+                    : isBelow768
+                    ? "2.1rem"
+                    : isBelow992
+                    ? "2.6rem"
+                    : "3rem",
+                  fontWeight: 800,
+                  color: "#003366",
+                  marginBottom: isBelow480 ? "0.65rem" : "1.1rem",
+                  lineHeight: isBelow480 ? "1.23" : "1.13",
+                }}
+              >
+                From Campus to Corporate — in Just{" "}
+                <span
+                  style={{
+                    color: "#007cf0",
+                    fontWeight: 900,
+                    fontSize: isBelow480
+                      ? "1.25em"
+                      : isBelow768
+                      ? "1.18em"
+                      : "1.1em",
+                  }}
+                >
+                  10 SECONDS
+                </span>
               </h1>
-              <h3>
+              <h3
+                style={{
+                  fontSize: isBelow480
+                    ? "1rem"
+                    : isBelow768
+                    ? "1.13rem"
+                    : isBelow992
+                    ? "1.22rem"
+                    : "1.3rem",
+                  color: "#444",
+                  fontWeight: 500,
+                  marginBottom: isBelow480 ? "0.8rem" : "1.2rem",
+                }}
+              >
                 We’re an employability ecosystem empowering students,
                 institutions, and recruiters through training, technology, and
                 talent solutions.
               </h3>
-              <button className="hero-btn">Get Started Now</button>
+              <button
+                className="hero-btn"
+                style={{
+                  padding: isBelow480
+                    ? "0.9rem 0"
+                    : isBelow768
+                    ? "0.85rem 2.2rem"
+                    : "1rem 2.8rem",
+                  fontSize: isBelow480 ? "1.05rem" : "1.18rem",
+                  fontWeight: 700,
+                  borderRadius: 30,
+                  display: "block",
+                  width: isBelow480 ? "100%" : "auto",
+                  margin: isBelow992 ? "0 auto" : "0",
+                }}
+              >
+                Get Started Now
+              </button>
             </div>
-
-            <div className="hero-image">
+            <div
+              className="hero-image"
+              style={{
+                flex: "1 1 0",
+                display: "flex",
+                justifyContent: isBelow992 ? "center" : "flex-end",
+                alignItems: "center",
+                width: isBelow768 ? "100%" : "auto",
+                minWidth: 0,
+                padding: isBelow480 ? "0 0.2rem" : isBelow768 ? "0 0.7rem" : 0,
+              }}
+            >
               <Image
                 src="/h.png"
                 alt="A professional graphic related to career success"
-                width={550}
-                height={400}
+                width={
+                  isBelow480 ? 220 : isBelow768 ? 280 : isBelow992 ? 340 : 550
+                }
+                height={
+                  isBelow480 ? 160 : isBelow768 ? 180 : isBelow992 ? 210 : 400
+                }
                 className="hero-main-image"
+                style={{
+                  maxWidth: isBelow768 ? "70%" : "100%",
+                  width: "100%",
+                  height: "auto",
+                  objectFit: "contain",
+                }}
               />
             </div>
           </div>
         </section>
 
-        <section className="quick-summary">
-          <div className="summary-card">
+        <section
+          className="quick-summary"
+          style={{
+            ...maxWidthWrapperStyle,
+            display: "flex",
+            flexDirection: isBelow992 ? "column" : "row",
+            alignItems: "stretch",
+            justifyContent: "center",
+            gap: isBelow480 ? "1rem" : isBelow768 ? "1.2rem" : "2.2rem",
+            padding: isBelow480
+              ? "20px 0 10px"
+              : isBelow768
+              ? "28px 0 18px"
+              : "36px 0 24px",
+            boxSizing: "border-box",
+          }}
+        >
+          <div
+            className="summary-card"
+            style={{
+              flex: 1,
+              minWidth: isBelow992 ? "90%" : 0,
+              width: isBelow992 ? "90%" : "auto",
+              margin: isBelow992 ? "0 auto" : 0,
+              padding: isBelow480 ? "18px" : isBelow768 ? "22px" : "25px",
+              marginBottom: isBelow992 ? "0.8rem" : 0,
+              borderRadius: 12,
+              background: "#fff",
+              boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
+              textAlign: "center",
+            }}
+          >
             <div
               className="summary-icon"
               style={{
@@ -268,7 +622,21 @@ export default function Page() {
             </p>
           </div>
 
-          <div className="summary-card">
+          <div
+            className="summary-card"
+            style={{
+              flex: 1,
+              minWidth: isBelow992 ? "90%" : 0,
+              width: isBelow992 ? "90%" : "auto",
+              margin: isBelow992 ? "0 auto" : 0,
+              padding: isBelow480 ? "18px" : isBelow768 ? "22px" : "25px",
+              marginBottom: isBelow992 ? "0.8rem" : 0,
+              borderRadius: 12,
+              background: "#fff",
+              boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
+              textAlign: "center",
+            }}
+          >
             <div
               className="summary-icon"
               style={{
@@ -285,7 +653,21 @@ export default function Page() {
             </p>
           </div>
 
-          <div className="summary-card">
+          <div
+            className="summary-card"
+            style={{
+              flex: 1,
+              minWidth: isBelow992 ? "90%" : 0,
+              width: isBelow992 ? "90%" : "auto",
+              margin: isBelow992 ? "0 auto" : 0,
+              padding: isBelow480 ? "18px" : isBelow768 ? "22px" : "25px",
+              marginBottom: isBelow992 ? "0.8rem" : 0,
+              borderRadius: 12,
+              background: "#fff",
+              boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
+              textAlign: "center",
+            }}
+          >
             <div
               className="summary-icon"
               style={{
@@ -305,13 +687,32 @@ export default function Page() {
         </section>
 
         {/* ======= About Us Section ======= */}
-        <section id="about" className="about-section">
-          <div className="about-container" data-aos="fade-up">
+        <section
+          id="about"
+          className="about-section"
+          style={{ background: "#f7fbff", width: "100%" }}
+        >
+          <div
+            className="about-container"
+            data-aos="fade-up"
+            style={{
+              ...maxWidthWrapperStyle,
+              padding: isBelow480 ? "18px 0" : isBelow768 ? "30px 0" : "50px 0",
+            }}
+          >
             <header className="about-header">
               <h2>🌟 ABOUT US</h2>
             </header>
 
-            <div className="about-grid">
+            <div
+              className="about-grid"
+              style={{
+                display: "grid",
+                gridTemplateColumns: isBelow992 ? "1fr" : "repeat(3, 1fr)",
+                gap: isBelow480 ? "1.1rem" : isBelow768 ? "1.5rem" : "2.5rem",
+                marginTop: isBelow480 ? "1rem" : "2rem",
+              }}
+            >
               {[
                 {
                   title: "Who We Are",
@@ -336,10 +737,12 @@ export default function Page() {
                     animationDelay: `${index * 0.2}s`,
                     background: "#ffffff",
                     borderRadius: "12px",
-                    padding: "25px",
+                    padding: isBelow480 ? "16px" : isBelow768 ? "20px" : "25px",
                     boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
                     textAlign: "center",
                     transition: "transform 0.3s ease, box-shadow 0.3s ease",
+                    margin: isBelow992 ? "0 auto" : 0,
+                    width: isBelow992 ? "90%" : "auto",
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = "translateY(-8px)";
@@ -355,17 +758,30 @@ export default function Page() {
                   <div
                     className="about-icon"
                     style={{
-                      fontSize: "2.5rem",
+                      fontSize: isBelow480 ? "1.7rem" : "2.2rem",
                       color: "#007bff",
-                      marginBottom: "15px",
+                      marginBottom: isBelow480 ? "8px" : "15px",
                     }}
                   >
                     {item.icon}
                   </div>
-                  <h3 style={{ color: "#003366", marginBottom: "10px" }}>
+                  <h3
+                    style={{
+                      color: "#003366",
+                      marginBottom: "10px",
+                      fontWeight: isBelow480 ? 600 : 700,
+                      fontSize: isBelow480 ? "1.13rem" : "1.3rem",
+                    }}
+                  >
                     {item.title}
                   </h3>
-                  <p style={{ color: "#444", lineHeight: "1.6" }}>
+                  <p
+                    style={{
+                      color: "#444",
+                      lineHeight: "1.6",
+                      fontSize: isBelow480 ? "0.98rem" : "1.05rem",
+                    }}
+                  >
                     {item.desc}
                   </p>
                 </div>
@@ -374,8 +790,19 @@ export default function Page() {
           </div>
         </section>
         {/* ======= Services Section ======= */}
-        <section id="services" className="services-section">
-          <div className="services-container" data-aos="fade-up">
+        <section
+          id="services"
+          className="services-section"
+          style={{ background: "#fff", width: "100%" }}
+        >
+          <div
+            className="services-container"
+            data-aos="fade-up"
+            style={{
+              ...maxWidthWrapperStyle,
+              padding: isBelow480 ? "18px 0" : isBelow768 ? "30px 0" : "50px 0",
+            }}
+          >
             <header className="services-header">
               <h2>🔧 SERVICES</h2>
             </header>
@@ -384,9 +811,13 @@ export default function Page() {
               className="services-grid"
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-                gap: "2rem",
-                marginTop: "2rem",
+                gridTemplateColumns: isBelow480
+                  ? "1fr"
+                  : isBelow992
+                  ? "1fr"
+                  : "repeat(auto-fit, minmax(300px, 1fr))",
+                gap: isBelow480 ? "1rem" : isBelow768 ? "1.2rem" : "2rem",
+                marginTop: isBelow480 ? "1rem" : "2rem",
               }}
             >
               {[
@@ -431,10 +862,12 @@ export default function Page() {
                   style={{
                     background: "#ffffff",
                     borderRadius: "12px",
-                    padding: "25px",
+                    padding: isBelow480 ? "15px" : isBelow768 ? "19px" : "25px",
                     boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
                     transition: "transform 0.3s ease, box-shadow 0.3s ease",
                     textAlign: "center",
+                    margin: isBelow992 ? "0 auto" : 0,
+                    width: isBelow992 ? "90%" : "auto",
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = "translateY(-8px)";
@@ -449,17 +882,41 @@ export default function Page() {
                 >
                   <div
                     className="service-icon"
-                    style={{ marginBottom: "15px" }}
+                    style={{
+                      marginBottom: isBelow480 ? "8px" : "15px",
+                      fontSize: isBelow480 ? "1.5rem" : undefined,
+                    }}
                   >
-                    {item.icon}
+                    {React.cloneElement(item.icon, {
+                      size: isBelow480 ? 28 : isBelow768 ? 36 : 50,
+                    })}
                   </div>
-                  <h3 style={{ color: "#007bff", marginBottom: "10px" }}>
+                  <h3
+                    style={{
+                      color: "#007bff",
+                      marginBottom: "10px",
+                      fontWeight: isBelow480 ? 600 : 700,
+                      fontSize: isBelow480 ? "1.05rem" : "1.2rem",
+                    }}
+                  >
                     {item.title}
                   </h3>
-                  <p style={{ color: "#444", lineHeight: "1.6" }}>
+                  <p
+                    style={{
+                      color: "#444",
+                      lineHeight: "1.6",
+                      fontSize: isBelow480 ? "0.97rem" : "1.05rem",
+                    }}
+                  >
                     {item.desc}
                   </p>
-                  <p style={{ marginTop: "10px", color: "#003366" }}>
+                  <p
+                    style={{
+                      marginTop: "10px",
+                      color: "#003366",
+                      fontSize: isBelow480 ? "0.98rem" : "1.05rem",
+                    }}
+                  >
                     <strong>Outcome:</strong> {item.outcome}
                   </p>
                 </div>
@@ -468,8 +925,19 @@ export default function Page() {
           </div>
         </section>
         {/* ======= LMS PLATFORM Section ======= */}
-        <section id="lms-platform" className="lms-section">
-          <div className="lms-container" data-aos="fade-up">
+        <section
+          id="lms-platform"
+          className="lms-section"
+          style={{ background: "#f7fbff", width: "100%" }}
+        >
+          <div
+            className="lms-container"
+            data-aos="fade-up"
+            style={{
+              ...maxWidthWrapperStyle,
+              padding: isBelow480 ? "18px 0" : isBelow768 ? "30px 0" : "50px 0",
+            }}
+          >
             <header className="lms-header">
               <h2>📚 LMS PLATFORM</h2>
               <a
@@ -487,7 +955,19 @@ export default function Page() {
               trainers, and recruiters on one platform.
             </p>
 
-            <div className="lms-stats">
+            <div
+              className="lms-stats"
+              style={{
+                display: "grid",
+                gridTemplateColumns: isBelow480
+                  ? "1fr"
+                  : isBelow768
+                  ? "1fr 1fr"
+                  : "repeat(5, 1fr)",
+                gap: isBelow480 ? "0.8rem" : isBelow768 ? "1.2rem" : "2rem",
+                margin: "2rem 0 1.2rem 0",
+              }}
+            >
               {[
                 { number: "50K+", label: "Active Users" },
                 { number: "250+", label: "Mock & Company-Specific Tests" },
@@ -495,9 +975,32 @@ export default function Page() {
                 { number: "📊", label: "Real-time Analytics & Leaderboards" },
                 { number: "💻", label: "MCQ + Coding Assessments" },
               ].map((stat, index) => (
-                <div key={index} className="lms-card">
-                  <h3>{stat.number}</h3>
-                  <p>{stat.label}</p>
+                <div
+                  key={index}
+                  className="lms-card"
+                  style={{
+                    background: "#fff",
+                    borderRadius: 10,
+                    boxShadow: "0 2px 10px rgba(0,0,0,0.07)",
+                    padding: isBelow480 ? "12px" : isBelow768 ? "15px" : "20px",
+                    textAlign: "center",
+                    fontSize: isBelow480 ? "1rem" : "1.1rem",
+                    width: isBelow992 ? "95%" : "auto",
+                    margin: isBelow992 ? "0 auto" : 0,
+                  }}
+                >
+                  <h3
+                    style={{
+                      fontSize: isBelow480 ? "1.22rem" : "1.4rem",
+                      fontWeight: isBelow480 ? 600 : 700,
+                      marginBottom: "0.3rem",
+                    }}
+                  >
+                    {stat.number}
+                  </h3>
+                  <p style={{ fontSize: isBelow480 ? "0.95rem" : "1rem" }}>
+                    {stat.label}
+                  </p>
                 </div>
               ))}
             </div>
@@ -510,8 +1013,19 @@ export default function Page() {
         </section>
 
         {/* ======= Clients Section ======= */}
-        <section id="clients" className="clients-section">
-          <div className="clients-container" data-aos="fade-up">
+        <section
+          id="clients"
+          className="clients-section"
+          style={{ background: "#fff", width: "100%" }}
+        >
+          <div
+            className="clients-container"
+            data-aos="fade-up"
+            style={{
+              ...maxWidthWrapperStyle,
+              padding: isBelow480 ? "18px 0" : isBelow768 ? "30px 0" : "50px 0",
+            }}
+          >
             <header
               className="clients-header"
               style={{ textAlign: "center", marginBottom: "2rem" }}
@@ -609,39 +1123,12 @@ export default function Page() {
         </section>
 
         {/* ======= Our Journey Section ======= */}
-        <section className="journey-section">
+        <section className="journey-section" id="journey">
           <div className="journey-container" data-aos="fade-up">
-            <header
-              className="journey-header"
-              style={{ textAlign: "center", marginBottom: "2.5rem" }}
-            >
-              <h2
-                style={{
-                  fontSize: "2.5rem",
-                  fontWeight: "800",
-                  color: "#004aad",
-                }}
-              >
-                🌱 OUR JOURNEY
-              </h2>
-              <h3
-                style={{
-                  fontSize: "1.4rem",
-                  color: "#007bff",
-                  marginTop: "0.5rem",
-                }}
-              >
-                From a Classroom Dream to a Campus Movement
-              </h3>
-              <p
-                style={{
-                  fontSize: "1.1rem",
-                  color: "#333",
-                  maxWidth: "850px",
-                  margin: "1.5rem auto 2rem auto",
-                  lineHeight: "1.7",
-                }}
-              >
+            <header className="journey-header">
+              <h2>🌱 OUR JOURNEY</h2>
+              <h3>From a Classroom Dream to a Campus Movement</h3>
+              <p>
                 What began in 2003 as a passion for aptitude has grown into a
                 network that bridges classrooms and careers. With every phase —
                 from training students to digitizing learning to building
@@ -650,16 +1137,7 @@ export default function Page() {
               </p>
             </header>
 
-            <h3
-              style={{
-                textAlign: "center",
-                fontSize: "1.8rem",
-                color: "#004aad",
-                marginBottom: "2rem",
-              }}
-            >
-              Milestones
-            </h3>
+            <h3 className="journey-subtitle">Milestones</h3>
 
             <div className="timeline">
               {[
@@ -667,56 +1145,39 @@ export default function Page() {
                   year: "2003",
                   title: "Aptitude Training Begins",
                   desc: "We started our journey by training students in aptitude, problem-solving, and analytical thinking — building strong career foundations.",
-                  icon: <FaRocket color="#007cf0" />,
+                  icon: <FaRocket />,
                 },
                 {
                   year: "2010",
                   title: "Technical & Soft Skills Expansion",
                   desc: "Introduced modules for communication, coding, and technical interviews, making students job-ready across multiple domains.",
-                  icon: <FaCogs color="#00bcd4" />,
+                  icon: <FaCogs />,
                 },
                 {
                   year: "2020",
                   title: "BASE Educational Services (Udupi) Acquired",
                   desc: "Expanded our footprint and strengthened our regional presence by integrating BASE's educational excellence with our training ecosystem.",
-                  icon: <FaUniversity color="#009688" />,
+                  icon: <FaUniversity />,
                 },
                 {
                   year: "2022",
                   title: "LMS Platform Launched",
                   desc: "Digitized learning with our in-house Learning Management System — enabling real-time analytics, assessments, and skill benchmarking.",
-                  icon: <FaLaptopCode color="#ff8800" />,
+                  icon: <FaLaptopCode />,
                 },
                 {
                   year: "2024",
                   title: "Staffing & Consulting Vertical Introduced",
                   desc: "Launched the Staffing and Consulting division — bridging trained talent and corporates, transforming employability into measurable success.",
-                  icon: <FaClipboardList color="#004aad" />,
+                  icon: <FaClipboardList />,
                 },
               ].map((item, index) => (
                 <div className="timeline-item" key={index}>
-                  <div
-                    className="timeline-dot"
-                    style={{
-                      fontSize: "2rem",
-                      transition: "transform 0.4s ease",
-                      animation: "pulseIcon 2.5s infinite",
-                    }}
-                  >
-                    {item.icon}
-                  </div>
+                  <div className="timeline-dot">{item.icon}</div>
                   <div className="timeline-year">{item.year}</div>
                   <div className="timeline-content">
                     <h4>{item.title}</h4>
-                    <p
-                      style={{
-                        color: "#444",
-                        lineHeight: "1.6",
-                        marginTop: "0.3rem",
-                      }}
-                    >
-                      {item.desc}
-                    </p>
+                    <p>{item.desc}</p>
                   </div>
                 </div>
               ))}
@@ -729,10 +1190,15 @@ export default function Page() {
           className="contact"
           style={{
             background: "linear-gradient(180deg, #e6f0ff 0%, #ffffff 100%)",
-            padding: "80px 0",
+            width: "100%",
+            padding: isBelow480 ? "40px 0" : isBelow768 ? "60px 0" : "80px 0",
           }}
         >
-          <div className="container" data-aos="fade-up">
+          <div
+            className="container"
+            data-aos="fade-up"
+            style={{ ...maxWidthWrapperStyle }}
+          >
             <header
               className="section-header"
               style={{ textAlign: "center", marginBottom: "50px" }}
@@ -747,25 +1213,36 @@ export default function Page() {
               className="row gy-4"
               style={{
                 display: "flex",
-                alignItems: "flex-start",
-                justifyContent: "space-between",
+                flexDirection: isBelow768 ? "column" : "row",
+                alignItems: isBelow768 ? "stretch" : "flex-start",
+                justifyContent: isBelow768 ? "center" : "space-between",
+                gap: isBelow480 ? "1.2rem" : isBelow768 ? "1.5rem" : "2.3rem",
               }}
             >
               {/* Left Side Info */}
               <div
                 className="col-lg-6"
                 style={{
-                  width: "48%",
+                  width: isBelow768 ? "100%" : "48%",
                   minWidth: 0,
                   boxSizing: "border-box",
+                  marginBottom: isBelow768 ? "1.2rem" : 0,
                 }}
               >
                 <div
                   className="info-grid"
                   style={{
                     display: "grid",
-                    gridTemplateColumns: "repeat(2, 1fr)",
-                    gap: "1.5rem",
+                    gridTemplateColumns: isBelow480
+                      ? "1fr"
+                      : isBelow768
+                      ? "1fr"
+                      : "repeat(2, 1fr)",
+                    gap: isBelow480
+                      ? "0.9rem"
+                      : isBelow768
+                      ? "1.1rem"
+                      : "1.5rem",
                   }}
                 >
                   {[
@@ -797,7 +1274,7 @@ export default function Page() {
                       style={{
                         background: "#ffffff",
                         borderRadius: "10px",
-                        padding: "20px",
+                        padding: isBelow480 ? "13px" : "20px",
                         boxShadow: "0 4px 15px rgba(0,0,0,0.08)",
                         transition:
                           "transform 0.3s cubic-bezier(.4,0,.2,1), box-shadow 0.3s cubic-bezier(.4,0,.2,1)",
@@ -808,6 +1285,8 @@ export default function Page() {
                             : i === 3
                             ? "4px solid #ff8800"
                             : "4px solid transparent",
+                        margin: isBelow992 ? "0 auto" : 0,
+                        width: isBelow992 ? "90%" : "auto",
                       }}
                       onMouseEnter={(e) => {
                         e.currentTarget.style.transform = "translateY(-5px)";
@@ -828,15 +1307,29 @@ export default function Page() {
                       <i
                         className={`bi ${item.icon}`}
                         style={{
-                          fontSize: "2rem",
+                          fontSize: isBelow480 ? "1.3rem" : "2rem",
                           color: "#007bff",
-                          marginBottom: "10px",
+                          marginBottom: isBelow480 ? "4px" : "10px",
                           display: "block",
                           transition: "color 0.3s",
                         }}
                       ></i>
-                      <h3 style={{ color: "#003366" }}>{item.title}</h3>
-                      <p style={{ whiteSpace: "pre-line", color: "#444" }}>
+                      <h3
+                        style={{
+                          color: "#003366",
+                          fontWeight: isBelow480 ? 600 : 700,
+                          fontSize: isBelow480 ? "1rem" : "1.13rem",
+                        }}
+                      >
+                        {item.title}
+                      </h3>
+                      <p
+                        style={{
+                          whiteSpace: "pre-line",
+                          color: "#444",
+                          fontSize: isBelow480 ? "0.97rem" : "1.05rem",
+                        }}
+                      >
                         {item.content}
                       </p>
                     </div>
@@ -848,7 +1341,7 @@ export default function Page() {
               <div
                 className="col-lg-6"
                 style={{
-                  width: "48%",
+                  width: isBelow768 ? "100%" : "48%",
                   minWidth: 0,
                   boxSizing: "border-box",
                   textAlign: "center",
@@ -861,7 +1354,11 @@ export default function Page() {
                   src="https://forms.zohopublic.in/10seconds/form/RequestforQuote/formperma/Yagg4-6x6eqKH8GfsJbH3E48VG-DicyHAr-YNc1qZtE?zf_rszfm=1"
                   style={{
                     border: "none",
-                    height: "900px",
+                    height: isBelow480
+                      ? "550px"
+                      : isBelow768
+                      ? "650px"
+                      : "900px",
                     width: "100%",
                     maxWidth: "100%",
                     borderRadius: "10px",
@@ -876,8 +1373,19 @@ export default function Page() {
         </section>
       </main>
       {/* ======= Vision & Future Section ======= */}
-      <section id="vision-future" className="vision-section">
-        <div className="vision-container" data-aos="fade-up">
+      <section
+        id="vision-future"
+        className="vision-section"
+        style={{ background: "#f7fbff", width: "100%" }}
+      >
+        <div
+          className="vision-container"
+          data-aos="fade-up"
+          style={{
+            ...maxWidthWrapperStyle,
+            padding: isBelow480 ? "18px 0" : isBelow768 ? "30px 0" : "50px 0",
+          }}
+        >
           <header
             className="vision-header"
             style={{ textAlign: "center", marginBottom: "2.5rem" }}
@@ -905,7 +1413,7 @@ export default function Page() {
               background: "#ffffff",
               borderRadius: "15px",
               boxShadow: "0 6px 25px rgba(0, 0, 0, 0.08)",
-              padding: "40px",
+              padding: isBelow480 ? "18px" : isBelow768 ? "28px" : "40px",
               textAlign: "center",
               transition: "transform 0.3s ease, box-shadow 0.3s ease",
             }}
@@ -952,41 +1460,126 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <footer className="footer">
-        <div className="footer-container">
-          <div className="footer-left">
+      <footer className="footer" style={{ background: "#fff", width: "100%" }}>
+        <div
+          className="footer-container"
+          style={{
+            ...maxWidthWrapperStyle,
+            display: "flex",
+            flexDirection: isBelow768 ? "column" : "row",
+            gap: isBelow480 ? "1.2rem" : isBelow768 ? "1.4rem" : "2.5rem",
+            alignItems: "flex-start",
+            justifyContent: "space-between",
+            padding: isBelow480
+              ? "20px 0 12px"
+              : isBelow768
+              ? "32px 0 18px"
+              : "40px 0 18px",
+            boxSizing: "border-box",
+          }}
+        >
+          <div
+            className="footer-left"
+            style={{
+              flex: 1,
+              minWidth: 0,
+              marginBottom: isBelow768 ? "1.2rem" : 0,
+            }}
+          >
             <Image
               src="/logo.png"
               alt="10Seconds Logo"
-              width={150}
-              height={50}
+              width={isBelow480 ? 80 : isBelow768 ? 110 : 150}
+              height={isBelow480 ? 25 : isBelow768 ? 35 : 50}
+              style={{
+                maxWidth: "100%",
+                height: "auto",
+                objectFit: "contain",
+              }}
             />
-            <p>
+            <p
+              style={{
+                fontSize: isBelow480 ? "0.97rem" : "1.05rem",
+                marginTop: "0.7rem",
+              }}
+            >
               10 SECONDS is an organization that unifies training, assessments
               and recruitment under one roof. Conceptualised by Anijith Shetty
               and Ramaprasad, we are an ensemble set of young executive trainers
               who specialise in all things digital.
             </p>
-            <div className="social-icons">
-              <a href="#" aria-label="Facebook">
+            <div
+              className="social-icons"
+              style={{
+                display: "flex",
+                gap: isBelow480 ? "0.55rem" : "1rem",
+                marginTop: "1.1rem",
+              }}
+            >
+              <a
+                href="#"
+                aria-label="Facebook"
+                style={{ fontSize: isBelow480 ? "1.2rem" : "1.5rem" }}
+              >
                 <FaFacebookF />
               </a>
-              <a href="#" aria-label="LinkedIn">
+              <a
+                href="#"
+                aria-label="LinkedIn"
+                style={{ fontSize: isBelow480 ? "1.2rem" : "1.5rem" }}
+              >
                 <FaLinkedinIn />
               </a>
-              <a href="#" aria-label="Instagram">
+              <a
+                href="#"
+                aria-label="Instagram"
+                style={{ fontSize: isBelow480 ? "1.2rem" : "1.5rem" }}
+              >
                 <FaInstagram />
               </a>
-              <a href="#" aria-label="YouTube">
+              <a
+                href="#"
+                aria-label="YouTube"
+                style={{ fontSize: isBelow480 ? "1.2rem" : "1.5rem" }}
+              >
                 <FaYoutube />
               </a>
             </div>
           </div>
-          <div className="footer-right">
-            <div className="footer-columns">
+          <div
+            className="footer-right"
+            style={{
+              flex: 1,
+              minWidth: 0,
+              width: isBelow992 ? "100%" : "auto",
+            }}
+          >
+            <div
+              className="footer-columns"
+              style={{
+                display: "flex",
+                flexDirection: isBelow480 ? "column" : "row",
+                gap: isBelow480 ? "0.8rem" : "2.2rem",
+              }}
+            >
               <div className="useful-links-block">
-                <h3>USEFUL LINKS</h3>
-                <ul className="useful-links">
+                <h3
+                  style={{
+                    fontWeight: 700,
+                    fontSize: isBelow480 ? "1rem" : "1.1rem",
+                  }}
+                >
+                  USEFUL LINKS
+                </h3>
+                <ul
+                  className="useful-links"
+                  style={{
+                    listStyle: "none",
+                    padding: 0,
+                    margin: 0,
+                    fontSize: isBelow480 ? "0.98rem" : "1.05rem",
+                  }}
+                >
                   <li>
                     <a href="#hero">Home</a>
                   </li>
@@ -1018,8 +1611,20 @@ export default function Page() {
                 </ul>
               </div>
               <div className="contact-us-block">
-                <h3>CONTACT US</h3>
-                <address>
+                <h3
+                  style={{
+                    fontWeight: 700,
+                    fontSize: isBelow480 ? "1rem" : "1.1rem",
+                  }}
+                >
+                  CONTACT US
+                </h3>
+                <address
+                  style={{
+                    fontSize: isBelow480 ? "0.98rem" : "1.05rem",
+                    fontStyle: "normal",
+                  }}
+                >
                   10 SECONDS
                   <br />
                   Arya Hamsa
@@ -1200,7 +1805,14 @@ export default function Page() {
             `}</style>
           </div>
         )}
-        <div className="footer-bottom">
+        <div
+          className="footer-bottom"
+          style={{
+            textAlign: "center",
+            padding: isBelow480 ? "7px 0" : "12px 0",
+            fontSize: isBelow480 ? "0.97rem" : "1.02rem",
+          }}
+        >
           © Copyright 10SECONDS. All Rights Reserved.
         </div>
       </footer>
