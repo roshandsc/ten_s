@@ -592,15 +592,23 @@ export default function Page() {
           className="quick-summary"
           style={{
             marginTop: isBelow992 ? "3rem" : "5rem",
+            padding: isBelow480
+              ? "3rem 5%"
+              : isBelow768
+              ? "4rem 6%"
+              : "6rem 8%",
+            background: isBelow768
+              ? "radial-gradient(circle at 40% 60%, rgba(0, 200, 255, 0.35), rgba(0, 150, 255, 0.25), rgba(10, 30, 60, 0.15))"
+              : "radial-gradient(circle at 30% 50%, rgba(0, 180, 255, 0.3), rgba(0, 120, 255, 0.25), rgba(5, 25, 50, 0.2))",
           }}
         >
           <div
             style={{
               ...maxWidthWrapperStyle,
-              display: "flex",
+              display: isBelow768 ? "block" : "flex",
               alignItems: "center",
               justifyContent: "space-between",
-              gap: "4rem",
+              gap: isBelow480 ? "2rem" : isBelow768 ? "2.4rem" : "4rem",
             }}
           >
             {/* Left side image */}
@@ -609,41 +617,56 @@ export default function Page() {
               style={{
                 flex: 1,
                 display: "flex",
-                justifyContent: "flex-end",
+                justifyContent: isBelow768 ? "center" : "flex-end",
                 alignItems: "center",
                 marginBottom: isBelow992 ? "2rem" : 0,
                 maxWidth: "100%",
                 minWidth: 0,
+                marginLeft: isBelow768 ? 0 : undefined,
+                marginRight: isBelow768 ? 0 : undefined,
               }}
             >
               <Image
                 src="/quick_summary.png"
                 alt="Training, Technology, Talent"
-                width={isBelow480 ? 400 : isBelow768 ? 550 : 700}
-                height={isBelow480 ? 280 : isBelow768 ? 380 : 500}
+                width={isBelow480 ? 320 : isBelow768 ? 480 : 700}
+                height={isBelow480 ? 220 : isBelow768 ? 340 : 500}
                 style={{
                   maxWidth: "100%",
-                  width: "100%",
+                  width: isBelow480 ? "90%" : "100%",
                   height: "auto",
                   objectFit: "contain",
-                  borderRadius: "20px 60px 20px 60px", // soft curve alternating corners
+                  borderRadius: isBelow480
+                    ? "15px 40px 15px 40px"
+                    : isBelow768
+                    ? "18px 50px 18px 50px"
+                    : "20px 60px 20px 60px",
                   filter: "none",
-                  transform: "scale(1.1)",
+                  transform: isBelow480 ? "scale(1)" : "scale(1.1)",
                   transition:
                     "transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease",
                   background: "transparent",
                   mixBlendMode: "multiply",
-                  boxShadow: "0 10px 30px rgba(0, 180, 255, 0.2)",
+                  boxShadow: isBelow480
+                    ? "0 6px 18px rgba(0, 180, 255, 0.25)"
+                    : "0 10px 30px rgba(0, 180, 255, 0.2)",
+                  margin: isBelow768 ? "0 auto" : "unset",
+                  display: "block",
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = "scale(1.15)";
+                  e.currentTarget.style.transform = isBelow480
+                    ? "scale(1.05)"
+                    : "scale(1.15)";
                   e.currentTarget.style.boxShadow =
                     "0 15px 45px rgba(0, 180, 255, 0.35)";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = "scale(1.1)";
-                  e.currentTarget.style.boxShadow =
-                    "0 10px 30px rgba(0, 180, 255, 0.2)";
+                  e.currentTarget.style.transform = isBelow480
+                    ? "scale(1)"
+                    : "scale(1.1)";
+                  e.currentTarget.style.boxShadow = isBelow480
+                    ? "0 6px 18px rgba(0, 180, 255, 0.25)"
+                    : "0 10px 30px rgba(0, 180, 255, 0.2)";
                 }}
                 priority
               />
