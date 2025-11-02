@@ -781,21 +781,26 @@ main {
    QUICK SUMMARY SECTION (Image Left, Horizontal Cards Right)
 =========================================================== */
 /* QUICK SUMMARY SECTION (Image Left, Horizontal Cards Right) */
+/* HOLOGRAPHIC GLOW THEME FOR QUICK SUMMARY */
 .quick-summary {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 3rem;
+  gap: 4rem;
   background: radial-gradient(
-    circle at 20% 30%,
-    #eaf3ff 0%,
-    #ffffff 60%,
-    #f0f8ff 100%
+    circle at 30% 50%,
+    rgba(0, 180, 255, 0.3),
+    rgba(0, 120, 255, 0.25),
+    rgba(5, 25, 50, 0.2)
   );
+  border-top: 2px solid #00a8ff;
+  border-bottom: 2px solid #00a8ff;
+  box-shadow: 0 0 40px rgba(0, 191, 255, 0.3);
+  backdrop-filter: blur(8px);
   position: relative;
   overflow: hidden;
-  padding: 4.5rem 2.5rem;
+  padding: 6rem 8%;
   box-sizing: border-box;
 }
 
@@ -820,10 +825,10 @@ main {
 }
 
 .quick-summary-image {
-  flex: 0 0 350px;
+  flex: 1;
   display: flex;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
 }
 
 .quick-summary-image img {
@@ -845,52 +850,60 @@ main {
 }
 
 .quick-summary-cards {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  gap: 2.2rem;
-  flex: 1;
-  align-items: center;
   justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  padding-left: 2rem;
+  gap: 2.2rem;
   min-width: 0;
   position: relative;
   z-index: 1;
 }
 
+/* HOLOGRAPHIC PANEL EFFECT FOR SUMMARY CARDS */
 .summary-card {
-  background: #ffffff;
+  background: rgba(15, 25, 45, 0.8);
+  border: 1px solid rgba(0, 191, 255, 0.4);
   border-radius: 16px;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.09);
+  box-shadow: 0 0 25px rgba(0, 191, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: #e0f7fa;
   padding: 2rem 1.5rem;
   flex: 1 1 0;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
   cursor: pointer;
   gap: 0.5rem;
-  min-width: 260px;
-  max-width: 370px;
-}
-
-.summary-card:hover {
-  transform: translateY(-7px) scale(1.03);
-  box-shadow: 0 10px 32px rgba(20, 99, 190, 0.13);
+  min-width: 320px;
+  max-width: 520px;
 }
 
 .summary-card h2 {
   font-size: 1.35rem;
   font-weight: 700;
-  color: #003366;
+  color: #00bfff;
   margin-bottom: 0.5rem;
   letter-spacing: -0.5px;
+  text-shadow: 0 0 10px #00bfff, 0 0 20px #00ffff;
 }
 
 .summary-card p {
-  color: #444;
+  color: #e0f7fa;
   font-size: 1.1rem;
   margin: 0;
   line-height: 1.6;
+}
+
+.summary-card:hover {
+  transform: translateY(-8px) scale(1.04);
+  box-shadow: 0 0 35px rgba(0, 191, 255, 0.6);
+  border-color: #00ffff;
 }
 
 /* Responsive behavior */
@@ -898,13 +911,24 @@ main {
   .quick-summary {
     flex-direction: column;
     text-align: center;
+    padding: 4rem 1.5rem;
+    gap: 2rem;
   }
   .quick-summary-cards {
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-left: 0;
   }
   .summary-card {
     align-items: center;
     text-align: center;
+    max-width: 90%;
+    min-width: 0;
+    width: 90%;
+  }
+  .quick-summary-image {
+    justify-content: center;
   }
 }
 /* ===========================

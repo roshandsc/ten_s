@@ -587,154 +587,185 @@ export default function Page() {
           </div>
         </section>
 
-        <section id="quick-summary" className="quick-summary">
-          {/* Left side image */}
+        <section
+          id="quick-summary"
+          className="quick-summary"
+          style={{
+            marginTop: isBelow992 ? "3rem" : "5rem",
+          }}
+        >
           <div
-            className="quick-summary-image"
             style={{
-              flex: isBelow992 ? "none" : "0 0 350px",
-              marginBottom: isBelow992 ? "2rem" : 0,
-              width: isBelow992 ? "100%" : "350px",
-              maxWidth: "100%",
-              minWidth: 0,
+              ...maxWidthWrapperStyle,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              gap: "4rem",
             }}
           >
-            <Image
-              src="/quick.png"
-              alt="Training, Technology, Talent"
-              width={isBelow480 ? 400 : isBelow768 ? 550 : 700}
-              height={isBelow480 ? 280 : isBelow768 ? 380 : 500}
+            {/* Left side image */}
+            <div
+              className="quick-summary-image"
               style={{
+                flex: 1,
+                display: "flex",
+                justifyContent: "flex-end",
+                alignItems: "center",
+                marginBottom: isBelow992 ? "2rem" : 0,
                 maxWidth: "100%",
-                width: "100%",
-                height: "auto",
-                objectFit: "contain",
-                borderRadius: "0",
-                filter: "none",
-                transform: "scale(1.1)",
-                transition: "transform 0.4s ease, filter 0.4s ease",
-                background: "transparent",
-                mixBlendMode: "multiply",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "scale(1.15)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = "scale(1.1)";
-              }}
-              priority
-            />
-          </div>
-          {/* Right side cards */}
-          <div
-            className="quick-summary-cards"
-            style={{
-              gap: isBelow480 ? "1.1rem" : isBelow768 ? "1.4rem" : "2.2rem",
-              flex: 1,
-              minWidth: 0,
-            }}
-          >
-            {/* Card 1 */}
-            <div
-              className="summary-card"
-              style={{
-                minWidth: isBelow480 ? "0" : isBelow768 ? "220px" : "260px",
-                maxWidth: "370px",
-                flex: "1 1 0",
-                gap: "0.5rem",
+                minWidth: 0,
               }}
             >
-              <h2
+              <Image
+                src="/quick_summary.png"
+                alt="Training, Technology, Talent"
+                width={isBelow480 ? 400 : isBelow768 ? 550 : 700}
+                height={isBelow480 ? 280 : isBelow768 ? 380 : 500}
                 style={{
-                  fontSize: isBelow480
-                    ? "1.12rem"
-                    : isBelow768
-                    ? "1.18rem"
-                    : "1.35rem",
+                  maxWidth: "100%",
+                  width: "100%",
+                  height: "auto",
+                  objectFit: "contain",
+                  borderRadius: "20px 60px 20px 60px", // soft curve alternating corners
+                  filter: "none",
+                  transform: "scale(1.1)",
+                  transition:
+                    "transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease",
+                  background: "transparent",
+                  mixBlendMode: "multiply",
+                  boxShadow: "0 10px 30px rgba(0, 180, 255, 0.2)",
                 }}
-              >
-                Training That Transforms
-              </h2>
-              <p
-                style={{
-                  fontSize: isBelow480
-                    ? "0.97rem"
-                    : isBelow768
-                    ? "1.05rem"
-                    : "1.11rem",
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "scale(1.15)";
+                  e.currentTarget.style.boxShadow =
+                    "0 15px 45px rgba(0, 180, 255, 0.35)";
                 }}
-              >
-                Aptitude, Coding, and Soft-Skill programs built for real
-                placements.
-              </p>
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "scale(1.1)";
+                  e.currentTarget.style.boxShadow =
+                    "0 10px 30px rgba(0, 180, 255, 0.2)";
+                }}
+                priority
+              />
             </div>
-            {/* Card 2 */}
+            {/* Right side cards */}
             <div
-              className="summary-card"
+              className="quick-summary-cards"
               style={{
-                minWidth: isBelow480 ? "0" : isBelow768 ? "220px" : "260px",
-                maxWidth: "370px",
-                flex: "1 1 0",
-                gap: "0.5rem",
+                flex: 1,
+                minWidth: 0,
+                padding: isBelow480
+                  ? "0 0.2rem"
+                  : isBelow768
+                  ? "0 0.7rem"
+                  : "0 40px",
+                gap: isBelow480 ? "1.1rem" : isBelow768 ? "1.4rem" : "2.2rem",
+                justifyContent: isBelow992 ? "center" : "flex-start",
+                alignItems: isBelow992 ? "center" : "flex-start",
               }}
             >
-              <h2
+              {/* Card 1 */}
+              <div
+                className="summary-card"
                 style={{
-                  fontSize: isBelow480
-                    ? "1.12rem"
-                    : isBelow768
-                    ? "1.18rem"
-                    : "1.35rem",
+                  minWidth: isBelow480 ? "0" : isBelow768 ? "220px" : "260px",
+                  maxWidth: isBelow992 ? "90%" : "520px",
+                  flex: "1 1 0",
+                  gap: "0.5rem",
                 }}
               >
-                Technology That Tracks
-              </h2>
-              <p
+                <h2
+                  style={{
+                    fontSize: isBelow480
+                      ? "1.12rem"
+                      : isBelow768
+                      ? "1.18rem"
+                      : "1.35rem",
+                  }}
+                >
+                  Training That Transforms
+                </h2>
+                <p
+                  style={{
+                    fontSize: isBelow480
+                      ? "0.97rem"
+                      : isBelow768
+                      ? "1.05rem"
+                      : "1.11rem",
+                  }}
+                >
+                  Aptitude, Coding, and Soft-Skill programs built for real
+                  placements.
+                </p>
+              </div>
+              {/* Card 2 */}
+              <div
+                className="summary-card"
                 style={{
-                  fontSize: isBelow480
-                    ? "0.97rem"
-                    : isBelow768
-                    ? "1.05rem"
-                    : "1.11rem",
+                  minWidth: isBelow480 ? "0" : isBelow768 ? "220px" : "260px",
+                  maxWidth: isBelow992 ? "90%" : "520px",
+                  flex: "1 1 0",
+                  gap: "0.5rem",
                 }}
               >
-                LMS with analytics, assessments, and recruiter-benchmarked
-                tests.
-              </p>
-            </div>
-            {/* Card 3 */}
-            <div
-              className="summary-card"
-              style={{
-                minWidth: isBelow480 ? "0" : isBelow768 ? "220px" : "260px",
-                maxWidth: "370px",
-                flex: "1 1 0",
-                gap: "0.5rem",
-              }}
-            >
-              <h2
+                <h2
+                  style={{
+                    fontSize: isBelow480
+                      ? "1.12rem"
+                      : isBelow768
+                      ? "1.18rem"
+                      : "1.35rem",
+                  }}
+                >
+                  Technology That Tracks
+                </h2>
+                <p
+                  style={{
+                    fontSize: isBelow480
+                      ? "0.97rem"
+                      : isBelow768
+                      ? "1.05rem"
+                      : "1.11rem",
+                  }}
+                >
+                  LMS with analytics, assessments, and recruiter-benchmarked
+                  tests.
+                </p>
+              </div>
+              {/* Card 3 */}
+              <div
+                className="summary-card"
                 style={{
-                  fontSize: isBelow480
-                    ? "1.12rem"
-                    : isBelow768
-                    ? "1.18rem"
-                    : "1.35rem",
+                  minWidth: isBelow480 ? "0" : isBelow768 ? "220px" : "260px",
+                  maxWidth: isBelow992 ? "90%" : "520px",
+                  flex: "1 1 0",
+                  gap: "0.5rem",
                 }}
               >
-                Talent That Fits
-              </h2>
-              <p
-                style={{
-                  fontSize: isBelow480
-                    ? "0.97rem"
-                    : isBelow768
-                    ? "1.05rem"
-                    : "1.11rem",
-                }}
-              >
-                Staffing and consulting services connecting pre-trained
-                candidates with leading corporates.
-              </p>
+                <h2
+                  style={{
+                    fontSize: isBelow480
+                      ? "1.12rem"
+                      : isBelow768
+                      ? "1.18rem"
+                      : "1.35rem",
+                  }}
+                >
+                  Talent That Fits
+                </h2>
+                <p
+                  style={{
+                    fontSize: isBelow480
+                      ? "0.97rem"
+                      : isBelow768
+                      ? "1.05rem"
+                      : "1.11rem",
+                  }}
+                >
+                  Staffing and consulting services connecting pre-trained
+                  candidates with leading corporates.
+                </p>
+              </div>
             </div>
           </div>
         </section>
