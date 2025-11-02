@@ -8,17 +8,16 @@ import {
   FaLinkedinIn,
   FaInstagram,
   FaYoutube,
-  FaBrain,
   FaChalkboardTeacher,
   FaClipboardList,
-  FaRocket,
   FaCogs,
-  FaUniversity,
   FaHandshake,
   FaUsersCog,
   FaLaptopCode,
   FaUserTie,
 } from "react-icons/fa";
+import { FaUniversity, FaBrain, FaRocket } from "react-icons/fa";
+import { motion, AnimatePresence } from "framer-motion";
 import SwiperCore from "swiper";
 import { Autoplay, FreeMode } from "swiper/modules";
 import "swiper/css";
@@ -28,6 +27,109 @@ import dynamic from "next/dynamic";
 const ClientsSection = dynamic(() => import("./ClientsSection"), {
   ssr: false,
 });
+
+// Inline AboutUs component (replaces dynamic import)
+const AboutUs = () => {
+  const [activeSection, setActiveSection] = React.useState(null);
+  const sections = {
+    who: {
+      title: "Who We Are",
+      content:
+        "10 SECONDS is a new-age training and staffing organization that unifies learning, assessment, and recruitment under one roof. We partner with colleges, universities, and corporates to create career-ready graduates who meet real industry expectations.",
+    },
+    believe: {
+      title: "What We Believe",
+      content:
+        "It takes just ten seconds to make a strong first impression. Our programs ensure every student, trainer, and partner institution makes theirs count.",
+    },
+    journey: {
+      title: "Our Journey",
+      content:
+        "From a single classroom in 2003 to a statewide network of 60 partner institutions, we’ve grown through innovation, trust, and measurable outcomes. Today, our digital learning platform and staffing services make us one of Karnataka’s most trusted campus-to-corporate partners.",
+    },
+  };
+  return (
+    <section
+      id="about"
+      className="about-section"
+      style={{
+        textAlign: "center",
+        padding: "60px 20px",
+        background: "#fff",
+      }}
+    >
+      <h2
+        style={{
+          fontSize: "2.5rem",
+          fontWeight: "700",
+          color: "#007bff",
+          marginBottom: "1.5rem",
+        }}
+      >
+        🌟 ABOUT US
+      </h2>
+      <div
+        style={{
+          display: "flex",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          gap: "1rem",
+          marginBottom: "2rem",
+        }}
+      >
+        {Object.entries(sections).map(([key, { title }]) => (
+          <button
+            key={key}
+            onClick={() => setActiveSection(activeSection === key ? null : key)}
+            style={{
+              padding: "0.8rem 1.5rem",
+              borderRadius: "8px",
+              border: "2px solid #007bff",
+              background: activeSection === key ? "#007bff" : "#fff",
+              color: activeSection === key ? "#fff" : "#007bff",
+              fontWeight: "600",
+              cursor: "pointer",
+              transition: "all 0.3s ease",
+            }}
+          >
+            {title}
+          </button>
+        ))}
+      </div>
+      {activeSection && (
+        <div
+          style={{
+            maxWidth: "800px",
+            margin: "0 auto",
+            background: "#f9fbff",
+            borderRadius: "12px",
+            padding: "20px 30px",
+            boxShadow: "0 4px 15px rgba(0,0,0,0.1)",
+          }}
+        >
+          <h3
+            style={{
+              color: "#004aad",
+              fontSize: "1.5rem",
+              marginBottom: "0.8rem",
+            }}
+          >
+            {sections[activeSection].title}
+          </h3>
+          <p
+            style={{
+              color: "#333",
+              lineHeight: "1.7",
+              fontSize: "1.1rem",
+            }}
+          >
+            {sections[activeSection].content}
+          </p>
+        </div>
+      )}
+    </section>
+  );
+};
 
 SwiperCore.use([Autoplay, FreeMode]);
 
@@ -63,13 +165,6 @@ export default function Page() {
       window.addEventListener("resize", handleResize);
       handleResize();
       return () => window.removeEventListener("resize", handleResize);
-    }
-  }, []);
-
-  useEffect(() => {
-    if (typeof window !== "undefined" && document.body) {
-      delete document.body.dataset.grExtInstalled;
-      delete document.body.dataset.newGrCSCheckLoaded;
     }
   }, []);
 
@@ -637,109 +732,7 @@ export default function Page() {
           </div>
         </section>
 
-        {/* ======= About Us Section ======= */}
-        <section
-          id="about"
-          className="about-section"
-          style={{ background: "#f7fbff", width: "100%" }}
-        >
-          <div
-            className="about-container"
-            data-aos="fade-up"
-            style={{
-              ...maxWidthWrapperStyle,
-              padding: isBelow480 ? "18px 0" : isBelow768 ? "30px 0" : "50px 0",
-            }}
-          >
-            <header className="about-header">
-              <h2>🌟 ABOUT US</h2>
-            </header>
-
-            <div
-              className="about-grid"
-              style={{
-                display: "grid",
-                gridTemplateColumns: isBelow992 ? "1fr" : "repeat(3, 1fr)",
-                gap: isBelow480 ? "1.1rem" : isBelow768 ? "1.5rem" : "2.5rem",
-                marginTop: isBelow480 ? "1rem" : "2rem",
-              }}
-            >
-              {[
-                {
-                  title: "Who We Are",
-                  desc: "10 SECONDS is a new-age training and staffing organization that unifies learning, assessment, and recruitment under one roof. We partner with colleges, universities, and corporates to create career-ready graduates who meet real industry expectations.",
-                  icon: <FaUniversity />,
-                },
-                {
-                  title: "What We Believe",
-                  desc: "It takes just ten seconds to make a strong first impression. Our programs ensure every student, trainer, and partner institution makes theirs count.",
-                  icon: <FaBrain />,
-                },
-                {
-                  title: "Our Journey",
-                  desc: "From a single classroom in 2003 to a statewide network of 60 partner institutions, we’ve grown through innovation, trust, and measurable outcomes. Today, our digital learning platform and staffing services make us one of Karnataka’s most trusted campus-to-corporate partners. We don’t just teach. We transform potential into performance.",
-                  icon: <FaRocket />,
-                },
-              ].map((item, index) => (
-                <div
-                  className="about-card"
-                  key={index}
-                  style={{
-                    animationDelay: `${index * 0.2}s`,
-                    background: "#ffffff",
-                    borderRadius: "12px",
-                    padding: isBelow480 ? "16px" : isBelow768 ? "20px" : "25px",
-                    boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
-                    textAlign: "center",
-                    transition: "transform 0.3s ease, box-shadow 0.3s ease",
-                    margin: isBelow992 ? "0 auto" : 0,
-                    width: isBelow992 ? "90%" : "auto",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "translateY(-8px)";
-                    e.currentTarget.style.boxShadow =
-                      "0 8px 25px rgba(0,0,0,0.12)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.style.boxShadow =
-                      "0 4px 20px rgba(0,0,0,0.08)";
-                  }}
-                >
-                  <div
-                    className="about-icon"
-                    style={{
-                      fontSize: isBelow480 ? "1.7rem" : "2.2rem",
-                      color: "#007bff",
-                      marginBottom: isBelow480 ? "8px" : "15px",
-                    }}
-                  >
-                    {item.icon}
-                  </div>
-                  <h3
-                    style={{
-                      color: "#003366",
-                      marginBottom: "10px",
-                      fontWeight: isBelow480 ? 600 : 700,
-                      fontSize: isBelow480 ? "1.13rem" : "1.3rem",
-                    }}
-                  >
-                    {item.title}
-                  </h3>
-                  <p
-                    style={{
-                      color: "#444",
-                      lineHeight: "1.6",
-                      fontSize: isBelow480 ? "0.98rem" : "1.05rem",
-                    }}
-                  >
-                    {item.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <AboutUs />
         {/* ======= Services Section ======= */}
         <section
           id="services"
