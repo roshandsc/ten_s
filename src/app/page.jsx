@@ -624,20 +624,14 @@ export default function Page() {
                 marginBottom: isBelow768 ? "1.8rem" : 0,
                 maxWidth: "100%",
                 minWidth: 0,
-                position: "relative",
-                width: "100%",
-                height: "auto",
-                overflow: "hidden",
               }}
             >
               <Image
                 src="/imageq.png"
                 alt="Training, Technology, Talent"
                 className="summary-image"
-                // fill
+                fill
                 priority
-                width={isBelow480 ? 280 : isBelow768 ? 340 : 500}
-                height={isBelow480 ? 200 : isBelow768 ? 250 : 360}
                 sizes="(max-width: 768px) 100vw, 50vw"
                 style={{
                   borderRadius: isBelow480
@@ -647,8 +641,6 @@ export default function Page() {
                     : "20px 60px 20px 60px",
                   boxShadow: "0 0 30px rgba(0, 180, 255, 0.25)",
                   transition: "filter 0.5s ease, box-shadow 0.5s ease",
-                  objectFit: "contain",
-                  maxWidth: "100%",
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.filter =
