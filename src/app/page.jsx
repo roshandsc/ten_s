@@ -587,225 +587,48 @@ export default function Page() {
           </div>
         </section>
 
-        <section
-          id="quick-summary"
-          className="quick-summary"
-          style={{
-            marginTop: isBelow992 ? "3rem" : "5rem",
-            padding: isBelow480
-              ? "3rem 5%"
-              : isBelow768
-              ? "4rem 6%"
-              : "6rem 8%",
-            background: isBelow768
-              ? "radial-gradient(circle at 40% 60%, rgba(0, 200, 255, 0.35), rgba(0, 150, 255, 0.25), rgba(10, 30, 60, 0.15))"
-              : "radial-gradient(circle at 30% 50%, rgba(0, 180, 255, 0.3), rgba(0, 120, 255, 0.25), rgba(5, 25, 50, 0.2))",
-          }}
-        >
-          <div
-            style={{
-              ...maxWidthWrapperStyle,
-              display: "flex",
-              flexDirection: isBelow768 ? "column" : "row",
-              alignItems: "stretch",
-              justifyContent: "space-between",
-              gap: isBelow480 ? "2rem" : isBelow768 ? "2.4rem" : "4rem",
-            }}
-          >
+        <section id="quick-summary" className="quick-summary">
+          <div className="quick-summary-wrapper">
             {/* Left side image */}
-            <div
-              className="quick-summary-image"
-              style={{
-                flex: 1,
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                textAlign: isBelow768 ? "center" : "left",
-                marginBottom: isBelow768 ? "1.8rem" : 0,
-                maxWidth: "100%",
-                minWidth: 0,
-              }}
-            >
+            <div className="quick-summary-image">
               <Image
                 src="/imageq.png"
                 alt="Training, Technology, Talent"
                 className="summary-image"
-                fill
+                width={600}
+                height={400}
                 priority
                 sizes="(max-width: 768px) 100vw, 50vw"
-                style={{
-                  borderRadius: isBelow480
-                    ? "15px 40px 15px 40px"
-                    : isBelow768
-                    ? "18px 50px 18px 50px"
-                    : "20px 60px 20px 60px",
-                  boxShadow: "0 0 30px rgba(0, 180, 255, 0.25)",
-                  transition: "filter 0.5s ease, box-shadow 0.5s ease",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.filter =
-                    "brightness(1.2) saturate(1.2)";
-                  e.currentTarget.style.boxShadow =
-                    "0 0 45px rgba(0, 191, 255, 0.35)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.filter = "brightness(1) saturate(1)";
-                  e.currentTarget.style.boxShadow =
-                    "0 0 30px rgba(0, 180, 255, 0.25)";
-                }}
               />
             </div>
+
             {/* Separator between image and cards */}
-            <hr
-              className="quick-summary-separator"
-              style={{
-                width: isBelow768 ? "70%" : "5px",
-                height: isBelow768 ? "3px" : "110%",
-                background: "linear-gradient(90deg, #007cf0, #00dfd8)",
-                opacity: 0.8,
-                border: "none",
-                borderRadius: "2px",
-                margin: isBelow768 ? "1.2rem auto" : "-2rem 0",
-                alignSelf: "center",
-                transition: "all 0.3s ease-in-out",
-              }}
-            />
+            <hr className="quick-summary-separator" />
+
             {/* Right side cards */}
-            <div
-              className="quick-summary-cards"
-              style={{
-                flex: 1,
-                display: "flex",
-                flexDirection: isBelow768 ? "column" : "column",
-                alignItems: isBelow768 ? "center" : "flex-start",
-                justifyContent: isBelow992 ? "center" : "flex-start",
-                minWidth: 0,
-                textAlign: isBelow768 ? "center" : "left",
-                padding: isBelow480
-                  ? "0 0.2rem"
-                  : isBelow768
-                  ? "0 0.7rem"
-                  : "0 40px",
-                gap: isBelow480 ? "1.1rem" : isBelow768 ? "1.4rem" : "2.2rem",
-                marginBottom: isBelow768 ? "1.8rem" : 0,
-              }}
-            >
+            <div className="quick-summary-cards">
               {/* Card 1 */}
-              <div
-                className="summary-card"
-                style={{
-                  minWidth: isBelow480 ? "0" : isBelow768 ? "220px" : "260px",
-                  maxWidth: isBelow992 ? "90%" : "520px",
-                  flex: "1 1 0",
-                  gap: "0.5rem",
-                }}
-              >
-                <h2
-                  style={{
-                    fontSize: isBelow480
-                      ? "1.12rem"
-                      : isBelow768
-                      ? "1.18rem"
-                      : "1.35rem",
-                    WebkitFontSmoothing: "antialiased",
-                    MozOsxFontSmoothing: "grayscale",
-                    textRendering: "optimizeLegibility",
-                  }}
-                >
-                  Training That Transforms
-                </h2>
-                <p
-                  style={{
-                    fontSize: isBelow480
-                      ? "0.97rem"
-                      : isBelow768
-                      ? "1.05rem"
-                      : "1.11rem",
-                    WebkitFontSmoothing: "antialiased",
-                    MozOsxFontSmoothing: "grayscale",
-                    textRendering: "optimizeLegibility",
-                  }}
-                >
+              <div className="summary-card">
+                <h2>Training That Transforms</h2>
+                <p>
                   Aptitude, Coding, and Soft-Skill programs built for real
                   placements.
                 </p>
               </div>
+
               {/* Card 2 */}
-              <div
-                className="summary-card"
-                style={{
-                  minWidth: isBelow480 ? "0" : isBelow768 ? "220px" : "260px",
-                  maxWidth: isBelow992 ? "90%" : "520px",
-                  flex: "1 1 0",
-                  gap: "0.5rem",
-                }}
-              >
-                <h2
-                  style={{
-                    fontSize: isBelow480
-                      ? "1.12rem"
-                      : isBelow768
-                      ? "1.18rem"
-                      : "1.35rem",
-                    WebkitFontSmoothing: "antialiased",
-                    MozOsxFontSmoothing: "grayscale",
-                    textRendering: "optimizeLegibility",
-                  }}
-                >
-                  Technology That Tracks
-                </h2>
-                <p
-                  style={{
-                    fontSize: isBelow480
-                      ? "0.97rem"
-                      : isBelow768
-                      ? "1.05rem"
-                      : "1.11rem",
-                    WebkitFontSmoothing: "antialiased",
-                    MozOsxFontSmoothing: "grayscale",
-                    textRendering: "optimizeLegibility",
-                  }}
-                >
+              <div className="summary-card">
+                <h2>Technology That Tracks</h2>
+                <p>
                   LMS with analytics, assessments, and recruiter-benchmarked
                   tests.
                 </p>
               </div>
+
               {/* Card 3 */}
-              <div
-                className="summary-card"
-                style={{
-                  minWidth: isBelow480 ? "0" : isBelow768 ? "220px" : "260px",
-                  maxWidth: isBelow992 ? "90%" : "520px",
-                  flex: "1 1 0",
-                  gap: "0.5rem",
-                }}
-              >
-                <h2
-                  style={{
-                    fontSize: isBelow480
-                      ? "1.12rem"
-                      : isBelow768
-                      ? "1.18rem"
-                      : "1.35rem",
-                    WebkitFontSmoothing: "antialiased",
-                    MozOsxFontSmoothing: "grayscale",
-                    textRendering: "optimizeLegibility",
-                  }}
-                >
-                  Talent That Fits
-                </h2>
-                <p
-                  style={{
-                    fontSize: isBelow480
-                      ? "0.97rem"
-                      : isBelow768
-                      ? "1.05rem"
-                      : "1.11rem",
-                    WebkitFontSmoothing: "antialiased",
-                    MozOsxFontSmoothing: "grayscale",
-                    textRendering: "optimizeLegibility",
-                  }}
-                >
+              <div className="summary-card">
+                <h2>Talent That Fits</h2>
+                <p>
                   Staffing and consulting services connecting pre-trained
                   candidates with leading corporates.
                 </p>
