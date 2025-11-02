@@ -606,6 +606,7 @@ export default function Page() {
             style={{
               ...maxWidthWrapperStyle,
               display: "flex",
+              flexDirection: isBelow768 ? "column" : "row",
               alignItems: "stretch",
               justifyContent: "space-between",
               gap: isBelow480 ? "2rem" : isBelow768 ? "2.4rem" : "4rem",
@@ -617,13 +618,12 @@ export default function Page() {
               style={{
                 flex: 1,
                 display: "flex",
-                justifyContent: isBelow768 ? "center" : "flex-end",
+                justifyContent: "center",
                 alignItems: "center",
-                marginBottom: isBelow992 ? "2rem" : 0,
+                textAlign: isBelow768 ? "center" : "left",
+                marginBottom: isBelow768 ? "1.8rem" : 0,
                 maxWidth: "100%",
                 minWidth: 0,
-                marginLeft: isBelow768 ? 0 : undefined,
-                marginRight: isBelow768 ? 0 : undefined,
               }}
             >
               <Image
@@ -655,18 +655,19 @@ export default function Page() {
                 }}
               />
             </div>
-            {/* Vertical separator between image and cards */}
+            {/* Separator between image and cards */}
             <hr
               className="quick-summary-separator"
               style={{
-                width: "5px",
-                height: isBelow768 ? "110%" : "110%",
+                width: isBelow768 ? "70%" : "5px",
+                height: isBelow768 ? "3px" : "110%",
                 background: "linear-gradient(90deg, #007cf0, #00dfd8)",
-                opacity: isBelow768 ? 0.7 : 0.8,
+                opacity: 0.8,
                 border: "none",
                 borderRadius: "2px",
-                margin: isBelow768 ? "-1rem auto" : "-2rem 0",
+                margin: isBelow768 ? "1.2rem auto" : "-2rem 0",
                 alignSelf: "center",
+                transition: "all 0.3s ease-in-out",
               }}
             />
             {/* Right side cards */}
@@ -674,15 +675,19 @@ export default function Page() {
               className="quick-summary-cards"
               style={{
                 flex: 1,
+                display: "flex",
+                flexDirection: isBelow768 ? "column" : "column",
+                alignItems: isBelow768 ? "center" : "flex-start",
+                justifyContent: isBelow992 ? "center" : "flex-start",
                 minWidth: 0,
+                textAlign: isBelow768 ? "center" : "left",
                 padding: isBelow480
                   ? "0 0.2rem"
                   : isBelow768
                   ? "0 0.7rem"
                   : "0 40px",
                 gap: isBelow480 ? "1.1rem" : isBelow768 ? "1.4rem" : "2.2rem",
-                justifyContent: isBelow992 ? "center" : "flex-start",
-                alignItems: isBelow992 ? "center" : "flex-start",
+                marginBottom: isBelow768 ? "1.8rem" : 0,
               }}
             >
               {/* Card 1 */}
