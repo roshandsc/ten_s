@@ -28,105 +28,144 @@ const ClientsSection = dynamic(() => import("./ClientsSection"), {
   ssr: false,
 });
 
-// Inline AboutUs component (replaces dynamic import)
+// Inline AboutUs component (3-Column Credibility Layout)
 const AboutUs = () => {
-  const [activeSection, setActiveSection] = React.useState(null);
-  const sections = {
-    who: {
-      title: "Who We Are",
-      content:
-        "10 SECONDS is a new-age training and staffing organization that unifies learning, assessment, and recruitment under one roof. We partner with colleges, universities, and corporates to create career-ready graduates who meet real industry expectations.",
-    },
-    believe: {
-      title: "What We Believe",
-      content:
-        "It takes just ten seconds to make a strong first impression. Our programs ensure every student, trainer, and partner institution makes theirs count.",
-    },
-    journey: {
-      title: "Our Journey",
-      content:
-        "From a single classroom in 2003 to a statewide network of 60 partner institutions, we’ve grown through innovation, trust, and measurable outcomes. Today, our digital learning platform and staffing services make us one of Karnataka’s most trusted campus-to-corporate partners.",
-    },
-  };
   return (
     <section
       id="about"
       className="about-section"
       style={{
-        textAlign: "center",
+        backgroundColor: "#e6f4ff",
+        width: "100%",
         padding: "60px 20px",
-        background: "#fff",
+        textAlign: "center",
       }}
     >
       <h2
         style={{
           fontSize: "2.5rem",
-          fontWeight: "700",
-          color: "#007bff",
-          marginBottom: "1.5rem",
+          fontWeight: "800",
+          color: "#004aad",
+          marginBottom: "2rem",
         }}
       >
         🌟 ABOUT US
       </h2>
+
       <div
+        className="about-columns"
         style={{
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "center",
-          gap: "1rem",
-          marginBottom: "2rem",
+          gap: "2rem",
+          maxWidth: "1200px",
+          margin: "0 auto",
         }}
       >
-        {Object.entries(sections).map(([key, { title }]) => (
-          <button
-            key={key}
-            onClick={() => setActiveSection(activeSection === key ? null : key)}
-            style={{
-              padding: "0.8rem 1.5rem",
-              borderRadius: "8px",
-              border: "2px solid #007bff",
-              background: activeSection === key ? "#007bff" : "#fff",
-              color: activeSection === key ? "#fff" : "#007bff",
-              fontWeight: "600",
-              cursor: "pointer",
-              transition: "all 0.3s ease",
-            }}
-          >
-            {title}
-          </button>
-        ))}
-      </div>
-      {activeSection && (
         <div
+          className="about-col"
           style={{
-            maxWidth: "800px",
-            margin: "0 auto",
-            background: "#f9fbff",
-            borderRadius: "12px",
-            padding: "20px 30px",
-            boxShadow: "0 4px 15px rgba(0,0,0,0.1)",
+            flex: "1 1 300px",
+            background: "#ffffff",
+            borderRadius: "10px",
+            padding: "20px",
+            boxShadow: "0 4px 10px rgba(0,0,0,0.08)",
           }}
         >
-          <h3
+          <div
             style={{
-              color: "#004aad",
-              fontSize: "1.5rem",
-              marginBottom: "0.8rem",
+              display: "flex",
+              justifyContent: "center",
+              marginBottom: "10px",
             }}
           >
-            {sections[activeSection].title}
-          </h3>
-          <p
-            style={{
-              color: "#333",
-              lineHeight: "1.7",
-              fontSize: "1.1rem",
-            }}
-          >
-            {sections[activeSection].content}
+            <Image src="/a1.png" alt="Who We Are" width={100} height={100} />
+          </div>
+          <h3 style={{ color: "#007bff", fontWeight: "700" }}>Who We Are</h3>
+          <p style={{ color: "#333", lineHeight: "1.7", fontSize: "1.05rem" }}>
+            10 SECONDS is a new-age training and staffing organization that
+            unifies learning, assessment, and recruitment under one roof. We
+            partner with colleges, universities, and corporates to create
+            career-ready graduates who meet real industry expectations.
           </p>
         </div>
-      )}
+
+        <div
+          className="about-col"
+          style={{
+            flex: "1 1 300px",
+            background: "#ffffff",
+            borderRadius: "10px",
+            padding: "20px",
+            boxShadow: "0 4px 10px rgba(0,0,0,0.08)",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              marginBottom: "10px",
+            }}
+          >
+            <Image
+              src="/a2.png"
+              alt="What We Believe"
+              width={100}
+              height={100}
+            />
+          </div>
+          <h3 style={{ color: "#007bff", fontWeight: "700" }}>
+            What We Believe
+          </h3>
+          <p style={{ color: "#333", lineHeight: "1.7", fontSize: "1.05rem" }}>
+            It takes just ten seconds to make a strong first impression. Our
+            programs ensure every student, trainer, and partner institution
+            makes theirs count.
+          </p>
+        </div>
+
+        <div
+          className="about-col"
+          style={{
+            flex: "1 1 300px",
+            background: "#ffffff",
+            borderRadius: "10px",
+            padding: "20px",
+            boxShadow: "0 4px 10px rgba(0,0,0,0.08)",
+          }}
+        >
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              marginBottom: "10px",
+            }}
+          >
+            <Image src="/a3.png" alt="Our Journey" width={100} height={100} />
+          </div>
+          <h3 style={{ color: "#007bff", fontWeight: "700" }}>Our Journey</h3>
+          <p style={{ color: "#333", lineHeight: "1.7", fontSize: "1.05rem" }}>
+            From a single classroom in 2003 to a statewide network of 60 partner
+            institutions, we’ve grown through innovation, trust, and measurable
+            outcomes. Today, our digital learning platform and staffing services
+            make us one of Karnataka’s most trusted campus-to-corporate
+            partners.
+          </p>
+        </div>
+      </div>
+
+      <blockquote
+        style={{
+          marginTop: "2.5rem",
+          fontStyle: "italic",
+          fontWeight: "600",
+          color: "#004aad",
+          fontSize: "1.3rem",
+        }}
+      >
+        “We don’t just teach. We transform potential into performance.”
+      </blockquote>
     </section>
   );
 };
