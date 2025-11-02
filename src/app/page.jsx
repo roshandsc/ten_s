@@ -605,8 +605,8 @@ export default function Page() {
           <div
             style={{
               ...maxWidthWrapperStyle,
-              display: isBelow768 ? "block" : "flex",
-              alignItems: "center",
+              display: "flex",
+              alignItems: "stretch",
               justifyContent: "space-between",
               gap: isBelow480 ? "2rem" : isBelow768 ? "2.4rem" : "4rem",
             }}
@@ -627,50 +627,48 @@ export default function Page() {
               }}
             >
               <Image
-                src="/quick_summary.png"
+                src="/imageq.png"
                 alt="Training, Technology, Talent"
-                width={isBelow480 ? 320 : isBelow768 ? 480 : 700}
-                height={isBelow480 ? 220 : isBelow768 ? 340 : 500}
+                className="summary-image"
+                fill
+                priority
+                sizes="(max-width: 768px) 100vw, 50vw"
                 style={{
-                  maxWidth: "100%",
-                  width: isBelow480 ? "90%" : "110%",
-                  height: "auto",
-                  objectFit: "contain",
                   borderRadius: isBelow480
                     ? "15px 40px 15px 40px"
                     : isBelow768
                     ? "18px 50px 18px 50px"
                     : "20px 60px 20px 60px",
-                  filter: "none",
-                  transform: isBelow480 ? "scale(1)" : "scale(1.1)",
-                  transition:
-                    "transform 0.6s ease, filter 0.4s ease, box-shadow 0.5s ease",
-                  background: "transparent",
-                  mixBlendMode: "multiply",
-                  boxShadow: isBelow480
-                    ? "0 6px 18px rgba(0, 180, 255, 0.25)"
-                    : "0 10px 30px rgba(0, 180, 255, 0.2)",
-                  margin: isBelow768 ? "0 auto" : "unset",
-                  display: "block",
+                  boxShadow: "0 0 30px rgba(0, 180, 255, 0.25)",
+                  transition: "filter 0.5s ease, box-shadow 0.5s ease",
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = isBelow480
-                    ? "scale(1.05)"
-                    : "scale(1.15)";
+                  e.currentTarget.style.filter =
+                    "brightness(1.2) saturate(1.2)";
                   e.currentTarget.style.boxShadow =
-                    "0 15px 45px rgba(0, 180, 255, 0.35)";
+                    "0 0 45px rgba(0, 191, 255, 0.35)";
                 }}
                 onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = isBelow480
-                    ? "scale(1)"
-                    : "scale(1.1)";
-                  e.currentTarget.style.boxShadow = isBelow480
-                    ? "0 6px 18px rgba(0, 180, 255, 0.25)"
-                    : "0 10px 30px rgba(0, 180, 255, 0.2)";
+                  e.currentTarget.style.filter = "brightness(1) saturate(1)";
+                  e.currentTarget.style.boxShadow =
+                    "0 0 30px rgba(0, 180, 255, 0.25)";
                 }}
-                priority
               />
             </div>
+            {/* Vertical separator between image and cards */}
+            <hr
+              className="quick-summary-separator"
+              style={{
+                width: "5px",
+                height: isBelow768 ? "110%" : "110%",
+                background: "linear-gradient(90deg, #007cf0, #00dfd8)",
+                opacity: isBelow768 ? 0.7 : 0.8,
+                border: "none",
+                borderRadius: "2px",
+                margin: isBelow768 ? "-1rem auto" : "-2rem 0",
+                alignSelf: "center",
+              }}
+            />
             {/* Right side cards */}
             <div
               className="quick-summary-cards"
