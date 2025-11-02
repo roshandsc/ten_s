@@ -8,14 +8,27 @@ import {
   FaLinkedinIn,
   FaInstagram,
   FaYoutube,
-  FaChalkboardTeacher,
   FaClipboardList,
   FaCogs,
   FaHandshake,
-  FaUsersCog,
   FaLaptopCode,
   FaUserTie,
+  FaUsersCog,
+  FaChalkboardTeacher,
 } from "react-icons/fa";
+import {
+  MdCastForEducation,
+  MdEngineering,
+  MdBusinessCenter,
+  MdWorkOutline,
+  MdPeopleAlt,
+} from "react-icons/md";
+import {
+  HiOutlinePresentationChartBar,
+  HiOutlineUserGroup,
+  HiOutlineRocketLaunch,
+  HiOutlineClipboardDocumentCheck,
+} from "react-icons/hi2";
 import { FaUniversity, FaBrain, FaRocket } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import SwiperCore from "swiper";
@@ -796,44 +809,46 @@ export default function Page() {
                 display: "grid",
                 gridTemplateColumns: isBelow480
                   ? "1fr"
-                  : isBelow992
-                  ? "1fr"
+                  : isBelow768
+                  ? "repeat(2, 1fr)"
                   : "repeat(auto-fit, minmax(300px, 1fr))",
-                gap: isBelow480 ? "1rem" : isBelow768 ? "1.2rem" : "2rem",
+                gap: isBelow480 ? "1.2rem" : isBelow768 ? "1.5rem" : "2.2rem",
                 marginTop: isBelow480 ? "1rem" : "2rem",
               }}
             >
               {[
                 {
                   title: "Pre-Placement Training",
-                  icon: <FaChalkboardTeacher color="#007cf0" size={50} />,
+                  icon: (
+                    <HiOutlinePresentationChartBar color="#007cf0" size={50} />
+                  ),
                   desc: "Aptitude (Quant, Reasoning, Verbal) | Soft Skills & Communication | Mock Interviews | Competitive Coding (C, C++, DSA).",
                   outcome:
                     "Higher aptitude clearance, improved recruiter alignment, and better first-round success.",
                 },
                 {
                   title: "Recruitment Readiness & Campus Programs",
-                  icon: <FaUsersCog color="#00bcd4" size={50} />,
+                  icon: <MdCastForEducation color="#00bcd4" size={50} />,
                   desc: "Company-specific test prep, GD and HR interview coaching, resume + LinkedIn grooming, and career mapping.",
                   outcome:
                     "Students ready for Cognizant, SAP Labs, TCS, Infosys & top recruiters.",
                 },
                 {
                   title: "Technical Upskilling & Projects",
-                  icon: <FaLaptopCode color="#28a745" size={50} />,
+                  icon: <MdEngineering color="#00d1db" size={50} />,
                   desc: "C, C++, Java, Python | IoT & Embedded Systems | Mini & Major Industry Projects.",
                   outcome:
                     "Hands-on, project-based learning that mirrors real corporate environments.",
                 },
                 {
                   title: "Corporate Training & Team Development",
-                  icon: <FaUserTie color="#ff8800" size={50} />,
+                  icon: <MdPeopleAlt color="#ff8800" size={50} />,
                   desc: "Leadership, Etiquette, Workplace Communication, and Time Management Modules for organizations and faculty.",
                   outcome: "Upskilled, motivated, and collaborative teams.",
                 },
                 {
                   title: "Staffing & Talent Consulting (NEW)",
-                  icon: <FaHandshake color="#004aad" size={50} />,
+                  icon: <MdBusinessCenter color="#004aad" size={50} />,
                   desc: "End-to-end recruitment support for companies hiring pre-trained talent. We handle sourcing, screening, onboarding, and payroll — powered by our LMS insights. Our staffing model is not transactional. It’s ecosystem-driven.",
                   outcome:
                     "Faster hiring cycles, better retention, zero bench cost.",
@@ -845,15 +860,20 @@ export default function Page() {
                   style={{
                     background: "#ffffff",
                     borderRadius: "12px",
-                    padding: isBelow480 ? "15px" : isBelow768 ? "19px" : "25px",
+                    padding: isBelow480 ? "18px" : isBelow768 ? "22px" : "24px",
                     boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
                     transition: "transform 0.3s ease, box-shadow 0.3s ease",
                     textAlign: "center",
-                    margin: isBelow992 ? "0 auto" : 0,
-                    width: isBelow992 ? "90%" : "auto",
+                    margin: "0 auto",
+                    width: isBelow992 ? "100%" : "auto",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "flex-start",
+                    alignItems: "center",
+                    gap: "10px",
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "translateY(-8px)";
+                    e.currentTarget.style.transform = "translateY(-6px)";
                     e.currentTarget.style.boxShadow =
                       "0 8px 25px rgba(0,0,0,0.12)";
                   }}
@@ -864,40 +884,75 @@ export default function Page() {
                   }}
                 >
                   <div
-                    className="service-icon"
                     style={{
-                      marginBottom: isBelow480 ? "8px" : "15px",
-                      fontSize: isBelow480 ? "1.5rem" : undefined,
+                      background:
+                        "linear-gradient(145deg, rgba(0,124,240,0.12), rgba(0,124,240,0.28))",
+                      borderRadius: "50%",
+                      padding: isBelow480
+                        ? "16px"
+                        : isBelow768
+                        ? "18px"
+                        : "22px",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                      marginBottom: "12px",
+                      boxShadow: "inset 0 0 10px rgba(0,124,240,0.1)",
+                      height: isBelow480
+                        ? "75px"
+                        : isBelow768
+                        ? "85px"
+                        : "95px",
+                      width: isBelow480 ? "75px" : isBelow768 ? "85px" : "95px",
                     }}
                   >
                     {React.cloneElement(item.icon, {
-                      size: isBelow480 ? 28 : isBelow768 ? 36 : 50,
+                      size: isBelow480 ? 32 : isBelow768 ? 42 : 52,
+                      style: { transform: "rotate(0deg)" },
                     })}
                   </div>
+
                   <h3
                     style={{
                       color: "#007bff",
-                      marginBottom: "10px",
-                      fontWeight: isBelow480 ? 600 : 700,
-                      fontSize: isBelow480 ? "1.05rem" : "1.2rem",
+                      marginBottom: "6px",
+                      fontWeight: 700,
+                      fontSize: isBelow480
+                        ? "1rem"
+                        : isBelow768
+                        ? "1.05rem"
+                        : "1.15rem",
+                      lineHeight: "1.4",
                     }}
                   >
                     {item.title}
                   </h3>
+
                   <p
                     style={{
                       color: "#444",
-                      lineHeight: "1.6",
-                      fontSize: isBelow480 ? "0.97rem" : "1.05rem",
+                      lineHeight: "1.5",
+                      fontSize: isBelow480
+                        ? "0.9rem"
+                        : isBelow768
+                        ? "0.95rem"
+                        : "1rem",
+                      margin: "0.3rem 0",
                     }}
                   >
                     {item.desc}
                   </p>
+
                   <p
                     style={{
-                      marginTop: "10px",
+                      marginTop: "6px",
                       color: "#003366",
-                      fontSize: isBelow480 ? "0.98rem" : "1.05rem",
+                      fontSize: isBelow480
+                        ? "0.9rem"
+                        : isBelow768
+                        ? "0.95rem"
+                        : "1rem",
+                      lineHeight: "1.5",
                     }}
                   >
                     <strong>Outcome:</strong> {item.outcome}
