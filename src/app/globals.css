@@ -832,7 +832,7 @@ main {
 }
 
 .quick-summary-image img {
-  width: 600px;
+  width: 700px;
   height: auto;
   object-fit: cover;
   border-radius: 0;
@@ -866,9 +866,9 @@ main {
 /* HOLOGRAPHIC PANEL EFFECT FOR SUMMARY CARDS */
 .summary-card {
   background: rgba(15, 25, 45, 0.8);
-  border: 1px solid rgba(0, 191, 255, 0.4);
+  border: 1px solid rgba(0, 191, 255, 0.25);
   border-radius: 16px;
-  box-shadow: 0 0 25px rgba(0, 191, 255, 0.2);
+  box-shadow: 0 0 18px rgba(0, 191, 255, 0.15);
   backdrop-filter: blur(10px);
   color: #e0f7fa;
   padding: 2rem 1.5rem;
@@ -887,10 +887,10 @@ main {
 .summary-card h2 {
   font-size: 1.35rem;
   font-weight: 700;
-  color: #00bfff;
+  color: #1ec8ff;
   margin-bottom: 0.5rem;
   letter-spacing: -0.5px;
-  text-shadow: 0 0 10px #00bfff, 0 0 20px #00ffff;
+  text-shadow: 0 0 1px #00bfff, 0 0 2px #00e5ff;
 }
 
 .summary-card p {

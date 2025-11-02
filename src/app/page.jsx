@@ -633,7 +633,7 @@ export default function Page() {
                 height={isBelow480 ? 220 : isBelow768 ? 340 : 500}
                 style={{
                   maxWidth: "100%",
-                  width: isBelow480 ? "90%" : "100%",
+                  width: isBelow480 ? "90%" : "110%",
                   height: "auto",
                   objectFit: "contain",
                   borderRadius: isBelow480
@@ -644,7 +644,7 @@ export default function Page() {
                   filter: "none",
                   transform: isBelow480 ? "scale(1)" : "scale(1.1)",
                   transition:
-                    "transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease",
+                    "transform 0.6s ease, filter 0.4s ease, box-shadow 0.5s ease",
                   background: "transparent",
                   mixBlendMode: "multiply",
                   boxShadow: isBelow480
@@ -704,6 +704,9 @@ export default function Page() {
                       : isBelow768
                       ? "1.18rem"
                       : "1.35rem",
+                    WebkitFontSmoothing: "antialiased",
+                    MozOsxFontSmoothing: "grayscale",
+                    textRendering: "optimizeLegibility",
                   }}
                 >
                   Training That Transforms
@@ -715,6 +718,9 @@ export default function Page() {
                       : isBelow768
                       ? "1.05rem"
                       : "1.11rem",
+                    WebkitFontSmoothing: "antialiased",
+                    MozOsxFontSmoothing: "grayscale",
+                    textRendering: "optimizeLegibility",
                   }}
                 >
                   Aptitude, Coding, and Soft-Skill programs built for real
@@ -738,6 +744,9 @@ export default function Page() {
                       : isBelow768
                       ? "1.18rem"
                       : "1.35rem",
+                    WebkitFontSmoothing: "antialiased",
+                    MozOsxFontSmoothing: "grayscale",
+                    textRendering: "optimizeLegibility",
                   }}
                 >
                   Technology That Tracks
@@ -749,6 +758,9 @@ export default function Page() {
                       : isBelow768
                       ? "1.05rem"
                       : "1.11rem",
+                    WebkitFontSmoothing: "antialiased",
+                    MozOsxFontSmoothing: "grayscale",
+                    textRendering: "optimizeLegibility",
                   }}
                 >
                   LMS with analytics, assessments, and recruiter-benchmarked
@@ -772,6 +784,9 @@ export default function Page() {
                       : isBelow768
                       ? "1.18rem"
                       : "1.35rem",
+                    WebkitFontSmoothing: "antialiased",
+                    MozOsxFontSmoothing: "grayscale",
+                    textRendering: "optimizeLegibility",
                   }}
                 >
                   Talent That Fits
@@ -783,6 +798,9 @@ export default function Page() {
                       : isBelow768
                       ? "1.05rem"
                       : "1.11rem",
+                    WebkitFontSmoothing: "antialiased",
+                    MozOsxFontSmoothing: "grayscale",
+                    textRendering: "optimizeLegibility",
                   }}
                 >
                   Staffing and consulting services connecting pre-trained
