@@ -1654,14 +1654,20 @@ main {
    LMS PLATFORM SECTION
 =========================================================== */
 
+/* ===========================================================
+   LMS PLATFORM SECTION (Enhanced)
+=========================================================== */
+
 .lms-section {
   background: linear-gradient(180deg, #eaf3ff 0%, #ffffff 100%);
-  padding: 50px 5%;
+  padding: 70px 6%;
   text-align: center;
   position: relative;
   overflow: hidden;
+  z-index: 1;
 }
 
+/* Subtle animated background orbs */
 .lms-section::before,
 .lms-section::after {
   content: "";
@@ -1669,10 +1675,10 @@ main {
   width: 500px;
   height: 500px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(0, 124, 240, 0.15), transparent 70%);
-  filter: blur(100px);
+  background: radial-gradient(circle, rgba(0, 124, 240, 0.18), transparent 70%);
+  filter: blur(120px);
   z-index: 0;
-  animation: lmsFloatGlow 10s ease-in-out infinite alternate;
+  animation: lmsFloatGlow 12s ease-in-out infinite alternate;
 }
 
 .lms-section::before {
@@ -1690,35 +1696,24 @@ main {
     transform: translate(0, 0);
   }
   100% {
-    transform: translate(60px, -60px);
+    transform: translate(80px, -80px);
   }
 }
 
+/* Title Styling */
 .lms-header h2 {
-  font-size: 2.5rem;
+  font-size: 2.6rem;
   font-weight: 800;
-  color: #004aad;
   background: linear-gradient(90deg, #007cf0, #00dfd8, #007cf0);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: headerShine 6s linear infinite;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-.lms-link {
-  display: inline-block;
-  color: #007bff;
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 1.1rem;
-  transition: color 0.3s ease;
-}
-
-.lms-link:hover {
-  color: #00bcd4;
-  text-decoration: underline;
-}
-
+/* Description Text */
 .lms-description {
   font-size: 1.2rem;
   color: #333;
@@ -1727,12 +1722,10 @@ main {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  line-height: 1.7;
 }
 
-/* ===========================
-   LMS PLATFORM SECTION - UPDATED
-=========================== */
-
+/* Cards Layout */
 .lms-stats {
   display: flex;
   flex-wrap: wrap;
@@ -1742,38 +1735,40 @@ main {
   margin-top: 2rem;
   margin-bottom: 2rem;
   width: 100%;
-  max-width: 900px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
 }
 
+/* LMS Cards */
 .lms-card {
   position: relative;
   overflow: hidden;
   background: linear-gradient(145deg, #ffffff, #f5f9ff);
-  border-radius: 18px;
+  border-radius: 20px;
   box-shadow: 0 6px 25px rgba(0, 124, 240, 0.15);
-  padding: 2.2rem 1.5rem;
-  flex: 1 1 250px;
-  max-width: 280px;
+  padding: 2.4rem 1.6rem;
+  flex: 1 1 260px;
+  max-width: 300px;
   transition: all 0.4s ease;
-  border: 1.5px solid #00bfff;
+  border: 1.5px solid rgba(0, 191, 255, 0.4);
   text-align: center;
-  animation: cardFloat 6s ease-in-out infinite alternate;
+  animation: cardFloat 8s ease-in-out infinite alternate;
+  z-index: 1;
 }
 
 .lms-card::before {
   content: "";
   position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
+  top: -60%;
+  left: -60%;
+  width: 220%;
+  height: 220%;
   background: linear-gradient(
     120deg,
-    rgba(0, 124, 240, 0.1),
+    rgba(0, 124, 240, 0.12),
     rgba(0, 223, 216, 0.1),
-    rgba(0, 124, 240, 0.1)
+    rgba(0, 124, 240, 0.12)
   );
   background-size: 300% 300%;
   opacity: 0;
@@ -1783,7 +1778,12 @@ main {
 
 .lms-card:hover::before {
   opacity: 1;
-  animation: cardShine 4s linear infinite;
+  animation: cardShine 5s linear infinite;
+}
+
+.lms-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 40px rgba(0, 124, 240, 0.2);
 }
 
 @keyframes cardFloat {
@@ -1792,7 +1792,7 @@ main {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-12px);
   }
 }
 
@@ -1809,10 +1809,10 @@ main {
 }
 
 .lms-card h3 {
-  font-size: 2.2rem;
+  font-size: 2.3rem;
   color: #007bff;
   font-weight: 800;
-  animation: textPulse 3s ease-in-out infinite;
+  animation: textPulse 3.5s ease-in-out infinite;
 }
 
 @keyframes textPulse {
@@ -1821,8 +1821,8 @@ main {
     text-shadow: 0 0 5px rgba(0, 124, 240, 0.5), 0 0 10px rgba(0, 223, 216, 0.3);
   }
   50% {
-    text-shadow: 0 0 20px rgba(0, 124, 240, 0.7),
-      0 0 30px rgba(0, 223, 216, 0.5);
+    text-shadow: 0 0 25px rgba(0, 124, 240, 0.7),
+      0 0 35px rgba(0, 223, 216, 0.5);
   }
 }
 
@@ -1833,31 +1833,59 @@ main {
   font-size: 1.05rem;
 }
 
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .lms-stats {
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-  }
+/* Quote Section */
+.lms-quote p {
+  font-size: 1.2rem;
+  color: #000;
+  font-weight: 700;
+  font-family: "Poppins", "Inter", sans-serif;
+  opacity: 0;
+  transform: translateY(15px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
 
-  .lms-card {
-    width: 90%;
-    max-width: 350px;
+.lms-quote.visible p {
+  animation: fadeLine 2.5s ease-in-out forwards;
+}
+
+.lms-quote.visible p:nth-child(1) {
+  animation-delay: 1.2s;
+}
+.lms-quote.visible p:nth-child(2) {
+  animation-delay: 3.6s;
+}
+.lms-quote.visible p:nth-child(3) {
+  animation-delay: 6s;
+}
+.lms-quote.visible p:nth-child(4) {
+  animation-delay: 8.4s;
+}
+
+@keyframes fadeLine {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
+/* Footer Line */
 .lms-footer {
   margin-top: 3rem;
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #003366;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #0077cc;
+  text-shadow: 0 0 8px rgba(0, 119, 204, 0.4);
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+  line-height: 1.8;
 }
 
-/* Circuit lines background animation for LMS section */
+/* Background Circuit Lines */
 .lms-section::after {
   content: "";
   position: absolute;
@@ -1869,7 +1897,7 @@ main {
     transparent 2px,
     transparent 20px
   );
-  animation: circuitMove 20s linear infinite;
+  animation: circuitMove 25s linear infinite;
   z-index: 0;
 }
 
@@ -1878,30 +1906,52 @@ main {
     background-position: 0 0;
   }
   100% {
-    background-position: 1000px 1000px;
+    background-position: 1200px 1200px;
   }
 }
 
-@keyframes bounceGlow {
-  0% {
-    transform: scale(1);
-    text-shadow: 0 0 0 rgba(0, 212, 255, 0);
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+  .lms-header h2 {
+    font-size: 2.2rem;
   }
-  40% {
-    transform: scale(1.2);
-    text-shadow: 0 0 6px rgba(0, 212, 255, 0.4);
+  .lms-description {
+    font-size: 1.05rem;
+    padding: 0 1rem;
   }
-  70% {
-    transform: scale(0.97);
-    text-shadow: 0 0 4px rgba(0, 212, 255, 0.25);
+  .lms-card {
+    flex: 1 1 80%;
+    max-width: 360px;
+    padding: 1.8rem 1.2rem;
   }
-  100% {
-    transform: scale(1);
-    text-shadow: 0 0 5px rgba(0, 212, 255, 0.3);
+  .lms-card h3 {
+    font-size: 2rem;
+  }
+  .lms-footer {
+    font-size: 1.05rem;
   }
 }
-.stat-number.animate-finish {
-  animation: bounceGlow 0.8s ease-out forwards;
+
+@media (max-width: 600px) {
+  .lms-header h2 {
+    font-size: 1.8rem;
+  }
+  .lms-description {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  .lms-card {
+    width: 90%;
+    margin: 0.6rem auto;
+  }
+  .lms-card p {
+    font-size: 0.95rem;
+  }
+  .lms-footer {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding: 0 0.8rem;
+  }
 }
 
 /* ===========================================================
