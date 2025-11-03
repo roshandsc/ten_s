@@ -1145,268 +1145,288 @@ export default function Page() {
         >
           <div
             className="lms-container"
-            data-aos="fade-up"
             style={{
               ...maxWidthWrapperStyle,
               padding: isBelow480 ? "18px 0" : isBelow768 ? "30px 0" : "50px 0",
             }}
           >
-            <header className="lms-header">
-              <h2
+            {/* LMS Title Centered Above Both Sides */}
+            <header
+              className="lms-header"
+              style={{
+                textAlign: "center",
+                marginBottom: isBelow480
+                  ? "1.3rem"
+                  : isBelow768
+                  ? "1.8rem"
+                  : "2.5rem",
+              }}
+            >
+              <div
                 style={{
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  gap: "10px",
-                  color: "#004aad",
-                  fontWeight: "800",
+                  gap: isBelow480 ? "0.6rem" : "0.8rem",
                 }}
               >
                 <Image
                   src="/learning-management-system.png"
                   alt="LMS Icon"
-                  width={isBelow480 ? 28 : isBelow768 ? 34 : 40}
-                  height={isBelow480 ? 28 : isBelow768 ? 34 : 40}
+                  width={isBelow480 ? 26 : isBelow768 ? 34 : 42}
+                  height={isBelow480 ? 26 : isBelow768 ? 34 : 42}
                   style={{ objectFit: "contain" }}
                 />
-                LMS PLATFORM
-              </h2>
-              <a
-                href="https://learning.10seconds.co.in"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="lms-link"
-              >
-                learning.10seconds.co.in
-              </a>
-            </header>
-
-            <p className="lms-description">
-              Our in-house Learning Management System
-            </p>
-            <div
-              className="lms-quote"
-              style={{
-                textAlign: "center",
-                fontWeight: "700",
-                color: "#000",
-                fontFamily: "'Poppins', 'Inter', sans-serif'",
-                marginTop: "1.5rem",
-                fontSize: isBelow480
-                  ? "1rem"
-                  : isBelow768
-                  ? "1.1rem"
-                  : "1.25rem",
-                lineHeight: "1.8",
-                overflow: "hidden",
-              }}
-            >
-              <div className="quote-container">
-                <p>Every learner writes a beat.</p>
-                <p>Every test drops a verse.</p>
-                <p>Real-time Analytics &amp; Leaderboards light the stage </p>
-                <p>where MCQs and Code become performance, not pressure.</p>
-              </div>
-
-              <style jsx>{`
-                .lms-quote p {
-                  margin: 0.4rem 0;
-                  opacity: 0;
-                  transform: translateY(20px);
-                }
-                .lms-quote.visible p {
-                  animation: fadeLine 3.2s ease-in-out forwards;
-                }
-                .lms-quote.visible p:nth-child(1) {
-                  animation-delay: 1.8s;
-                }
-                .lms-quote.visible p:nth-child(2) {
-                  animation-delay: 4.2s;
-                }
-                .lms-quote.visible p:nth-child(3) {
-                  animation-delay: 7s;
-                }
-                .lms-quote.visible p:nth-child(4) {
-                  animation-delay: 9.5s;
-                }
-                @keyframes fadeLine {
-                  0% {
-                    opacity: 0;
-                    transform: translateY(25px);
-                  }
-                  50% {
-                    opacity: 0.5;
-                    transform: translateY(10px);
-                  }
-                  100% {
-                    opacity: 1;
-                    transform: translateY(0);
-                  }
-                }
-
-                /* Improved mobile and tablet responsiveness */
-                @media (max-width: 992px) {
-                  .lms-quote {
-                    font-size: 1rem;
-                    padding: 0 1rem;
-                    line-height: 1.7;
-                    text-align: center;
-                  }
-                  .lms-card {
-                    width: 85% !important;
-                    margin: 1rem auto !important;
-                    padding: 1.2rem !important;
-                  }
-                  .lms-stats {
-                    flex-direction: column !important;
-                    align-items: center !important;
-                    gap: 1.2rem !important;
-                  }
-                  .lms-footer {
-                    font-size: 1rem !important;
-                    line-height: 1.6 !important;
-                    padding: 0 1rem;
-                  }
-                  .lms-header h2 {
-                    font-size: 1.8rem !important;
-                    text-align: center;
-                  }
-                }
-
-                @media (max-width: 600px) {
-                  .lms-quote {
-                    font-size: 0.95rem;
-                    line-height: 1.6;
-                    padding: 0 0.8rem;
-                    text-align: center;
-                  }
-                  .lms-card {
-                    width: 95% !important;
-                    margin: 0.8rem auto !important;
-                    padding: 0.9rem !important;
-                    border-radius: 10px;
-                    background: #ffffff !important;
-                    box-shadow: 0 3px 10px rgba(0, 124, 240, 0.1);
-                  }
-                  .lms-stats {
-                    flex-direction: column !important;
-                    gap: 1rem !important;
-                  }
-                  .lms-card h3 {
-                    font-size: 1.3rem !important;
-                    background: none !important;
-                    color: #00a859 !important;
-                    font-weight: 700 !important;
-                    text-align: center;
-                  }
-                  .lms-card p {
-                    font-size: 0.9rem !important;
-                    color: #004aad !important;
-                    font-weight: 600 !important;
-                    text-align: center;
-                  }
-                  .lms-footer {
-                    font-size: 0.9rem !important;
-                    line-height: 1.5 !important;
-                    padding: 0 0.6rem;
-                  }
-                  .lms-header h2 {
-                    font-size: 1.4rem !important;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    gap: 8px;
-                  }
-                  .lms-link {
-                    font-size: 0.9rem;
-                    color: #007cf0;
-                    font-weight: 600;
-                    display: inline-block;
-                    margin-top: 0.3rem;
-                  }
-                }
-              `}</style>
-            </div>
-
-            <div
-              className="lms-stats"
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                flexWrap: "wrap",
-                gap: isBelow480 ? "0.8rem" : isBelow768 ? "1.2rem" : "2rem",
-                width: "100%",
-                maxWidth: "900px",
-                margin: "2rem auto 1.2rem auto",
-              }}
-            >
-              {[
-                { number: 50000, label: "Active Users", suffix: "+" },
-                {
-                  number: 250,
-                  label: "Mock & Company-Specific Tests",
-                  suffix: "+",
-                },
-                { number: 100, label: "Video Tutorials", suffix: "+" },
-              ].map((stat, index) => (
-                <div
-                  key={index}
-                  className="lms-card"
+                <h2
                   style={{
-                    background: "#fff",
-                    borderRadius: 10,
-                    boxShadow: "0 2px 10px rgba(0,0,0,0.07)",
-                    padding: isBelow480 ? "12px" : isBelow768 ? "15px" : "20px",
-                    textAlign: "center",
-                    fontSize: isBelow480 ? "1rem" : "1.1rem",
-                    width: isBelow992 ? "95%" : "auto",
-                    margin: isBelow992 ? "0 auto" : 0,
+                    color: "#004aad",
+                    fontWeight: "800",
+                    fontSize: isBelow480
+                      ? "1.35rem"
+                      : isBelow768
+                      ? "1.8rem"
+                      : "2.3rem",
+                    letterSpacing: "1px",
+                    margin: 0,
                   }}
                 >
-                  <h3
-                    className="stat-number"
-                    data-target={stat.number}
-                    style={{
-                      fontSize: isBelow480 ? "1.4rem" : "1.6rem",
-                      fontWeight: 700,
-                      marginBottom: "0.3rem",
-                      background: "linear-gradient(90deg, #007bff, #00d4ff)",
-                      WebkitBackgroundClip: "text",
-                      WebkitTextFillColor: "transparent",
-                      transition: "background 0.3s ease, transform 0.3s ease",
-                    }}
-                  >
-                    <span className="count-text">0</span>
-                    {stat.suffix}
-                  </h3>
-                  <p style={{ fontSize: isBelow480 ? "0.95rem" : "1rem" }}>
-                    {stat.label}
-                  </p>
-                </div>
-              ))}
-            </div>
-
-            <p
-              className="lms-footer"
+                  LMS PLATFORM
+                </h2>
+              </div>
+            </header>
+            <div
+              className="lms-flex"
               style={{
-                textAlign: "center",
-                color: "#0077cc",
-                fontWeight: "600",
-                fontSize: isBelow480
-                  ? "1rem"
-                  : isBelow768
-                  ? "1.1rem"
-                  : "1.2rem",
-                textShadow: "0 0 8px rgba(0, 119, 204, 0.4)",
-                marginTop: "1rem",
-                lineHeight: "1.8",
-                fontFamily: "'Poppins', 'Inter', sans-serif'",
+                display: "flex",
+                flexDirection: isBelow992 ? "column" : "row",
+                gap: isBelow480 ? "1.2rem" : isBelow768 ? "2rem" : "3.5rem",
+                alignItems: "stretch",
+                justifyContent: "center",
               }}
             >
-              Personalized, data-driven, and measurable — our LMS turns every
-              learner into a performer.
-            </p>
+              {/* Left Side: LMS image */}
+              <div
+                className="lms-image"
+                style={{
+                  flex: isBelow992 ? "unset" : "1 1 48%",
+                  maxWidth: isBelow992 ? "100%" : "48%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  marginBottom: isBelow992 ? "2rem" : 0,
+                }}
+              >
+                <Image
+                  src="/lms-1.png"
+                  alt="LMS Platform"
+                  width={600}
+                  height={100}
+                  style={{
+                    objectFit: "contain",
+                    width: "100%",
+                    height: isBelow992 ? "auto" : "100%",
+                    maxHeight: isBelow480
+                      ? "220px"
+                      : isBelow768
+                      ? "320px"
+                      : "420px",
+                    borderRadius: "18px",
+                    // Removed background and boxShadow
+                    transform:
+                      "perspective(1000px) rotateY(10deg) rotateX(5deg)",
+                    filter: "drop-shadow(0 10px 25px rgba(0, 0, 0, 0.25))",
+                  }}
+                  priority
+                />
+              </div>
+
+              {/* Right Side: Content grid */}
+              <div
+                className="lms-content"
+                style={{
+                  flex: isBelow992 ? "unset" : "1 1 52%",
+                  maxWidth: isBelow992 ? "100%" : "52%",
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "space-between",
+                }}
+              >
+                <a
+                  href="https://learning.10seconds.co.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    color: "#007cf0",
+                    fontWeight: 600,
+                    fontSize: isBelow480 ? "0.95rem" : "1.05rem",
+                    textDecoration: "underline",
+                    display: "block",
+                    marginBottom: "0.6rem",
+                  }}
+                >
+                  learning.10seconds.co.in
+                </a>
+                <p
+                  style={{
+                    color: "#222",
+                    fontWeight: 500,
+                    fontSize: isBelow480
+                      ? "0.99rem"
+                      : isBelow768
+                      ? "1.02rem"
+                      : "1.11rem",
+                    margin: 0,
+                    marginBottom: "1.1rem",
+                    lineHeight: "1.6",
+                  }}
+                >
+                  Our in-house Learning Management System connects learners,
+                  trainers, and recruiters on one platform.
+                </p>
+                {/* Cards Grid */}
+                <div
+                  className="lms-cards-grid"
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: isBelow600()
+                      ? "1fr"
+                      : isBelow992
+                      ? "1fr"
+                      : "1fr 1fr",
+                    gridTemplateRows: isBelow600()
+                      ? "repeat(5, auto)"
+                      : isBelow992
+                      ? "repeat(5, auto)"
+                      : "repeat(2, 1fr)",
+                    gap: isBelow480
+                      ? "0.9rem"
+                      : isBelow768
+                      ? "1.15rem"
+                      : "1.6rem",
+                    marginBottom: isBelow480 ? "1.1rem" : "1.7rem",
+                    alignItems: "stretch",
+                  }}
+                >
+                  {/* Row 1 */}
+                  <div
+                    className="lms-card"
+                    style={lmsCardStyle(isBelow480, isBelow768)}
+                  >
+                    <h3 style={lmsCardH3Style(isBelow480, "#007bff")}>
+                      Real-time Analytics &amp; Leaderboards
+                    </h3>
+                    <p style={lmsCardPStyle(isBelow480)}>
+                      Instantly track progress, rankings, and performance.
+                    </p>
+                  </div>
+                  <div
+                    className="lms-card"
+                    style={lmsCardStyle(isBelow480, isBelow768)}
+                  >
+                    <h3 style={lmsCardH3Style(isBelow480, "#00a859")}>
+                      MCQ + Coding Assessments
+                    </h3>
+                    <p style={lmsCardPStyle(isBelow480)}>
+                      Assess every skill: technical, aptitude, and code.
+                    </p>
+                  </div>
+                  {/* Row 2 (3 cards) */}
+                  <div
+                    className="lms-card"
+                    style={{
+                      ...lmsCardStyle(isBelow480, isBelow768),
+                      gridColumn:
+                        isBelow600() || isBelow992 ? "auto" : "1 / span 1",
+                    }}
+                  >
+                    <div className="stat-number" data-target="50000">
+                      <h3 style={lmsCardH3Style(isBelow480, "#004aad")}>
+                        <span className="count-text">0</span>+
+                      </h3>
+                    </div>
+                    <p style={lmsCardPStyle(isBelow480)}>Active Users</p>
+                  </div>
+
+                  <div
+                    className="lms-card"
+                    style={lmsCardStyle(isBelow480, isBelow768)}
+                  >
+                    <div className="stat-number" data-target="250">
+                      <h3 style={lmsCardH3Style(isBelow480, "#ff8800")}>
+                        <span className="count-text">0</span>+
+                      </h3>
+                    </div>
+                    <p style={lmsCardPStyle(isBelow480)}>
+                      Mock &amp; Company-Specific Tests
+                    </p>
+                  </div>
+
+                  <div
+                    className="lms-card"
+                    style={lmsCardStyle(isBelow480, isBelow768)}
+                  >
+                    <div className="stat-number" data-target="100">
+                      <h3 style={lmsCardH3Style(isBelow480, "#00bcd4")}>
+                        <span className="count-text">0</span>+
+                      </h3>
+                    </div>
+                    <p style={lmsCardPStyle(isBelow480)}>Video Tutorials</p>
+                  </div>
+                </div>
+                {/* Footer statement */}
+                <div
+                  className="lms-footer"
+                  style={{
+                    textAlign: "center",
+                    color: "#0077cc",
+                    fontWeight: "600",
+                    fontSize: isBelow480
+                      ? "1rem"
+                      : isBelow768
+                      ? "1.1rem"
+                      : "1.13rem",
+                    textShadow: "0 0 8px rgba(0, 119, 204, 0.18)",
+                    marginTop: isBelow480 ? "0.7rem" : "1rem",
+                    lineHeight: "1.7",
+                    fontFamily: "'Poppins', 'Inter', sans-serif'",
+                  }}
+                >
+                  Personalized, data-driven, and measurable — our LMS turns
+                  every learner into a performer.
+                </div>
+              </div>
+            </div>
+            {/* Responsive helpers for grid columns */}
+            <style jsx>{`
+              @media (max-width: 992px) {
+                .lms-flex {
+                  flex-direction: column !important;
+                }
+                .lms-image {
+                  max-width: 100% !important;
+                  margin-bottom: 2rem !important;
+                }
+                .lms-cards-grid {
+                  grid-template-columns: 1fr !important;
+                  grid-template-rows: repeat(5, auto) !important;
+                }
+              }
+              @media (max-width: 600px) {
+                .lms-cards-grid {
+                  grid-template-columns: 1fr !important;
+                  grid-template-rows: repeat(5, auto) !important;
+                  gap: 0.7rem !important;
+                }
+                .lms-card {
+                  border-radius: 10px !important;
+                  padding: 0.85rem !important;
+                  font-size: 0.96rem !important;
+                }
+                .lms-footer {
+                  font-size: 0.96rem !important;
+                }
+              }
+            `}</style>
           </div>
         </section>
 
@@ -2216,4 +2236,51 @@ export default function Page() {
       </footer>
     </>
   );
+}
+
+// Helper for below 600px
+function isBelow600() {
+  if (typeof window !== "undefined") {
+    return window.innerWidth < 600;
+  }
+  return false;
+}
+
+// Card style helpers for LMS section
+function lmsCardStyle(isBelow480, isBelow768) {
+  return {
+    background: "#ffffff",
+    borderRadius: isBelow480 ? 10 : 16,
+    boxShadow: "0 2px 10px rgba(0, 124, 240, 0.07)",
+    padding: isBelow480 ? "0.85rem" : isBelow768 ? "1.1rem" : "1.25rem",
+    textAlign: "center",
+    minHeight: isBelow480 ? 80 : isBelow768 ? 95 : 110,
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+    width: "100%",
+    transition: "box-shadow 0.2s, transform 0.2s",
+  };
+}
+function lmsCardH3Style(isBelow480, color) {
+  return {
+    fontWeight: 700,
+    fontSize: isBelow480 ? "1.08rem" : "1.17rem",
+    color,
+    margin: 0,
+    marginBottom: "0.3rem",
+    letterSpacing: "0.5px",
+    textAlign: "center",
+  };
+}
+function lmsCardPStyle(isBelow480) {
+  return {
+    fontSize: isBelow480 ? "0.92rem" : "1.01rem",
+    color: "#003366",
+    fontWeight: 500,
+    margin: 0,
+    textAlign: "center",
+    lineHeight: "1.45",
+  };
 }
