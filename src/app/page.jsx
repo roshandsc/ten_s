@@ -1215,19 +1215,19 @@ export default function Page() {
                   transform: translateY(20px);
                 }
                 .lms-quote.visible p {
-                  animation: fadeLine 2.5s ease-in-out forwards;
+                  animation: fadeLine 3.2s ease-in-out forwards;
                 }
                 .lms-quote.visible p:nth-child(1) {
-                  animation-delay: 1.5s;
+                  animation-delay: 1.8s;
                 }
                 .lms-quote.visible p:nth-child(2) {
-                  animation-delay: 4s;
+                  animation-delay: 4.2s;
                 }
                 .lms-quote.visible p:nth-child(3) {
-                  animation-delay: 6.5s;
+                  animation-delay: 7s;
                 }
                 .lms-quote.visible p:nth-child(4) {
-                  animation-delay: 9s;
+                  animation-delay: 9.5s;
                 }
                 @keyframes fadeLine {
                   0% {
@@ -1243,22 +1243,23 @@ export default function Page() {
                     transform: translateY(0);
                   }
                 }
-                /* Responsive styles for LMS section */
-                @media (max-width: 768px) {
+
+                /* Enhanced mobile and tablet responsiveness */
+                @media (max-width: 992px) {
                   .lms-quote {
                     font-size: 1.05rem;
-                    padding: 0 1rem;
-                    line-height: 1.6;
+                    padding: 0 1.2rem;
+                    line-height: 1.7;
                   }
                   .lms-card {
                     width: 90% !important;
-                    margin: 0.8rem auto !important;
-                    padding: 1rem !important;
+                    margin: 1rem auto !important;
+                    padding: 1.3rem !important;
                   }
                   .lms-stats {
                     flex-direction: column !important;
                     align-items: center !important;
-                    gap: 1rem !important;
+                    gap: 1.5rem !important;
                   }
                   .lms-footer {
                     font-size: 1.05rem !important;
@@ -1266,31 +1267,60 @@ export default function Page() {
                     padding: 0 1rem;
                   }
                   .lms-header h2 {
-                    font-size: 1.5rem !important;
+                    font-size: 1.7rem !important;
+                    text-align: center;
                   }
                 }
-                @media (max-width: 480px) {
+
+                @media (max-width: 600px) {
                   .lms-quote {
                     font-size: 0.95rem;
-                    line-height: 1.5;
-                    padding: 0 0.6rem;
+                    line-height: 1.6;
+                    padding: 0 0.8rem;
+                    text-align: center;
                   }
                   .lms-card {
                     width: 100% !important;
-                    margin: 0.6rem auto !important;
-                    padding: 0.8rem !important;
+                    margin: 0.8rem auto !important;
+                    padding: 1rem !important;
+                    border-radius: 12px;
+                    background: #ffffff !important;
+                    box-shadow: 0 4px 14px rgba(0, 124, 240, 0.1);
                   }
                   .lms-stats {
                     flex-direction: column !important;
-                    gap: 0.8rem !important;
+                    gap: 1.2rem !important;
+                  }
+                  .lms-card h3 {
+                    font-size: 1.4rem !important;
+                    background: none !important;
+                    color: #00a859 !important;
+                    text-shadow: 0 0 8px rgba(0, 168, 89, 0.5);
+                    -webkit-text-fill-color: #00a859 !important;
+                  }
+                  .lms-card p {
+                    font-size: 0.95rem !important;
+                    color: #004aad !important;
+                    font-weight: 600 !important;
                   }
                   .lms-footer {
                     font-size: 0.95rem !important;
                     line-height: 1.5 !important;
-                    padding: 0 0.5rem;
+                    padding: 0 0.6rem;
                   }
                   .lms-header h2 {
-                    font-size: 1.3rem !important;
+                    font-size: 1.4rem !important;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 8px;
+                  }
+                  .lms-link {
+                    font-size: 0.9rem;
+                    color: #007cf0;
+                    font-weight: 600;
+                    display: inline-block;
+                    margin-top: 0.3rem;
                   }
                 }
               `}</style>

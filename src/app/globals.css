@@ -1808,6 +1808,7 @@ main {
   }
 }
 
+/* LMS Animated Number (default, desktop) */
 .lms-card h3 {
   font-size: 2.3rem;
   color: #007bff;
@@ -1826,11 +1827,35 @@ main {
   }
 }
 
+/* LMS Card Description (default, desktop) */
 .lms-card p {
   color: #333;
   margin-top: 0.6rem;
   font-weight: 500;
   font-size: 1.05rem;
+}
+
+/* --- Mobile visibility improvement for LMS animated numbers --- */
+@media (max-width: 768px) {
+  .lms-card h3 {
+    background: none !important;
+    color: #00a859 !important; /* Bright green for clarity */
+    text-shadow: 0 0 8px rgba(0, 168, 89, 0.5), 0 0 12px rgba(0, 255, 128, 0.3);
+    -webkit-text-fill-color: #00a859 !important;
+  }
+  .lms-card p {
+    color: #004aad !important;
+    font-weight: 600 !important;
+  }
+  .lms-card {
+    background: #ffffff !important;
+    border: 1.5px solid rgba(0, 191, 255, 0.4);
+    box-shadow: 0 6px 18px rgba(0, 124, 240, 0.1);
+  }
+  .lms-card h3.animate-finish {
+    color: #00c853 !important;
+    text-shadow: 0 0 12px rgba(0, 200, 83, 0.6), 0 0 20px rgba(0, 255, 128, 0.4);
+  }
 }
 
 /* Quote Section */
