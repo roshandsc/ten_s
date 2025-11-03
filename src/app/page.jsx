@@ -313,23 +313,72 @@ export default function Page() {
   // Stats Counter Animation
   useEffect(() => {
     if (!hydrated || typeof window === "undefined") return;
+    const quote = document.querySelector(".lms-quote");
+    if (!quote) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            quote.classList.add("visible");
+            const lines = quote.querySelectorAll("p");
+            lines.forEach((line, index) => {
+              line.style.animationDelay = `${index * 0.6}s`;
+              line.style.animation = "fadeLine 0.8s ease forwards";
+            });
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    observer.observe(quote);
+
+    return () => {
+      if (observer && quote) observer.unobserve(quote);
+    };
+  }, [hydrated]);
+
+  useEffect(() => {
+    if (!hydrated || typeof window === "undefined") return;
     const counters = document.querySelectorAll(".stat-number");
     let hasAnimated = false;
 
     function animateCounters() {
       counters.forEach((counter) => {
-        const target = +counter.getAttribute("data-target");
-        const duration = 1500;
+        const target = parseInt(counter.getAttribute("data-target"));
+        const duration = 4000; // duration of 4 seconds for animation
         const startTime = performance.now();
 
         function updateCounter(currentTime) {
           const elapsed = currentTime - startTime;
           const progress = Math.min(elapsed / duration, 1);
           const value = Math.floor(progress * target);
-          counter.textContent = value.toLocaleString();
-          if (progress < 1) requestAnimationFrame(updateCounter);
-          else counter.textContent = target.toLocaleString();
+          const textElement = counter.querySelector(".count-text");
+
+          if (textElement) {
+            textElement.textContent = value.toLocaleString();
+          }
+
+          // Smooth transition from red (start) to green (end)
+          const red = Math.floor(255 * (1 - progress));
+          const green = Math.floor(255 * progress);
+          counter.style.background = `rgb(${red}, ${green}, 0)`;
+          counter.style.WebkitBackgroundClip = "text";
+          counter.style.WebkitTextFillColor = "transparent";
+
+          if (progress < 1) {
+            requestAnimationFrame(updateCounter);
+          } else {
+            // Final state + pulse bounce
+            if (textElement) textElement.textContent = target.toLocaleString();
+            counter.style.background =
+              "linear-gradient(90deg, #00ff00, #00cc00)";
+            counter.classList.add("animate-finish");
+          }
         }
+
         requestAnimationFrame(updateCounter);
       });
     }
@@ -347,7 +396,10 @@ export default function Page() {
       { threshold: 0.3 }
     );
 
-    const statsSection = document.querySelector(".stats-section");
+    // Find the section containing the stats cards
+    // Try both .stats-section and .lms-section for robustness
+    let statsSection = document.querySelector(".stats-section");
+    if (!statsSection) statsSection = document.querySelector(".lms-section");
     if (statsSection) observer.observe(statsSection);
   }, [hydrated]);
 
@@ -1100,7 +1152,25 @@ export default function Page() {
             }}
           >
             <header className="lms-header">
-              <h2>📚 LMS PLATFORM</h2>
+              <h2
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  gap: "10px",
+                  color: "#004aad",
+                  fontWeight: "800",
+                }}
+              >
+                <Image
+                  src="/learning-management-system.png"
+                  alt="LMS Icon"
+                  width={isBelow480 ? 28 : isBelow768 ? 34 : 40}
+                  height={isBelow480 ? 28 : isBelow768 ? 34 : 40}
+                  style={{ objectFit: "contain" }}
+                />
+                LMS PLATFORM
+              </h2>
               <a
                 href="https://learning.10seconds.co.in"
                 target="_blank"
@@ -1112,29 +1182,141 @@ export default function Page() {
             </header>
 
             <p className="lms-description">
-              Our in-house Learning Management System connects learners,
-              trainers, and recruiters on one platform.
+              Our in-house Learning Management System
             </p>
+            <div
+              className="lms-quote"
+              style={{
+                textAlign: "center",
+                fontWeight: "700",
+                color: "#000",
+                fontFamily: "'Poppins', 'Inter', sans-serif'",
+                marginTop: "1.5rem",
+                fontSize: isBelow480
+                  ? "1rem"
+                  : isBelow768
+                  ? "1.1rem"
+                  : "1.25rem",
+                lineHeight: "1.8",
+                overflow: "hidden",
+              }}
+            >
+              <div className="quote-container">
+                <p>Every learner writes a beat.</p>
+                <p>Every test drops a verse.</p>
+                <p>Real-time Analytics &amp; Leaderboards light the stage </p>
+                <p>where MCQs and Code become performance, not pressure.</p>
+              </div>
+
+              <style jsx>{`
+                .lms-quote p {
+                  margin: 0.4rem 0;
+                  opacity: 0;
+                  transform: translateY(20px);
+                }
+                .lms-quote.visible p {
+                  animation: fadeLine 2.5s ease-in-out forwards;
+                }
+                .lms-quote.visible p:nth-child(1) {
+                  animation-delay: 1.5s;
+                }
+                .lms-quote.visible p:nth-child(2) {
+                  animation-delay: 4s;
+                }
+                .lms-quote.visible p:nth-child(3) {
+                  animation-delay: 6.5s;
+                }
+                .lms-quote.visible p:nth-child(4) {
+                  animation-delay: 9s;
+                }
+                @keyframes fadeLine {
+                  0% {
+                    opacity: 0;
+                    transform: translateY(25px);
+                  }
+                  50% {
+                    opacity: 0.5;
+                    transform: translateY(10px);
+                  }
+                  100% {
+                    opacity: 1;
+                    transform: translateY(0);
+                  }
+                }
+                /* Responsive styles for LMS section */
+                @media (max-width: 768px) {
+                  .lms-quote {
+                    font-size: 1.05rem;
+                    padding: 0 1rem;
+                    line-height: 1.6;
+                  }
+                  .lms-card {
+                    width: 90% !important;
+                    margin: 0.8rem auto !important;
+                    padding: 1rem !important;
+                  }
+                  .lms-stats {
+                    flex-direction: column !important;
+                    align-items: center !important;
+                    gap: 1rem !important;
+                  }
+                  .lms-footer {
+                    font-size: 1.05rem !important;
+                    line-height: 1.6 !important;
+                    padding: 0 1rem;
+                  }
+                  .lms-header h2 {
+                    font-size: 1.5rem !important;
+                  }
+                }
+                @media (max-width: 480px) {
+                  .lms-quote {
+                    font-size: 0.95rem;
+                    line-height: 1.5;
+                    padding: 0 0.6rem;
+                  }
+                  .lms-card {
+                    width: 100% !important;
+                    margin: 0.6rem auto !important;
+                    padding: 0.8rem !important;
+                  }
+                  .lms-stats {
+                    flex-direction: column !important;
+                    gap: 0.8rem !important;
+                  }
+                  .lms-footer {
+                    font-size: 0.95rem !important;
+                    line-height: 1.5 !important;
+                    padding: 0 0.5rem;
+                  }
+                  .lms-header h2 {
+                    font-size: 1.3rem !important;
+                  }
+                }
+              `}</style>
+            </div>
 
             <div
               className="lms-stats"
               style={{
-                display: "grid",
-                gridTemplateColumns: isBelow480
-                  ? "1fr"
-                  : isBelow768
-                  ? "1fr 1fr"
-                  : "repeat(5, 1fr)",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                flexWrap: "wrap",
                 gap: isBelow480 ? "0.8rem" : isBelow768 ? "1.2rem" : "2rem",
-                margin: "2rem 0 1.2rem 0",
+                width: "100%",
+                maxWidth: "900px",
+                margin: "2rem auto 1.2rem auto",
               }}
             >
               {[
-                { number: "50K+", label: "Active Users" },
-                { number: "250+", label: "Mock & Company-Specific Tests" },
-                { number: "100+", label: "Video Tutorials" },
-                { number: "📊", label: "Real-time Analytics & Leaderboards" },
-                { number: "💻", label: "MCQ + Coding Assessments" },
+                { number: 50000, label: "Active Users", suffix: "+" },
+                {
+                  number: 250,
+                  label: "Mock & Company-Specific Tests",
+                  suffix: "+",
+                },
+                { number: 100, label: "Video Tutorials", suffix: "+" },
               ].map((stat, index) => (
                 <div
                   key={index}
@@ -1151,13 +1333,20 @@ export default function Page() {
                   }}
                 >
                   <h3
+                    className="stat-number"
+                    data-target={stat.number}
                     style={{
-                      fontSize: isBelow480 ? "1.22rem" : "1.4rem",
-                      fontWeight: isBelow480 ? 600 : 700,
+                      fontSize: isBelow480 ? "1.4rem" : "1.6rem",
+                      fontWeight: 700,
                       marginBottom: "0.3rem",
+                      background: "linear-gradient(90deg, #007bff, #00d4ff)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      transition: "background 0.3s ease, transform 0.3s ease",
                     }}
                   >
-                    {stat.number}
+                    <span className="count-text">0</span>
+                    {stat.suffix}
                   </h3>
                   <p style={{ fontSize: isBelow480 ? "0.95rem" : "1rem" }}>
                     {stat.label}
@@ -1166,7 +1355,23 @@ export default function Page() {
               ))}
             </div>
 
-            <p className="lms-footer">
+            <p
+              className="lms-footer"
+              style={{
+                textAlign: "center",
+                color: "#0077cc",
+                fontWeight: "600",
+                fontSize: isBelow480
+                  ? "1rem"
+                  : isBelow768
+                  ? "1.1rem"
+                  : "1.2rem",
+                textShadow: "0 0 8px rgba(0, 119, 204, 0.4)",
+                marginTop: "1rem",
+                lineHeight: "1.8",
+                fontFamily: "'Poppins', 'Inter', sans-serif'",
+              }}
+            >
               Personalized, data-driven, and measurable — our LMS turns every
               learner into a performer.
             </p>

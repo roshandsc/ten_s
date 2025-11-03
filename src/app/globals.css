@@ -1656,14 +1656,52 @@ main {
 
 .lms-section {
   background: linear-gradient(180deg, #eaf3ff 0%, #ffffff 100%);
-  padding: 100px 5%;
+  padding: 50px 5%;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.lms-section::before,
+.lms-section::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 124, 240, 0.15), transparent 70%);
+  filter: blur(100px);
+  z-index: 0;
+  animation: lmsFloatGlow 10s ease-in-out infinite alternate;
+}
+
+.lms-section::before {
+  top: -150px;
+  left: -150px;
+}
+
+.lms-section::after {
+  bottom: -150px;
+  right: -150px;
+}
+
+@keyframes lmsFloatGlow {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(60px, -60px);
+  }
 }
 
 .lms-header h2 {
   font-size: 2.5rem;
   font-weight: 800;
   color: #004aad;
+  background: linear-gradient(90deg, #007cf0, #00dfd8, #007cf0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: headerShine 6s linear infinite;
   margin-bottom: 0.5rem;
 }
 
@@ -1691,40 +1729,122 @@ main {
   margin-right: auto;
 }
 
+/* ===========================
+   LMS PLATFORM SECTION - UPDATED
+=========================== */
+
 .lms-stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  gap: 2.5rem;
   margin-top: 2rem;
   margin-bottom: 2rem;
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .lms-card {
-  background: #ffffff;
-  border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  padding: 2rem 1rem;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(145deg, #ffffff, #f5f9ff);
+  border-radius: 18px;
+  box-shadow: 0 6px 25px rgba(0, 124, 240, 0.15);
+  padding: 2.2rem 1.5rem;
+  flex: 1 1 250px;
+  max-width: 280px;
   transition: all 0.4s ease;
-  border-top: 4px solid #007bff;
+  border: 1.5px solid #00bfff;
+  text-align: center;
+  animation: cardFloat 6s ease-in-out infinite alternate;
 }
 
-.lms-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0, 124, 240, 0.2);
+.lms-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    rgba(0, 124, 240, 0.1),
+    rgba(0, 223, 216, 0.1),
+    rgba(0, 124, 240, 0.1)
+  );
+  background-size: 300% 300%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 0;
+}
+
+.lms-card:hover::before {
+  opacity: 1;
+  animation: cardShine 4s linear infinite;
+}
+
+@keyframes cardFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes cardShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .lms-card h3 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   color: #007bff;
-  font-weight: 700;
+  font-weight: 800;
+  animation: textPulse 3s ease-in-out infinite;
+}
+
+@keyframes textPulse {
+  0%,
+  100% {
+    text-shadow: 0 0 5px rgba(0, 124, 240, 0.5), 0 0 10px rgba(0, 223, 216, 0.3);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(0, 124, 240, 0.7),
+      0 0 30px rgba(0, 223, 216, 0.5);
+  }
 }
 
 .lms-card p {
   color: #333;
-  margin-top: 0.5rem;
+  margin-top: 0.6rem;
   font-weight: 500;
+  font-size: 1.05rem;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .lms-stats {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .lms-card {
+    width: 90%;
+    max-width: 350px;
+  }
 }
 
 .lms-footer {
@@ -1735,6 +1855,53 @@ main {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Circuit lines background animation for LMS section */
+.lms-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(0, 124, 240, 0.05) 0,
+    rgba(0, 124, 240, 0.05) 1px,
+    transparent 2px,
+    transparent 20px
+  );
+  animation: circuitMove 20s linear infinite;
+  z-index: 0;
+}
+
+@keyframes circuitMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 1000px 1000px;
+  }
+}
+
+@keyframes bounceGlow {
+  0% {
+    transform: scale(1);
+    text-shadow: 0 0 0 rgba(0, 212, 255, 0);
+  }
+  40% {
+    transform: scale(1.2);
+    text-shadow: 0 0 6px rgba(0, 212, 255, 0.4);
+  }
+  70% {
+    transform: scale(0.97);
+    text-shadow: 0 0 4px rgba(0, 212, 255, 0.25);
+  }
+  100% {
+    transform: scale(1);
+    text-shadow: 0 0 5px rgba(0, 212, 255, 0.3);
+  }
+}
+.stat-number.animate-finish {
+  animation: bounceGlow 0.8s ease-out forwards;
 }
 
 /* ===========================================================
