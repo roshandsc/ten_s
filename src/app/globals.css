@@ -1746,7 +1746,7 @@ main {
   overflow: hidden;
   background: linear-gradient(145deg, #ffffff, #f5f9ff);
   border-radius: 20px;
-  box-shadow: 0 6px 25px rgba(0, 124, 240, 0.15);
+  box-shadow: 0 4px 18px rgba(0, 124, 240, 0.1);
   padding: 2.4rem 1.6rem;
   flex: 1 1 260px;
   max-width: 300px;
@@ -1813,18 +1813,13 @@ main {
   font-size: 2.3rem;
   color: #007bff;
   font-weight: 800;
-  animation: textPulse 3.5s ease-in-out infinite;
+  animation: none;
+  text-shadow: none;
 }
 
-@keyframes textPulse {
-  0%,
-  100% {
-    text-shadow: 0 0 5px rgba(0, 124, 240, 0.5), 0 0 10px rgba(0, 223, 216, 0.3);
-  }
-  50% {
-    text-shadow: 0 0 25px rgba(0, 124, 240, 0.7),
-      0 0 35px rgba(0, 223, 216, 0.5);
-  }
+.lms-card h3.animate-finish {
+  color: #00c853 !important;
+  text-shadow: none !important;
 }
 
 /* LMS Card Description (default, desktop) */
@@ -1837,24 +1832,37 @@ main {
 
 /* --- Mobile visibility improvement for LMS animated numbers --- */
 @media (max-width: 768px) {
+  .lms-card {
+    background: #ffffff !important;
+    border: 1.2px solid rgba(0, 191, 255, 0.3);
+    box-shadow: 0 3px 12px rgba(0, 124, 240, 0.08);
+    border-radius: 14px;
+    padding: 1.6rem 1.2rem;
+    text-align: center;
+  }
   .lms-card h3 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #007bff !important;
     background: none !important;
-    color: #00a859 !important; /* Bright green for clarity */
-    text-shadow: 0 0 8px rgba(0, 168, 89, 0.5), 0 0 12px rgba(0, 255, 128, 0.3);
-    -webkit-text-fill-color: #00a859 !important;
+    -webkit-text-fill-color: #007bff !important;
+    animation: none;
+    text-shadow: none;
+  }
+  .lms-card h3.animate-finish {
+    color: #00c853 !important;
+    text-shadow: none !important;
   }
   .lms-card p {
     color: #004aad !important;
     font-weight: 600 !important;
+    font-size: 1rem;
   }
-  .lms-card {
-    background: #ffffff !important;
-    border: 1.5px solid rgba(0, 191, 255, 0.4);
-    box-shadow: 0 6px 18px rgba(0, 124, 240, 0.1);
-  }
-  .lms-card h3.animate-finish {
-    color: #00c853 !important;
-    text-shadow: 0 0 12px rgba(0, 200, 83, 0.6), 0 0 20px rgba(0, 255, 128, 0.4);
+  .lms-footer {
+    font-size: 1rem;
+    color: #0077cc;
+    text-shadow: none;
+    padding: 0 1rem;
   }
 }
 
@@ -1870,20 +1878,19 @@ main {
 }
 
 .lms-quote.visible p {
-  animation: fadeLine 2.5s ease-in-out forwards;
+  animation: fadeLine 3.5s ease-in-out forwards;
 }
-
 .lms-quote.visible p:nth-child(1) {
-  animation-delay: 1.2s;
+  animation-delay: 1.5s;
 }
 .lms-quote.visible p:nth-child(2) {
-  animation-delay: 3.6s;
+  animation-delay: 4s;
 }
 .lms-quote.visible p:nth-child(3) {
-  animation-delay: 6s;
+  animation-delay: 6.5s;
 }
 .lms-quote.visible p:nth-child(4) {
-  animation-delay: 8.4s;
+  animation-delay: 9s;
 }
 
 @keyframes fadeLine {
@@ -1944,10 +1951,13 @@ main {
     font-size: 1.05rem;
     padding: 0 1rem;
   }
+  .lms-stats {
+    gap: 1.5rem;
+  }
   .lms-card {
     flex: 1 1 80%;
-    max-width: 360px;
-    padding: 1.8rem 1.2rem;
+    margin: 0 auto;
+    padding: 1.8rem 1.4rem;
   }
   .lms-card h3 {
     font-size: 2rem;
@@ -1958,6 +1968,11 @@ main {
 }
 
 @media (max-width: 600px) {
+  .lms-card h3 {
+    background: none !important;
+    color: #00a859 !important;
+    -webkit-text-fill-color: #00a859 !important;
+  }
   .lms-header h2 {
     font-size: 1.8rem;
   }

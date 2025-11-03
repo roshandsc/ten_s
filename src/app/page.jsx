@@ -1244,30 +1244,31 @@ export default function Page() {
                   }
                 }
 
-                /* Enhanced mobile and tablet responsiveness */
+                /* Improved mobile and tablet responsiveness */
                 @media (max-width: 992px) {
                   .lms-quote {
-                    font-size: 1.05rem;
-                    padding: 0 1.2rem;
+                    font-size: 1rem;
+                    padding: 0 1rem;
                     line-height: 1.7;
+                    text-align: center;
                   }
                   .lms-card {
-                    width: 90% !important;
+                    width: 85% !important;
                     margin: 1rem auto !important;
-                    padding: 1.3rem !important;
+                    padding: 1.2rem !important;
                   }
                   .lms-stats {
                     flex-direction: column !important;
                     align-items: center !important;
-                    gap: 1.5rem !important;
+                    gap: 1.2rem !important;
                   }
                   .lms-footer {
-                    font-size: 1.05rem !important;
+                    font-size: 1rem !important;
                     line-height: 1.6 !important;
                     padding: 0 1rem;
                   }
                   .lms-header h2 {
-                    font-size: 1.7rem !important;
+                    font-size: 1.8rem !important;
                     text-align: center;
                   }
                 }
@@ -1280,31 +1281,32 @@ export default function Page() {
                     text-align: center;
                   }
                   .lms-card {
-                    width: 100% !important;
+                    width: 95% !important;
                     margin: 0.8rem auto !important;
-                    padding: 1rem !important;
-                    border-radius: 12px;
+                    padding: 0.9rem !important;
+                    border-radius: 10px;
                     background: #ffffff !important;
-                    box-shadow: 0 4px 14px rgba(0, 124, 240, 0.1);
+                    box-shadow: 0 3px 10px rgba(0, 124, 240, 0.1);
                   }
                   .lms-stats {
                     flex-direction: column !important;
-                    gap: 1.2rem !important;
+                    gap: 1rem !important;
                   }
                   .lms-card h3 {
-                    font-size: 1.4rem !important;
+                    font-size: 1.3rem !important;
                     background: none !important;
                     color: #00a859 !important;
-                    text-shadow: 0 0 8px rgba(0, 168, 89, 0.5);
-                    -webkit-text-fill-color: #00a859 !important;
+                    font-weight: 700 !important;
+                    text-align: center;
                   }
                   .lms-card p {
-                    font-size: 0.95rem !important;
+                    font-size: 0.9rem !important;
                     color: #004aad !important;
                     font-weight: 600 !important;
+                    text-align: center;
                   }
                   .lms-footer {
-                    font-size: 0.95rem !important;
+                    font-size: 0.9rem !important;
                     line-height: 1.5 !important;
                     padding: 0 0.6rem;
                   }
