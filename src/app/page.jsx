@@ -361,20 +361,18 @@ export default function Page() {
             textElement.textContent = value.toLocaleString();
           }
 
-          // Smooth transition from red (start) to green (end)
-          const red = Math.floor(255 * (1 - progress));
-          const green = Math.floor(255 * progress);
-          counter.style.background = `rgb(${red}, ${green}, 0)`;
-          counter.style.WebkitBackgroundClip = "text";
-          counter.style.WebkitTextFillColor = "transparent";
+          // Removed background color animation for .stat-number
+          // counter.style.background = `rgb(${red}, ${green}, 0)`;
+          // counter.style.WebkitBackgroundClip = "text";
+          // counter.style.WebkitTextFillColor = "transparent";
 
           if (progress < 1) {
             requestAnimationFrame(updateCounter);
           } else {
             // Final state + pulse bounce
             if (textElement) textElement.textContent = target.toLocaleString();
-            counter.style.background =
-              "linear-gradient(90deg, #00ff00, #00cc00)";
+            counter.style.background = "none";
+            counter.style.WebkitTextFillColor = "inherit";
             counter.classList.add("animate-finish");
           }
         }
@@ -1481,6 +1479,27 @@ export default function Page() {
               style={{ marginBottom: "4rem" }}
             >
               <ClientsSection />
+              {/* Remove any gradient overlays or fading edges from slider */}
+              <style jsx>{`
+                .clients-slider-wrapper::before,
+                .clients-slider-wrapper::after,
+                .clients-slider::before,
+                .clients-slider::after {
+                  display: none !important;
+                  content: none !important;
+                }
+                .clients-slider-wrapper,
+                .clients-slider {
+                  background: none !important;
+                  mask-image: none !important;
+                  -webkit-mask-image: none !important;
+                }
+                @media (max-width: 768px) {
+                  .clients-slider-wrapper {
+                    padding: 0 10px !important;
+                  }
+                }
+              `}</style>
             </div>
 
             <div
