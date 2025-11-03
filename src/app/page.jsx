@@ -1493,6 +1493,12 @@ export default function Page() {
                   background: none !important;
                   mask-image: none !important;
                   -webkit-mask-image: none !important;
+                  box-shadow: none !important;
+                  filter: none !important;
+                }
+                .clients-slider img {
+                  filter: none !important;
+                  box-shadow: none !important;
                 }
                 @media (max-width: 768px) {
                   .clients-slider-wrapper {
