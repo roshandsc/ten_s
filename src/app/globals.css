@@ -2145,26 +2145,11 @@ main {
   }
 }
 
-/* Gradient mask edges for smooth visibility */
+/* Remove gradient mask edges for smooth visibility */
 .clients-slider::before,
 .clients-slider::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 200px;
-  pointer-events: none;
-  z-index: 2;
-}
-
-.clients-slider::before {
-  left: 0;
-  background: linear-gradient(to right, #f7fbff 0%, transparent 100%);
-}
-
-.clients-slider::after {
-  right: 0;
-  background: linear-gradient(to left, #f7fbff 0%, transparent 100%);
+  display: none !important;
+  content: none !important;
 }
 
 /* Glowing rings for motion emphasis */
@@ -2192,11 +2177,24 @@ main {
 
 /* Responsive tuning */
 @media (max-width: 768px) {
-  .clients-lane img {
-    width: 90px;
+  .clients-slider {
+    padding: 60px 0;
   }
   .clients-lane {
     gap: 2rem;
+  }
+  .clients-lane img {
+    width: 85px;
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .clients-slider {
+    padding: 40px 0;
+  }
+  .clients-lane img {
+    width: 70px;
   }
 }
 
