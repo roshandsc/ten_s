@@ -41,8 +41,107 @@ const ClientsSection = dynamic(() => import("./ClientsSection"), {
   ssr: false,
 });
 
-// Inline AboutUs component (3-Column Credibility Layout)
+// Responsive AboutUs component (3-Column Credibility Layout, mobile-friendly)
 const AboutUs = () => {
+  // Responsive helpers
+  const [windowWidth, setWindowWidth] = React.useState(
+    typeof window !== "undefined" ? window.innerWidth : 1200
+  );
+  React.useEffect(() => {
+    if (typeof window === "undefined") return;
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    handleResize();
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  const isBelow768 = windowWidth < 768;
+  const isBelow480 = windowWidth < 480;
+
+  // Style helpers for card
+  const getColStyle = () => {
+    if (isBelow480) {
+      return {
+        width: "95%",
+        margin: "0 auto 1.5rem",
+        borderRadius: "15px",
+        padding: "12px",
+        background: "#ffffff",
+        position: "relative",
+        overflow: "hidden",
+        boxShadow: "none",
+        flex: "unset",
+        textAlign: "center",
+        display: "block",
+      };
+    }
+    if (isBelow768) {
+      return {
+        width: "90%",
+        margin: "0 auto 1.5rem",
+        borderRadius: "20px",
+        padding: "15px",
+        background: "#ffffff",
+        position: "relative",
+        overflow: "hidden",
+        boxShadow: "none",
+        flex: "unset",
+        textAlign: "center",
+        display: "block",
+      };
+    }
+    // Desktop
+    return {
+      flex: "1 1 300px",
+      background: "#ffffff",
+      position: "relative",
+      borderRadius: "20px",
+      padding: "20px",
+      overflow: "hidden",
+      boxShadow: "none",
+      minWidth: 260,
+      maxWidth: 370,
+      textAlign: "left",
+      display: "block",
+    };
+  };
+  // Style helpers for image
+  const getImgSize = () => {
+    if (isBelow480) return { width: 80, height: 80 };
+    if (isBelow768) return { width: 90, height: 90 };
+    return { width: 100, height: 100 };
+  };
+  // Style helpers for text
+  const getFontSize = () => {
+    if (isBelow480) return "0.9rem";
+    if (isBelow768) return "0.95rem";
+    return "1.05rem";
+  };
+  const getH3FontSize = () => {
+    if (isBelow480) return "1.05rem";
+    if (isBelow768) return "1.1rem";
+    return "1.15rem";
+  };
+  // AboutUs cards data
+  const aboutCards = [
+    {
+      img: "/a1.png",
+      alt: "Who We Are",
+      title: "Who We Are",
+      desc: "10 SECONDS is a new-age training and staffing organization that unifies learning, assessment, and recruitment under one roof. We partner with colleges, universities, and corporates to create career-ready graduates who meet real industry expectations.",
+    },
+    {
+      img: "/a2.png",
+      alt: "What We Believe",
+      title: "What We Believe",
+      desc: "It takes just ten seconds to make a strong first impression. Our programs ensure every student, trainer, and partner institution makes theirs count.",
+    },
+    {
+      img: "/a3.png",
+      alt: "Our Journey",
+      title: "Our Journey",
+      desc: "From a single classroom in 2003 to a statewide network of 60 partner institutions, we’ve grown through innovation, trust, and measurable outcomes. Today, our digital learning platform and staffing services make us one of Karnataka’s most trusted campus-to-corporate partners.",
+    },
+  ];
   return (
     <section
       id="about"
@@ -50,13 +149,17 @@ const AboutUs = () => {
       style={{
         backgroundColor: "#e6f4ff",
         width: "100%",
-        padding: "60px 20px",
+        padding: isBelow480
+          ? "40px 5px"
+          : isBelow768
+          ? "45px 10px"
+          : "60px 20px",
         textAlign: "center",
       }}
     >
       <h2
         style={{
-          fontSize: "2.5rem",
+          fontSize: isBelow480 ? "1.6rem" : isBelow768 ? "2rem" : "2.5rem",
           fontWeight: "800",
           color: "#004aad",
           marginBottom: "2rem",
@@ -65,120 +168,107 @@ const AboutUs = () => {
         🌟 ABOUT US
       </h2>
 
-      <div
-        className="about-columns"
-        style={{
-          display: "flex",
-          flexWrap: "wrap",
-          justifyContent: "center",
-          gap: "2rem",
-          maxWidth: "1200px",
-          margin: "0 auto",
-        }}
-      >
-        <div
-          className="about-col"
-          style={{
-            flex: "1 1 300px",
-            background: "#ffffff",
-            borderRadius: "10px",
-            padding: "20px",
-            boxShadow: "0 4px 10px rgba(0,0,0,0.08)",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              marginBottom: "10px",
-            }}
-          >
-            <Image src="/a1.png" alt="Who We Are" width={100} height={100} />
-          </div>
-          <h3 style={{ color: "#007bff", fontWeight: "700" }}>Who We Are</h3>
-          <p style={{ color: "#333", lineHeight: "1.7", fontSize: "1.05rem" }}>
-            10 SECONDS is a new-age training and staffing organization that
-            unifies learning, assessment, and recruitment under one roof. We
-            partner with colleges, universities, and corporates to create
-            career-ready graduates who meet real industry expectations.
-          </p>
-        </div>
-
-        <div
-          className="about-col"
-          style={{
-            flex: "1 1 300px",
-            background: "#ffffff",
-            borderRadius: "10px",
-            padding: "20px",
-            boxShadow: "0 4px 10px rgba(0,0,0,0.08)",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              marginBottom: "10px",
-            }}
-          >
-            <Image
-              src="/a2.png"
-              alt="What We Believe"
-              width={100}
-              height={100}
-            />
-          </div>
-          <h3 style={{ color: "#007bff", fontWeight: "700" }}>
-            What We Believe
-          </h3>
-          <p style={{ color: "#333", lineHeight: "1.7", fontSize: "1.05rem" }}>
-            It takes just ten seconds to make a strong first impression. Our
-            programs ensure every student, trainer, and partner institution
-            makes theirs count.
-          </p>
-        </div>
-
-        <div
-          className="about-col"
-          style={{
-            flex: "1 1 300px",
-            background: "#ffffff",
-            borderRadius: "10px",
-            padding: "20px",
-            boxShadow: "0 4px 10px rgba(0,0,0,0.08)",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              marginBottom: "10px",
-            }}
-          >
-            <Image src="/a3.png" alt="Our Journey" width={100} height={100} />
-          </div>
-          <h3 style={{ color: "#007bff", fontWeight: "700" }}>Our Journey</h3>
-          <p style={{ color: "#333", lineHeight: "1.7", fontSize: "1.05rem" }}>
-            From a single classroom in 2003 to a statewide network of 60 partner
-            institutions, we’ve grown through innovation, trust, and measurable
-            outcomes. Today, our digital learning platform and staffing services
-            make us one of Karnataka’s most trusted campus-to-corporate
-            partners.
-          </p>
-        </div>
-      </div>
-
       <blockquote
         style={{
           marginTop: "2.5rem",
           fontStyle: "italic",
           fontWeight: "600",
           color: "#004aad",
-          fontSize: "1.3rem",
+          fontSize: isBelow480 ? "1.05rem" : isBelow768 ? "1.15rem" : "1.3rem",
+          marginBottom: "1.5rem",
         }}
       >
         “We don’t just teach. We transform potential into performance.”
       </blockquote>
+
+      <div
+        className="about-columns"
+        style={{
+          display: "flex",
+          flexDirection: isBelow768 ? "column" : "row",
+          flexWrap: "wrap",
+          justifyContent: "center",
+          alignItems: "stretch",
+          gap: isBelow480 ? "1.1rem" : isBelow768 ? "1.5rem" : "2rem",
+          maxWidth: "1200px",
+          margin: "0 auto",
+        }}
+      >
+        {aboutCards.map((card, idx) => (
+          <div key={card.title} className="about-col" style={getColStyle()}>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                marginBottom: "10px",
+                position: "relative",
+                zIndex: 1,
+              }}
+            >
+              <Image
+                src={card.img}
+                alt={card.alt}
+                width={getImgSize().width}
+                height={getImgSize().height}
+                style={{
+                  animation: "floatImage 4s ease-in-out infinite",
+                  position: "relative",
+                  zIndex: 1,
+                  width: getImgSize().width,
+                  height: getImgSize().height,
+                  objectFit: "contain",
+                }}
+              />
+            </div>
+            <h3
+              style={{
+                color: "#007bff",
+                fontWeight: "700",
+                position: "relative",
+                zIndex: 1,
+                fontSize: getH3FontSize(),
+                marginBottom: isBelow768 ? "0.4rem" : "0.7rem",
+                textAlign: "center",
+              }}
+            >
+              {card.title}
+            </h3>
+            <p
+              style={{
+                color: "#333",
+                lineHeight: "1.7",
+                fontSize: getFontSize(),
+                position: "relative",
+                zIndex: 1,
+                textAlign: isBelow768 ? "center" : "left",
+                margin: 0,
+              }}
+            >
+              {card.desc}
+            </p>
+          </div>
+        ))}
+      </div>
+      {/* Global keyframes for AboutUs animations */}
+      <style jsx global>{`
+        @keyframes floatImage {
+          0%,
+          100% {
+            transform: translateY(0);
+          }
+          50% {
+            transform: translateY(-8px);
+          }
+        }
+        @keyframes borderMove {
+          0% {
+            background-position: 0% 50%;
+          }
+          100% {
+            background-position: 100% 50%;
+          }
+        }
+      `}</style>
     </section>
   );
 };
@@ -796,11 +886,43 @@ export default function Page() {
             data-aos="fade-up"
             style={{
               ...maxWidthWrapperStyle,
-              padding: isBelow480 ? "18px 0" : isBelow768 ? "30px 0" : "50px 0",
+              padding: isBelow480 ? "10px 0" : isBelow768 ? "20px 0" : "35px 0",
             }}
           >
-            <header className="services-header">
-              <h2>🔧 SERVICES</h2>
+            <header
+              className="services-header"
+              style={{
+                textAlign: "center",
+                marginBottom: isBelow480 ? "0.8rem" : "1.2rem",
+              }}
+            >
+              <h2
+                style={{
+                  fontSize: isBelow480
+                    ? "1.6rem"
+                    : isBelow768
+                    ? "1.8rem"
+                    : "2rem",
+                  fontWeight: 800,
+                  color: "#004aad",
+                  margin: 0,
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  gap: "7px",
+                  paddingBottom: "2rem",
+                  paddingTop: "0.5rem",
+                }}
+              >
+                <Image
+                  src="/service.png"
+                  alt="Services Icon"
+                  width={isBelow480 ? 28 : isBelow768 ? 34 : 40}
+                  height={isBelow480 ? 28 : isBelow768 ? 34 : 40}
+                  style={{ objectFit: "contain" }}
+                />
+                SERVICES
+              </h2>
             </header>
 
             <div
@@ -812,8 +934,9 @@ export default function Page() {
                   : isBelow768
                   ? "repeat(2, 1fr)"
                   : "repeat(auto-fit, minmax(300px, 1fr))",
-                gap: isBelow480 ? "1.2rem" : isBelow768 ? "1.5rem" : "2.2rem",
-                marginTop: isBelow480 ? "1rem" : "2rem",
+                gap: isBelow480 ? "1rem" : isBelow768 ? "1.3rem" : "1.8rem",
+                marginTop: isBelow480 ? "0.6rem" : "1.2rem",
+                marginBottom: isBelow480 ? "0.8rem" : "1rem",
               }}
             >
               {[
@@ -860,7 +983,7 @@ export default function Page() {
                   style={{
                     background: "#ffffff",
                     borderRadius: "12px",
-                    padding: isBelow480 ? "18px" : isBelow768 ? "22px" : "24px",
+                    padding: isBelow480 ? "14px" : isBelow768 ? "18px" : "20px",
                     boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
                     transition: "transform 0.3s ease, box-shadow 0.3s ease",
                     textAlign: "center",
@@ -899,11 +1022,11 @@ export default function Page() {
                       marginBottom: "12px",
                       boxShadow: "inset 0 0 10px rgba(0,124,240,0.1)",
                       height: isBelow480
-                        ? "75px"
+                        ? "65px"
                         : isBelow768
-                        ? "85px"
-                        : "95px",
-                      width: isBelow480 ? "75px" : isBelow768 ? "85px" : "95px",
+                        ? "75px"
+                        : "85px",
+                      width: isBelow480 ? "65px" : isBelow768 ? "75px" : "85px",
                     }}
                   >
                     {React.cloneElement(item.icon, {
