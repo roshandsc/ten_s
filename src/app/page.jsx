@@ -1497,165 +1497,362 @@ export default function Page() {
             className="clients-container"
             data-aos="fade-up"
             style={{
-              ...maxWidthWrapperStyle,
-              paddingLeft: isBelow768 ? "18px" : "40px",
-              paddingRight: isBelow768 ? "18px" : "40px",
-              paddingTop: isBelow480 ? "18px" : isBelow768 ? "30px" : "50px",
-              paddingBottom: isBelow480 ? "18px" : isBelow768 ? "30px" : "50px",
+              width: "100vw",
+              marginLeft: "calc(-50vw + 50%)",
+              marginRight: "calc(-50vw + 50%)",
+              padding: 0,
+              overflow: "hidden",
+              position: "relative",
             }}
           >
-            <header
-              className="clients-header"
-              style={{ textAlign: "center", marginBottom: "2rem" }}
-            >
-              <h2
-                style={{
-                  fontSize: "2.4rem",
-                  fontWeight: "800",
-                  color: "#004aad",
-                }}
-              >
-                🤝 Institutional Partners
-              </h2>
-              <p
-                style={{
-                  fontSize: "1.1rem",
-                  color: "#333",
-                  maxWidth: "900px",
-                  margin: "1rem auto 3rem auto",
-                  lineHeight: "1.7",
-                }}
-              >
-                Trusted by 50+ top colleges including{" "}
-                <strong>
-                  NITK Surathkal, MAHE Manipal, RVCE, BMSCE, NMIT, Sahyadri
-                  Mangalore, PES Mandya, VCET Puttur, Navkis Hassan, Jain
-                  University, MIT Mysuru
-                </strong>
-                , and many more.
-              </p>
-            </header>
-
             <div
-              className="clients-slider-wrapper"
-              style={{ marginBottom: "4rem" }}
+              className="clients-inner"
+              style={{
+                maxWidth: "1280px",
+                margin: "0 auto",
+                paddingLeft: isBelow768 ? "18px" : "40px",
+                paddingRight: isBelow768 ? "18px" : "40px",
+              }}
             >
-              <ClientsSection />
-              {/* Remove any gradient overlays or fading edges from slider */}
-              <style jsx>{`
-                .clients-slider-wrapper::before,
-                .clients-slider-wrapper::after,
-                .clients-slider::before,
-                .clients-slider::after {
-                  display: none !important;
-                  content: none !important;
-                }
-                .clients-slider-wrapper,
-                .clients-slider {
-                  background: none !important;
-                  mask-image: none !important;
-                  -webkit-mask-image: none !important;
-                  box-shadow: none !important;
-                  filter: none !important;
-                }
-                .clients-slider img {
-                  filter: none !important;
-                  box-shadow: none !important;
-                }
-                @media (max-width: 768px) {
-                  .clients-slider-wrapper {
-                    padding: 0 10px !important;
-                  }
-                }
-              `}</style>
-            </div>
+              <header
+                className="clients-header"
+                style={{ textAlign: "center", marginBottom: "2rem" }}
+              >
+                <h2
+                  style={{
+                    fontSize: "2.4rem",
+                    fontWeight: "800",
+                    color: "#004aad",
+                  }}
+                >
+                  🤝 Institutional Partners
+                </h2>
+                <p
+                  style={{
+                    fontSize: "1.1rem",
+                    color: "#333",
+                    maxWidth: "900px",
+                    margin: "1rem auto 3rem auto",
+                    lineHeight: "1.7",
+                  }}
+                >
+                  Trusted by 50+ top colleges including{" "}
+                  <strong>
+                    NITK Surathkal, MAHE Manipal, RVCE, BMSCE, NMIT, Sahyadri
+                    Mangalore, PES Mandya, VCET Puttur, Navkis Hassan, Jain
+                    University, MIT Mysuru
+                  </strong>
+                  , and many more.
+                </p>
+              </header>
 
-            <div
-              className="clients-footer"
-              style={{ textAlign: "center", marginTop: "3rem" }}
-            >
+              {/* 🌍 Our footprint covers every major engineering hub across Karnataka. */}
               <h3
                 style={{
                   color: "#004aad",
                   fontSize: "1.8rem",
                   fontWeight: "700",
                   marginBottom: "1rem",
+                  textAlign: "center",
                 }}
               >
                 🌍 Our footprint covers every major engineering hub across
                 Karnataka.
               </h3>
+              {/* style block for h3 is inline above */}
 
-              <div className="corporate-collab" style={{ marginTop: "2rem" }}>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    flexWrap: "wrap",
-                    textAlign: "center",
-                    gap: isBelow480 ? "0.5rem" : isBelow768 ? "0.7rem" : "1rem",
-                  }}
-                >
-                  <Image
-                    src="/collaboration.png"
-                    alt="Collaboration Icon"
-                    width={isBelow480 ? 36 : isBelow768 ? 46 : 56}
-                    height={isBelow480 ? 36 : isBelow768 ? 46 : 56}
-                    style={{ objectFit: "contain" }}
-                  />
-                  <h2
-                    style={{
-                      fontSize: isBelow480
-                        ? "1.4rem"
-                        : isBelow768
-                        ? "1.7rem"
-                        : "2rem",
-                      fontWeight: "800",
-                      color: "#007bff",
-                      marginBottom: isBelow480 ? "0.6rem" : "1rem",
-                      textAlign: "center",
-                    }}
-                  >
-                    Corporate Collaborations
-                  </h2>
-                </div>
-                <p
-                  style={{
-                    fontSize: "1.1rem",
-                    color: "#333",
-                    maxWidth: "850px",
-                    margin: "0 auto 1.5rem auto",
-                    lineHeight: "1.7",
-                  }}
-                >
-                  <strong>
-                    Tata Elxsi | UiPath | Hitachi | Everi India | RPASoft.ai |
-                    VectorFab | Glowtouch | Prime Technosoft
-                  </strong>
-                </p>
-                <p
-                  style={{
-                    fontSize: "1.05rem",
-                    color: "#003366",
-                    maxWidth: "750px",
-                    margin: "0 auto",
-                  }}
-                >
-                  We design, train, and deploy talent aligned with real-world
-                  industry needs.
-                </p>
+              <div
+                className="clients-slider-wrapper"
+                style={{
+                  marginBottom: "4rem",
+                  width: "100vw",
+                  marginLeft: "calc(-50vw + 50%)",
+                  marginRight: "calc(-50vw + 50%)",
+                  position: "relative",
+                  left: 0,
+                  right: 0,
+                  overflow: "hidden",
+                }}
+              >
+                <ClientsSection />
+                {/* Remove any gradient overlays or fading edges from slider */}
                 <style jsx>{`
-                  @media (max-width: 480px) {
-                    .corporate-collab div {
-                      flex-direction: column !important;
-                    }
-                    .corporate-collab h2 {
-                      font-size: 1.4rem !important;
-                      text-align: center !important;
+                  .clients-slider-wrapper {
+                    width: 100vw !important;
+                    margin-left: calc(-50vw + 50%) !important;
+                    margin-right: calc(-50vw + 50%) !important;
+                    position: relative !important;
+                    left: 0 !important;
+                    right: 0 !important;
+                    overflow: hidden !important;
+                  }
+                  .clients-slider-wrapper::before,
+                  .clients-slider-wrapper::after,
+                  .clients-slider::before,
+                  .clients-slider::after {
+                    display: none !important;
+                    content: none !important;
+                  }
+                  .clients-slider-wrapper,
+                  .clients-slider {
+                    background: none !important;
+                    mask-image: none !important;
+                    -webkit-mask-image: none !important;
+                    box-shadow: none !important;
+                    filter: none !important;
+                  }
+                  .clients-slider img {
+                    filter: none !important;
+                    box-shadow: none !important;
+                  }
+                  @media (max-width: 768px) {
+                    .clients-slider-wrapper {
+                      padding: 0 10px !important;
                     }
                   }
                 `}</style>
+              </div>
+
+              <div
+                className="clients-footer"
+                style={{ textAlign: "center", marginTop: "3rem" }}
+              >
+                <div className="corporate-collab" style={{ marginTop: "2rem" }}>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      flexWrap: "wrap",
+                      textAlign: "center",
+                      gap: isBelow480
+                        ? "0.5rem"
+                        : isBelow768
+                        ? "0.7rem"
+                        : "1rem",
+                    }}
+                  >
+                    <Image
+                      src="/collaboration.png"
+                      alt="Collaboration Icon"
+                      width={isBelow480 ? 36 : isBelow768 ? 46 : 56}
+                      height={isBelow480 ? 36 : isBelow768 ? 46 : 56}
+                      style={{ objectFit: "contain" }}
+                    />
+                    <h2
+                      style={{
+                        fontSize: isBelow480
+                          ? "1.4rem"
+                          : isBelow768
+                          ? "1.7rem"
+                          : "2rem",
+                        fontWeight: "800",
+                        color: "#007bff",
+                        marginBottom: isBelow480 ? "0.6rem" : "1rem",
+                        textAlign: "center",
+                      }}
+                    >
+                      Corporate Collaborations
+                    </h2>
+                  </div>
+                  <p
+                    style={{
+                      fontSize: "1.1rem",
+                      color: "#333",
+                      maxWidth: "850px",
+                      margin: "0 auto 1.5rem auto",
+                      lineHeight: "1.7",
+                    }}
+                  >
+                    <strong>
+                      Tata Elxsi | UiPath | Hitachi | Everi India | RPASoft.ai |
+                      Glowtouch | Prime Technosoft
+                    </strong>
+                  </p>
+                  {/* Corporate Logos Slider */}
+                  <div
+                    className="corporate-logos-slider-wrapper"
+                    style={{
+                      marginBottom: "2rem",
+                      width: "100vw",
+                      marginLeft: "calc(-50vw + 50%)",
+                      marginRight: "calc(-50vw + 50%)",
+                      position: "relative",
+                      left: 0,
+                      right: 0,
+                      overflow: "hidden",
+                      background: "#ffffff",
+                      padding: isBelow480
+                        ? "4px 0"
+                        : isBelow768
+                        ? "8px 0"
+                        : "10px 0",
+                    }}
+                  >
+                    <div
+                      className="corporate-logos-slider"
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: isBelow480 ? "24px" : isBelow768 ? "36px" : "48px",
+                        animation: "scrollLogos 28s linear infinite",
+                        width: "max-content",
+                      }}
+                    >
+                      {/* Repeat the logos twice for seamless looping */}
+                      {[...Array(2)].map((_, repIdx) => (
+                        <React.Fragment key={repIdx}>
+                          <Image
+                            src="/Company1.png"
+                            alt="Tata Elxsi"
+                            width={isBelow480 ? 100 : isBelow768 ? 130 : 160}
+                            height={isBelow480 ? 48 : isBelow768 ? 55 : 65}
+                            style={{
+                              objectFit: "contain",
+                              height: isBelow480 ? 48 : isBelow768 ? 55 : 65,
+                              width: isBelow480 ? 100 : isBelow768 ? 130 : 160,
+                              transition: "width 0.2s, height 0.2s",
+                            }}
+                          />
+                          <Image
+                            src="/UiPath_id_6hYBRTt_0.svg"
+                            alt="UiPath"
+                            width={isBelow480 ? 78 : isBelow768 ? 102 : 130}
+                            height={isBelow480 ? 30 : isBelow768 ? 38 : 45}
+                            style={{
+                              objectFit: "contain",
+                              height: isBelow480 ? 30 : isBelow768 ? 38 : 45,
+                              width: isBelow480 ? 78 : isBelow768 ? 102 : 130,
+                              transition: "width 0.2s, height 0.2s",
+                            }}
+                          />
+                          <Image
+                            src="/Hitachi_idd_z9R5x4_0.svg"
+                            alt="Hitachi"
+                            width={isBelow480 ? 78 : isBelow768 ? 102 : 130}
+                            height={isBelow480 ? 30 : isBelow768 ? 38 : 45}
+                            style={{
+                              objectFit: "contain",
+                              height: isBelow480 ? 30 : isBelow768 ? 38 : 45,
+                              width: isBelow480 ? 78 : isBelow768 ? 102 : 130,
+                              transition: "width 0.2s, height 0.2s",
+                            }}
+                          />
+                          <Image
+                            src="/IE-logo-together.svg"
+                            alt="Everi India"
+                            width={isBelow480 ? 80 : isBelow768 ? 110 : 140}
+                            height={isBelow480 ? 30 : isBelow768 ? 36 : 42}
+                            style={{
+                              objectFit: "contain",
+                              height: isBelow480 ? 30 : isBelow768 ? 36 : 42,
+                              width: isBelow480 ? 80 : isBelow768 ? 110 : 140,
+                              transition: "width 0.2s, height 0.2s",
+                              filter: "grayscale(100%) brightness(0) invert(0)",
+                            }}
+                          />
+                          <Image
+                            src="/rpasoft-ai.png"
+                            alt="RPASoft.ai"
+                            width={isBelow480 ? 75 : isBelow768 ? 102 : 120}
+                            height={isBelow480 ? 32 : isBelow768 ? 38 : 45}
+                            style={{
+                              objectFit: "contain",
+                              height: isBelow480 ? 32 : isBelow768 ? 38 : 45,
+                              width: isBelow480 ? 75 : isBelow768 ? 102 : 120,
+                              transition: "width 0.2s, height 0.2s",
+                            }}
+                          />
+                          <Image
+                            src="/GLOWTOUCH.webp"
+                            alt="Glowtouch"
+                            width={isBelow480 ? 80 : isBelow768 ? 110 : 140}
+                            height={isBelow480 ? 32 : isBelow768 ? 38 : 45}
+                            style={{
+                              objectFit: "contain",
+                              height: isBelow480 ? 32 : isBelow768 ? 38 : 45,
+                              width: isBelow480 ? 80 : isBelow768 ? 110 : 140,
+                              transition: "width 0.2s, height 0.2s",
+                            }}
+                          />
+                          <Image
+                            src="/FINAL.gif"
+                            alt="Prime Technosoft"
+                            width={isBelow480 ? 70 : isBelow768 ? 95 : 120}
+                            height={isBelow480 ? 32 : isBelow768 ? 36 : 40}
+                            style={{
+                              objectFit: "contain",
+                              height: isBelow480 ? 32 : isBelow768 ? 36 : 40,
+                              width: isBelow480 ? 70 : isBelow768 ? 95 : 120,
+                              transition: "width 0.2s, height 0.2s",
+                            }}
+                          />
+                        </React.Fragment>
+                      ))}
+                    </div>
+                    <style jsx>{`
+                      .corporate-logos-slider-wrapper {
+                        width: 100vw !important;
+                        margin-left: calc(-50vw + 50%) !important;
+                        margin-right: calc(-50vw + 50%) !important;
+                        position: relative !important;
+                        left: 0 !important;
+                        right: 0 !important;
+                        overflow: hidden !important;
+                        background: #ffffff !important;
+                      }
+                      .corporate-logos-slider {
+                        background: none !important;
+                        box-shadow: none !important;
+                        filter: none !important;
+                        mask-image: none !important;
+                        -webkit-mask-image: none !important;
+                        border-radius: 0 !important;
+                        min-height: 40px;
+                      }
+                      .corporate-logos-slider img {
+                        filter: none !important;
+                        box-shadow: none !important;
+                        background: none !important;
+                        margin: 0;
+                        border-radius: 0 !important;
+                      }
+                      @keyframes scrollLogos {
+                        0% {
+                          transform: translateX(0);
+                        }
+                        100% {
+                          transform: translateX(-50%);
+                        }
+                      }
+                      @media (max-width: 768px) {
+                        .corporate-logos-slider-wrapper {
+                          padding: 0 8px !important;
+                        }
+                        .corporate-logos-slider {
+                          gap: 36px !important;
+                        }
+                      }
+                      @media (max-width: 480px) {
+                        .corporate-logos-slider {
+                          gap: 24px !important;
+                        }
+                      }
+                    `}</style>
+                  </div>
+                  {/* ======= Vision & Future Section ======= */}
+                  <p
+                    style={{
+                      fontSize: "1.05rem",
+                      color: "#003366",
+                      maxWidth: "750px",
+                      margin: "0 auto",
+                    }}
+                  >
+                    We design, train, and deploy talent aligned with real-world
+                    industry needs.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -2015,7 +2212,17 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <footer className="footer" style={{ background: "#fff", width: "100%" }}>
+      <footer
+        className="footer"
+        style={{
+          background: "#fff",
+          width: "100%",
+          marginTop: "auto",
+          marginBottom: 0,
+          paddingBottom: 0,
+          backgroundColor: "#ffffff",
+        }}
+      >
         <div
           className="footer-container"
           style={{
@@ -2076,36 +2283,21 @@ export default function Page() {
                 justifyContent: isBelow768 ? "center" : "flex-start",
               }}
             >
-              <a
-                href="#"
-                aria-label="Facebook"
-                style={{ fontSize: isBelow480 ? "1.5rem" : "1.5rem" }}
-              >
+              <a href="#" aria-label="Facebook" style={{ fontSize: "1.5rem" }}>
                 <FaFacebookF />
               </a>
-              <a
-                href="#"
-                aria-label="LinkedIn"
-                style={{ fontSize: isBelow480 ? "1.5rem" : "1.5rem" }}
-              >
+              <a href="#" aria-label="LinkedIn" style={{ fontSize: "1.5rem" }}>
                 <FaLinkedinIn />
               </a>
-              <a
-                href="#"
-                aria-label="Instagram"
-                style={{ fontSize: isBelow480 ? "1.5rem" : "1.5rem" }}
-              >
+              <a href="#" aria-label="Instagram" style={{ fontSize: "1.5rem" }}>
                 <FaInstagram />
               </a>
-              <a
-                href="#"
-                aria-label="YouTube"
-                style={{ fontSize: isBelow480 ? "1.5rem" : "1.5rem" }}
-              >
+              <a href="#" aria-label="YouTube" style={{ fontSize: "1.5rem" }}>
                 <FaYoutube />
               </a>
             </div>
           </div>
+
           <div
             className="footer-right"
             style={{
@@ -2148,139 +2340,51 @@ export default function Page() {
                     textAlign: isBelow768 ? "center" : "left",
                   }}
                 >
-                  <li>
-                    <a
-                      href="#hero"
-                      style={{
-                        color: "#004aad",
-                        textDecoration: "none",
-                        fontWeight: 500,
-                        transition: "color 0.3s ease, border-bottom 0.3s ease",
-                        borderBottom: "2px solid transparent",
-                        display: "inline-block",
-                        paddingBottom: "2px",
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.color = "#007cf0";
-                        e.currentTarget.style.borderBottom =
-                          "2px solid #007cf0";
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.color = "#004aad";
-                        e.currentTarget.style.borderBottom =
-                          "2px solid transparent";
-                      }}
-                    >
-                      Home
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#track-assign-achieve"
-                      style={{
-                        color: "#004aad",
-                        textDecoration: "none",
-                        fontWeight: 500,
-                        transition: "color 0.3s ease, border-bottom 0.3s ease",
-                        borderBottom: "2px solid transparent",
-                        display: "inline-block",
-                        paddingBottom: "2px",
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.color = "#007cf0";
-                        e.currentTarget.style.borderBottom =
-                          "2px solid #007cf0";
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.color = "#004aad";
-                        e.currentTarget.style.borderBottom =
-                          "2px solid transparent";
-                      }}
-                    >
-                      For Universities / Institutions
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#about"
-                      style={{
-                        color: "#004aad",
-                        textDecoration: "none",
-                        fontWeight: 500,
-                        transition: "color 0.3s ease, border-bottom 0.3s ease",
-                        borderBottom: "2px solid transparent",
-                        display: "inline-block",
-                        paddingBottom: "2px",
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.color = "#007cf0";
-                        e.currentTarget.style.borderBottom =
-                          "2px solid #007cf0";
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.color = "#004aad";
-                        e.currentTarget.style.borderBottom =
-                          "2px solid transparent";
-                      }}
-                    >
-                      About Us
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#consulting"
-                      style={{
-                        color: "#004aad",
-                        textDecoration: "none",
-                        fontWeight: 500,
-                        transition: "color 0.3s ease, border-bottom 0.3s ease",
-                        borderBottom: "2px solid transparent",
-                        display: "inline-block",
-                        paddingBottom: "2px",
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.color = "#007cf0";
-                        e.currentTarget.style.borderBottom =
-                          "2px solid #007cf0";
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.color = "#004aad";
-                        e.currentTarget.style.borderBottom =
-                          "2px solid transparent";
-                      }}
-                    >
-                      Consulting
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="#contact"
-                      style={{
-                        color: "#004aad",
-                        textDecoration: "none",
-                        fontWeight: 500,
-                        transition: "color 0.3s ease, border-bottom 0.3s ease",
-                        borderBottom: "2px solid transparent",
-                        display: "inline-block",
-                        paddingBottom: "2px",
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.color = "#007cf0";
-                        e.currentTarget.style.borderBottom =
-                          "2px solid #007cf0";
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.color = "#004aad";
-                        e.currentTarget.style.borderBottom =
-                          "2px solid transparent";
-                      }}
-                    >
-                      Contact Us
-                    </a>
-                  </li>
+                  {[
+                    { text: "Home", href: "#hero" },
+                    {
+                      text: "For Universities / Institutions",
+                      href: "#track-assign-achieve",
+                    },
+                    { text: "About Us", href: "#about" },
+                    { text: "Consulting", href: "#consulting" },
+                    { text: "Contact Us", href: "#contact" },
+                  ].map((link, index) => (
+                    <li key={index}>
+                      <a
+                        href={link.href}
+                        style={{
+                          color: "#004aad",
+                          textDecoration: "none",
+                          fontWeight: 500,
+                          transition:
+                            "color 0.3s ease, border-bottom 0.3s ease",
+                          borderBottom: "2px solid transparent",
+                          display: "inline-block",
+                          paddingBottom: "2px",
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.color = "#007cf0";
+                          e.currentTarget.style.borderBottom =
+                            "2px solid #007cf0";
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.color = "#004aad";
+                          e.currentTarget.style.borderBottom =
+                            "2px solid transparent";
+                        }}
+                      >
+                        {link.text}
+                      </a>
+                    </li>
+                  ))}
                   <li>
                     <a
                       href="#"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setShowPolicy(true);
+                      }}
                       style={{
                         color: "#004aad",
                         textDecoration: "none",
@@ -2289,10 +2393,6 @@ export default function Page() {
                         borderBottom: "2px solid transparent",
                         display: "inline-block",
                         paddingBottom: "2px",
-                      }}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        setShowPolicy(true);
                       }}
                       onMouseEnter={(e) => {
                         e.currentTarget.style.color = "#007cf0";
@@ -2310,6 +2410,7 @@ export default function Page() {
                   </li>
                 </ul>
               </div>
+
               <div className="contact-us-block">
                 <h3
                   style={{
@@ -2349,170 +2450,24 @@ export default function Page() {
             </div>
           </div>
         </div>
-        {showPolicy && (
-          <div
-            className="privacy-modal-overlay"
-            style={{
-              position: "fixed",
-              top: 0,
-              left: 0,
-              width: "100%",
-              height: "100%",
-              background: "rgba(0, 0, 0, 0.4)",
-              backdropFilter: "blur(6px)",
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-              zIndex: 1000,
-              overflowY: "auto",
-              padding: "40px 0",
-              opacity: showPolicy ? 1 : 0,
-              transition: "opacity 0.4s ease-in-out",
-              animation: "fadeIn 0.4s ease forwards",
-            }}
-            onClick={(e) => {
-              if (e.target.classList.contains("privacy-modal-overlay")) {
-                setShowPolicy(false);
-              }
-            }}
-          >
-            <div
-              className="privacy-modal"
-              style={{
-                background: "#ffffff",
-                borderRadius: "12px",
-                padding: "40px",
-                maxWidth: "900px",
-                width: "90%",
-                color: "#333",
-                position: "relative",
-                transform: "translateY(20px)",
-                animation: "slideUp 0.4s ease forwards",
-                boxShadow: "0 8px 30px rgba(0, 0, 0, 0.2)",
-              }}
-            >
-              <button
-                onClick={() => setShowPolicy(false)}
-                style={{
-                  position: "absolute",
-                  top: "15px",
-                  right: "20px",
-                  fontSize: "1.8rem",
-                  background: "none",
-                  border: "none",
-                  cursor: "pointer",
-                  color: "#555",
-                  transition: "color 0.3s",
-                }}
-                onMouseEnter={(e) => (e.currentTarget.style.color = "#000")}
-                onMouseLeave={(e) => (e.currentTarget.style.color = "#555")}
-              >
-                ✕
-              </button>
 
-              <h2
-                style={{
-                  textAlign: "center",
-                  color: "#003366",
-                  marginBottom: "20px",
-                }}
-              >
-                Privacy Policy
-              </h2>
-
-              <p>
-                10 SECONDS is committed to protecting the privacy and security
-                of our users' personal information. We are an edtech company
-                that provides educational services to students, teachers, and
-                educational institutions. Our privacy policy outlines how we
-                collect, use, and disclose your personal information in
-                connection with our services.
-              </p>
-
-              <h3>Information Collection:</h3>
-              <p>
-                We collect personal information such as name, email address, and
-                payment information when you sign up for our services. We may
-                also collect information about your device and browser when you
-                access our website or use our mobile application.
-              </p>
-
-              <h3>Information Use:</h3>
-              <p>
-                We use your personal information to provide and improve our
-                services, communicate with you about your account, send you
-                promotional materials, and respond to your inquiries. We may
-                also use your information for research and analytics purposes to
-                understand how our services are used.
-              </p>
-
-              <h3>Information Sharing:</h3>
-              <p>
-                We do not share your personal information with third parties,
-                except for service providers who help us provide our services.
-                We may also share your information if required by law or to
-                protect our legal rights.
-              </p>
-
-              <h3>Data Security:</h3>
-              <p>
-                We take reasonable measures to protect your personal information
-                from unauthorized access, disclosure, or misuse. We use secure
-                servers and encryption technology to protect your information.
-              </p>
-
-              <h3>Children's Privacy:</h3>
-              <p>
-                We do not knowingly collect personal information from children
-                under the age of 13. If you are a parent or legal guardian and
-                believe your child has provided us with personal information,
-                please contact us immediately.
-              </p>
-
-              <h3>Changes to Our Policy:</h3>
-              <p>
-                We may update our privacy policy from time to time. If we make
-                any material changes, we will notify you by email or by posting
-                a notice on our website.
-              </p>
-
-              <h3>Contact Us:</h3>
-              <p>
-                If you have any questions or concerns about our privacy policy,
-                please contact us at{" "}
-                <a href="mailto:care@10seconds.co.in">care@10seconds.co.in</a>.
-              </p>
-            </div>
-
-            <style jsx>{`
-              @keyframes fadeIn {
-                from {
-                  opacity: 0;
-                }
-                to {
-                  opacity: 1;
-                }
-              }
-
-              @keyframes slideUp {
-                from {
-                  transform: translateY(40px);
-                  opacity: 0;
-                }
-                to {
-                  transform: translateY(0);
-                  opacity: 1;
-                }
-              }
-            `}</style>
-          </div>
-        )}
         <div
           className="footer-bottom"
           style={{
             textAlign: "center",
             padding: isBelow480 ? "7px 0" : "12px 0",
             fontSize: isBelow480 ? "0.97rem" : "1.02rem",
+            backgroundColor: "#004aad",
+            color: "#ffffff",
+            width: "100vw",
+            marginLeft: "calc(-50vw + 50%)",
+            marginRight: "calc(-50vw + 50%)",
+            borderTop: "1px solid rgba(255, 255, 255, 0.2)",
+            position: "relative",
+            left: 0,
+            right: 0,
+            bottom: 0,
+            marginBottom: 0,
           }}
         >
           © Copyright 10SECONDS. All Rights Reserved.
@@ -2627,6 +2582,18 @@ function lmsCardPStyle(isBelow480) {
     }
     .social-icons a {
       font-size: 1.5rem !important;
+    }
+  }
+`}</style>;
+
+<style jsx global>{`
+  @media (max-width: 480px) {
+    .corporate-collab div {
+      flex-direction: column !important;
+    }
+    .corporate-collab h2 {
+      font-size: 1.4rem !important;
+      text-align: center !important;
     }
   }
 `}</style>;
