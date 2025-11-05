@@ -936,9 +936,14 @@ export default function Page() {
         <section
           id="about"
           style={{
-            ...maxWidthWrapperStyle,
+            backgroundColor: "#e6f4ff",
+            minWidth: "100vw",
+            minHeight: "100vh",
             paddingLeft: isBelow768 ? "18px" : "40px",
             paddingRight: isBelow768 ? "18px" : "40px",
+            paddingTop: isBelow768 ? undefined : undefined,
+            paddingBottom: isBelow768 ? undefined : undefined,
+            textAlign: "center",
           }}
         >
           <AboutUs />
@@ -1215,6 +1220,29 @@ export default function Page() {
                   LMS PLATFORM
                 </h2>
               </div>
+              {/* Centered subtitle below title */}
+              <p
+                style={{
+                  color: "#222",
+                  fontWeight: 500,
+                  fontSize: isBelow480
+                    ? "0.99rem"
+                    : isBelow768
+                    ? "1.02rem"
+                    : "1.11rem",
+                  margin: 0,
+                  marginTop: isBelow480 ? "0.8rem" : "1.2rem",
+                  marginBottom: isBelow480 ? "1.1rem" : "1.5rem",
+                  lineHeight: "1.6",
+                  maxWidth: 600,
+                  textAlign: "center",
+                  marginLeft: "auto",
+                  marginRight: "auto",
+                }}
+              >
+                Our in-house Learning Management System connects learners,
+                trainers, and recruiters on one platform.
+              </p>
             </header>
             <div
               className="lms-flex"
@@ -1273,38 +1301,51 @@ export default function Page() {
                   justifyContent: "space-between",
                 }}
               >
-                <a
-                  href="https://learning.10seconds.co.in"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <div
                   style={{
-                    color: "#007cf0",
-                    fontWeight: 600,
-                    fontSize: isBelow480 ? "0.95rem" : "1.05rem",
-                    textDecoration: "underline",
-                    display: "block",
-                    marginBottom: "0.6rem",
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "flex-end",
+                    alignItems: "center",
+                    marginBottom: isBelow480 ? "0.9rem" : "1.2rem",
                   }}
                 >
-                  learning.10seconds.co.in
-                </a>
-                <p
-                  style={{
-                    color: "#222",
-                    fontWeight: 500,
-                    fontSize: isBelow480
-                      ? "0.99rem"
-                      : isBelow768
-                      ? "1.02rem"
-                      : "1.11rem",
-                    margin: 0,
-                    marginBottom: "1.1rem",
-                    lineHeight: "1.6",
-                  }}
-                >
-                  Our in-house Learning Management System connects learners,
-                  trainers, and recruiters on one platform.
-                </p>
+                  <a
+                    href="https://learning.10seconds.co.in"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      background: "linear-gradient(90deg, #007cf0, #00dfd8)",
+                      color: "#fff",
+                      padding: "16px 0",
+                      borderRadius: "8px",
+                      fontWeight: 600,
+                      fontSize: isBelow480 ? "0.97rem" : "1.07rem",
+                      textDecoration: "none",
+                      display: "block",
+                      width: isBelow480 ? "100%" : isBelow768 ? "100%" : "100%",
+                      alignSelf: "flex-end",
+                      textAlign: "center",
+                      boxShadow: "0 2px 8px rgba(0,124,240,0.13)",
+                      transition: "background 0.2s, box-shadow 0.2s",
+                      marginBottom: "1.5rem",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.background =
+                        "linear-gradient(90deg, #00dfd8, #007cf0)";
+                      e.currentTarget.style.boxShadow =
+                        "0 4px 16px rgba(0,124,240,0.23)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.background =
+                        "linear-gradient(90deg, #007cf0, #00dfd8)";
+                      e.currentTarget.style.boxShadow =
+                        "0 2px 8px rgba(0,124,240,0.13)";
+                    }}
+                  >
+                    learning.10seconds.co.in
+                  </a>
+                </div>
                 {/* Cards Grid */}
                 <div
                   className="lms-cards-grid"
@@ -1394,28 +1435,22 @@ export default function Page() {
                     </div>
                     <p style={lmsCardPStyle(isBelow480)}>Video Tutorials</p>
                   </div>
+                  {/* New Card: Personalized, Data-Driven & Measurable */}
+                  <div
+                    className="lms-card"
+                    style={{
+                      ...lmsCardStyle(isBelow480, isBelow768),
+                      // For grid layout, put beside Video Tutorials
+                      gridColumn:
+                        isBelow600() || isBelow992 ? "auto" : "2 / span 1",
+                    }}
+                  >
+                    <h3 style={lmsCardH3Style(isBelow480, "#0077cc")}>
+                      Personalized Learning That Adapts, Measures, and Excels
+                    </h3>
+                  </div>
                 </div>
-                {/* Footer statement */}
-                <div
-                  className="lms-footer"
-                  style={{
-                    textAlign: "center",
-                    color: "#0077cc",
-                    fontWeight: "600",
-                    fontSize: isBelow480
-                      ? "1rem"
-                      : isBelow768
-                      ? "1.1rem"
-                      : "1.13rem",
-                    textShadow: "0 0 8px rgba(0, 119, 204, 0.18)",
-                    marginTop: isBelow480 ? "0.7rem" : "1rem",
-                    lineHeight: "1.7",
-                    fontFamily: "'Poppins', 'Inter', sans-serif'",
-                  }}
-                >
-                  Personalized, data-driven, and measurable — our LMS turns
-                  every learner into a performer.
-                </div>
+                {/* No footer statement here (removed) */}
               </div>
             </div>
             {/* Responsive helpers for grid columns */}
