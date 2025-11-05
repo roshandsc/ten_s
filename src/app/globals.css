@@ -666,7 +666,6 @@ main {
   align-items: center;
   justify-content: space-between;
   background: linear-gradient(90deg, #eaf3ff 0%, #ffffff 100%);
-  border-top: 3px solid #007cf0; /* Blue line under header */
   padding: 6rem 8%;
   height: 90vh;
   overflow: hidden;
