@@ -742,6 +742,8 @@ export default function Page() {
             className="hero-content"
             style={{
               ...maxWidthWrapperStyle,
+              paddingLeft: isBelow768 ? "18px" : "40px",
+              paddingRight: isBelow768 ? "18px" : "40px",
             }}
           >
             <div
@@ -875,7 +877,14 @@ export default function Page() {
         </section>
 
         <section id="quick-summary" className="quick-summary">
-          <div className="quick-summary-wrapper">
+          <div
+            className="quick-summary-wrapper"
+            style={{
+              ...maxWidthWrapperStyle,
+              paddingLeft: isBelow768 ? "18px" : "40px",
+              paddingRight: isBelow768 ? "18px" : "40px",
+            }}
+          >
             {/* Left side image */}
             <div className="quick-summary-image">
               <Image
@@ -924,7 +933,16 @@ export default function Page() {
           </div>
         </section>
 
-        <AboutUs />
+        <section
+          id="about"
+          style={{
+            ...maxWidthWrapperStyle,
+            paddingLeft: isBelow768 ? "18px" : "40px",
+            paddingRight: isBelow768 ? "18px" : "40px",
+          }}
+        >
+          <AboutUs />
+        </section>
         {/* ======= Services Section ======= */}
         <section
           id="services"
@@ -936,7 +954,10 @@ export default function Page() {
             data-aos="fade-up"
             style={{
               ...maxWidthWrapperStyle,
-              padding: isBelow480 ? "10px 0" : isBelow768 ? "20px 0" : "35px 0",
+              paddingLeft: isBelow768 ? "18px" : "40px",
+              paddingRight: isBelow768 ? "18px" : "40px",
+              paddingTop: isBelow480 ? "10px" : isBelow768 ? "20px" : "35px",
+              paddingBottom: isBelow480 ? "10px" : isBelow768 ? "20px" : "35px",
             }}
           >
             <header
@@ -1145,7 +1166,10 @@ export default function Page() {
             className="lms-container"
             style={{
               ...maxWidthWrapperStyle,
-              padding: isBelow480 ? "18px 0" : isBelow768 ? "30px 0" : "50px 0",
+              paddingLeft: isBelow768 ? "18px" : "40px",
+              paddingRight: isBelow768 ? "18px" : "40px",
+              paddingTop: isBelow480 ? "18px" : isBelow768 ? "30px" : "50px",
+              paddingBottom: isBelow480 ? "18px" : isBelow768 ? "30px" : "50px",
             }}
           >
             {/* LMS Title Centered Above Both Sides */}
@@ -1439,7 +1463,10 @@ export default function Page() {
             data-aos="fade-up"
             style={{
               ...maxWidthWrapperStyle,
-              padding: isBelow480 ? "18px 0" : isBelow768 ? "30px 0" : "50px 0",
+              paddingLeft: isBelow768 ? "18px" : "40px",
+              paddingRight: isBelow768 ? "18px" : "40px",
+              paddingTop: isBelow480 ? "18px" : isBelow768 ? "30px" : "50px",
+              paddingBottom: isBelow480 ? "18px" : isBelow768 ? "30px" : "50px",
             }}
           >
             <header
@@ -1567,7 +1594,16 @@ export default function Page() {
 
         {/* ======= Our Journey Section ======= */}
         <section className="journey-section" id="journey">
-          <div className="journey-container" data-aos="fade-up">
+          <div
+            className="journey-container"
+            data-aos="fade-up"
+            style={{
+              ...maxWidthWrapperStyle,
+              paddingLeft: isBelow768 ? "18px" : "40px",
+              paddingRight: isBelow768 ? "18px" : "40px",
+              // preserve vertical padding if desired, or set as needed
+            }}
+          >
             <header className="journey-header">
               <h2>🌱 OUR JOURNEY</h2>
               <h3>From a Classroom Dream to a Campus Movement</h3>
@@ -1640,7 +1676,11 @@ export default function Page() {
           <div
             className="container"
             data-aos="fade-up"
-            style={{ ...maxWidthWrapperStyle }}
+            style={{
+              ...maxWidthWrapperStyle,
+              paddingLeft: isBelow768 ? "18px" : "40px",
+              paddingRight: isBelow768 ? "18px" : "40px",
+            }}
           >
             <header
               className="section-header"
@@ -1826,7 +1866,10 @@ export default function Page() {
           data-aos="fade-up"
           style={{
             ...maxWidthWrapperStyle,
-            padding: isBelow480 ? "18px 0" : isBelow768 ? "30px 0" : "50px 0",
+            paddingLeft: isBelow768 ? "18px" : "40px",
+            paddingRight: isBelow768 ? "18px" : "40px",
+            paddingTop: isBelow480 ? "18px" : isBelow768 ? "30px" : "50px",
+            paddingBottom: isBelow480 ? "18px" : isBelow768 ? "30px" : "50px",
           }}
         >
           <header
@@ -1911,13 +1954,12 @@ export default function Page() {
             display: "flex",
             flexDirection: isBelow768 ? "column" : "row",
             gap: isBelow480 ? "1.2rem" : isBelow768 ? "1.4rem" : "2.5rem",
-            alignItems: "flex-start",
+            alignItems: isBelow768 ? "center" : "flex-start",
             justifyContent: "space-between",
-            padding: isBelow480
-              ? "20px 0 12px"
-              : isBelow768
-              ? "32px 0 18px"
-              : "40px 0 18px",
+            paddingLeft: isBelow768 ? "18px" : "40px",
+            paddingRight: isBelow768 ? "18px" : "40px",
+            paddingTop: isBelow480 ? "16px" : isBelow768 ? "28px" : "40px",
+            paddingBottom: isBelow480 ? "10px" : isBelow768 ? "16px" : "18px",
             boxSizing: "border-box",
           }}
         >
@@ -1926,7 +1968,11 @@ export default function Page() {
             style={{
               flex: 1,
               minWidth: 0,
-              marginBottom: isBelow768 ? "1.2rem" : 0,
+              marginBottom: isBelow768 ? "1.5rem" : 0,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: isBelow768 ? "center" : "flex-start",
+              textAlign: isBelow768 ? "center" : "left",
             }}
           >
             <Image
@@ -1942,8 +1988,9 @@ export default function Page() {
             />
             <p
               style={{
-                fontSize: isBelow480 ? "0.97rem" : "1.05rem",
+                fontSize: isBelow480 ? "0.92rem" : "1.05rem",
                 marginTop: "0.7rem",
+                textAlign: isBelow768 ? "center" : "left",
               }}
             >
               10 SECONDS is an organization that unifies training, assessments
@@ -1955,35 +2002,36 @@ export default function Page() {
               className="social-icons"
               style={{
                 display: "flex",
-                gap: isBelow480 ? "0.55rem" : "1rem",
+                gap: isBelow480 ? "0.7rem" : "1rem",
                 marginTop: "1.1rem",
+                justifyContent: isBelow768 ? "center" : "flex-start",
               }}
             >
               <a
                 href="#"
                 aria-label="Facebook"
-                style={{ fontSize: isBelow480 ? "1.2rem" : "1.5rem" }}
+                style={{ fontSize: isBelow480 ? "1.5rem" : "1.5rem" }}
               >
                 <FaFacebookF />
               </a>
               <a
                 href="#"
                 aria-label="LinkedIn"
-                style={{ fontSize: isBelow480 ? "1.2rem" : "1.5rem" }}
+                style={{ fontSize: isBelow480 ? "1.5rem" : "1.5rem" }}
               >
                 <FaLinkedinIn />
               </a>
               <a
                 href="#"
                 aria-label="Instagram"
-                style={{ fontSize: isBelow480 ? "1.2rem" : "1.5rem" }}
+                style={{ fontSize: isBelow480 ? "1.5rem" : "1.5rem" }}
               >
                 <FaInstagram />
               </a>
               <a
                 href="#"
                 aria-label="YouTube"
-                style={{ fontSize: isBelow480 ? "1.2rem" : "1.5rem" }}
+                style={{ fontSize: isBelow480 ? "1.5rem" : "1.5rem" }}
               >
                 <FaYoutube />
               </a>
@@ -1995,14 +2043,20 @@ export default function Page() {
               flex: 1,
               minWidth: 0,
               width: isBelow992 ? "100%" : "auto",
+              marginBottom: isBelow768 ? "1.5rem" : 0,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: isBelow768 ? "center" : "flex-start",
             }}
           >
             <div
               className="footer-columns"
               style={{
                 display: "flex",
-                flexDirection: isBelow480 ? "column" : "row",
-                gap: isBelow480 ? "0.8rem" : "2.2rem",
+                flexDirection: isBelow768 ? "column" : "row",
+                gap: isBelow768 ? "1.2rem" : "2.2rem",
+                alignItems: isBelow768 ? "center" : "flex-start",
+                width: "100%",
               }}
             >
               <div className="useful-links-block">
@@ -2010,6 +2064,7 @@ export default function Page() {
                   style={{
                     fontWeight: 700,
                     fontSize: isBelow480 ? "1rem" : "1.1rem",
+                    textAlign: isBelow768 ? "center" : "left",
                   }}
                 >
                   USEFUL LINKS
@@ -2020,32 +2075,165 @@ export default function Page() {
                     listStyle: "none",
                     padding: 0,
                     margin: 0,
-                    fontSize: isBelow480 ? "0.98rem" : "1.05rem",
+                    fontSize: isBelow480 ? "0.95rem" : "1.05rem",
+                    textAlign: isBelow768 ? "center" : "left",
                   }}
                 >
                   <li>
-                    <a href="#hero">Home</a>
+                    <a
+                      href="#hero"
+                      style={{
+                        color: "#004aad",
+                        textDecoration: "none",
+                        fontWeight: 500,
+                        transition: "color 0.3s ease, border-bottom 0.3s ease",
+                        borderBottom: "2px solid transparent",
+                        display: "inline-block",
+                        paddingBottom: "2px",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.color = "#007cf0";
+                        e.currentTarget.style.borderBottom =
+                          "2px solid #007cf0";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.color = "#004aad";
+                        e.currentTarget.style.borderBottom =
+                          "2px solid transparent";
+                      }}
+                    >
+                      Home
+                    </a>
                   </li>
                   <li>
-                    <a href="#track-assign-achieve">
+                    <a
+                      href="#track-assign-achieve"
+                      style={{
+                        color: "#004aad",
+                        textDecoration: "none",
+                        fontWeight: 500,
+                        transition: "color 0.3s ease, border-bottom 0.3s ease",
+                        borderBottom: "2px solid transparent",
+                        display: "inline-block",
+                        paddingBottom: "2px",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.color = "#007cf0";
+                        e.currentTarget.style.borderBottom =
+                          "2px solid #007cf0";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.color = "#004aad";
+                        e.currentTarget.style.borderBottom =
+                          "2px solid transparent";
+                      }}
+                    >
                       For Universities / Institutions
                     </a>
                   </li>
                   <li>
-                    <a href="#about">About Us</a>
+                    <a
+                      href="#about"
+                      style={{
+                        color: "#004aad",
+                        textDecoration: "none",
+                        fontWeight: 500,
+                        transition: "color 0.3s ease, border-bottom 0.3s ease",
+                        borderBottom: "2px solid transparent",
+                        display: "inline-block",
+                        paddingBottom: "2px",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.color = "#007cf0";
+                        e.currentTarget.style.borderBottom =
+                          "2px solid #007cf0";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.color = "#004aad";
+                        e.currentTarget.style.borderBottom =
+                          "2px solid transparent";
+                      }}
+                    >
+                      About Us
+                    </a>
                   </li>
                   <li>
-                    <a href="#consulting">Consulting</a>
+                    <a
+                      href="#consulting"
+                      style={{
+                        color: "#004aad",
+                        textDecoration: "none",
+                        fontWeight: 500,
+                        transition: "color 0.3s ease, border-bottom 0.3s ease",
+                        borderBottom: "2px solid transparent",
+                        display: "inline-block",
+                        paddingBottom: "2px",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.color = "#007cf0";
+                        e.currentTarget.style.borderBottom =
+                          "2px solid #007cf0";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.color = "#004aad";
+                        e.currentTarget.style.borderBottom =
+                          "2px solid transparent";
+                      }}
+                    >
+                      Consulting
+                    </a>
                   </li>
                   <li>
-                    <a href="#contact">Contact Us</a>
+                    <a
+                      href="#contact"
+                      style={{
+                        color: "#004aad",
+                        textDecoration: "none",
+                        fontWeight: 500,
+                        transition: "color 0.3s ease, border-bottom 0.3s ease",
+                        borderBottom: "2px solid transparent",
+                        display: "inline-block",
+                        paddingBottom: "2px",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.color = "#007cf0";
+                        e.currentTarget.style.borderBottom =
+                          "2px solid #007cf0";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.color = "#004aad";
+                        e.currentTarget.style.borderBottom =
+                          "2px solid transparent";
+                      }}
+                    >
+                      Contact Us
+                    </a>
                   </li>
                   <li>
                     <a
                       href="#"
+                      style={{
+                        color: "#004aad",
+                        textDecoration: "none",
+                        fontWeight: 500,
+                        transition: "color 0.3s ease, border-bottom 0.3s ease",
+                        borderBottom: "2px solid transparent",
+                        display: "inline-block",
+                        paddingBottom: "2px",
+                      }}
                       onClick={(e) => {
                         e.preventDefault();
                         setShowPolicy(true);
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.color = "#007cf0";
+                        e.currentTarget.style.borderBottom =
+                          "2px solid #007cf0";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.color = "#004aad";
+                        e.currentTarget.style.borderBottom =
+                          "2px solid transparent";
                       }}
                     >
                       Privacy Policy
@@ -2058,14 +2246,16 @@ export default function Page() {
                   style={{
                     fontWeight: 700,
                     fontSize: isBelow480 ? "1rem" : "1.1rem",
+                    textAlign: isBelow768 ? "center" : "left",
                   }}
                 >
                   CONTACT US
                 </h3>
                 <address
                   style={{
-                    fontSize: isBelow480 ? "0.98rem" : "1.05rem",
+                    fontSize: isBelow480 ? "0.95rem" : "1.05rem",
                     fontStyle: "normal",
+                    textAlign: isBelow768 ? "center" : "left",
                   }}
                 >
                   10 SECONDS
@@ -2309,3 +2499,65 @@ function lmsCardPStyle(isBelow480) {
     lineHeight: "1.45",
   };
 }
+
+{
+  /* Responsive Footer Styles */
+}
+<style jsx>{`
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center !important;
+      padding-left: 18px !important;
+      padding-right: 18px !important;
+    }
+    .footer-left,
+    .footer-right {
+      width: 100% !important;
+      align-items: center !important;
+      text-align: center !important;
+      margin-bottom: 1.5rem !important;
+    }
+    .footer-columns {
+      flex-direction: column !important;
+      gap: 1.2rem !important;
+      align-items: center !important;
+      width: 100% !important;
+    }
+    .footer-left p,
+    .footer-right p,
+    .footer-right address,
+    .footer-right h3 {
+      text-align: center !important;
+    }
+    .social-icons {
+      justify-content: center !important;
+    }
+    .social-icons a {
+      font-size: 1.5rem !important;
+    }
+  }
+  @media (max-width: 480px) {
+    .footer-container {
+      gap: 1rem !important;
+      padding-top: 10px !important;
+      padding-bottom: 8px !important;
+    }
+    .footer-left p,
+    .footer-right p,
+    .footer-right address {
+      font-size: 0.92rem !important;
+    }
+    .footer-right h3,
+    .footer-left h3 {
+      font-size: 1rem !important;
+    }
+    .footer-columns {
+      gap: 0.7rem !important;
+    }
+    .social-icons a {
+      font-size: 1.5rem !important;
+    }
+  }
+`}</style>;
