@@ -1552,16 +1552,39 @@ export default function Page() {
               </h3>
 
               <div className="corporate-collab" style={{ marginTop: "2rem" }}>
-                <h2
+                <div
                   style={{
-                    fontSize: "2rem",
-                    fontWeight: "800",
-                    color: "#007bff",
-                    marginBottom: "1rem",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexWrap: "wrap",
+                    textAlign: "center",
+                    gap: isBelow480 ? "0.5rem" : isBelow768 ? "0.7rem" : "1rem",
                   }}
                 >
-                  Corporate Collaborations
-                </h2>
+                  <Image
+                    src="/collaboration.png"
+                    alt="Collaboration Icon"
+                    width={isBelow480 ? 36 : isBelow768 ? 46 : 56}
+                    height={isBelow480 ? 36 : isBelow768 ? 46 : 56}
+                    style={{ objectFit: "contain" }}
+                  />
+                  <h2
+                    style={{
+                      fontSize: isBelow480
+                        ? "1.4rem"
+                        : isBelow768
+                        ? "1.7rem"
+                        : "2rem",
+                      fontWeight: "800",
+                      color: "#007bff",
+                      marginBottom: isBelow480 ? "0.6rem" : "1rem",
+                      textAlign: "center",
+                    }}
+                  >
+                    Corporate Collaborations
+                  </h2>
+                </div>
                 <p
                   style={{
                     fontSize: "1.1rem",
@@ -1587,6 +1610,17 @@ export default function Page() {
                   We design, train, and deploy talent aligned with real-world
                   industry needs.
                 </p>
+                <style jsx>{`
+                  @media (max-width: 480px) {
+                    .corporate-collab div {
+                      flex-direction: column !important;
+                    }
+                    .corporate-collab h2 {
+                      font-size: 1.4rem !important;
+                      text-align: center !important;
+                    }
+                  }
+                `}</style>
               </div>
             </div>
           </div>
