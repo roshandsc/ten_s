@@ -870,7 +870,8 @@ export default function Page() {
                 institutions, and recruiters through training, technology, and
                 talent solutions.
               </h3>
-              <button
+              <a
+                href="#quick-summary"
                 className="hero-btn"
                 style={{
                   padding: isBelow480
@@ -889,6 +890,8 @@ export default function Page() {
                   border: "none",
                   cursor: "pointer",
                   transition: "background-color 0.2s",
+                  textAlign: "center",
+                  textDecoration: "none",
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.backgroundColor = "#0f4c94";
@@ -898,7 +901,7 @@ export default function Page() {
                 }}
               >
                 Get Started Now
-              </button>
+              </a>
             </div>
             <div
               className="hero-image"
