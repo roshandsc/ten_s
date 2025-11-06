@@ -306,7 +306,61 @@ export default function Page() {
       const handleResize = () => setWindowWidth(window.innerWidth);
       window.addEventListener("resize", handleResize);
       handleResize();
-      return () => window.removeEventListener("resize", handleResize);
+      // Smooth scroll for anchor links (all # links)
+      // Custom slow smooth scroll
+      function smoothScrollTo(targetY, duration = 900) {
+        const startY = window.scrollY || window.pageYOffset;
+        const diff = targetY - startY;
+        let start;
+        function easeInOutQuad(t) {
+          return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+        }
+        function step(timestamp) {
+          if (!start) start = timestamp;
+          const elapsed = timestamp - start;
+          let progress = Math.min(elapsed / duration, 1);
+          progress = easeInOutQuad(progress);
+          window.scrollTo(0, startY + diff * progress);
+          if (elapsed < duration) {
+            window.requestAnimationFrame(step);
+          }
+        }
+        window.requestAnimationFrame(step);
+      }
+
+      const handleAnchorClick = (e) => {
+        // Only intercept anchor links with href="#section" (not external or just "#")
+        const anchor = e.target.closest('a[href^="#"]');
+        if (
+          anchor &&
+          anchor.getAttribute("href") &&
+          anchor.getAttribute("href").startsWith("#") &&
+          anchor.getAttribute("href").length > 1
+        ) {
+          const sectionId = anchor.getAttribute("href").slice(1);
+          const section = document.getElementById(sectionId);
+          if (section) {
+            e.preventDefault();
+            // Compute offset for fixed header (if any)
+            let offset = 0;
+            const header = document.querySelector(".header");
+            if (header) {
+              offset = header.offsetHeight || 0;
+            }
+            const sectionTop =
+              section.getBoundingClientRect().top + window.scrollY;
+            const targetY = Math.max(sectionTop - offset, 0);
+            smoothScrollTo(targetY, 900);
+            // Optionally update the URL hash
+            window.history.replaceState(null, "", `#${sectionId}`);
+          }
+        }
+      };
+      document.addEventListener("click", handleAnchorClick);
+      return () => {
+        window.removeEventListener("resize", handleResize);
+        document.removeEventListener("click", handleAnchorClick);
+      };
     }
   }, []);
 
@@ -2344,10 +2398,10 @@ export default function Page() {
                     { text: "Home", href: "#hero" },
                     {
                       text: "For Universities / Institutions",
-                      href: "#track-assign-achieve",
+                      href: "#clients",
                     },
                     { text: "About Us", href: "#about" },
-                    { text: "Consulting", href: "#consulting" },
+                    { text: "Services", href: "#services" },
                     { text: "Contact Us", href: "#contact" },
                   ].map((link, index) => (
                     <li key={index}>
@@ -2597,3 +2651,31 @@ function lmsCardPStyle(isBelow480) {
     }
   }
 `}</style>;
+
+{
+  /* ======= Footer Navigation (if present) ======= */
+}
+{
+  /* If you have a footer navigation, ensure the links below use the correct hrefs with section IDs */
+}
+{
+  /* Example footer navigation: */
+}
+{
+  /*
+      <footer>
+        <nav>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#lms-platform">LMS Platform</a></li>
+            <li><a href="#clients">Our Clients</a></li>
+            <li><a href="#journey">Our Journey</a></li>
+            <li><a href="#vision-future">Vision and Future</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </nav>
+      </footer>
+      */
+}
