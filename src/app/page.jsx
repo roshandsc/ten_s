@@ -1,4 +1,114 @@
 "use client";
+
+// Tablet responsiveness global styles
+/* Tablet responsiveness global styles */
+<style jsx global>{`
+  @media (max-width: 992px) and (min-width: 768px) {
+    /* Header */
+    .header-container {
+      padding: 10px 30px !important;
+    }
+    .nav-links {
+      gap: 1.2rem !important;
+    }
+
+    /* Hero Section */
+    .hero-content {
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center !important;
+    }
+    .hero-text {
+      max-width: 90% !important;
+      margin-bottom: 2rem !important;
+    }
+    .hero-text h1 {
+      font-size: 2.4rem !important;
+    }
+    .hero-text h3 {
+      font-size: 1.2rem !important;
+    }
+
+    /* About Us */
+    .about-section {
+      padding: 60px 25px !important;
+    }
+    .about-columns {
+      flex-direction: row !important;
+      flex-wrap: wrap !important;
+      gap: 1.5rem !important;
+    }
+    .about-col {
+      max-width: 46% !important;
+    }
+
+    /* Services */
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 1.5rem !important;
+    }
+
+    /* LMS Section */
+    .lms-flex {
+      flex-direction: row !important;
+      align-items: center !important;
+      gap: 2.2rem !important;
+    }
+    .lms-image {
+      max-width: 46% !important;
+    }
+    .lms-content {
+      max-width: 54% !important;
+    }
+    .lms-card h3 {
+      font-size: 1.05rem !important;
+    }
+
+    /* Clients */
+    .clients-header h2 {
+      font-size: 2.2rem !important;
+    }
+    .clients-header p {
+      font-size: 1rem !important;
+    }
+    .clients-slider-wrapper {
+      padding: 0 20px !important;
+    }
+
+    /* Journey */
+    .journey-header h2 {
+      font-size: 2.2rem !important;
+    }
+    .journey-header h3 {
+      font-size: 1.3rem !important;
+    }
+    .timeline-item {
+      flex-direction: row !important;
+    }
+
+    /* Contact */
+    .contact .row {
+      flex-direction: row !important;
+      gap: 1.8rem !important;
+    }
+    .info-grid {
+      grid-template-columns: 1fr 1fr !important;
+    }
+    .info-box {
+      width: 100% !important;
+    }
+    iframe {
+      height: 750px !important;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center !important;
+      padding: 20px 25px !important;
+    }
+  }
+`}</style>;
+
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";

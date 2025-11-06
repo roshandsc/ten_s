@@ -2672,3 +2672,110 @@ footer.footer .footer-container {
     font-size: 1.05rem;
   }
 }
+
+/* ===========================================================
+   TABLET RESPONSIVENESS: 768px–992px ENHANCEMENTS
+=========================================================== */
+@media (min-width: 768px) and (max-width: 992px) {
+  /* Header */
+  .header-container {
+    padding: 0 1.5rem !important;
+  }
+  .nav-links {
+    gap: 1.2rem !important;
+  }
+
+  /* Hero Section */
+  .hero {
+    flex-direction: column !important;
+    text-align: center !important;
+    padding: 4rem 2rem !important;
+  }
+  .hero-text {
+    align-items: center !important;
+    text-align: center !important;
+    max-width: 90% !important;
+    margin: 0 auto 2rem !important;
+  }
+  .hero-text h1 {
+    font-size: 2.5rem !important;
+  }
+  .hero-text p {
+    font-size: 1.1rem !important;
+  }
+  .hero-image img {
+    max-width: 420px !important;
+  }
+
+  /* About Section */
+  .about-section {
+    padding: 5rem 2rem !important;
+  }
+  .about-columns {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 1.8rem !important;
+  }
+  .about-col {
+    flex: 1 1 45% !important;
+    max-width: 45% !important;
+  }
+
+  /* Services Section */
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2rem !important;
+  }
+
+  /* LMS Section */
+  .lms-stats {
+    flex-direction: row !important;
+    gap: 2rem !important;
+    justify-content: center !important;
+  }
+  .lms-card {
+    max-width: 45% !important;
+    margin: 0 auto !important;
+  }
+  .lms-header h2 {
+    font-size: 2.3rem !important;
+  }
+
+  /* Clients Section */
+  .clients-header h2 {
+    font-size: 2.2rem !important;
+  }
+  .clients-header p {
+    font-size: 1rem !important;
+    max-width: 700px !important;
+  }
+  .clients-lane img {
+    width: 100px !important;
+  }
+
+  /* Journey Section */
+  .timeline-item {
+    width: 80% !important;
+    align-self: center !important;
+  }
+  .journey-header h2 {
+    font-size: 2.3rem !important;
+  }
+
+  /* Footer */
+  footer.footer {
+    padding: 3rem 2rem !important;
+  }
+  .footer-container {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    gap: 2rem !important;
+  }
+  .footer-left,
+  .footer-right {
+    flex: 1 1 45% !important;
+    min-width: 300px !important;
+  }
+}
