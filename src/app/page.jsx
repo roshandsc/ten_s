@@ -42,6 +42,19 @@
       align-items: center !important;
     }
   }
+  /* Force hamburger (mobile) layout for tablet landscape (900px–1024px) */
+  @media only screen and (orientation: landscape) and (min-width: 768px) and (max-width: 1024px) {
+    .header-right {
+      display: none !important;
+    }
+    .mobile-nav-toggle {
+      display: block !important;
+    }
+    .header-left {
+      display: flex !important;
+      justify-content: flex-start !important;
+    }
+  }
 `}</style>;
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
@@ -581,8 +594,9 @@ export default function Page() {
   }, []);
 
   // Responsive classes/logic
-  const isBelow992 = windowWidth < 992;
+  // isBelow992 is not used for header logic anymore, only isBelow1025
   const isBelow1025 = windowWidth <= 1024;
+  const isBelow992 = windowWidth < 992; // keep for other usages if needed
   const isBelow768 = windowWidth < 768;
   const isBelow480 = windowWidth < 480;
 
