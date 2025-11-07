@@ -6,6 +6,7 @@
   @media only screen and (max-width: 1024px) {
     .header {
       height: 70px !important;
+      overflow-x: hidden !important;
     }
     .header-container {
       padding: 10px 24px !important;
@@ -13,6 +14,7 @@
       align-items: center !important;
       justify-content: space-between !important;
       flex-wrap: nowrap !important;
+      overflow-x: hidden !important;
     }
     .header-left img,
     .header-logo img {
@@ -31,6 +33,9 @@
     .header-right {
       display: none !important;
     }
+    .mobile-nav-toggle {
+      display: block !important;
+    }
     .header-left {
       display: flex !important;
       align-items: center !important;
@@ -42,8 +47,8 @@
       align-items: center !important;
     }
   }
-  /* Force hamburger (mobile) layout for tablet landscape (900px–1024px) */
-  @media only screen and (orientation: landscape) and (min-width: 768px) and (max-width: 1024px) {
+  /* Force hamburger (mobile) layout for all tablet landscape (<=1024px) */
+  @media only screen and (orientation: landscape) and (max-width: 1024px) {
     .header-right {
       display: none !important;
     }
@@ -596,7 +601,7 @@ export default function Page() {
   // Responsive classes/logic
   // isBelow992 is not used for header logic anymore, only isBelow1025
   const isBelow1025 = windowWidth <= 1024;
-  const isBelow992 = windowWidth < 992; // keep for other usages if needed
+  // Remove isBelow992 for header logic to avoid accidental use
   const isBelow768 = windowWidth < 768;
   const isBelow480 = windowWidth < 480;
 
@@ -785,6 +790,7 @@ export default function Page() {
                 opacity: navOpen ? 1 : 0,
                 transform: navOpen ? "translateY(0)" : "translateY(-10px)",
                 zIndex: 999,
+                pointerEvents: navOpen ? "auto" : "none",
               }}
             >
               {/* Blue X close icon */}
@@ -870,10 +876,10 @@ export default function Page() {
               className="hero-text"
               style={{
                 fontSize: isBelow480 ? undefined : undefined,
-                textAlign: isBelow992 ? "center" : "left",
-                marginBottom: isBelow992 ? "2.5rem" : 0,
-                marginRight: isBelow992 ? 0 : "2.5rem",
-                maxWidth: isBelow992 ? "100%" : 540,
+                textAlign: isBelow768 ? "center" : "left",
+                marginBottom: isBelow768 ? "2.5rem" : 0,
+                marginRight: isBelow768 ? 0 : "2.5rem",
+                maxWidth: isBelow768 ? "100%" : 540,
                 padding: isBelow480 ? "0 0.2rem" : isBelow768 ? "0 0.7rem" : 0,
               }}
             >
