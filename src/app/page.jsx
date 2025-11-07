@@ -2,21 +2,21 @@
 
 // Improved Responsive Header Styles for Tablets and Global
 <style jsx global>{`
-  /* ===== LANDSCAPE TABLET (900px–1024px, landscape) - MATCH PORTRAIT HEADER ===== */
-  @media only screen and (min-width: 900px) and (max-width: 1024px) and (orientation: landscape) {
+  /* ===== TABLET (768px–1024px, both orientations) - Unified Portrait and Landscape Header ===== */
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .header {
       height: 70px !important;
     }
     .header-container {
-      padding: 8px 22px !important;
-      gap: 16px !important;
+      padding: 10px 24px !important;
+      gap: 12px !important;
       align-items: center !important;
       justify-content: space-between !important;
       flex-wrap: nowrap !important;
     }
     .header-left img,
     .header-logo img {
-      width: clamp(70px, 6vw, 110px) !important;
+      width: clamp(80px, 8vw, 120px) !important;
       height: auto !important;
       object-fit: contain !important;
     }
