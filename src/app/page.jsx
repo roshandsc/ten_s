@@ -227,6 +227,50 @@
       padding: 20px 25px !important;
     }
   }
+
+  /* ===== Custom Tablet Styles (1024px to 768px) ===== */
+  @media (max-width: 1024px) and (min-width: 768px) {
+    .header-container {
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 20px;
+    }
+
+    .header-logo img {
+      width: 110px; /* Adjusted smaller for tablet */
+      height: auto;
+    }
+
+    .nav-menu li a {
+      font-size: 14px; /* Slightly smaller for tablet */
+      margin: 0 10px;
+    }
+
+    .nav-menu {
+      gap: 12px;
+    }
+
+    .contact-btn {
+      padding: 8px 14px;
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 820px) {
+    .header-logo img {
+      width: 95px; /* Further reduce for smaller tablets */
+    }
+
+    .nav-menu li a {
+      font-size: 13px;
+    }
+
+    .contact-btn {
+      font-size: 13px;
+      padding: 6px 12px;
+    }
+  }
 `}</style>;
 
 import React, { useEffect, useState } from "react";
