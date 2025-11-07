@@ -1,25 +1,5 @@
 "use client";
 
-// Tablet responsiveness global styles
-/* Tablet responsiveness global styles */
-<style jsx global>{`
-  /* ...other global styles... */
-`}</style>
-
-/* Force hamburger for all tablets (portrait + landscape) */
-<style jsx global>{`
-  @media (min-width: 768px) and (max-width: 1024px) {
-    .header-right {
-      display: none !important;
-    }
-    .mobile-nav-toggle {
-      display: block !important;
-    }
-    .mobile-dropdown {
-      display: block !important;
-    }
-  }
-`}</style>
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
@@ -2009,7 +1989,7 @@ export default function Page() {
             </div>
           </div>
         </section>
-        {/* ======= Contact Section ======= */}
+      {/* ======= Contact Section ======= */}
         <section
           id="contact"
           className="contact"
@@ -2180,6 +2160,29 @@ export default function Page() {
                 }}
               >
                 <iframe
+      {/* Global tablet and hamburger styles */}
+      <style jsx global>{`
+        /* ...other global styles... */
+
+        /* Force hamburger for all tablets (portrait + landscape) */
+        @media (min-width: 768px) and (max-width: 1024px) {
+          .header-right {
+            display: none !important;
+          }
+          .mobile-nav-toggle {
+            display: block !important;
+          }
+          .mobile-dropdown {
+            display: block !important;
+          }
+          .nav-links {
+            display: none !important;
+          }
+          .header-container {
+            justify-content: space-between !important;
+          }
+        }
+      `}</style>
                   src="https://forms.zohopublic.in/10seconds/form/RequestforQuote/formperma/Yagg4-6x6eqKH8GfsJbH3E48VG-DicyHAr-YNc1qZtE?zf_rszfm=1"
                   style={{
                     border: "none",
