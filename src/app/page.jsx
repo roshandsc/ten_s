@@ -3,127 +3,159 @@
 // Tablet responsiveness global styles
 /* Tablet responsiveness global styles */
 <style jsx global>{`
-  @media (max-width: 992px) and (min-width: 768px) {
-    /* Header layout fixes for tablet (landscape/portrait) */
+  @media (min-width: 768px) and (max-width: 992px) {
+    /* ===== HEADER ===== */
     .header-container {
-      flex-wrap: wrap !important;
-      justify-content: space-around !important;
+      display: flex !important;
       align-items: center !important;
+      justify-content: space-around !important;
+      flex-wrap: wrap !important;
       padding: 10px 25px !important;
-      row-gap: 8px !important;
+      row-gap: 10px !important;
     }
 
     .header-left img {
       max-width: 120px !important;
       height: auto !important;
       margin-right: 10px !important;
+      object-fit: contain !important;
     }
 
     .nav-links {
+      display: flex !important;
       flex-wrap: wrap !important;
       justify-content: center !important;
+      align-items: center !important;
       margin-top: 6px !important;
-      gap: 1.2rem !important;
+      gap: 1.3rem !important;
     }
 
     .header {
       align-items: center !important;
+      height: auto !important;
     }
 
-    /* Hero Section */
+    /* ===== HERO SECTION ===== */
     .hero-content {
       flex-direction: row !important;
       align-items: center !important;
       justify-content: space-between !important;
       gap: 1.8rem !important;
+      flex-wrap: wrap !important;
     }
+
     .hero-text {
       max-width: 55% !important;
       text-align: left !important;
     }
+
     .hero-image {
       max-width: 45% !important;
+      text-align: center !important;
     }
 
-    /* About Us */
+    /* ===== ABOUT US ===== */
     .about-section {
       padding: 60px 25px !important;
     }
+
     .about-columns {
+      display: flex !important;
       flex-direction: row !important;
       flex-wrap: wrap !important;
+      justify-content: center !important;
       gap: 1.5rem !important;
     }
+
     .about-col {
       max-width: 46% !important;
+      flex: 1 1 46% !important;
     }
 
-    /* Services */
+    /* ===== SERVICES ===== */
     .services-grid {
+      display: grid !important;
       grid-template-columns: repeat(2, 1fr) !important;
       gap: 1.5rem !important;
     }
 
-    /* LMS Section */
+    /* ===== LMS SECTION ===== */
     .lms-flex {
+      display: flex !important;
       flex-direction: row !important;
       align-items: center !important;
+      justify-content: space-between !important;
       gap: 2.2rem !important;
+      flex-wrap: wrap !important;
     }
+
     .lms-image {
       max-width: 46% !important;
     }
+
     .lms-content {
       max-width: 54% !important;
     }
+
     .lms-card h3 {
       font-size: 1.05rem !important;
     }
 
-    /* Clients */
+    /* ===== CLIENTS SECTION ===== */
     .clients-header h2 {
       font-size: 2.2rem !important;
     }
+
     .clients-header p {
       font-size: 1rem !important;
     }
+
     .clients-slider-wrapper {
       padding: 0 20px !important;
     }
 
-    /* Journey */
+    /* ===== JOURNEY ===== */
     .journey-header h2 {
       font-size: 2.2rem !important;
     }
+
     .journey-header h3 {
       font-size: 1.3rem !important;
     }
+
     .timeline-item {
       flex-direction: row !important;
     }
 
-    /* Contact */
+    /* ===== CONTACT ===== */
     .contact .row {
       flex-direction: row !important;
       gap: 1.8rem !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
     }
+
     .info-grid {
       grid-template-columns: 1fr 1fr !important;
+      gap: 1.2rem !important;
     }
+
     .info-box {
       width: 100% !important;
     }
+
     iframe {
       height: 750px !important;
+      width: 100% !important;
     }
 
-    /* Footer */
+    /* ===== FOOTER ===== */
     .footer {
       text-align: center !important;
       padding: 20px 25px !important;
     }
 
-    /* Prevent header overlap on tablet */
+    /* ===== GENERAL FIX ===== */
     body {
       margin-top: 70px !important;
     }
