@@ -3,15 +3,15 @@
 // Tablet responsiveness global styles
 /* Tablet responsiveness global styles */
 <style jsx global>{`
-  /* ===== TABLET LANDSCAPE RESPONSIVE HEADER FIX ===== */
-  @media only screen and (min-width: 768px) and (max-width: 992px) {
+  /* ===== UNIVERSAL TABLET RESPONSIVE HEADER FIX (600px–1024px) ===== */
+  @media only screen and (min-width: 600px) and (max-width: 1024px) {
     .header {
       display: flex !important;
       align-items: center !important;
       justify-content: center !important;
       width: 100% !important;
       background: #fff !important;
-      padding: 6px 0 !important;
+      padding: 8px 0 !important;
       position: fixed !important;
       top: 0 !important;
       left: 0 !important;
@@ -25,27 +25,29 @@
       align-items: center !important;
       justify-content: space-between !important;
       width: 100% !important;
-      max-width: 1100px !important;
-      padding: 6px 20px !important;
-      gap: 8px !important;
+      max-width: 1150px !important;
+      padding: 8px 20px !important;
+      margin: 0 auto !important;
+      gap: 10px !important;
+      flex-wrap: nowrap !important;
     }
 
-    /* Logo section */
+    /* ===== LOGO ===== */
     .header-left {
+      flex: 0 0 auto !important;
       display: flex !important;
       align-items: center !important;
       justify-content: flex-start !important;
-      flex: 0 0 auto !important;
     }
 
     .header-left img,
     .header-logo img {
-      width: 110px !important; /* Smaller logo */
+      width: clamp(80px, 10vw, 110px) !important;
       height: auto !important;
       object-fit: contain !important;
     }
 
-    /* Right side navigation */
+    /* ===== NAVIGATION ===== */
     .header-right {
       flex: 1 !important;
       display: flex !important;
@@ -58,46 +60,64 @@
       align-items: center !important;
       justify-content: flex-end !important;
       flex-wrap: nowrap !important;
-      gap: 1rem !important;
+      gap: clamp(0.4rem, 1vw, 1rem) !important;
     }
 
     .nav-links {
       display: flex !important;
       align-items: center !important;
       justify-content: flex-end !important;
-      gap: 0.8rem !important;
+      gap: clamp(0.4rem, 1vw, 0.8rem) !important;
       margin: 0 !important;
       padding: 0 !important;
       list-style: none !important;
+      flex-wrap: nowrap !important;
     }
 
     .nav-links a {
-      font-size: 0.8rem !important;
+      font-size: clamp(0.65rem, 1.2vw, 0.85rem) !important;
       font-weight: 600 !important;
       color: #004aad !important;
       text-decoration: none !important;
       white-space: nowrap !important;
-      transition: color 0.2s ease !important;
+      transition: color 0.3s ease !important;
     }
 
     .nav-links a:hover {
       color: #007cf0 !important;
     }
 
-    /* Contact button */
+    /* ===== CONTACT BUTTON ===== */
     .contact-button {
       background: #004aad !important;
       color: #fff !important;
-      font-size: 0.8rem !important;
-      padding: 6px 14px !important;
+      font-size: clamp(0.65rem, 1.2vw, 0.85rem) !important;
+      padding: clamp(4px, 0.6vw, 8px) clamp(10px, 1.2vw, 14px) !important;
       border-radius: 8px !important;
       text-decoration: none !important;
       transition: background 0.3s ease !important;
-      margin-left: 10px !important;
+      margin-left: clamp(6px, 0.8vw, 10px) !important;
     }
 
     .contact-button:hover {
       background: #007cf0 !important;
+    }
+
+    /* ===== Adjust layout for smaller tablets ===== */
+    @media (max-width: 820px) {
+      .header-container {
+        padding: 6px 14px !important;
+        gap: 6px !important;
+      }
+
+      .nav-links a {
+        font-size: 0.7rem !important;
+      }
+
+      .contact-button {
+        font-size: 0.7rem !important;
+        padding: 5px 10px !important;
+      }
     }
 
     body {
