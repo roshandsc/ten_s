@@ -4,18 +4,21 @@
 /* Tablet responsiveness global styles */
 <style jsx global>{`
   @media (max-width: 992px) and (min-width: 768px) {
-    /* Header layout fixes for tablet */
+    /* Header layout fixes for tablet (landscape/portrait) */
     .header-container {
-      padding: 12px 20px !important;
+      padding: 10px 25px !important;
+      align-items: center !important;
       justify-content: space-between !important;
+      gap: 1rem !important;
     }
     .header-left img {
-      max-width: 150px !important;
+      max-width: 130px !important;
       height: auto !important;
     }
     .nav-links {
       gap: 1.4rem !important;
-      justify-content: center !important;
+      flex-wrap: wrap !important;
+      justify-content: space-evenly !important;
     }
     .header {
       align-items: center !important;
