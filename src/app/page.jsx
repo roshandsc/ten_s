@@ -2669,13 +2669,30 @@ function lmsCardPStyle(isBelow480) {
 `}</style>;
 
 <style jsx global>{`
-  @media (max-width: 480px) {
-    .corporate-collab div {
-      flex-direction: column !important;
+  /* 🔒 Force hamburger menu on all tablets (portrait + landscape) */
+  @media (min-width: 768px) and (max-width: 1080px) {
+    .header-right {
+      display: none !important;
     }
-    .corporate-collab h2 {
-      font-size: 1.4rem !important;
-      text-align: center !important;
+
+    .mobile-nav-toggle {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
+    .mobile-dropdown {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+    }
+
+    .nav-links {
+      display: none !important;
+    }
+
+    .header-container {
+      justify-content: space-between !important;
     }
   }
 `}</style>;
