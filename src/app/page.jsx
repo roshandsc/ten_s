@@ -3,75 +3,61 @@
 // Tablet responsiveness global styles
 /* Tablet responsiveness global styles */
 <style jsx global>{`
-  @media (min-width: 768px) and (max-width: 992px) {
-    /* ===== HEADER (FINAL RESPONSIVE FIX) ===== */
+  /* ===== TABLET VIEW FINAL RESPONSIVE FIX ===== */
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
     .header {
       display: flex !important;
-      flex-direction: row !important;
+      flex-direction: column !important;
       align-items: center !important;
       justify-content: center !important;
       width: 100% !important;
-      height: auto !important;
-      padding-top: 4px !important;
-      padding-bottom: 4px !important;
+      background: #fff !important;
+      padding: 8px 0 !important;
       position: fixed !important;
       top: 0 !important;
       left: 0 !important;
-      background: #fff !important;
       z-index: 1000 !important;
       box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08) !important;
     }
 
     .header-container {
       display: flex !important;
-      flex-direction: row !important;
-      align-items: center !important;
       flex-wrap: wrap !important;
-      justify-content: space-around !important;
+      align-items: center !important;
+      justify-content: center !important;
       width: 100% !important;
-      padding: 6px 14px !important;
-      gap: 4px !important;
+      padding: 8px 16px !important;
+      gap: 10px !important;
     }
 
     .header-left {
+      flex: 0 0 100% !important;
       display: flex !important;
       align-items: center !important;
       justify-content: center !important;
-      width: 100% !important;
-      margin-bottom: 6px !important;
     }
 
-    .header-left img {
-      max-width: 60px !important;
+    .header-left img,
+    .header-logo img {
+      max-width: 120px !important;
       height: auto !important;
       object-fit: contain !important;
     }
-    .header-logo {
-      position: static !important;
-      transform: none !important;
-    }
-    .header-logo img {
-      width: auto !important;
-      height: 26px !important;
-      object-fit: contain !important;
-    }
 
     .header-right {
-      width: 100% !important;
+      flex: 0 0 100% !important;
       display: flex !important;
-      align-items: center !important;
       justify-content: center !important;
-    }
-    .header-right {
-      flex: 1 !important;
+      align-items: center !important;
     }
 
     .nav {
       width: 100% !important;
       display: flex !important;
-      align-items: center !important;
       justify-content: center !important;
+      align-items: center !important;
       flex-wrap: wrap !important;
+      gap: 8px !important;
     }
 
     .nav-links {
@@ -79,27 +65,26 @@
       flex-wrap: wrap !important;
       justify-content: center !important;
       align-items: center !important;
-      gap: 0.5rem !important;
-      width: 100% !important;
-      margin: 0 !important;
-      padding: 0 !important;
+      gap: 0.7rem !important;
       list-style: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
     }
 
     .nav-links a {
-      font-size: 0.6rem !important;
-      font-weight: 500 !important;
-      white-space: nowrap !important;
+      font-size: 0.8rem !important;
+      font-weight: 600 !important;
       color: #004aad !important;
+      white-space: nowrap !important;
       margin: 0 6px !important;
     }
 
     .contact-button {
-      padding: 6px 12px !important;
-      font-size: 0.6rem !important;
-      border-radius: 8px !important;
       background: #004aad !important;
       color: #fff !important;
+      font-size: 0.8rem !important;
+      padding: 6px 14px !important;
+      border-radius: 8px !important;
       text-decoration: none !important;
       transition: background 0.3s ease !important;
     }
@@ -109,171 +94,7 @@
     }
 
     body {
-      padding-top: 110px !important;
-    }
-
-    /* ===== HERO SECTION ===== */
-    .hero-content {
-      flex-direction: row !important;
-      align-items: center !important;
-      justify-content: space-between !important;
-      gap: 1.8rem !important;
-      flex-wrap: wrap !important;
-    }
-
-    .hero-text {
-      max-width: 55% !important;
-      text-align: left !important;
-    }
-
-    .hero-image {
-      max-width: 45% !important;
-      text-align: center !important;
-    }
-
-    /* ===== ABOUT US ===== */
-    .about-section {
-      padding: 60px 25px !important;
-    }
-
-    .about-columns {
-      display: flex !important;
-      flex-direction: row !important;
-      flex-wrap: wrap !important;
-      justify-content: center !important;
-      gap: 1.5rem !important;
-    }
-
-    .about-col {
-      max-width: 46% !important;
-      flex: 1 1 46% !important;
-    }
-
-    /* ===== SERVICES ===== */
-    .services-grid {
-      display: grid !important;
-      grid-template-columns: repeat(2, 1fr) !important;
-      gap: 1.5rem !important;
-    }
-
-    /* ===== LMS SECTION ===== */
-    .lms-flex {
-      display: flex !important;
-      flex-direction: row !important;
-      align-items: center !important;
-      justify-content: space-between !important;
-      gap: 2.2rem !important;
-      flex-wrap: wrap !important;
-    }
-
-    .lms-image {
-      max-width: 46% !important;
-    }
-
-    .lms-content {
-      max-width: 54% !important;
-    }
-
-    .lms-card h3 {
-      font-size: 1.05rem !important;
-    }
-
-    /* ===== CLIENTS SECTION ===== */
-    .clients-header h2 {
-      font-size: 2.2rem !important;
-    }
-
-    .clients-header p {
-      font-size: 1rem !important;
-    }
-
-    .clients-slider-wrapper {
-      padding: 0 20px !important;
-    }
-
-    /* ===== JOURNEY ===== */
-    .journey-header h2 {
-      font-size: 2.2rem !important;
-    }
-
-    .journey-header h3 {
-      font-size: 1.3rem !important;
-    }
-
-    .timeline-item {
-      flex-direction: row !important;
-    }
-
-    /* ===== CONTACT ===== */
-    .contact .row {
-      flex-direction: row !important;
-      gap: 1.8rem !important;
-      flex-wrap: wrap !important;
-      justify-content: center !important;
-    }
-
-    .info-grid {
-      grid-template-columns: 1fr 1fr !important;
-      gap: 1.2rem !important;
-    }
-
-    .info-box {
-      width: 100% !important;
-    }
-
-    iframe {
-      height: 750px !important;
-      width: 100% !important;
-    }
-
-    /* ===== FOOTER ===== */
-    .footer {
-      text-align: center !important;
-      padding: 20px 25px !important;
-    }
-  }
-
-  /* ===== Custom Tablet Styles (1024px to 768px) ===== */
-  @media (max-width: 1024px) and (min-width: 768px) {
-    .header-container {
-      flex-wrap: nowrap;
-      justify-content: space-between;
-      align-items: center;
-      padding: 8px 20px;
-    }
-
-    .header-logo img {
-      width: 110px; /* Adjusted smaller for tablet */
-      height: auto;
-    }
-
-    .nav-menu li a {
-      font-size: 14px; /* Slightly smaller for tablet */
-      margin: 0 10px;
-    }
-
-    .nav-menu {
-      gap: 12px;
-    }
-
-    .contact-btn {
-      padding: 8px 14px;
-      font-size: 14px;
-    }
-  }
-
-  @media (max-width: 820px) {
-    .header-logo img {
-      width: 95px; /* Further reduce for smaller tablets */
-    }
-
-    .nav-menu li a {
-      font-size: 13px;
-    }
-
-    .contact-btn {
-      font-size: 13px;
-      padding: 6px 12px;
+      padding-top: 120px !important;
     }
   }
 `}</style>;
