@@ -1,10 +1,94 @@
 "use client";
 
 // Tablet responsiveness global styles
-/* Tablet responsiveness global styles */
 <style jsx global>{`
-  /* ===== UNIVERSAL TABLET RESPONSIVE HEADER FIX (600px–1024px) ===== */
-  @media only screen and (min-width: 600px) and (max-width: 1024px) {
+  /* ===== UNIVERSAL RESPONSIVE HEADER FIX (ALL DEVICES) ===== */
+
+  /* ====== SMALL DEVICES (Phones + Mini Tablets: <600px) ====== */
+  @media only screen and (max-width: 600px) {
+    .header {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 100% !important;
+      background: #fff !important;
+      padding: 6px 0 !important;
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      z-index: 1000 !important;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08) !important;
+    }
+
+    .header-container {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 100% !important;
+      padding: 8px 10px !important;
+      gap: 6px !important;
+    }
+
+    .header-left {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 100% !important;
+    }
+
+    .header-left img,
+    .header-logo img {
+      width: 80px !important;
+      height: auto !important;
+      object-fit: contain !important;
+    }
+
+    .header-right {
+      width: 100% !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-wrap: wrap !important;
+    }
+
+    .nav-links {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+      align-items: center !important;
+      gap: 0.5rem !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      list-style: none !important;
+    }
+
+    .nav-links a {
+      font-size: 0.75rem !important;
+      font-weight: 600 !important;
+      color: #004aad !important;
+      text-decoration: none !important;
+      white-space: nowrap !important;
+    }
+
+    .contact-button {
+      background: #004aad !important;
+      color: #fff !important;
+      font-size: 0.7rem !important;
+      padding: 5px 10px !important;
+      border-radius: 6px !important;
+      margin-top: 4px !important;
+      text-decoration: none !important;
+    }
+
+    body {
+      padding-top: 90px !important;
+    }
+  }
+
+  /* ====== TABLETS & HYBRIDS (600px–1100px) ====== */
+  @media only screen and (min-width: 600px) and (max-width: 1100px) {
     .header {
       display: flex !important;
       align-items: center !important;
@@ -25,10 +109,10 @@
       align-items: center !important;
       justify-content: space-between !important;
       width: 100% !important;
-      max-width: 1150px !important;
-      padding: 8px 20px !important;
+      max-width: 1200px !important;
+      padding: 8px 24px !important;
       margin: 0 auto !important;
-      gap: 10px !important;
+      gap: 12px !important;
       flex-wrap: nowrap !important;
     }
 
@@ -42,7 +126,7 @@
 
     .header-left img,
     .header-logo img {
-      width: clamp(80px, 10vw, 110px) !important;
+      width: clamp(75px, 9vw, 120px) !important;
       height: auto !important;
       object-fit: contain !important;
     }
@@ -60,14 +144,14 @@
       align-items: center !important;
       justify-content: flex-end !important;
       flex-wrap: nowrap !important;
-      gap: clamp(0.4rem, 1vw, 1rem) !important;
+      gap: clamp(0.5rem, 1vw, 1.1rem) !important;
     }
 
     .nav-links {
       display: flex !important;
       align-items: center !important;
       justify-content: flex-end !important;
-      gap: clamp(0.4rem, 1vw, 0.8rem) !important;
+      gap: clamp(0.5rem, 1vw, 1rem) !important;
       margin: 0 !important;
       padding: 0 !important;
       list-style: none !important;
@@ -75,7 +159,7 @@
     }
 
     .nav-links a {
-      font-size: clamp(0.65rem, 1.2vw, 0.85rem) !important;
+      font-size: clamp(0.7rem, 1.1vw, 0.9rem) !important;
       font-weight: 600 !important;
       color: #004aad !important;
       text-decoration: none !important;
@@ -91,23 +175,28 @@
     .contact-button {
       background: #004aad !important;
       color: #fff !important;
-      font-size: clamp(0.65rem, 1.2vw, 0.85rem) !important;
-      padding: clamp(4px, 0.6vw, 8px) clamp(10px, 1.2vw, 14px) !important;
+      font-size: clamp(0.7rem, 1.1vw, 0.9rem) !important;
+      padding: clamp(4px, 0.6vw, 8px) clamp(10px, 1.2vw, 16px) !important;
       border-radius: 8px !important;
       text-decoration: none !important;
       transition: background 0.3s ease !important;
-      margin-left: clamp(6px, 0.8vw, 10px) !important;
+      margin-left: clamp(6px, 0.8vw, 12px) !important;
     }
 
     .contact-button:hover {
       background: #007cf0 !important;
     }
 
-    /* ===== Adjust layout for smaller tablets ===== */
+    /* ===== SMALL TABLET OPTIMIZATION (600px–820px) ===== */
     @media (max-width: 820px) {
       .header-container {
-        padding: 6px 14px !important;
+        padding: 6px 16px !important;
         gap: 6px !important;
+      }
+
+      .header-left img,
+      .header-logo img {
+        width: clamp(70px, 10vw, 95px) !important;
       }
 
       .nav-links a {
@@ -125,7 +214,6 @@
     }
   }
 `}</style>;
-
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
