@@ -6,20 +6,26 @@
   @media (max-width: 992px) and (min-width: 768px) {
     /* Header layout fixes for tablet (landscape/portrait) */
     .header-container {
-      padding: 10px 25px !important;
-      align-items: center !important;
-      justify-content: space-between !important;
-      gap: 1rem !important;
-    }
-    .header-left img {
-      max-width: 130px !important;
-      height: auto !important;
-    }
-    .nav-links {
-      gap: 1.4rem !important;
       flex-wrap: wrap !important;
-      justify-content: space-evenly !important;
+      justify-content: space-around !important;
+      align-items: center !important;
+      padding: 10px 25px !important;
+      row-gap: 8px !important;
     }
+
+    .header-left img {
+      max-width: 120px !important;
+      height: auto !important;
+      margin-right: 10px !important;
+    }
+
+    .nav-links {
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+      margin-top: 6px !important;
+      gap: 1.2rem !important;
+    }
+
     .header {
       align-items: center !important;
     }
