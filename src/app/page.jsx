@@ -7,18 +7,38 @@
     /* ===== HEADER ===== */
     .header-container {
       display: flex !important;
+      flex-direction: row !important;
       align-items: center !important;
       justify-content: space-between !important;
       flex-wrap: wrap !important;
-      padding: 8px 16px !important;
-      column-gap: 12px !important;
-      row-gap: 8px !important;
+      width: 100% !important;
+      padding: 8px 20px !important;
+      gap: 10px !important;
     }
 
     .header-left img {
-      max-width: 105px !important;
+      max-width: 100px !important;
       height: auto !important;
       object-fit: contain !important;
+    }
+
+    .header-left {
+      flex: 0 0 auto !important;
+    }
+
+    .header-right {
+      flex: 1 1 auto !important;
+      display: flex !important;
+      justify-content: flex-end !important;
+      align-items: center !important;
+      width: auto !important;
+    }
+
+    .nav {
+      flex: 1 1 100% !important;
+      display: flex !important;
+      justify-content: center !important;
+      margin-top: 5px !important;
     }
 
     .header-left {
@@ -41,8 +61,20 @@
       flex-wrap: wrap !important;
       justify-content: center !important;
       align-items: center !important;
-      margin-top: 6px !important;
       gap: 1rem !important;
+      width: 100% !important;
+    }
+
+    .nav-links a {
+      font-size: 0.95rem !important;
+      white-space: nowrap !important;
+    }
+
+    .contact-button {
+      padding: 8px 14px !important;
+      font-size: 0.95rem !important;
+      border-radius: 8px !important;
+      min-width: 100px !important;
     }
 
     .nav-links a {
@@ -59,6 +91,7 @@
     .header {
       align-items: center !important;
       height: auto !important;
+      flex-wrap: wrap !important;
     }
 
     /* ===== HERO SECTION ===== */
