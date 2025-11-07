@@ -2,37 +2,43 @@
 
 // Improved Responsive Header Styles for Tablets and Global
 <style jsx global>{`
-  /* ===== LANDSCAPE TABLET (900px–1024px, landscape) - REFINED FOR COMPACT HEADER ===== */
+  /* ===== LANDSCAPE TABLET (900px–1024px, landscape) - MATCH PORTRAIT HEADER ===== */
   @media only screen and (min-width: 900px) and (max-width: 1024px) and (orientation: landscape) {
     .header {
-      height: 60px !important;
+      height: 70px !important;
     }
     .header-container {
-      padding: 6px 20px !important;
-      gap: 14px !important;
+      padding: 8px 22px !important;
+      gap: 16px !important;
       align-items: center !important;
       justify-content: space-between !important;
       flex-wrap: nowrap !important;
     }
     .header-left img,
     .header-logo img {
-      width: clamp(55px, 5vw, 70px) !important;
+      width: clamp(70px, 6vw, 110px) !important;
       height: auto !important;
       object-fit: contain !important;
     }
     .nav-links {
-      gap: 0.6rem !important;
+      gap: 1rem !important;
     }
     .nav-links a {
-      font-size: 0.78rem !important;
-      letter-spacing: 0.01em !important;
-      padding: 2px 0 !important;
-      margin: 0 1px !important;
+      font-size: 0.9rem !important;
+      letter-spacing: 0.02em !important;
+      padding: 3px 0 !important;
+      margin: 0 2px !important;
     }
     .contact-button {
-      font-size: 0.78rem !important;
-      padding: 4px 10px !important;
-      margin-left: 8px !important;
+      font-size: 0.9rem !important;
+      padding: 5px 12px !important;
+      margin-left: 10px !important;
+    }
+    .header-container,
+    .header-left,
+    .header-right {
+      flex-wrap: nowrap !important;
+      align-items: center !important;
     }
   }
 `}</style>;
