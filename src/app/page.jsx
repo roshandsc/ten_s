@@ -2,8 +2,8 @@
 
 // Improved Responsive Header Styles for Tablets and Global
 <style jsx global>{`
-  /* ===== TABLET (768px–1024px, Unified Portrait & Landscape Header) ===== */
-  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+  /* ===== MOBILE & TABLET HEADER (0-1024px): Hamburger Only ===== */
+  @media only screen and (max-width: 1024px) {
     .header {
       height: 70px !important;
     }
@@ -28,23 +28,16 @@
       top: 50% !important;
       transform: translateY(-50%) !important;
     }
-    .nav-links {
-      gap: 1rem !important;
+    .header-right {
+      display: none !important;
     }
-    .nav-links a {
-      font-size: 0.9rem !important;
-      letter-spacing: 0.02em !important;
-      padding: 3px 0 !important;
-      margin: 0 2px !important;
-    }
-    .contact-button {
-      font-size: 0.9rem !important;
-      padding: 5px 12px !important;
-      margin-left: 10px !important;
+    .header-left {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: flex-start !important;
     }
     .header-container,
-    .header-left,
-    .header-right {
+    .header-left {
       flex-wrap: nowrap !important;
       align-items: center !important;
     }
@@ -589,6 +582,7 @@ export default function Page() {
 
   // Responsive classes/logic
   const isBelow992 = windowWidth < 992;
+  const isBelow1025 = windowWidth <= 1024;
   const isBelow768 = windowWidth < 768;
   const isBelow480 = windowWidth < 480;
 
@@ -623,19 +617,26 @@ export default function Page() {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            padding: isBelow768 ? "8px 18px" : "14px 40px",
+            padding: isBelow1025 ? "10px 24px" : "14px 40px",
             position: "relative",
           }}
         >
           <div
             className="header-left"
-            style={{ display: "flex", alignItems: "center" }}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "flex-start",
+              flex: "0 0 auto",
+            }}
           >
             <Image
               src="/logo.png"
               alt="10Seconds Logo"
-              width={isBelow480 ? 110 : isBelow768 ? 140 : 180}
-              height={isBelow480 ? 35 : isBelow768 ? 45 : 55}
+              width={
+                isBelow480 ? 110 : isBelow768 ? 140 : isBelow1025 ? 120 : 180
+              }
+              height={isBelow480 ? 35 : isBelow768 ? 45 : isBelow1025 ? 38 : 55}
               className="header-logo"
               style={{
                 maxWidth: "100%",
@@ -644,8 +645,8 @@ export default function Page() {
               }}
             />
           </div>
-          {/* Hamburger for mobile */}
-          {isBelow768 ? (
+          {/* Hamburger for mobile and tablet */}
+          {isBelow1025 ? (
             <div
               className="mobile-nav-toggle"
               style={{
@@ -715,7 +716,7 @@ export default function Page() {
             className="header-right"
             style={{
               flex: 1,
-              display: isBelow768 ? "none" : "flex",
+              display: isBelow1025 ? "none" : "flex",
               justifyContent: "flex-end",
               alignItems: "center",
             }}
@@ -751,8 +752,8 @@ export default function Page() {
               </ul>
             </nav>
           </div>
-          {/* Mobile Nav Dropdown - Tessa Cloud style */}
-          {isBelow768 && (
+          {/* Mobile/Tablet Nav Dropdown */}
+          {isBelow1025 && (
             <div
               className="mobile-dropdown"
               style={{
