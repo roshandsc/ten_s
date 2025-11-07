@@ -3,48 +3,32 @@
 // Improved Responsive Header Styles for Tablets and Global
 <style jsx global>{`
   /* ===== LANDSCAPE TABLET (900px–1024px, landscape) - CORRECTED ===== */
-@media only screen and (min-width: 900px) and (max-width: 1024px) and (orientation: landscape) {
-  .header-container {
-    padding: 10px 24px !important; /* Slightly more vertical padding */
-    gap: 16px !important; /* INCREASED GAP between logo and nav */
-    flex-wrap: nowrap !important;
-  }
-  /* Ensure header-left is constrained and doesn't grow */
-  .header-left {
-    flex: 0 0 auto !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-  }
-  .header-left img,
-  .header-logo img {
-    /* Slightly smaller logo to free up space */
-    width: clamp(60px, 6vw, 75px) !important; 
-    max-width: 100% !important;
-  }
-  /* Ensure header-right can take up the remaining space and justify content to the end */
-  .header-right {
-    flex: 1 1 auto !important; /* Allows navigation to grow and shrink appropriately */
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-end !important; /* Pushes content to the right */
-  }
-  .nav-links {
-    gap: 0.8rem !important; /* Increased gap for better spacing */
-  }
-  .nav-links a {
-    font-size: 0.83rem !important;
-    letter-spacing: 0.01em !important;
-    padding: 2px 0 !important;
-    margin: 0 2px !important; /* Slight margin added */
-  }
-  .contact-button {
-    font-size: 0.83rem !important;
-    padding: 5px 12px !important;
-    margin-left: 10px !important; /* Increased margin to separate from nav links */
-  }
-  body {
-    padding-top: 68px !important; /* Slightly adjusted padding for the fixed header */
+  @media only screen and (min-width: 900px) and (max-width: 1024px) and (orientation: landscape) {
+    .header-container {
+      padding: 8px 24px !important;
+      gap: 16px !important; /* Increased gap for better separation */
+    }
+    .header-left img,
+    .header-logo img {
+      /* Reduced the max width to ensure it doesn't push the nav links */
+      width: clamp(60px, 6vw, 75px) !important;
+      height: auto !important;
+      object-fit: contain !important;
+    }
+    .nav-links {
+      gap: 0.8rem !important; /* Slightly increased link gap for readability */
+    }
+    .nav-links a {
+      font-size: 0.83rem !important;
+      letter-spacing: 0.01em !important;
+      padding: 2px 0 !important;
+      margin: 0 1px !important;
+    }
+    .contact-button {
+      font-size: 0.83rem !important;
+      padding: 5px 12px !important;
+      margin-left: 10px !important; /* Increased margin to separate from links */
+    }
   }
 `}</style>;
 import React, { useEffect, useState } from "react";
