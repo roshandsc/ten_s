@@ -541,7 +541,9 @@ export default function Page() {
   const isBelow992 = windowWidth < 992;
   const isBelow768 = windowWidth < 768;
   const isBelow480 = windowWidth < 480;
-  const isAtOrBelow1024 = windowWidth <= 1024; // Tablets now use mobile-style hamburger menu (<= includes 1024px landscape)
+  const isAtOrBelow1024 =
+    windowWidth <= 1024 ||
+    window.matchMedia("(orientation: landscape)").matches; // Tablets now use mobile-style hamburger menu (<= includes 1024px landscape)
 
   // Max-width wrapper style for central alignment
   const maxWidthWrapperStyle = {
@@ -2669,55 +2671,51 @@ function lmsCardPStyle(isBelow480) {
 `}</style>;
 
 <style jsx global>{`
-  /* 🔒 Lock header layout for tablets (both portrait + landscape) */
+  /* 🔒 Lock header for tablets (both portrait and landscape) */
   @media (min-width: 768px) and (max-width: 1024px) {
-    /* Always show hamburger on left, logo on right */
     .header-right {
-      display: none !important;
+      display: none !important; /* Hide full nav always */
     }
     .mobile-nav-toggle {
-      display: block !important;
+      display: block !important; /* Always show hamburger */
+      order: 1 !important; /* Keep it on left */
+      margin-left: 0 !important;
     }
-
+    .header-left {
+      order: 2 !important; /* Logo stays right */
+    }
+    .header-container {
+      flex-direction: row !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+    }
     .header {
       height: 70px !important;
     }
-
-    .header-container {
-      justify-content: space-between !important;
-      flex-direction: row !important;
-    }
-
-    /* Flip order: hamburger left, logo right */
-    .header-left {
-      order: 2 !important;
-    }
-    .mobile-nav-toggle {
-      order: 1 !important;
-      margin-left: 0 !important;
-    }
   }
 
-  /* Explicitly handle landscape orientation */
+  /* 🧭 Extra lock for tablet landscape */
   @media (orientation: landscape) and (min-width: 768px) and (max-width: 1024px) {
     .header-right {
-      display: none !important;
+      display: none !important; /* Prevent showing full nav */
     }
     .mobile-nav-toggle {
-      display: block !important;
+      display: block !important; /* Force hamburger */
+      order: 1 !important;
     }
     .header-left {
       order: 2 !important;
     }
-    .mobile-nav-toggle {
-      order: 1 !important;
+    .header-container {
+      flex-direction: row !important;
+      justify-content: space-between !important;
+      align-items: center !important;
     }
     .header {
       height: 70px !important;
     }
   }
 `}</style>;
-
 {
   /* ======= Footer Navigation (if present) ======= */
 }
