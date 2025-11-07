@@ -2,7 +2,7 @@
 
 // Improved Responsive Header Styles for Tablets and Global
 <style jsx global>{`
-  /* ===== TABLET (768px–1024px, both orientations) - Unified Portrait and Landscape Header ===== */
+  /* ===== TABLET (768px–1024px, Unified Portrait & Landscape Header) ===== */
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
     .header {
       height: 70px !important;
@@ -16,9 +16,17 @@
     }
     .header-left img,
     .header-logo img {
-      width: clamp(80px, 8vw, 120px) !important;
+      width: clamp(90px, 8vw, 120px) !important;
       height: auto !important;
       object-fit: contain !important;
+    }
+    .mobile-nav-toggle {
+      display: block !important;
+      cursor: pointer !important;
+      position: absolute !important;
+      right: 24px !important;
+      top: 50% !important;
+      transform: translateY(-50%) !important;
     }
     .nav-links {
       gap: 1rem !important;
