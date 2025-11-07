@@ -4,56 +4,60 @@
 /* Tablet responsiveness global styles */
 <style jsx global>{`
   @media (min-width: 768px) and (max-width: 992px) {
-    /* ===== HEADER ===== */
+    /* ===== HEADER (FINAL RESPONSIVE FIX) ===== */
+    .header {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 100% !important;
+      height: auto !important;
+      padding: 10px 0 !important;
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      background: #fff !important;
+      z-index: 1000 !important;
+      box-shadow: 0 1px 6px rgba(0, 0, 0, 0.08) !important;
+    }
+
     .header-container {
       display: flex !important;
-      flex-direction: row !important;
+      flex-direction: column !important;
       align-items: center !important;
-      justify-content: space-between !important;
-      flex-wrap: wrap !important;
+      justify-content: center !important;
       width: 100% !important;
-      padding: 8px 20px !important;
+      padding: 8px 16px !important;
       gap: 10px !important;
     }
 
+    .header-left {
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 100% !important;
+      margin-bottom: 6px !important;
+    }
+
     .header-left img {
-      max-width: 100px !important;
+      max-width: 110px !important;
       height: auto !important;
       object-fit: contain !important;
     }
 
-    .header-left {
-      flex: 0 0 auto !important;
-    }
-
     .header-right {
-      flex: 1 1 auto !important;
+      width: 100% !important;
       display: flex !important;
-      justify-content: flex-end !important;
       align-items: center !important;
-      width: auto !important;
-    }
-
-    .nav {
-      flex: 1 1 100% !important;
-      display: flex !important;
       justify-content: center !important;
-      margin-top: 5px !important;
-    }
-
-    .header-left {
-      flex: 0 0 auto !important;
-      order: 1 !important;
-    }
-
-    .header-right {
-      flex: 1 1 100% !important;
-      order: 2 !important;
-      width: 100% !important;
     }
 
     .nav {
       width: 100% !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      flex-wrap: wrap !important;
     }
 
     .nav-links {
@@ -63,35 +67,34 @@
       align-items: center !important;
       gap: 1rem !important;
       width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      list-style: none !important;
     }
 
     .nav-links a {
       font-size: 0.95rem !important;
+      font-weight: 500 !important;
       white-space: nowrap !important;
+      color: #004aad !important;
     }
 
     .contact-button {
       padding: 8px 14px !important;
-      font-size: 0.95rem !important;
+      font-size: 0.9rem !important;
       border-radius: 8px !important;
-      min-width: 100px !important;
+      background: #004aad !important;
+      color: #fff !important;
+      text-decoration: none !important;
+      transition: background 0.3s ease !important;
     }
 
-    .nav-links a {
-      font-size: 0.98rem !important;
-      line-height: 1.2 !important;
+    .contact-button:hover {
+      background: #007cf0 !important;
     }
 
-    .contact-button {
-      padding: 10px 14px !important;
-      font-size: 0.98rem !important;
-      border-radius: 8px !important;
-    }
-
-    .header {
-      align-items: center !important;
-      height: auto !important;
-      flex-wrap: wrap !important;
+    body {
+      padding-top: 110px !important;
     }
 
     /* ===== HERO SECTION ===== */
@@ -212,11 +215,6 @@
     .footer {
       text-align: center !important;
       padding: 20px 25px !important;
-    }
-
-    /* ===== GENERAL FIX ===== */
-    body {
-      margin-top: 70px !important;
     }
   }
 `}</style>;
