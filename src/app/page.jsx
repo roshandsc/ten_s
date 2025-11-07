@@ -582,11 +582,11 @@ export default function Page() {
       .catch((err) => console.error("Swiper init failed:", err));
   }, []);
 
-  // Responsive classes/logic
-  // isBelow992 is not used for header logic anymore, only isBelow1025
+  // ✅ Responsive breakpoints (hydration-safe)
   const isBelow1025 = windowWidth <= 1024;
   const isBelow992 = windowWidth < 992;
   const isBelow768 = windowWidth < 768;
+  const isBelow600Flag = windowWidth < 600;
   const isBelow480 = windowWidth < 480;
 
   // Max-width wrapper style for central alignment
@@ -1464,12 +1464,12 @@ export default function Page() {
                   className="lms-cards-grid"
                   style={{
                     display: "grid",
-                    gridTemplateColumns: isBelow600()
+                    gridTemplateColumns: isBelow600Flag
                       ? "1fr"
                       : isBelow992
                       ? "1fr"
                       : "1fr 1fr",
-                    gridTemplateRows: isBelow600()
+                    gridTemplateRows: isBelow600Flag
                       ? "repeat(5, auto)"
                       : isBelow992
                       ? "repeat(5, auto)"
@@ -1512,7 +1512,7 @@ export default function Page() {
                     style={{
                       ...lmsCardStyle(isBelow480, isBelow768),
                       gridColumn:
-                        isBelow600() || isBelow992 ? "auto" : "1 / span 1",
+                        isBelow600Flag || isBelow992 ? "auto" : "1 / span 1",
                     }}
                   >
                     <div className="stat-number" data-target="50000">
@@ -1555,7 +1555,7 @@ export default function Page() {
                       ...lmsCardStyle(isBelow480, isBelow768),
                       // For grid layout, put beside Video Tutorials
                       gridColumn:
-                        isBelow600() || isBelow992 ? "auto" : "2 / span 1",
+                        isBelow600Flag || isBelow992 ? "auto" : "2 / span 1",
                     }}
                   >
                     <h3 style={lmsCardH3Style(isBelow480, "#0077cc")}>
