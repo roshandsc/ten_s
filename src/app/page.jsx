@@ -29,7 +29,7 @@
       justify-content: space-between !important;
       width: 100% !important;
       padding: 4px 10px !important;
-      gap: 6px !important;
+      gap: 4px !important;
     }
 
     .header-left {
@@ -41,7 +41,7 @@
     }
 
     .header-left img {
-      max-width: 40px !important;
+      max-width: 32px !important;
       height: auto !important;
       object-fit: contain !important;
     }
@@ -51,7 +51,7 @@
     }
     .header-logo img {
       width: auto !important;
-      height: 20px !important;
+      height: 16px !important;
       object-fit: contain !important;
     }
 
@@ -83,15 +83,15 @@
     }
 
     .nav-links a {
-      font-size: 0.4rem !important;
+      font-size: 0.35rem !important;
       font-weight: 500 !important;
       white-space: nowrap !important;
       color: #004aad !important;
     }
 
     .contact-button {
-      padding: 5px 10px !important;
-      font-size: 0.4rem !important;
+      padding: 4px 8px !important;
+      font-size: 0.35rem !important;
       border-radius: 8px !important;
       background: #004aad !important;
       color: #fff !important;
