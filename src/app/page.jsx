@@ -3,142 +3,23 @@
 // Tablet responsiveness global styles
 /* Tablet responsiveness global styles */
 <style jsx global>{`
-  @media (max-width: 992px) and (min-width: 768px) {
-    /* Header layout fixes for tablet (landscape/portrait) */
-    .header-container {
-      flex-wrap: wrap !important;
-      justify-content: space-around !important;
-      align-items: center !important;
-      padding: 10px 25px !important;
-      row-gap: 8px !important;
-    }
+  /* ...other global styles... */
+`}</style>
 
-    .header-left img {
-      max-width: 120px !important;
-      height: auto !important;
-      margin-right: 10px !important;
-    }
-
-    .nav-links {
-      flex-wrap: wrap !important;
-      justify-content: center !important;
-      margin-top: 6px !important;
-      gap: 1.2rem !important;
-    }
-
-    .header {
-      align-items: center !important;
-    }
-
-    /* Hero Section */
-    .hero-content {
-      flex-direction: row !important;
-      align-items: center !important;
-      justify-content: space-between !important;
-      gap: 1.8rem !important;
-    }
-    .hero-text {
-      max-width: 55% !important;
-      text-align: left !important;
-    }
-    .hero-image {
-      max-width: 45% !important;
-    }
-
-    /* About Us */
-    .about-section {
-      padding: 60px 25px !important;
-    }
-    .about-columns {
-      flex-direction: row !important;
-      flex-wrap: wrap !important;
-      gap: 1.5rem !important;
-    }
-    .about-col {
-      max-width: 46% !important;
-    }
-
-    /* Services */
-    .services-grid {
-      grid-template-columns: repeat(2, 1fr) !important;
-      gap: 1.5rem !important;
-    }
-
-    /* LMS Section */
-    .lms-flex {
-      flex-direction: row !important;
-      align-items: center !important;
-      gap: 2.2rem !important;
-    }
-    .lms-image {
-      max-width: 46% !important;
-    }
-    .lms-content {
-      max-width: 54% !important;
-    }
-    .lms-card h3 {
-      font-size: 1.05rem !important;
-    }
-
-    /* Clients */
-    .clients-header h2 {
-      font-size: 2.2rem !important;
-    }
-    .clients-header p {
-      font-size: 1rem !important;
-    }
-    .clients-slider-wrapper {
-      padding: 0 20px !important;
-    }
-
-    /* Journey */
-    .journey-header h2 {
-      font-size: 2.2rem !important;
-    }
-    .journey-header h3 {
-      font-size: 1.3rem !important;
-    }
-    .timeline-item {
-      flex-direction: row !important;
-    }
-
-    /* Contact */
-    .contact .row {
-      flex-direction: row !important;
-      gap: 1.8rem !important;
-    }
-    .info-grid {
-      grid-template-columns: 1fr 1fr !important;
-    }
-    .info-box {
-      width: 100% !important;
-    }
-    iframe {
-      height: 750px !important;
-    }
-
-    /* Footer */
-    .footer {
-      text-align: center !important;
-      padding: 20px 25px !important;
-    }
-
-    /* Prevent header overlap on tablet */
-    body {
-      margin-top: 70px !important;
-    }
-  }
-
-  /* Force hamburger menu on tablets (always hide .header-right, show .mobile-nav-toggle) */
-  @media (max-width: 1024px) and (min-width: 768px) {
+/* Force hamburger for all tablets (portrait + landscape) */
+<style jsx global>{`
+  @media (min-width: 768px) and (max-width: 1024px) {
     .header-right {
       display: none !important;
     }
     .mobile-nav-toggle {
       display: block !important;
     }
+    .mobile-dropdown {
+      display: block !important;
+    }
   }
-`}</style>;
+`}</style>
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
@@ -441,68 +322,68 @@ export default function Page() {
   }, []);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      setWindowWidth(window.innerWidth);
-      document.documentElement.style.scrollBehavior = "smooth";
-      const handleResize = () => setWindowWidth(window.innerWidth);
-      window.addEventListener("resize", handleResize);
-      handleResize();
-      // Smooth scroll for anchor links (all # links)
-      // Custom slow smooth scroll
-      function smoothScrollTo(targetY, duration = 900) {
-        const startY = window.scrollY || window.pageYOffset;
-        const diff = targetY - startY;
-        let start;
-        function easeInOutQuad(t) {
-          return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
-        }
-        function step(timestamp) {
-          if (!start) start = timestamp;
-          const elapsed = timestamp - start;
-          let progress = Math.min(elapsed / duration, 1);
-          progress = easeInOutQuad(progress);
-          window.scrollTo(0, startY + diff * progress);
-          if (elapsed < duration) {
-            window.requestAnimationFrame(step);
-          }
-        }
-        window.requestAnimationFrame(step);
+    if (typeof window === "undefined") return;
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    const handleOrientationChange = () => setWindowWidth(window.innerWidth);
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("orientationchange", handleOrientationChange);
+    handleResize();
+    // Smooth scroll for anchor links (all # links)
+    // Custom slow smooth scroll
+    function smoothScrollTo(targetY, duration = 900) {
+      const startY = window.scrollY || window.pageYOffset;
+      const diff = targetY - startY;
+      let start;
+      function easeInOutQuad(t) {
+        return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
       }
-
-      const handleAnchorClick = (e) => {
-        // Only intercept anchor links with href="#section" (not external or just "#")
-        const anchor = e.target.closest('a[href^="#"]');
-        if (
-          anchor &&
-          anchor.getAttribute("href") &&
-          anchor.getAttribute("href").startsWith("#") &&
-          anchor.getAttribute("href").length > 1
-        ) {
-          const sectionId = anchor.getAttribute("href").slice(1);
-          const section = document.getElementById(sectionId);
-          if (section) {
-            e.preventDefault();
-            // Compute offset for fixed header (if any)
-            let offset = 0;
-            const header = document.querySelector(".header");
-            if (header) {
-              offset = header.offsetHeight || 0;
-            }
-            const sectionTop =
-              section.getBoundingClientRect().top + window.scrollY;
-            const targetY = Math.max(sectionTop - offset, 0);
-            smoothScrollTo(targetY, 900);
-            // Optionally update the URL hash
-            window.history.replaceState(null, "", `#${sectionId}`);
-          }
+      function step(timestamp) {
+        if (!start) start = timestamp;
+        const elapsed = timestamp - start;
+        let progress = Math.min(elapsed / duration, 1);
+        progress = easeInOutQuad(progress);
+        window.scrollTo(0, startY + diff * progress);
+        if (elapsed < duration) {
+          window.requestAnimationFrame(step);
         }
-      };
-      document.addEventListener("click", handleAnchorClick);
-      return () => {
-        window.removeEventListener("resize", handleResize);
-        document.removeEventListener("click", handleAnchorClick);
-      };
+      }
+      window.requestAnimationFrame(step);
     }
+
+    const handleAnchorClick = (e) => {
+      // Only intercept anchor links with href="#section" (not external or just "#")
+      const anchor = e.target.closest('a[href^="#"]');
+      if (
+        anchor &&
+        anchor.getAttribute("href") &&
+        anchor.getAttribute("href").startsWith("#") &&
+        anchor.getAttribute("href").length > 1
+      ) {
+        const sectionId = anchor.getAttribute("href").slice(1);
+        const section = document.getElementById(sectionId);
+        if (section) {
+          e.preventDefault();
+          // Compute offset for fixed header (if any)
+          let offset = 0;
+          const header = document.querySelector(".header");
+          if (header) {
+            offset = header.offsetHeight || 0;
+          }
+          const sectionTop =
+            section.getBoundingClientRect().top + window.scrollY;
+          const targetY = Math.max(sectionTop - offset, 0);
+          smoothScrollTo(targetY, 900);
+          // Optionally update the URL hash
+          window.history.replaceState(null, "", `#${sectionId}`);
+        }
+      }
+    };
+    document.addEventListener("click", handleAnchorClick);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("orientationchange", handleOrientationChange);
+      document.removeEventListener("click", handleAnchorClick);
+    };
   }, []);
 
   // Stats Counter Animation

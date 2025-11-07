@@ -2779,3 +2779,28 @@ footer.footer .footer-container {
     min-width: 300px !important;
   }
 }
+
+/* ===========================================================
+   FORCE HAMBURGER MENU FOR TABLETS (PORTRAIT + LANDSCAPE)
+=========================================================== */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .header-right {
+    display: none !important;
+  }
+
+  .mobile-nav-toggle {
+    display: block !important;
+  }
+
+  .mobile-dropdown {
+    display: block !important;
+  }
+
+  .nav-links {
+    display: none !important;
+  }
+
+  .header-container {
+    justify-content: space-between !important;
+  }
+}
