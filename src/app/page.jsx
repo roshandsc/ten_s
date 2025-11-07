@@ -8,17 +8,32 @@
     .header-container {
       display: flex !important;
       align-items: center !important;
-      justify-content: space-around !important;
+      justify-content: space-between !important;
       flex-wrap: wrap !important;
-      padding: 10px 25px !important;
-      row-gap: 10px !important;
+      padding: 8px 16px !important;
+      column-gap: 12px !important;
+      row-gap: 8px !important;
     }
 
     .header-left img {
-      max-width: 120px !important;
+      max-width: 105px !important;
       height: auto !important;
-      margin-right: 10px !important;
       object-fit: contain !important;
+    }
+
+    .header-left {
+      flex: 0 0 auto !important;
+      order: 1 !important;
+    }
+
+    .header-right {
+      flex: 1 1 100% !important;
+      order: 2 !important;
+      width: 100% !important;
+    }
+
+    .nav {
+      width: 100% !important;
     }
 
     .nav-links {
@@ -27,7 +42,18 @@
       justify-content: center !important;
       align-items: center !important;
       margin-top: 6px !important;
-      gap: 1.3rem !important;
+      gap: 1rem !important;
+    }
+
+    .nav-links a {
+      font-size: 0.98rem !important;
+      line-height: 1.2 !important;
+    }
+
+    .contact-button {
+      padding: 10px 14px !important;
+      font-size: 0.98rem !important;
+      border-radius: 8px !important;
     }
 
     .header {
