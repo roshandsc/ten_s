@@ -41,7 +41,7 @@
     }
 
     .header-left img {
-      max-width: 70px !important;
+      max-width: 40px !important;
       height: auto !important;
       object-fit: contain !important;
     }
@@ -51,7 +51,7 @@
     }
     .header-logo img {
       width: auto !important;
-      height: 44px !important;
+      height: 20px !important;
       object-fit: contain !important;
     }
 
@@ -83,7 +83,7 @@
     }
 
     .nav-links a {
-      font-size: 0.75rem !important;
+      font-size: 0.4rem !important;
       font-weight: 500 !important;
       white-space: nowrap !important;
       color: #004aad !important;
@@ -91,7 +91,7 @@
 
     .contact-button {
       padding: 5px 10px !important;
-      font-size: 0.75rem !important;
+      font-size: 0.4rem !important;
       border-radius: 8px !important;
       background: #004aad !important;
       color: #fff !important;
