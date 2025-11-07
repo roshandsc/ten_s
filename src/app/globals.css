@@ -2672,3 +2672,67 @@ footer.footer .footer-container {
     font-size: 1.05rem;
   }
 }
+
+/* ===========================================================
+   MOBILE & TABLET HEADER (0–1024px): Hamburger Only
+=========================================================== */
+@media only screen and (max-width: 1024px) {
+  .header {
+    height: 70px !important;
+    overflow-x: hidden !important;
+  }
+  .header-container {
+    padding: 10px 24px !important;
+    gap: 12px !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: nowrap !important;
+    overflow-x: hidden !important;
+  }
+  .header-left img,
+  .header-logo img {
+    width: clamp(90px, 8vw, 120px) !important;
+    height: auto !important;
+    object-fit: contain !important;
+  }
+  .mobile-nav-toggle {
+    display: block !important;
+    cursor: pointer !important;
+    position: absolute !important;
+    right: 24px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+  .header-right {
+    display: none !important;
+  }
+  .mobile-nav-toggle {
+    display: block !important;
+  }
+  .header-left {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+  }
+  .header-container,
+  .header-left {
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+  }
+}
+
+/* ===========================================================
+   Force hamburger (mobile) layout for all tablet landscape (<=1024px)
+=========================================================== */
+@media only screen and (orientation: landscape) and (max-width: 1024px) {
+  .header-right {
+    display: none !important;
+  }
+  .mobile-nav-toggle {
+    display: block !important;
+  }
+  .header-left {
+    display: flex !important;
+    justify-content: flex-start !important;
+  }
+}
