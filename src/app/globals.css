@@ -2674,139 +2674,108 @@ footer.footer .footer-container {
 }
 
 /* ===========================================================
-   MOBILE & TABLET HEADER (0–1024px): Hamburger Only
+   TABLET RESPONSIVENESS: 768px–992px ENHANCEMENTS
 =========================================================== */
-@media only screen and (max-width: 1024px) {
-  .header {
-    height: 70px !important;
-    overflow-x: hidden !important;
-  }
+@media (min-width: 768px) and (max-width: 992px) {
+  /* Header */
   .header-container {
-    padding: 10px 24px !important;
-    gap: 12px !important;
-    align-items: center !important;
-    justify-content: space-between !important;
-    flex-wrap: nowrap !important;
-    overflow-x: hidden !important;
+    padding: 0 1.5rem !important;
   }
-  .header-left img,
-  .header-logo img {
-    width: clamp(90px, 8vw, 120px) !important;
-    height: auto !important;
-    object-fit: contain !important;
+  .nav-links {
+    gap: 1.2rem !important;
   }
-  .mobile-nav-toggle {
-    display: block !important;
-    cursor: pointer !important;
-    position: absolute !important;
-    right: 24px !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-  }
-  .header-right {
-    display: none !important;
-  }
-  .mobile-nav-toggle {
-    display: block !important;
-  }
-  .header-left {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-start !important;
-  }
-  .header-container,
-  .header-left {
-    flex-wrap: nowrap !important;
-    align-items: center !important;
-  }
-}
 
-/* ===========================================================
-   Force hamburger (mobile) layout for all tablet landscape (<=1024px)
-=========================================================== */
-@media only screen and (orientation: landscape) and (max-width: 1024px) {
-  .header-right {
-    display: none !important;
-  }
-  .mobile-nav-toggle {
-    display: block !important;
-  }
-  .header-left {
-    display: flex !important;
-    justify-content: flex-start !important;
-  }
-}
-
-/* ===========================================================
-   RESPONSIVE FOOTER STYLES
-=========================================================== */
-@media (max-width: 768px) {
-  .footer-container {
+  /* Hero Section */
+  .hero {
     flex-direction: column !important;
+    text-align: center !important;
+    padding: 4rem 2rem !important;
+  }
+  .hero-text {
     align-items: center !important;
     text-align: center !important;
-    padding-left: 18px !important;
-    padding-right: 18px !important;
+    max-width: 90% !important;
+    margin: 0 auto 2rem !important;
+  }
+  .hero-text h1 {
+    font-size: 2.5rem !important;
+  }
+  .hero-text p {
+    font-size: 1.1rem !important;
+  }
+  .hero-image img {
+    max-width: 420px !important;
+  }
+
+  /* About Section */
+  .about-section {
+    padding: 5rem 2rem !important;
+  }
+  .about-columns {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 1.8rem !important;
+  }
+  .about-col {
+    flex: 1 1 45% !important;
+    max-width: 45% !important;
+  }
+
+  /* Services Section */
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2rem !important;
+  }
+
+  /* LMS Section */
+  .lms-stats {
+    flex-direction: row !important;
+    gap: 2rem !important;
+    justify-content: center !important;
+  }
+  .lms-card {
+    max-width: 45% !important;
+    margin: 0 auto !important;
+  }
+  .lms-header h2 {
+    font-size: 2.3rem !important;
+  }
+
+  /* Clients Section */
+  .clients-header h2 {
+    font-size: 2.2rem !important;
+  }
+  .clients-header p {
+    font-size: 1rem !important;
+    max-width: 700px !important;
+  }
+  .clients-lane img {
+    width: 100px !important;
+  }
+
+  /* Journey Section */
+  .timeline-item {
+    width: 80% !important;
+    align-self: center !important;
+  }
+  .journey-header h2 {
+    font-size: 2.3rem !important;
+  }
+
+  /* Footer */
+  footer.footer {
+    padding: 3rem 2rem !important;
+  }
+  .footer-container {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: space-between !important;
+    gap: 2rem !important;
   }
   .footer-left,
   .footer-right {
-    width: 100% !important;
-    align-items: center !important;
-    text-align: center !important;
-    margin-bottom: 1.5rem !important;
-  }
-  .footer-columns {
-    flex-direction: column !important;
-    gap: 1.2rem !important;
-    align-items: center !important;
-    width: 100% !important;
-  }
-  .footer-left p,
-  .footer-right p,
-  .footer-right address,
-  .footer-right h3 {
-    text-align: center !important;
-  }
-  .social-icons {
-    justify-content: center !important;
-  }
-  .social-icons a {
-    font-size: 1.5rem !important;
-  }
-}
-
-@media (max-width: 480px) {
-  .footer-container {
-    gap: 1rem !important;
-    padding-top: 10px !important;
-    padding-bottom: 8px !important;
-  }
-  .footer-left p,
-  .footer-right p,
-  .footer-right address {
-    font-size: 0.92rem !important;
-  }
-  .footer-right h3,
-  .footer-left h3 {
-    font-size: 1rem !important;
-  }
-  .footer-columns {
-    gap: 0.7rem !important;
-  }
-  .social-icons a {
-    font-size: 1.5rem !important;
-  }
-}
-
-/* ===========================================================
-   CORPORATE COLLAB RESPONSIVE FIX (Below 480px)
-=========================================================== */
-@media (max-width: 480px) {
-  .corporate-collab div {
-    flex-direction: column !important;
-  }
-  .corporate-collab h2 {
-    font-size: 1.4rem !important;
-    text-align: center !important;
+    flex: 1 1 45% !important;
+    min-width: 300px !important;
   }
 }

@@ -1,4 +1,135 @@
 "use client";
+
+// Tablet responsiveness global styles
+/* Tablet responsiveness global styles */
+<style jsx global>{`
+  @media (max-width: 992px) and (min-width: 768px) {
+    /* Header layout fixes for tablet (landscape/portrait) */
+    .header-container {
+      flex-wrap: wrap !important;
+      justify-content: space-around !important;
+      align-items: center !important;
+      padding: 10px 25px !important;
+      row-gap: 8px !important;
+    }
+
+    .header-left img {
+      max-width: 120px !important;
+      height: auto !important;
+      margin-right: 10px !important;
+    }
+
+    .nav-links {
+      flex-wrap: wrap !important;
+      justify-content: center !important;
+      margin-top: 6px !important;
+      gap: 1.2rem !important;
+    }
+
+    .header {
+      align-items: center !important;
+    }
+
+    /* Hero Section */
+    .hero-content {
+      flex-direction: row !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 1.8rem !important;
+    }
+    .hero-text {
+      max-width: 55% !important;
+      text-align: left !important;
+    }
+    .hero-image {
+      max-width: 45% !important;
+    }
+
+    /* About Us */
+    .about-section {
+      padding: 60px 25px !important;
+    }
+    .about-columns {
+      flex-direction: row !important;
+      flex-wrap: wrap !important;
+      gap: 1.5rem !important;
+    }
+    .about-col {
+      max-width: 46% !important;
+    }
+
+    /* Services */
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 1.5rem !important;
+    }
+
+    /* LMS Section */
+    .lms-flex {
+      flex-direction: row !important;
+      align-items: center !important;
+      gap: 2.2rem !important;
+    }
+    .lms-image {
+      max-width: 46% !important;
+    }
+    .lms-content {
+      max-width: 54% !important;
+    }
+    .lms-card h3 {
+      font-size: 1.05rem !important;
+    }
+
+    /* Clients */
+    .clients-header h2 {
+      font-size: 2.2rem !important;
+    }
+    .clients-header p {
+      font-size: 1rem !important;
+    }
+    .clients-slider-wrapper {
+      padding: 0 20px !important;
+    }
+
+    /* Journey */
+    .journey-header h2 {
+      font-size: 2.2rem !important;
+    }
+    .journey-header h3 {
+      font-size: 1.3rem !important;
+    }
+    .timeline-item {
+      flex-direction: row !important;
+    }
+
+    /* Contact */
+    .contact .row {
+      flex-direction: row !important;
+      gap: 1.8rem !important;
+    }
+    .info-grid {
+      grid-template-columns: 1fr 1fr !important;
+    }
+    .info-box {
+      width: 100% !important;
+    }
+    iframe {
+      height: 750px !important;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center !important;
+      padding: 20px 25px !important;
+    }
+
+    /* Prevent header overlap on tablet */
+    body {
+      margin-top: 70px !important;
+    }
+  }
+`}</style>;
+
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -536,11 +667,9 @@ export default function Page() {
       .catch((err) => console.error("Swiper init failed:", err));
   }, []);
 
-  // ✅ Responsive breakpoints (hydration-safe)
-  const isBelow1025 = windowWidth <= 1024;
+  // Responsive classes/logic
   const isBelow992 = windowWidth < 992;
   const isBelow768 = windowWidth < 768;
-  const isBelow600Flag = windowWidth < 600;
   const isBelow480 = windowWidth < 480;
 
   // Max-width wrapper style for central alignment
@@ -574,26 +703,19 @@ export default function Page() {
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
-            padding: isBelow1025 ? "10px 24px" : "14px 40px",
+            padding: isBelow768 ? "8px 18px" : "14px 40px",
             position: "relative",
           }}
         >
           <div
             className="header-left"
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "flex-start",
-              flex: "0 0 auto",
-            }}
+            style={{ display: "flex", alignItems: "center" }}
           >
             <Image
               src="/logo.png"
               alt="10Seconds Logo"
-              width={
-                isBelow480 ? 110 : isBelow768 ? 140 : isBelow1025 ? 120 : 180
-              }
-              height={isBelow480 ? 35 : isBelow768 ? 45 : isBelow1025 ? 38 : 55}
+              width={isBelow480 ? 110 : isBelow768 ? 140 : 180}
+              height={isBelow480 ? 35 : isBelow768 ? 45 : 55}
               className="header-logo"
               style={{
                 maxWidth: "100%",
@@ -602,8 +724,8 @@ export default function Page() {
               }}
             />
           </div>
-          {/* Hamburger for mobile and tablet */}
-          {isBelow1025 ? (
+          {/* Hamburger for mobile */}
+          {isBelow768 ? (
             <div
               className="mobile-nav-toggle"
               style={{
@@ -673,7 +795,7 @@ export default function Page() {
             className="header-right"
             style={{
               flex: 1,
-              display: isBelow1025 ? "none" : "flex",
+              display: isBelow768 ? "none" : "flex",
               justifyContent: "flex-end",
               alignItems: "center",
             }}
@@ -709,8 +831,8 @@ export default function Page() {
               </ul>
             </nav>
           </div>
-          {/* Mobile/Tablet Nav Dropdown */}
-          {isBelow1025 && (
+          {/* Mobile Nav Dropdown - Tessa Cloud style */}
+          {isBelow768 && (
             <div
               className="mobile-dropdown"
               style={{
@@ -728,7 +850,6 @@ export default function Page() {
                 opacity: navOpen ? 1 : 0,
                 transform: navOpen ? "translateY(0)" : "translateY(-10px)",
                 zIndex: 999,
-                pointerEvents: navOpen ? "auto" : "none",
               }}
             >
               {/* Blue X close icon */}
@@ -814,10 +935,10 @@ export default function Page() {
               className="hero-text"
               style={{
                 fontSize: isBelow480 ? undefined : undefined,
-                textAlign: isBelow768 ? "center" : "left",
-                marginBottom: isBelow768 ? "2.5rem" : 0,
-                marginRight: isBelow768 ? 0 : "2.5rem",
-                maxWidth: isBelow768 ? "100%" : 540,
+                textAlign: isBelow992 ? "center" : "left",
+                marginBottom: isBelow992 ? "2.5rem" : 0,
+                marginRight: isBelow992 ? 0 : "2.5rem",
+                maxWidth: isBelow992 ? "100%" : 540,
                 padding: isBelow480 ? "0 0.2rem" : isBelow768 ? "0 0.7rem" : 0,
               }}
             >
@@ -1418,12 +1539,12 @@ export default function Page() {
                   className="lms-cards-grid"
                   style={{
                     display: "grid",
-                    gridTemplateColumns: isBelow600Flag
+                    gridTemplateColumns: isBelow600()
                       ? "1fr"
                       : isBelow992
                       ? "1fr"
                       : "1fr 1fr",
-                    gridTemplateRows: isBelow600Flag
+                    gridTemplateRows: isBelow600()
                       ? "repeat(5, auto)"
                       : isBelow992
                       ? "repeat(5, auto)"
@@ -1466,7 +1587,7 @@ export default function Page() {
                     style={{
                       ...lmsCardStyle(isBelow480, isBelow768),
                       gridColumn:
-                        isBelow600Flag || isBelow992 ? "auto" : "1 / span 1",
+                        isBelow600() || isBelow992 ? "auto" : "1 / span 1",
                     }}
                   >
                     <div className="stat-number" data-target="50000">
@@ -1509,7 +1630,7 @@ export default function Page() {
                       ...lmsCardStyle(isBelow480, isBelow768),
                       // For grid layout, put beside Video Tutorials
                       gridColumn:
-                        isBelow600Flag || isBelow992 ? "auto" : "2 / span 1",
+                        isBelow600() || isBelow992 ? "auto" : "2 / span 1",
                     }}
                   >
                     <h3 style={lmsCardH3Style(isBelow480, "#0077cc")}>
@@ -2543,6 +2664,7 @@ export default function Page() {
     </>
   );
 }
+
 // Helper for below 600px
 function isBelow600() {
   if (typeof window !== "undefined") {
@@ -2588,4 +2710,106 @@ function lmsCardPStyle(isBelow480) {
     textAlign: "center",
     lineHeight: "1.45",
   };
+}
+
+{
+  /* Responsive Footer Styles */
+}
+<style jsx>{`
+  @media (max-width: 768px) {
+    .footer-container {
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center !important;
+      padding-left: 18px !important;
+      padding-right: 18px !important;
+    }
+    .footer-left,
+    .footer-right {
+      width: 100% !important;
+      align-items: center !important;
+      text-align: center !important;
+      margin-bottom: 1.5rem !important;
+    }
+    .footer-columns {
+      flex-direction: column !important;
+      gap: 1.2rem !important;
+      align-items: center !important;
+      width: 100% !important;
+    }
+    .footer-left p,
+    .footer-right p,
+    .footer-right address,
+    .footer-right h3 {
+      text-align: center !important;
+    }
+    .social-icons {
+      justify-content: center !important;
+    }
+    .social-icons a {
+      font-size: 1.5rem !important;
+    }
+  }
+  @media (max-width: 480px) {
+    .footer-container {
+      gap: 1rem !important;
+      padding-top: 10px !important;
+      padding-bottom: 8px !important;
+    }
+    .footer-left p,
+    .footer-right p,
+    .footer-right address {
+      font-size: 0.92rem !important;
+    }
+    .footer-right h3,
+    .footer-left h3 {
+      font-size: 1rem !important;
+    }
+    .footer-columns {
+      gap: 0.7rem !important;
+    }
+    .social-icons a {
+      font-size: 1.5rem !important;
+    }
+  }
+`}</style>;
+
+<style jsx global>{`
+  @media (max-width: 480px) {
+    .corporate-collab div {
+      flex-direction: column !important;
+    }
+    .corporate-collab h2 {
+      font-size: 1.4rem !important;
+      text-align: center !important;
+    }
+  }
+`}</style>;
+
+{
+  /* ======= Footer Navigation (if present) ======= */
+}
+{
+  /* If you have a footer navigation, ensure the links below use the correct hrefs with section IDs */
+}
+{
+  /* Example footer navigation: */
+}
+{
+  /*
+      <footer>
+        <nav>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#lms-platform">LMS Platform</a></li>
+            <li><a href="#clients">Our Clients</a></li>
+            <li><a href="#journey">Our Journey</a></li>
+            <li><a href="#vision-future">Vision and Future</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </nav>
+      </footer>
+      */
 }
