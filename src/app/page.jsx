@@ -671,6 +671,7 @@ export default function Page() {
   const isBelow992 = windowWidth < 992;
   const isBelow768 = windowWidth < 768;
   const isBelow480 = windowWidth < 480;
+  const isBelow1024 = windowWidth < 1024; // Tablets now use mobile-style hamburger menu
 
   // Max-width wrapper style for central alignment
   const maxWidthWrapperStyle = {
@@ -725,7 +726,7 @@ export default function Page() {
             />
           </div>
           {/* Hamburger for mobile */}
-          {isBelow768 ? (
+          {isBelow1024 ? (
             <div
               className="mobile-nav-toggle"
               style={{
@@ -795,7 +796,7 @@ export default function Page() {
             className="header-right"
             style={{
               flex: 1,
-              display: isBelow768 ? "none" : "flex",
+              display: isBelow1024 ? "none" : "flex",
               justifyContent: "flex-end",
               alignItems: "center",
             }}
@@ -832,7 +833,7 @@ export default function Page() {
             </nav>
           </div>
           {/* Mobile Nav Dropdown - Tessa Cloud style */}
-          {isBelow768 && (
+          {isBelow1024 && (
             <div
               className="mobile-dropdown"
               style={{
