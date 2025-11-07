@@ -2669,64 +2669,51 @@ function lmsCardPStyle(isBelow480) {
 `}</style>;
 
 <style jsx global>{`
-  /* 🔒 Force hamburger menu on all tablets (portrait + landscape) */
-  /* -------------------------
-   Force hamburger on all tablets
-   (covers portrait + landscape)
-   ------------------------- */
-  @media (min-width: 768px) and (max-width: 1080px) {
-    /* hide desktop nav container */
+  /* 🔒 Lock header layout for tablets (both portrait + landscape) */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    /* Always show hamburger on left, logo on right */
     .header-right {
       display: none !important;
-      visibility: hidden !important;
-      opacity: 0 !important;
     }
-
-    /* show hamburger toggle */
     .mobile-nav-toggle {
       display: block !important;
-      visibility: visible !important;
-      opacity: 1 !important;
     }
 
-    /* ensure mobile dropdown exists and is visible when open */
-    .mobile-dropdown {
-      display: block !important;
-      visibility: visible !important;
-      opacity: 1 !important;
-      transform: translateY(0) !important;
-      max-height: 420px !important; /* allow dropdown height */
+    .header {
+      height: 70px !important;
     }
 
-    /* hide regular nav links inside header-right if they appear */
-    .nav-links {
-      display: none !important;
-    }
-
-    /* spacing fix so logo and hamburger align */
     .header-container {
       justify-content: space-between !important;
-      padding-left: 18px !important;
-      padding-right: 18px !important;
+      flex-direction: row !important;
     }
 
-    /* reduce logo size slightly in tablet range if required */
-    .header-logo {
-      max-width: 140px !important;
-      height: auto !important;
+    /* Flip order: hamburger left, logo right */
+    .header-left {
+      order: 2 !important;
+    }
+    .mobile-nav-toggle {
+      order: 1 !important;
+      margin-left: 0 !important;
     }
   }
 
-  /* Extra: if some tablets are slightly larger (e.g., 1080-1140) you can extend */
-  @media (min-width: 1081px) and (max-width: 1140px) {
-    /* optional—only if you see edge devices jumping back to desktop nav */
+  /* Explicitly handle landscape orientation */
+  @media (orientation: landscape) and (min-width: 768px) and (max-width: 1024px) {
     .header-right {
       display: none !important;
-      visibility: hidden !important;
-      opacity: 0 !important;
     }
     .mobile-nav-toggle {
       display: block !important;
+    }
+    .header-left {
+      order: 2 !important;
+    }
+    .mobile-nav-toggle {
+      order: 1 !important;
+    }
+    .header {
+      height: 70px !important;
     }
   }
 `}</style>;
