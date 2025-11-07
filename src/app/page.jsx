@@ -2543,7 +2543,6 @@ export default function Page() {
     </>
   );
 }
-
 // Helper for below 600px
 function isBelow600() {
   if (typeof window !== "undefined") {
@@ -2589,106 +2588,4 @@ function lmsCardPStyle(isBelow480) {
     textAlign: "center",
     lineHeight: "1.45",
   };
-}
-
-{
-  /* Responsive Footer Styles */
-}
-<style jsx>{`
-  @media (max-width: 768px) {
-    .footer-container {
-      flex-direction: column !important;
-      align-items: center !important;
-      text-align: center !important;
-      padding-left: 18px !important;
-      padding-right: 18px !important;
-    }
-    .footer-left,
-    .footer-right {
-      width: 100% !important;
-      align-items: center !important;
-      text-align: center !important;
-      margin-bottom: 1.5rem !important;
-    }
-    .footer-columns {
-      flex-direction: column !important;
-      gap: 1.2rem !important;
-      align-items: center !important;
-      width: 100% !important;
-    }
-    .footer-left p,
-    .footer-right p,
-    .footer-right address,
-    .footer-right h3 {
-      text-align: center !important;
-    }
-    .social-icons {
-      justify-content: center !important;
-    }
-    .social-icons a {
-      font-size: 1.5rem !important;
-    }
-  }
-  @media (max-width: 480px) {
-    .footer-container {
-      gap: 1rem !important;
-      padding-top: 10px !important;
-      padding-bottom: 8px !important;
-    }
-    .footer-left p,
-    .footer-right p,
-    .footer-right address {
-      font-size: 0.92rem !important;
-    }
-    .footer-right h3,
-    .footer-left h3 {
-      font-size: 1rem !important;
-    }
-    .footer-columns {
-      gap: 0.7rem !important;
-    }
-    .social-icons a {
-      font-size: 1.5rem !important;
-    }
-  }
-`}</style>;
-
-<style jsx global>{`
-  @media (max-width: 480px) {
-    .corporate-collab div {
-      flex-direction: column !important;
-    }
-    .corporate-collab h2 {
-      font-size: 1.4rem !important;
-      text-align: center !important;
-    }
-  }
-`}</style>;
-
-{
-  /* ======= Footer Navigation (if present) ======= */
-}
-{
-  /* If you have a footer navigation, ensure the links below use the correct hrefs with section IDs */
-}
-{
-  /* Example footer navigation: */
-}
-{
-  /*
-      <footer>
-        <nav>
-          <ul>
-            <li><a href="#hero">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#lms-platform">LMS Platform</a></li>
-            <li><a href="#clients">Our Clients</a></li>
-            <li><a href="#journey">Our Journey</a></li>
-            <li><a href="#vision-future">Vision and Future</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-          </ul>
-        </nav>
-      </footer>
-      */
 }
