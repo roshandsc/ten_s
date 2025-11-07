@@ -26,9 +26,10 @@
       display: flex !important;
       flex-direction: row !important;
       align-items: center !important;
-      justify-content: space-between !important;
+      flex-wrap: wrap !important;
+      justify-content: space-around !important;
       width: 100% !important;
-      padding: 4px 10px !important;
+      padding: 6px 14px !important;
       gap: 4px !important;
     }
 
@@ -41,7 +42,7 @@
     }
 
     .header-left img {
-      max-width: 32px !important;
+      max-width: 60px !important;
       height: auto !important;
       object-fit: contain !important;
     }
@@ -51,7 +52,7 @@
     }
     .header-logo img {
       width: auto !important;
-      height: 16px !important;
+      height: 26px !important;
       object-fit: contain !important;
     }
 
@@ -60,6 +61,9 @@
       display: flex !important;
       align-items: center !important;
       justify-content: center !important;
+    }
+    .header-right {
+      flex: 1 !important;
     }
 
     .nav {
@@ -83,15 +87,16 @@
     }
 
     .nav-links a {
-      font-size: 0.35rem !important;
+      font-size: 0.6rem !important;
       font-weight: 500 !important;
       white-space: nowrap !important;
       color: #004aad !important;
+      margin: 0 6px !important;
     }
 
     .contact-button {
-      padding: 4px 8px !important;
-      font-size: 0.35rem !important;
+      padding: 6px 12px !important;
+      font-size: 0.6rem !important;
       border-radius: 8px !important;
       background: #004aad !important;
       color: #fff !important;
