@@ -7,12 +7,13 @@
     /* ===== HEADER (FINAL RESPONSIVE FIX) ===== */
     .header {
       display: flex !important;
-      flex-direction: column !important;
+      flex-direction: row !important;
       align-items: center !important;
       justify-content: center !important;
       width: 100% !important;
       height: auto !important;
-      padding: 10px 0 !important;
+      padding-top: 4px !important;
+      padding-bottom: 4px !important;
       position: fixed !important;
       top: 0 !important;
       left: 0 !important;
@@ -23,12 +24,12 @@
 
     .header-container {
       display: flex !important;
-      flex-direction: column !important;
+      flex-direction: row !important;
       align-items: center !important;
-      justify-content: center !important;
+      justify-content: space-between !important;
       width: 100% !important;
-      padding: 8px 16px !important;
-      gap: 10px !important;
+      padding: 4px 10px !important;
+      gap: 6px !important;
     }
 
     .header-left {
@@ -40,8 +41,17 @@
     }
 
     .header-left img {
-      max-width: 110px !important;
+      max-width: 70px !important;
       height: auto !important;
+      object-fit: contain !important;
+    }
+    .header-logo {
+      position: static !important;
+      transform: none !important;
+    }
+    .header-logo img {
+      width: auto !important;
+      height: 44px !important;
       object-fit: contain !important;
     }
 
@@ -65,7 +75,7 @@
       flex-wrap: wrap !important;
       justify-content: center !important;
       align-items: center !important;
-      gap: 1rem !important;
+      gap: 0.5rem !important;
       width: 100% !important;
       margin: 0 !important;
       padding: 0 !important;
@@ -73,15 +83,15 @@
     }
 
     .nav-links a {
-      font-size: 0.95rem !important;
+      font-size: 0.75rem !important;
       font-weight: 500 !important;
       white-space: nowrap !important;
       color: #004aad !important;
     }
 
     .contact-button {
-      padding: 8px 14px !important;
-      font-size: 0.9rem !important;
+      padding: 5px 10px !important;
+      font-size: 0.75rem !important;
       border-radius: 8px !important;
       background: #004aad !important;
       color: #fff !important;
