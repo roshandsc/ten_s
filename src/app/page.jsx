@@ -541,7 +541,7 @@ export default function Page() {
   const isBelow992 = windowWidth < 992;
   const isBelow768 = windowWidth < 768;
   const isBelow480 = windowWidth < 480;
-  const isAtOrBelow1080 = windowWidth <= 1080; // Covers all tablets (portrait + landscape)
+  const isAtOrBelow1024 = windowWidth <= 1024; // Tablets now use mobile-style hamburger menu (<= includes 1024px landscape)
 
   // Max-width wrapper style for central alignment
   const maxWidthWrapperStyle = {
@@ -596,7 +596,7 @@ export default function Page() {
             />
           </div>
           {/* Hamburger for mobile and tablets */}
-          {isAtOrBelow1080 ? (
+          {isAtOrBelow1024 ? (
             <div
               className="mobile-nav-toggle"
               style={{
@@ -666,6 +666,7 @@ export default function Page() {
             className="header-right"
             style={{
               flex: 1,
+              display: isAtOrBelow1024 ? "none" : "flex",
               justifyContent: "flex-end",
               alignItems: "center",
             }}
@@ -702,7 +703,7 @@ export default function Page() {
             </nav>
           </div>
           {/* Mobile Nav Dropdown - Tessa Cloud style */}
-          {isAtOrBelow1080 && (
+          {isAtOrBelow1024 && (
             <div
               className="mobile-dropdown"
               style={{
@@ -2668,38 +2669,92 @@ function lmsCardPStyle(isBelow480) {
 `}</style>;
 
 <style jsx global>{`
-  /* ✅ Lock hamburger menu for all tablets (portrait + landscape) */
+  /* 🔒 Force hamburger menu on all tablets (portrait + landscape) */
+  /* -------------------------
+   Force hamburger on all tablets
+   (covers portrait + landscape)
+   ------------------------- */
   @media (min-width: 768px) and (max-width: 1080px) {
+    /* hide desktop nav container */
     .header-right {
       display: none !important;
       visibility: hidden !important;
       opacity: 0 !important;
     }
 
+    /* show hamburger toggle */
     .mobile-nav-toggle {
       display: block !important;
       visibility: visible !important;
       opacity: 1 !important;
     }
 
+    /* ensure mobile dropdown exists and is visible when open */
     .mobile-dropdown {
       display: block !important;
       visibility: visible !important;
       opacity: 1 !important;
-      transition: all 0.4s ease-in-out;
+      transform: translateY(0) !important;
+      max-height: 420px !important; /* allow dropdown height */
     }
 
+    /* hide regular nav links inside header-right if they appear */
     .nav-links {
       display: none !important;
     }
 
+    /* spacing fix so logo and hamburger align */
     .header-container {
       justify-content: space-between !important;
+      padding-left: 18px !important;
+      padding-right: 18px !important;
     }
 
+    /* reduce logo size slightly in tablet range if required */
     .header-logo {
       max-width: 140px !important;
       height: auto !important;
     }
   }
+
+  /* Extra: if some tablets are slightly larger (e.g., 1080-1140) you can extend */
+  @media (min-width: 1081px) and (max-width: 1140px) {
+    /* optional—only if you see edge devices jumping back to desktop nav */
+    .header-right {
+      display: none !important;
+      visibility: hidden !important;
+      opacity: 0 !important;
+    }
+    .mobile-nav-toggle {
+      display: block !important;
+    }
+  }
 `}</style>;
+
+{
+  /* ======= Footer Navigation (if present) ======= */
+}
+{
+  /* If you have a footer navigation, ensure the links below use the correct hrefs with section IDs */
+}
+{
+  /* Example footer navigation: */
+}
+{
+  /*
+      <footer>
+        <nav>
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#lms-platform">LMS Platform</a></li>
+            <li><a href="#clients">Our Clients</a></li>
+            <li><a href="#journey">Our Journey</a></li>
+            <li><a href="#vision-future">Vision and Future</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </nav>
+      </footer>
+      */
+}
