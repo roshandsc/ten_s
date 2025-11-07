@@ -128,6 +128,16 @@
       margin-top: 70px !important;
     }
   }
+
+  /* Force hamburger menu on tablets (always hide .header-right, show .mobile-nav-toggle) */
+  @media (max-width: 1024px) and (min-width: 768px) {
+    .header-right {
+      display: none !important;
+    }
+    .mobile-nav-toggle {
+      display: block !important;
+    }
+  }
 `}</style>;
 
 import React, { useEffect, useState } from "react";
@@ -725,7 +735,7 @@ export default function Page() {
               }}
             />
           </div>
-          {/* Hamburger for mobile */}
+          {/* Hamburger for mobile and tablets */}
           {isBelow1024 ? (
             <div
               className="mobile-nav-toggle"
