@@ -4,29 +4,36 @@
 /* Tablet responsiveness global styles */
 <style jsx global>{`
   @media (max-width: 992px) and (min-width: 768px) {
-    /* Header */
+    /* Header layout fixes for tablet */
     .header-container {
-      padding: 10px 30px !important;
+      padding: 12px 20px !important;
+      justify-content: space-between !important;
+    }
+    .header-left img {
+      max-width: 150px !important;
+      height: auto !important;
     }
     .nav-links {
-      gap: 1.2rem !important;
+      gap: 1.4rem !important;
+      justify-content: center !important;
+    }
+    .header {
+      align-items: center !important;
     }
 
     /* Hero Section */
     .hero-content {
-      flex-direction: column !important;
+      flex-direction: row !important;
       align-items: center !important;
-      text-align: center !important;
+      justify-content: space-between !important;
+      gap: 1.8rem !important;
     }
     .hero-text {
-      max-width: 90% !important;
-      margin-bottom: 2rem !important;
+      max-width: 55% !important;
+      text-align: left !important;
     }
-    .hero-text h1 {
-      font-size: 2.4rem !important;
-    }
-    .hero-text h3 {
-      font-size: 1.2rem !important;
+    .hero-image {
+      max-width: 45% !important;
     }
 
     /* About Us */
@@ -105,6 +112,11 @@
     .footer {
       text-align: center !important;
       padding: 20px 25px !important;
+    }
+
+    /* Prevent header overlap on tablet */
+    body {
+      margin-top: 70px !important;
     }
   }
 `}</style>;
