@@ -1,6 +1,5 @@
 "use client";
 
-
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -1989,7 +1988,7 @@ export default function Page() {
             </div>
           </div>
         </section>
-      {/* ======= Contact Section ======= */}
+        {/* ======= Contact Section ======= */}
         <section
           id="contact"
           className="contact"
@@ -2159,30 +2158,8 @@ export default function Page() {
                   alignItems: "stretch",
                 }}
               >
+                {/* Contact Form Iframe */}
                 <iframe
-      {/* Global tablet and hamburger styles */}
-      <style jsx global>{`
-        /* ...other global styles... */
-
-        /* Force hamburger for all tablets (portrait + landscape) */
-        @media (min-width: 768px) and (max-width: 1024px) {
-          .header-right {
-            display: none !important;
-          }
-          .mobile-nav-toggle {
-            display: block !important;
-          }
-          .mobile-dropdown {
-            display: block !important;
-          }
-          .nav-links {
-            display: none !important;
-          }
-          .header-container {
-            justify-content: space-between !important;
-          }
-        }
-      `}</style>
                   src="https://forms.zohopublic.in/10seconds/form/RequestforQuote/formperma/Yagg4-6x6eqKH8GfsJbH3E48VG-DicyHAr-YNc1qZtE?zf_rszfm=1"
                   style={{
                     border: "none",
@@ -2199,6 +2176,28 @@ export default function Page() {
                   }}
                   allowFullScreen
                 ></iframe>
+
+                {/* ✅ Global tablet and hamburger styles */}
+                <style jsx global>{`
+                  /* Force hamburger for all tablets (portrait + landscape) */
+                  @media (min-width: 768px) and (max-width: 1024px) {
+                    .header-right {
+                      display: none !important;
+                    }
+                    .mobile-nav-toggle {
+                      display: block !important;
+                    }
+                    .mobile-dropdown {
+                      display: block !important;
+                    }
+                    .nav-links {
+                      display: none !important;
+                    }
+                    .header-container {
+                      justify-content: space-between !important;
+                    }
+                  }
+                `}</style>
               </div>
             </div>
           </div>
