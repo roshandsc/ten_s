@@ -286,44 +286,6 @@ const navigationLinks = [
   { name: "Contact Us", href: "#contact" },
 ];
 
-function lmsCardStyle(isBelow480, isBelow768) {
-  return {
-    background: "#ffffff",
-    borderRadius: isBelow480 ? 10 : 16,
-    boxShadow: "0 2px 10px rgba(0, 124, 240, 0.07)",
-    padding: isBelow480 ? "0.85rem" : isBelow768 ? "1.1rem" : "1.25rem",
-    textAlign: "center",
-    minHeight: isBelow480 ? 80 : isBelow768 ? 95 : 110,
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    width: "100%",
-    transition: "box-shadow 0.2s, transform 0.2s",
-  };
-}
-function lmsCardH3Style(isBelow480, color) {
-  return {
-    fontWeight: 700,
-    fontSize: isBelow480 ? "1.08rem" : "1.17rem",
-    color,
-    margin: 0,
-    marginBottom: "0.3rem",
-    letterSpacing: "0.5px",
-    textAlign: "center",
-  };
-}
-function lmsCardPStyle(isBelow480) {
-  return {
-    fontSize: isBelow480 ? "0.92rem" : "1.01rem",
-    color: "#003366",
-    fontWeight: 500,
-    margin: 0,
-    textAlign: "center",
-    lineHeight: "1.45",
-  };
-}
-
 export default function Page() {
   const pathname = usePathname();
   const [showPolicy, setShowPolicy] = useState(false);
