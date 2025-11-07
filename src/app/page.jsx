@@ -286,14 +286,6 @@ const navigationLinks = [
   { name: "Contact Us", href: "#contact" },
 ];
 
-// === Responsive + LMS helper functions (kept outside components) ===
-function isBelow600() {
-  if (typeof window !== "undefined") {
-    return window.innerWidth < 600;
-  }
-  return false;
-}
-
 function lmsCardStyle(isBelow480, isBelow768) {
   return {
     background: "#ffffff",
