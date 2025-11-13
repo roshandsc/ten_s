@@ -2617,7 +2617,7 @@ export default function Page() {
             </h2>
 
             <div style={{ marginTop: "20px" }}>
-              <h3>PAGE 1: Ethics & Compliance</h3>
+              <h3>Ethics & Compliance</h3>
               <h4>Ethics, Integrity & Responsible Business Conduct</h4>
               <p>
                 At 10 SECONDS, integrity is the foundation of everything we do.
@@ -2642,9 +2642,7 @@ export default function Page() {
                 <li>Free of harassment or bullying</li>
               </ul>
 
-              <hr />
-
-              <h3>PAGE 2: Supplier Integrity & Conduct</h3>
+              <h3>Supplier Integrity & Conduct</h3>
               <ul>
                 <li>Equal opportunity workplace.</li>
                 <li>No harassment or abuse.</li>
@@ -2661,9 +2659,7 @@ export default function Page() {
                 <li>No exploitation</li>
               </ul>
 
-              <hr />
-
-              <h3>PAGE 3: Information Security & Data Protection</h3>
+              <h3>Information Security & Data Protection</h3>
               <ul>
                 <li>Security governance & annual reviews.</li>
                 <li>Security awareness training.</li>
@@ -2672,9 +2668,7 @@ export default function Page() {
                 <li>No unauthorised storage of client data.</li>
               </ul>
 
-              <hr />
-
-              <h3>PAGE 4: Privacy Policy</h3>
+              <h3>Privacy Policy</h3>
               <h4>What Data We Collect</h4>
               <ul>
                 <li>Contact info</li>
@@ -2689,54 +2683,42 @@ export default function Page() {
                 <li>Opt-out of non-essential communication</li>
               </ul>
 
-              <hr />
-
-              <h3>PAGE 5: Anti-Bribery & Anti-Corruption</h3>
+              <h3>Anti-Bribery & Anti-Corruption</h3>
               <ul>
                 <li>No gifts, favours, entertainment.</li>
                 <li>No bribes or facilitation payments.</li>
                 <li>Transparent documentation.</li>
               </ul>
 
-              <hr />
-
-              <h3>PAGE 6: Accessibility & Inclusivity</h3>
+              <h3>Accessibility & Inclusivity</h3>
               <ul>
                 <li>Accessibility-first design.</li>
                 <li>Alternate content formats.</li>
                 <li>Zero discrimination.</li>
               </ul>
 
-              <hr />
-
-              <h3>PAGE 7: Responsible AI & Tech Use</h3>
+              <h3>Responsible AI & Tech Use</h3>
               <ul>
                 <li>No client data used to train AI.</li>
                 <li>Human-supervised AI usage.</li>
                 <li>Bias-free automation.</li>
               </ul>
 
-              <hr />
-
-              <h3>PAGE 8: Audit & Documentation Integrity</h3>
+              <h3>Audit & Documentation Integrity</h3>
               <ul>
                 <li>Accurate reporting.</li>
                 <li>Transparent invoicing.</li>
                 <li>Audit-ready documentation.</li>
               </ul>
 
-              <hr />
-
-              <h3>PAGE 9: Governance & Risk Management</h3>
+              <h3>Governance & Risk Management</h3>
               <ul>
                 <li>Ethical leadership.</li>
                 <li>Policy-driven operations.</li>
                 <li>Risk monitoring.</li>
               </ul>
 
-              <hr />
-
-              <h3>PAGE 10: Security & Compliance</h3>
+              <h3>Security & Compliance</h3>
               <p>
                 10 SECONDS is committed to ethical conduct, information
                 security, anti-corruption, accessibility, responsible tech use,
