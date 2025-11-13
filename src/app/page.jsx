@@ -2523,7 +2523,8 @@ export default function Page() {
                   Bangalore - 560083
                   <br />
                   <br />
-                  Phone: <a href="tel:+919731144344">+91 97311 44344</a> |{" "}
+                  Phone: <a href="tel:+919731144344">+91 97311 44344</a>
+                  <br />
                   <a href="tel:+919480074552">+91 94800 74552</a>
                   <br />
                   Email:{" "}
