@@ -2512,24 +2512,22 @@ export default function Page() {
                     textAlign: isBelow768 ? "center" : "left",
                   }}
                 >
-                  <strong>Bengaluru Head Office</strong>
+                  10 SECONDS
                   <br />
-                  10 SECONDS, Arya Hamsa, 8th Phase, JP Nagar, Bengaluru –
-                  560083
+                  Arya Hamsa
                   <br />
-                  📞 <a href="tel:+919731144344">+91 97311 44344</a> |{" "}
-                  <a href="tel:+919480074552">+91 94800 74552</a>
+                  Royal County, 80 Feet Road
                   <br />
-                  📧{" "}
-                  <a href="mailto:care@10seconds.co.in">care@10seconds.co.in</a>
+                  J P Nagar, 8th Phase
                   <br />
-                  🌐{" "}
-                  <a
-                    href="https://www.10seconds.co.in"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    www.10seconds.co.in
+                  Bangalore - 83
+                  <br />
+                  <br />
+                  Phone: <a href="tel:+919611224444">+91 9611 22 4444</a>
+                  <br />
+                  Email:{" "}
+                  <a href="mailto:info@10secondsgroup.in">
+                    info@10secondsgroup.in
                   </a>
                 </address>
               </div>
