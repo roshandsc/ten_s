@@ -2562,6 +2562,249 @@ export default function Page() {
           © Copyright 10SECONDS. All Rights Reserved.
         </div>
       </footer>
+      {/* ======= Modal Popup for Privacy Policy, Terms, etc. ======= */}
+      {showPolicy && (
+        <div
+          className="modal-overlay"
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100vw",
+            height: "100vh",
+            background: "rgba(0,0,0,0.36)",
+            zIndex: 2000,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+          onClick={() => setShowPolicy(false)}
+        >
+          <div
+            className="modal-content"
+            style={{
+              background: "#ffffff",
+              borderRadius: "16px",
+              boxShadow: "0 8px 32px rgba(0,0,0,0.18)",
+              maxWidth: "680px",
+              width: "96vw",
+              maxHeight: "92vh",
+              overflowY: "auto",
+              padding: "32px 28px",
+              position: "relative",
+            }}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Close button */}
+            <button
+              aria-label="Close"
+              onClick={() => setShowPolicy(false)}
+              style={{
+                position: "absolute",
+                top: 16,
+                right: 16,
+                background: "none",
+                border: "none",
+                fontSize: "2rem",
+                color: "#004aad",
+                cursor: "pointer",
+                fontWeight: 700,
+                zIndex: 1,
+                lineHeight: 1,
+              }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = "#007cf0")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = "#004aad")}
+            >
+              ×
+            </button>
+            {/* Modal Content */}
+            {/* PAGE 1 */}
+            <h3
+              style={{
+                color: "#000000",
+                fontWeight: 700,
+                marginTop: "22px",
+                marginBottom: "12px",
+                textAlign: "left",
+                letterSpacing: "0.2px",
+              }}
+            >
+              PAGE 1: Privacy Policy
+            </h3>
+            <p>
+              This Privacy Policy describes how 10 SECONDS ("we", "us", or
+              "our") collects, uses, and protects your personal information when
+              you use our website and services.
+            </p>
+            {/* PAGE 2 */}
+            <h3
+              style={{
+                color: "#000000",
+                fontWeight: 700,
+                marginTop: "22px",
+                marginBottom: "12px",
+                textAlign: "left",
+                letterSpacing: "0.2px",
+              }}
+            >
+              PAGE 2: Information We Collect
+            </h3>
+            <ul>
+              <li>
+                <strong>Personal Information:</strong> Name, email address,
+                phone number, and other contact details provided by you.
+              </li>
+              <li>
+                <strong>Usage Data:</strong> Information about how you use our
+                website, such as IP address, browser type, and pages visited.
+              </li>
+            </ul>
+            {/* PAGE 3 */}
+            <h3
+              style={{
+                color: "#000000",
+                fontWeight: 700,
+                marginTop: "22px",
+                marginBottom: "12px",
+                textAlign: "left",
+                letterSpacing: "0.2px",
+              }}
+            >
+              PAGE 3: How We Use Your Information
+            </h3>
+            <ul>
+              <li>To provide and improve our services.</li>
+              <li>
+                To communicate with you about updates, offers, or inquiries.
+              </li>
+              <li>To comply with legal obligations.</li>
+            </ul>
+            {/* PAGE 4 */}
+            <h3
+              style={{
+                color: "#000000",
+                fontWeight: 700,
+                marginTop: "22px",
+                marginBottom: "12px",
+                textAlign: "left",
+                letterSpacing: "0.2px",
+              }}
+            >
+              PAGE 4: Cookies and Tracking
+            </h3>
+            <p>
+              We use cookies and similar technologies to enhance your experience
+              on our website. You can control cookies through your browser
+              settings.
+            </p>
+            {/* PAGE 5 */}
+            <h3
+              style={{
+                color: "#000000",
+                fontWeight: 700,
+                marginTop: "22px",
+                marginBottom: "12px",
+                textAlign: "left",
+                letterSpacing: "0.2px",
+              }}
+            >
+              PAGE 5: Data Security
+            </h3>
+            <p>
+              We implement reasonable security measures to protect your personal
+              information from unauthorized access, disclosure, or alteration.
+            </p>
+            {/* PAGE 6 */}
+            <h3
+              style={{
+                color: "#000000",
+                fontWeight: 700,
+                marginTop: "22px",
+                marginBottom: "12px",
+                textAlign: "left",
+                letterSpacing: "0.2px",
+              }}
+            >
+              PAGE 6: Sharing Your Information
+            </h3>
+            <p>
+              We do not sell or rent your personal information. We may share
+              information with trusted partners to provide services, or when
+              required by law.
+            </p>
+            {/* PAGE 7 */}
+            <h3
+              style={{
+                color: "#000000",
+                fontWeight: 700,
+                marginTop: "22px",
+                marginBottom: "12px",
+                textAlign: "left",
+                letterSpacing: "0.2px",
+              }}
+            >
+              PAGE 7: Third-Party Links
+            </h3>
+            <p>
+              Our website may contain links to third-party sites. We are not
+              responsible for their privacy practices or content.
+            </p>
+            {/* PAGE 8 */}
+            <h3
+              style={{
+                color: "#000000",
+                fontWeight: 700,
+                marginTop: "22px",
+                marginBottom: "12px",
+                textAlign: "left",
+                letterSpacing: "0.2px",
+              }}
+            >
+              PAGE 8: Children's Privacy
+            </h3>
+            <p>
+              Our services are not directed to children under 13. We do not
+              knowingly collect personal information from children.
+            </p>
+            {/* PAGE 9 */}
+            <h3
+              style={{
+                color: "#000000",
+                fontWeight: 700,
+                marginTop: "22px",
+                marginBottom: "12px",
+                textAlign: "left",
+                letterSpacing: "0.2px",
+              }}
+            >
+              PAGE 9: Updates to This Policy
+            </h3>
+            <p>
+              We may update this Privacy Policy from time to time. Changes will
+              be posted on this page with the updated date.
+            </p>
+            {/* PAGE 10 */}
+            <h3
+              style={{
+                color: "#000000",
+                fontWeight: 700,
+                marginTop: "22px",
+                marginBottom: "12px",
+                textAlign: "left",
+                letterSpacing: "0.2px",
+              }}
+            >
+              PAGE 10: Contact Us
+            </h3>
+            <p>
+              If you have questions about this Privacy Policy, please contact us
+              at{" "}
+              <a href="mailto:info@10secondsgroup.in">info@10secondsgroup.in</a>
+              .
+            </p>
+          </div>
+        </div>
+      )}
       {showPolicy && (
         <div
           style={{
