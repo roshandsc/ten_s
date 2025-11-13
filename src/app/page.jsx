@@ -2205,128 +2205,6 @@ export default function Page() {
           </div>
         </section>
       </main>
-      <section
-        id="privacy-policy"
-        style={{
-          padding: "60px 20px",
-          background: "#f7fbff",
-          minHeight: "100vh",
-        }}
-      >
-        <div style={{ maxWidth: "900px", margin: "0 auto" }}>
-          <h2
-            style={{
-              color: "#004aad",
-              fontWeight: "800",
-              fontSize: "2.2rem",
-              marginBottom: "1rem",
-            }}
-          >
-            Ethics & Compliance
-          </h2>
-          <p>
-            At 10 SECONDS, integrity is the foundation of everything we do. We
-            follow a strict ethical framework aligned with global standards.
-          </p>
-
-          <h3>Our Ethical Commitments</h3>
-          <ul>
-            <li>Honesty, fairness, and transparency in all operations.</li>
-            <li>Truthful documentation and communication.</li>
-            <li>Zero tolerance for bribery, fraud, or unethical conduct.</li>
-            <li>Strict conflict-of-interest adherence.</li>
-            <li>Encouraging a safe speak-up culture.</li>
-          </ul>
-
-          <h3>Respectful & Professional Conduct</h3>
-          <ul>
-            <li>Respectful</li>
-            <li>Inclusive</li>
-            <li>Non-discriminatory</li>
-            <li>Free from harassment or intimidation</li>
-          </ul>
-
-          <h2 style={{ marginTop: "2rem", color: "#004aad" }}>
-            Supplier Integrity & Conduct
-          </h2>
-          <ul>
-            <li>Equal opportunity and merit-based hiring.</li>
-            <li>Zero harassment or abuse.</li>
-            <li>Safe and supportive working environment.</li>
-            <li>No child labour, forced labour, or unsafe practices.</li>
-          </ul>
-
-          <h2 style={{ marginTop: "2rem", color: "#004aad" }}>
-            Information Security & Data Protection
-          </h2>
-          <ul>
-            <li>Dedicated Information Security Officer.</li>
-            <li>Annual policy reviews.</li>
-            <li>Mandatory security training.</li>
-            <li>Encryption at rest and in transit.</li>
-            <li>Role-based access controls with MFA.</li>
-            <li>Strict data retention & secure disposal.</li>
-          </ul>
-
-          <h2 style={{ marginTop: "2rem", color: "#004aad" }}>
-            Privacy Policy
-          </h2>
-          <h3>What Data We Collect</h3>
-          <ul>
-            <li>Contact information</li>
-            <li>Academic or professional details</li>
-            <li>Training and performance data</li>
-            <li>Platform usage logs</li>
-          </ul>
-
-          <h3>How We Use Your Data</h3>
-          <ul>
-            <li>Training, placement, assessments</li>
-            <li>Improving learner experience</li>
-            <li>Operational & reporting</li>
-            <li>Security & compliance</li>
-          </ul>
-
-          <h3>Your Rights</h3>
-          <ul>
-            <li>Request access, correction, deletion</li>
-            <li>Opt out of non-essential communication</li>
-            <li>Contact the Data Protection Officer</li>
-          </ul>
-
-          <h2 style={{ marginTop: "2rem", color: "#004aad" }}>
-            Anti-Bribery & Anti-Corruption
-          </h2>
-          <ul>
-            <li>No gifts, favours, entertainment, or inducements.</li>
-            <li>No bribes, kickbacks, or facilitation payments.</li>
-            <li>Full legal compliance.</li>
-          </ul>
-
-          <h2 style={{ marginTop: "2rem", color: "#004aad" }}>
-            Responsible AI & Technology Use
-          </h2>
-          <ul>
-            <li>No client data used for AI training.</li>
-            <li>Human-supervised AI usage.</li>
-            <li>Bias-free automation practices.</li>
-          </ul>
-
-          <h2 style={{ marginTop: "2rem", color: "#004aad" }}>
-            Governance & Risk Management
-          </h2>
-          <ul>
-            <li>Policy-driven operations.</li>
-            <li>Annual governance reviews.</li>
-            <li>Risk mitigation across all departments.</li>
-          </ul>
-
-          <p style={{ marginTop: "2rem", fontWeight: "600", color: "#003366" }}>
-            10 SECONDS is committed to ethical conduct, strict security,
-            compliance, privacy, accessibility, and responsible technology use.
-          </p>
-        </div>
-      </section>
       {/* ======= Vision & Future Section ======= */}
       <section
         id="vision-future"
@@ -2586,7 +2464,11 @@ export default function Page() {
                   ))}
                   <li>
                     <a
-                      href="#privacy-policy"
+                      href="#"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setShowPolicy(true);
+                      }}
                       style={{
                         color: "#004aad",
                         textDecoration: "none",
