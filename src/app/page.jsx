@@ -2520,14 +2520,18 @@ export default function Page() {
                   <br />
                   J P Nagar, 8th Phase
                   <br />
-                  Bangalore - 83
+                  Bangalore - 560083
                   <br />
                   <br />
-                  Phone: <a href="tel:+919611224444">+91 9611 22 4444</a>
+                  Phone: <a href="tel:+919731144344">+91 97311 44344</a> |{" "}
+                  <a href="tel:+919480074552">+91 94800 74552</a>
                   <br />
                   Email:{" "}
-                  <a href="mailto:info@10secondsgroup.in">
-                    info@10secondsgroup.in
+                  <a href="mailto:care@10seconds.co.in">care@10seconds.co.in</a>
+                  <br />
+                  Website:{" "}
+                  <a href="https://www.10seconds.co.in" target="_blank">
+                    www.10seconds.co.in
                   </a>
                 </address>
               </div>
