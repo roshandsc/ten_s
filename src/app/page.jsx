@@ -2070,12 +2070,12 @@ export default function Page() {
                     {
                       icon: "bi-telephone",
                       title: "Call Us",
-                      content: "+91 9611 22 4444",
+                      content: "+91 97311 44344 | +91 94800 74552",
                     },
                     {
                       icon: "bi-envelope",
                       title: "Email Us",
-                      content: "info@10secondsgroup.in",
+                      content: "care@10seconds.co.in",
                     },
                   ].map((item, i) => (
                     <div
