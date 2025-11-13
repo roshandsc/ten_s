@@ -2562,6 +2562,190 @@ export default function Page() {
           © Copyright 10SECONDS. All Rights Reserved.
         </div>
       </footer>
+      {showPolicy && (
+        <div
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            background: "rgba(0,0,0,0.5)",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            zIndex: 9999,
+            padding: "20px",
+          }}
+          onClick={() => setShowPolicy(false)}
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            style={{
+              background: "#fff",
+              width: "95%",
+              maxWidth: "900px",
+              maxHeight: "90vh",
+              overflowY: "auto",
+              padding: "30px",
+              borderRadius: "8px",
+              boxShadow: "0 4px 25px rgba(0,0,0,0.2)",
+              scrollBehavior: "smooth",
+              fontSize: "1rem",
+              lineHeight: "1.6",
+              color: "#333",
+              position: "relative",
+            }}
+          >
+            <button
+              onClick={() => setShowPolicy(false)}
+              style={{
+                position: "absolute",
+                top: "10px",
+                right: "20px",
+                background: "transparent",
+                border: "none",
+                fontSize: "1.8rem",
+                cursor: "pointer",
+              }}
+            >
+              ×
+            </button>
+
+            <h2 style={{ textAlign: "center", fontWeight: "700" }}>
+              Privacy Policy & Compliance Framework
+            </h2>
+
+            <div style={{ marginTop: "20px" }}>
+              <h3>PAGE 1: Ethics & Compliance</h3>
+              <h4>Ethics, Integrity & Responsible Business Conduct</h4>
+              <p>
+                At 10 SECONDS, integrity is the foundation of everything we do.
+                We follow a strict, enterprise-grade ethical framework aligned
+                with global business standards and federal supplier guidelines.
+              </p>
+              <h4>Our Ethical Commitments</h4>
+              <ul>
+                <li>Honesty, fairness & transparency.</li>
+                <li>Truthful information in all documents.</li>
+                <li>No bribery, gifts, or improper influence.</li>
+                <li>Zero tolerance for fraud.</li>
+                <li>Conflict-of-interest compliance.</li>
+                <li>Speak-up culture without retaliation.</li>
+              </ul>
+
+              <h4>Respectful & Professional Conduct</h4>
+              <ul>
+                <li>Respectful</li>
+                <li>Inclusive</li>
+                <li>Non-discriminatory</li>
+                <li>Free of harassment or bullying</li>
+              </ul>
+
+              <hr />
+
+              <h3>PAGE 2: Supplier Integrity & Conduct</h3>
+              <ul>
+                <li>Equal opportunity workplace.</li>
+                <li>No harassment or abuse.</li>
+                <li>Merit-based evaluation.</li>
+                <li>Freedom of expression & dignity.</li>
+                <li>Revolving-door compliance in hiring.</li>
+              </ul>
+
+              <h4>Labour & Human Rights</h4>
+              <ul>
+                <li>No forced labour</li>
+                <li>No child labour</li>
+                <li>No trafficking</li>
+                <li>No exploitation</li>
+              </ul>
+
+              <hr />
+
+              <h3>PAGE 3: Information Security & Data Protection</h3>
+              <ul>
+                <li>Security governance & annual reviews.</li>
+                <li>Security awareness training.</li>
+                <li>Data classification & access control.</li>
+                <li>Encrypted data at rest & transit.</li>
+                <li>No unauthorised storage of client data.</li>
+              </ul>
+
+              <hr />
+
+              <h3>PAGE 4: Privacy Policy</h3>
+              <h4>What Data We Collect</h4>
+              <ul>
+                <li>Contact info</li>
+                <li>Academic/professional data</li>
+                <li>Performance data</li>
+                <li>Website/LMS logs</li>
+              </ul>
+
+              <h4>Your Rights</h4>
+              <ul>
+                <li>Access, correction, deletion</li>
+                <li>Opt-out of non-essential communication</li>
+              </ul>
+
+              <hr />
+
+              <h3>PAGE 5: Anti-Bribery & Anti-Corruption</h3>
+              <ul>
+                <li>No gifts, favours, entertainment.</li>
+                <li>No bribes or facilitation payments.</li>
+                <li>Transparent documentation.</li>
+              </ul>
+
+              <hr />
+
+              <h3>PAGE 6: Accessibility & Inclusivity</h3>
+              <ul>
+                <li>Accessibility-first design.</li>
+                <li>Alternate content formats.</li>
+                <li>Zero discrimination.</li>
+              </ul>
+
+              <hr />
+
+              <h3>PAGE 7: Responsible AI & Tech Use</h3>
+              <ul>
+                <li>No client data used to train AI.</li>
+                <li>Human-supervised AI usage.</li>
+                <li>Bias-free automation.</li>
+              </ul>
+
+              <hr />
+
+              <h3>PAGE 8: Audit & Documentation Integrity</h3>
+              <ul>
+                <li>Accurate reporting.</li>
+                <li>Transparent invoicing.</li>
+                <li>Audit-ready documentation.</li>
+              </ul>
+
+              <hr />
+
+              <h3>PAGE 9: Governance & Risk Management</h3>
+              <ul>
+                <li>Ethical leadership.</li>
+                <li>Policy-driven operations.</li>
+                <li>Risk monitoring.</li>
+              </ul>
+
+              <hr />
+
+              <h3>PAGE 10: Security & Compliance</h3>
+              <p>
+                10 SECONDS is committed to ethical conduct, information
+                security, anti-corruption, accessibility, responsible tech use,
+                and transparent governance.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }
