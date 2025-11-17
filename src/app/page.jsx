@@ -2060,7 +2060,7 @@ export default function Page() {
                       icon: "bi-geo-alt",
                       title: "Address",
                       content:
-                        "10 SECONDS, Arya Hamsa, Royal County, 80 Feet Road, JP Nagar, 8th Phase, Bangalore - 560083",
+                        "10 SECONDS, Tower 2, Prestige Park Square Sy. No. 8/2, 9/1, 10 Basavanapura, Bannerghatta Main Road, Bengaluru, Karnataka 560083",
                     },
                     {
                       icon: "bi-clock",
