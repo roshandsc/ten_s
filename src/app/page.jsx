@@ -2514,13 +2514,13 @@ export default function Page() {
                 >
                   10 SECONDS
                   <br />
-                  Arya Hamsa
+                  Tower 2, Prestige Park Square
                   <br />
-                  Royal County, 80 Feet Road
+                  Sy. No. 8/2, 9/1, 10 Basavanapura
                   <br />
-                  J P Nagar, 8th Phase
+                  Bannerghatta Main Road
                   <br />
-                  Bangalore - 560083
+                  Bengaluru, Karnataka 560083
                   <br />
                   <br />
                   Phone: <a href="tel:+919731144344">+91 97311 44344</a>
