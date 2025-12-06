@@ -2060,7 +2060,7 @@ export default function Page() {
                       icon: "bi-geo-alt",
                       title: "Address",
                       content:
-                        "10 SECONDS, Tower 2, Prestige Park Square Sy. No. 8/2, 9/1, 10 Basavanapura, Bannerghatta Main Road, Bengaluru, Karnataka 560083",
+                        "10 SECONDS\n#56, 4th Floor, Sumukha Plaza, Puttanna Rd, Basavanagudi, Bengaluru, Karnataka, 560004",
                     },
                     {
                       icon: "bi-clock",
@@ -2070,7 +2070,7 @@ export default function Page() {
                     {
                       icon: "bi-telephone",
                       title: "Call Us",
-                      content: "+91 97311 44344\n+91 94800 74552",
+                      content: "9440074552\n9731144344",
                     },
                     {
                       icon: "bi-envelope",
@@ -2514,18 +2514,16 @@ export default function Page() {
                 >
                   10 SECONDS
                   <br />
-                  Tower 2, Prestige Park Square
+                  #56, 4th Floor, Sumukha Plaza
                   <br />
-                  Sy. No. 8/2, 9/1, 10 Basavanapura
+                  Puttanna Rd, Basavanagudi
                   <br />
-                  Bannerghatta Main Road
-                  <br />
-                  Bengaluru, Karnataka 560083
+                  Bengaluru, Karnataka, 560004
                   <br />
                   <br />
-                  Phone: <a href="tel:+919731144344">+91 97311 44344</a>
+                  Phone: <a href="tel:+919440074552">9440074552</a>
                   <br />
-                  <a href="tel:+919480074552">+91 94800 74552</a>
+                  <a href="tel:+919731144344">9731144344</a>
                   <br />
                   Email:{" "}
                   <a href="mailto:care@10seconds.co.in">care@10seconds.co.in</a>
