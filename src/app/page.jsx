@@ -2162,7 +2162,7 @@ export default function Page() {
                   }}
                 >
                   <iframe
-                    src="https://maps.app.goo.gl/v3anUHc1GeWWP8ZH6?g_st=iw"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.813314612642!2d77.567207!3d12.9316767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15a32a824f3d%3A0x88ea514875536499!2s10%20Seconds%20-%20Training%2C%20Staffing%20%26%20Skills%20Platform!5e0!3m2!1sen!2sin!4v1733679667002"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
