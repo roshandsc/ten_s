@@ -2162,7 +2162,7 @@ export default function Page() {
                   }}
                 >
                   <iframe
-                    src="https://www.google.com/maps?q=10+SECONDS,+Sumukha+Plaza,+Puttanna+Rd,+Basavanagudi,+Bengaluru&output=embed"
+                    src="https://maps.app.goo.gl/v3anUHc1GeWWP8ZH6?g_st=iw"
                     width="100%"
                     height="100%"
                     style={{ border: 0 }}
