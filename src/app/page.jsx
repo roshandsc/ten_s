@@ -2145,6 +2145,33 @@ export default function Page() {
                     </div>
                   ))}
                 </div>
+                {/* Google Map Embed */}
+                <div
+                  className="map-box"
+                  style={{
+                    marginTop: isBelow480 ? "1.2rem" : "1.6rem",
+                    borderRadius: "12px",
+                    overflow: "hidden",
+                    boxShadow: "0 4px 15px rgba(0,0,0,0.08)",
+                    width: "100%",
+                    height: isBelow480
+                      ? "260px"
+                      : isBelow768
+                      ? "300px"
+                      : "340px",
+                  }}
+                >
+                  <iframe
+                    src="https://www.google.com/maps?q=10+SECONDS,+Sumukha+Plaza,+Puttanna+Rd,+Basavanagudi,+Bengaluru&output=embed"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 0 }}
+                    allowFullScreen=""
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="10 Seconds Location Map"
+                  ></iframe>
+                </div>
               </div>
 
               {/* Right Side Form */}
