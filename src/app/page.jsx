@@ -2548,7 +2548,7 @@ export default function Page() {
                   Bengaluru, Karnataka, 560004
                   <br />
                   <br />
-                  Phone: <a href="tel:+919480074552">9440074552</a>
+                  Phone: <a href="tel:+919480074552">9480074552</a>
                   <br />
                   <a href="tel:+919731144344">9731144344</a>
                   <br />
